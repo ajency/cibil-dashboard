@@ -5,4 +5,12 @@
     .section-heading{
         margin-bottom: 40px;
     }
+    @include media-breakpoint-down(md){
+        background-color: $light;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        .section-heading{
+            margin-bottom: 47px;
+        }
+    }
 }

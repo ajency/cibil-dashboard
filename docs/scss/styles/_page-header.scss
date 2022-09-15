@@ -28,13 +28,17 @@
     }
   }
   @include media-breakpoint-down(md) {
-    &__Wraper {
+    border-bottom: none;
+    &__wraper {
       padding-top: 30px;
       padding-bottom: 30px;
       .page-title {
         margin-bottom: 20px;
         font-size: 24px;
         line-height: 30px;
+      }
+      .page-desc{
+        font-weight: $intro-book;
       }
     }
   }

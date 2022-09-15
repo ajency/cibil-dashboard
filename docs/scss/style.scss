@@ -4,10 +4,12 @@
 $light-blue: #f5f9ff;
 $black: #2c2c2c;
 $border-color: #a1b3cd;
+$border-color-1:#D5DDEB;
 $primary-blue: #00a6ca;
 $primary-orange: #F16E00;
 $dark: #000;
 $primary-blue: #00A6CA;
+$light: #fff;
 
 
 /* fonts */
@@ -50,8 +52,10 @@ p {
 }
 .page-width {
   display: block;
-  max-width: 1106px;
-  padding: 0 48px;
+  max-width: calc(1146px - 56px);
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .main-container {
   display: flex;

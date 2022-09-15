@@ -15,6 +15,9 @@
         text-transform: uppercase;
         margin-bottom: 20px;
       }
+      .desc {
+        margin-bottom: 0px;
+      }
       .cibil-button {
         margin-top: 20px;
       }
@@ -25,8 +28,8 @@
       .img-container {
         z-index: 1;
         position: relative;
-        img{
-            width: 100%;
+        img {
+          width: 100%;
         }
       }
       &::after {
@@ -42,26 +45,63 @@
       }
     }
   }
-  &.image-left{
-    .cta-feature__wraper{
-        flex-direction: row-reverse;
-        .right-side{
-            padding: 30px 0px 30px 40px;
-            &::after{
-                right: 0;
-                left: -20px;
-            }
+  &.image-left {
+    .cta-feature__wraper {
+      flex-direction: row-reverse;
+      .right-side {
+        padding: 30px 0px 30px 40px;
+        &::after {
+          right: 0;
+          left: -20px;
         }
+      }
     }
   }
-  @include media-breakpoint-up(lg){
-    &__wraper{
-        .left-side, .right-side{
-            max-width: 346px;
-        }
+  @include media-breakpoint-up(lg) {
+    &__wraper {
+      .left-side,
+      .right-side {
+        max-width: 346px;
+      }
     }
   }
-  @include media-breakpoint-down(lg){
-
+  @include media-breakpoint-down(md) {
+    padding-bottom: 40px;
+    position: relative;
+    &:after {
+      content: "";
+      height: 1px;
+      width: 100px;
+      background-color: $border-color-1;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 50px);
+    }
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+    &__wraper {
+      flex-direction: column-reverse !important;
+      .left-side {
+        text-align: center;
+        .feature-title {
+          font-size: 16px;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+      }
+      .right-side, .left-side {
+        padding: 0 !important;
+        &::after {
+          height: 119px;
+          max-width: 154px;
+          background-image: url(../images/static-images/dotted-bg-mob.png);
+          right: -20px !important;
+          top: -20px !important;
+          left: inherit !important;
+          background-size: cover;
+        }
+      }
+    }
   }
 }
