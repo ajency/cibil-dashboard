@@ -1,29 +1,41 @@
 //Page header
 .page-header-section {
-    background-color: $light-blue;
-    border-bottom: 1px solid $border-color;
-    &__wraper {
-      padding-top: 22px;
-      padding-bottom: 22px;
-      .page-title,
-      .page-desc {
-        font-weight: $intro-regular;
+  background-color: $light-blue;
+  border-bottom: 1px solid $border-color;
+  &__wraper {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    .page-title,
+    .page-desc {
+      font-weight: $intro-regular;
+    }
+    .page-title {
+      font-size: 32px;
+      line-height: 32px;
+      margin-bottom: 24px;
+      display: inline-flex;
+      align-items: center;
+      .icon {
+        width: 44px;
+        height: 44px;
+        margin-right: 16px;
       }
+    }
+    .page-desc {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 0px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__Wraper {
+      padding-top: 30px;
+      padding-bottom: 30px;
       .page-title {
-        font-size: 32px;
-        line-height: 32px;
-        margin-bottom: 24px;
-        display: inline-flex;
-        align-items: center;
-        .icon {
-          width: 44px;
-          height: 44px;
-          margin-right: 16px;
-        }
-      }
-      .page-desc {
-        font-size: 16px;
-        line-height: 24px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        line-height: 30px;
       }
     }
   }
+}

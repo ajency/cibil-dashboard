@@ -1,0 +1,14 @@
+<div class="cta-feature {{ .image_alignment }}">
+  <div class="cta-feature__wraper">
+    <div class="left-side">
+      <p class="feature-title">{{ .feature_title }}</p>
+      <p class="desc">{{ .feature_description }}</p>
+      <a href="{{ .button_link }}" class="cibil-button">{{ .button }}</a>
+    </div>
+    <div class="right-side">
+      <div class="img-container">
+        <img src="{{ .image_path | relURL }}" alt="" />
+      </div>
+    </div>
+  </div>
+</div>

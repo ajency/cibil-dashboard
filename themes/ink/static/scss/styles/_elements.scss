@@ -1,0 +1,24 @@
+.section-heading{
+    color: $primary-blue;
+    font-weight: $intro-bold;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.cibil-button {
+    height: 50px;
+    background: $primary-orange;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 19px 32px;
+    color: #2C2C2C !important;
+    text-decoration: none !important;
+    font-weight: $intro-bold;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    outline: none !important;
+}

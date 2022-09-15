@@ -4,14 +4,16 @@
 $light-blue: #f5f9ff;
 $black: #2c2c2c;
 $border-color: #a1b3cd;
+$primary-blue: #00a6ca;
+$primary-orange: #F16E00;
 $dark: #000;
 $primary-blue: #00A6CA;
 
 
 /* fonts */
 $intro: "Intro";
-$intro-regular : 600;
-$intro-bold : 700;
+$intro-regular: 600;
+$intro-bold: 700;
 $intro-book: 400;
 
 @mixin intro-book-14 {
@@ -39,16 +41,19 @@ $intro-book: 400;
 body {
   color: $black;
 }
-body, p{
-    font-family: $intro;
-    font-weight: $intro-book;
+body,
+p {
+  font-family: $intro;
+  font-weight: $intro-book;
+  font-size: 16px;
+  line-height: 24px;
 }
-.page-width{
+.page-width {
   display: block;
   max-width: 1106px;
   padding: 0 48px;
 }
-.main-container{
+.main-container {
   display: flex;
   width: 100%;
   height: 100%;
@@ -57,7 +62,14 @@ body, p{
   display: block;
   width: 100%;
 }
-.nav-container{
+.page-inner-container {
+  max-width: 928px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+.nav-container {
   display: block;
   width: 20%;
   min-width: 260px;
@@ -114,3 +126,6 @@ footer{
 
 
 @import "styles/page-header";
+@import "styles/elements";
+@import "styles/components";
+@import "styles/sections";
