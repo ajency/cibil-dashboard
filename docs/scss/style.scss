@@ -1,19 +1,41 @@
+@import "bootstrap/bootstrap.scss";
+
+/* colors */
+$light-blue: #f5f9ff;
+$black: #2c2c2c;
+$border-color: #a1b3cd;
+
+/* fonts */
+$intro: "Intro";
+$intro-regular : 600;
+$intro-bold : 700;
+$intro-book: 400;
+
+body {
+  color: $black;
+}
+body, p{
+    font-family: $intro;
+    font-weight: $intro-book;
+}
 .page-width{
-    display: block;
-    max-width: 1106px;
-    padding: 0 48px;
+  display: block;
+  max-width: 1106px;
+  padding: 0 48px;
 }
 .main-container{
-    display: flex;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 .page-container {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 .nav-container{
-    display: block;
-    width: 20%;
-    min-width: 260px;
+  display: block;
+  width: 20%;
+  min-width: 260px;
 }
+
+@import "styles/page-header";
