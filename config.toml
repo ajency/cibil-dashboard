@@ -1,3 +1,5 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://ajency.github.io/cibil-dashboard/"
+languageCode = "en-us"
+title = "CIBIL Dashboard"
+theme = "ink"
+publishDir = "docs"
