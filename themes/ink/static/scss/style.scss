@@ -4,12 +4,37 @@
 $light-blue: #f5f9ff;
 $black: #2c2c2c;
 $border-color: #a1b3cd;
+$dark: #000;
+$primary-blue: #00A6CA;
+
 
 /* fonts */
 $intro: "Intro";
 $intro-regular : 600;
 $intro-bold : 700;
 $intro-book: 400;
+
+@mixin intro-book-14 {
+    font-family: 'Intro';
+    font-weight: $intro-book;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $black;
+}
+
+@mixin intro-regular-14 {
+    font-family: 'Intro';
+    font-weight: $intro-regular;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+}
+
+*{
+    outline: none;
+    box-shadow: none;
+}
 
 body {
   color: $black;
@@ -36,6 +61,56 @@ body, p{
   display: block;
   width: 20%;
   min-width: 260px;
+  background-color: $primary-blue;
+  @include media-breakpoint-down(lg) {
+      display: none;
+  }
 }
+
+header{
+    padding: 20px 0;
+    border-bottom: 1px solid #C1D5F8;
+    .header-list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: $black;
+        .header-list-item{
+            display: flex;
+            @include intro-regular-14;
+            &:not(:first-child){
+                margin-left: 46px;
+            }
+            svg{
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #DDDDDD;
+    text-align: center;
+    .footer-text{
+        @include intro-book-14;
+        color: $dark;
+        margin-bottom: 12px;
+    }
+    .footer-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .footer-list-item{
+            @include intro-book-14;
+            text-decoration: underline;
+            &:not(:last-child){
+                margin-right: 40px;
+            }
+        }
+    }
+}
+
 
 @import "styles/page-header";
