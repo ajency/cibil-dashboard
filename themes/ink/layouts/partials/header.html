@@ -1,10 +1,26 @@
 <header>
     <div class="page-width ">
-        <div class="header-list">
-            <a href="" class="header-list-item">{{ partial "svg-help"}}HOW IT WORKS</a>
-            <a href="" class="header-list-item">{{ partial "svg-language"}}ENGLISH</a>
-            <a href="" class="header-list-item">{{ partial "svg-account"}}MY ACCOUNT</a>
-            <a href="" class="header-list-item">{{ partial "svg-logout"}}LOGOUT</a>
+        <div class="header-list desktop-view">
+            <a href="" class="header-list-item">{{ partial "svg-help"}}<span>HOW IT WORKS</span></a>
+            <a class="header-list-item language-selector">
+                {{ partial "svg-language"}}
+                <span>ENGLISH</span>
+                {{ partial "svg-arrow"}}
+                {{ partial "language-list"}}
+            </a>
+            <a href="" class="header-list-item">{{ partial "svg-account"}}<span>MY ACCOUNT</span></a>
+            <a href="" class="header-list-item">{{ partial "svg-logout"}}<span>LOGOUT</span></a>
+        </div>
+        <div class="header-list-mobile mobile-view">
+            <div class="logo-mobile">
+                {{ partial "svg-logo-mobile"}}
+            </div>
+            <div class="header-list-items">
+                <a class="header-list-item-mobile language-selector">{{ partial "svg-language-mobile"}}</a>
+                <a class="header-list-item-mobile">{{ partial "svg-account-mobile"}}</a>
+                <a class="header-list-item-mobile">{{ partial "svg-hamburger"}}</a>
+            </div>
+            {{ partial "language-list"}}
         </div>
     </div>
 </header>
