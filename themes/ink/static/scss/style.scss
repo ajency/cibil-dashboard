@@ -268,6 +268,16 @@ footer{
     }
 }
 
+.hide-md-down{
+    @include media-breakpoint-down(md){
+        display: none;
+    }
+}
+.hide-lg-up{
+    @include media-breakpoint-up(lg){
+        display: none;
+    }
+}
 
 @import "styles/page-header";
 @import "styles/elements";

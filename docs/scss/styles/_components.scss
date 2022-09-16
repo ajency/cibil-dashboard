@@ -59,13 +59,29 @@
   }
   @include media-breakpoint-up(lg) {
     &__wraper {
-      .left-side,
-      .right-side {
+      .left-side {
         max-width: 346px;
       }
     }
   }
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-only(md){
+    &__wraper{
+      .left-side, .right-side{
+        max-width: calc(50% - 10px);
+      }
+      .right-side{
+        &::after{
+          left: 0 !important;
+        }
+      }
+      .left-side{
+        &::after{
+          left: 0;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
     padding-bottom: 40px;
     position: relative;
     &:after {
@@ -90,15 +106,21 @@
           margin-bottom: 10px;
         }
       }
+      .right-side{
+        .img-container{
+          max-width: calc(100% - 14px);
+        }
+      }
       .right-side,
       .left-side {
+        width: 100%;
         padding: 0 !important;
         &::after {
           height: 119px;
           max-width: 154px;
           background-image: url(../images/static-images/dotted-bg-mob.png);
-          right: -20px !important;
-          top: -20px !important;
+          right: 0px !important;
+          top: -14px !important;
           left: inherit !important;
           background-size: cover;
         }
