@@ -236,3 +236,60 @@
     }
   }
 }
+
+// banner section
+.banner-section {
+  background: $gradient-blue;
+  padding-top: 33px;
+  padding-bottom: 52px;
+  &__wraper {
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    .banner-heading{
+      color: $dark;
+      margin-bottom: 0px;
+    }
+    .username{
+      margin-bottom: 4px;
+    }
+    .img-container{
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      &:before{
+        content: '';
+        height: 157px;
+        width: 100%;
+        max-width: 265px;
+        background-image: url(../images/static-images/dotted-bg-small.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: -5px;
+        top:-15px;
+        z-index: -1;
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+  @include media-breakpoint-up(md){
+    &__wraper{
+      .left-side{
+        margin-top: 37px;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    &__wraper{
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      .left-side{
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

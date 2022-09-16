@@ -4,16 +4,29 @@
 $light-blue: #f5f9ff;
 $black: #2c2c2c;
 $border-color: #a1b3cd;
-$border-color-1:#D5DDEB;
-$border-color-2:#ABABAB;
+$border-color-1: #d5ddeb;
+$border-color-2: #ababab;
 $primary-blue: #00a6ca;
-$primary-orange: #F16E00;
+$primary-orange: #f16e00;
 $dark: #000;
 $grey: #707070;
-$primary-blue: #00A6CA;
-$light-blue-2:#f6f7fc;
+$primary-blue: #00a6ca;
+$light-blue-2: #f6f7fc;
 $light: #fff;
+<<<<<<< Updated upstream
 $primary-yellow: #FCD800;
+=======
+$yellow: #FCD800;
+
+/* gradients */
+$gradient-blue: linear-gradient(
+  0deg,
+  #f1f6ff 0%,
+  #edf3fe 21.93%,
+  #d3e0f8 22.84%,
+  #f1f6ff 100%
+);
+>>>>>>> Stashed changes
 
 /* fonts */
 $intro: "Intro";
@@ -22,22 +35,23 @@ $intro-bold: 700;
 $intro-book: 400;
 
 @mixin intro-book-14 {
-    font-family: 'Intro';
-    font-weight: $intro-book;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    color: $black;
+  font-family: "Intro";
+  font-weight: $intro-book;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: $black;
 }
 
 @mixin intro-regular-14 {
-    font-family: 'Intro';
-    font-weight: $intro-regular;
-    font-size: 14px;
-    line-height: 24px;
-    color: $black;
+  font-family: "Intro";
+  font-weight: $intro-regular;
+  font-size: 14px;
+  line-height: 24px;
+  color: $black;
 }
 
+<<<<<<< Updated upstream
 @mixin intro-regular-16 {
     font-family: 'Intro';
     font-weight: $intro-regular;
@@ -49,6 +63,11 @@ $intro-book: 400;
 *{
     outline: none !important;
     box-shadow: none;
+=======
+* {
+  outline: none !important;
+  box-shadow: none;
+>>>>>>> Stashed changes
 }
 
 body {
@@ -68,20 +87,20 @@ p {
    margin-left: auto;
   margin-right: auto;
 } */
-.desktop-view{
-    @include media-breakpoint-down(lg) {
-        display: none !important;
-    }
+.desktop-view {
+  @include media-breakpoint-down(lg) {
+    display: none !important;
+  }
 }
-.mobile-view{
-    @include media-breakpoint-up(xl) { 
-        display: none !important;
-     }
+.mobile-view {
+  @include media-breakpoint-up(xl) {
+    display: none !important;
+  }
 }
-.page-width{
+.page-width {
   display: block;
   max-width: 1106px;
-//   padding: 0 48px;
+  //   padding: 0 48px;
   padding: 0 60px;
   margin-right: auto;
   @include media-breakpoint-down(lg) {
@@ -92,108 +111,109 @@ p {
 .main-container {
   display: flex;
   width: 100%;
-//   height: 100%;
+  //   height: 100%;
   height: max-content;
   height: -webkit-max-content;
 }
 .page-container {
   display: block;
   width: 100%;
-  @include media-breakpoint-up(xl) { 
+  @include media-breakpoint-up(xl) {
     width: 80%;
- }
+  }
 }
 .page-inner-container {
   max-width: 928px;
   margin-left: auto;
   margin-right: auto;
-//   padding-left: 45px;
-//   padding-right: 45px;
+  //   padding-left: 45px;
+  //   padding-right: 45px;
 }
 .nav-container {
   display: block;
   width: 20%;
   min-width: 260px;
   background-color: $primary-blue;
-  .logo-container{
+  .logo-container {
     padding: 60px 0 43px 30px;
   }
   @include media-breakpoint-down(lg) {
-      display: none;
+    display: none;
   }
 }
 
-header{
-    padding: 17.5px 0;
-    border-bottom: 1px solid #C1D5F8;
-    position: relative;
-    .page-width {
-        margin-left: auto;
-        margin-right: 0;
-    }
-    .header-list {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        color: $black;
-        .header-list-item{
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            @include intro-regular-14;
-            &:not(:first-child){
-                margin-left: 46px;
-            }
-            svg{
-                margin-right: 10px;
-            }
-            span{
-                position: relative;
-                top: 2px;
-                text-transform: uppercase;
-            }
-            &.language-selector {
-                &>svg:last-of-type{
-                    margin-right: 0;
-                    margin-left: 10px;
-                }
-            }
+header {
+  padding: 17.5px 0;
+  border-bottom: 1px solid #c1d5f8;
+  position: relative;
+  .page-width {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .header-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: $black;
+    .header-list-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      @include intro-regular-14;
+      &:not(:first-child) {
+        margin-left: 46px;
+      }
+      svg {
+        margin-right: 10px;
+      }
+      span {
+        position: relative;
+        top: 2px;
+        text-transform: uppercase;
+      }
+      &.language-selector {
+        & > svg:last-of-type {
+          margin-right: 0;
+          margin-left: 10px;
         }
+      }
     }
-    .header-list-mobile {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .header-list-items{
-            display: flex;
-        }
-        .header-list-item-mobile{
-            // margin-left: 22px;
-            padding: 0 10px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            &:last-of-type{
-                padding-right: 0;
-            }
-            &.active{
-                background-color: #006685;
-            }
-        }
+  }
+  .header-list-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-list-items {
+      display: flex;
     }
+    .header-list-item-mobile {
+      // margin-left: 22px;
+      padding: 0 10px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:last-of-type {
+        padding-right: 0;
+      }
+      &.active {
+        background-color: #006685;
+      }
+    }
+  }
 
-    @include media-breakpoint-down(lg) {
-        background-color: $primary-blue;
-        padding: 0;
+  @include media-breakpoint-down(lg) {
+    background-color: $primary-blue;
+    padding: 0;
 
-        .logo-mobile {
-            padding: 13px 0 12px;
-        }
+    .logo-mobile {
+      padding: 13px 0 12px;
     }
+  }
 }
 
+<<<<<<< Updated upstream
 .nav-list {
     display: flex;
     flex-direction: column;
@@ -245,86 +265,99 @@ footer{
         @include media-breakpoint-down(sm) {
             margin-bottom: 20px;
         }
+=======
+footer {
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid #dddddd;
+  text-align: center;
+  .footer-text {
+    @include intro-book-14;
+    color: $dark;
+    margin-bottom: 12px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 20px;
+>>>>>>> Stashed changes
     }
-    .footer-list{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .footer-list-item{
-            @include intro-book-14;
-            text-decoration: underline;
-            &:not(:last-child){
-                margin-right: 40px;
-            }
-        }
-        @include media-breakpoint-down(sm) {
-            justify-content: space-around;
-            flex-flow: wrap;
-            .footer-list-item{
-                margin: 10px 5px 0 !important;
-                
-            }
-        }
+  }
+  .footer-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .footer-list-item {
+      @include intro-book-14;
+      text-decoration: underline;
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
     }
+    @include media-breakpoint-down(sm) {
+      justify-content: space-around;
+      flex-flow: wrap;
+      .footer-list-item {
+        margin: 10px 5px 0 !important;
+      }
+    }
+  }
 }
-.language-selector{
-    position: relative;
-    text-decoration: none !important;
-    &.active:not(.header-list-item-mobile){
-        & > svg:last-of-type{
-            transform: rotate(180deg);
-        }
+.language-selector {
+  position: relative;
+  text-decoration: none !important;
+  &.active:not(.header-list-item-mobile) {
+    & > svg:last-of-type {
+      transform: rotate(180deg);
     }
+  }
 }
 
 .language-list {
-    position: absolute;
-    display: none;
-    left: 0;
-    top: calc(100% + 10px);
-    width: 205px;
-    background: #FFFFFF;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: none;
+  left: 0;
+  top: calc(100% + 10px);
+  width: 205px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  .langauge-item {
+    padding: 15px 0 12px 50px;
+    margin: 0;
+    font-weight: $intro-regular;
+    text-transform: uppercase;
+    cursor: pointer;
+    &.active {
+      background-color: #cdf6ff;
+      color: $primary-blue;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    top: 100%;
+    width: 100%;
     .langauge-item {
-        padding: 15px 0 12px 50px;
-        margin: 0;
+      padding-left: 20px;
+      text-transform: capitalize;
+      font-weight: $intro-book;
+      &.active {
         font-weight: $intro-regular;
-        text-transform: uppercase;
-        cursor: pointer;
-        &.active{
-            background-color: #cdf6ff;
-            color: $primary-blue;
-        }
+        background-color: #cdf6ff;
+        color: $primary-blue;
+      }
     }
-
-    @include media-breakpoint-down(lg) {
-        top: 100%;
-        width: 100%;
-        .langauge-item {
-            padding-left: 20px;
-            text-transform: capitalize;
-            font-weight: $intro-book;
-            &.active{
-                font-weight: $intro-regular;
-                background-color: #cdf6ff;
-                color: $primary-blue;
-            }
-        }
-    }
-    &.active{
-        display: block;
-    }
+  }
+  &.active {
+    display: block;
+  }
 }
 
-.hide-md-down{
-    @include media-breakpoint-down(md){
-        display: none;
-    }
+.hide-md-down {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
-.hide-lg-up{
-    @include media-breakpoint-up(lg){
-        display: none;
-    }
+.hide-lg-up {
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
 }
 
 @import "styles/page-header";

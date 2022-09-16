@@ -7,8 +7,8 @@
     text-align: center;
     text-transform: uppercase;
   }
-  @include media-breakpoint-up (lg){
-    .section-heading{
+  @include media-breakpoint-up(lg) {
+    .section-heading {
       text-align: left;
     }
   }

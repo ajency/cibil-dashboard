@@ -18,6 +18,11 @@
         }
     }
 }
+.banner-heading {
+    font-weight: $intro-regular;
+    font-size: 24px;
+    line-height: 30px;
+}
 .cibil-button {
     height: 50px;
     background: $primary-orange;
@@ -33,4 +38,20 @@
     line-height: 16px;
     text-transform: uppercase;
     outline: none !important;
+}
+
+.highlight{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    z-index: 1;
+    &:after{
+        content:"";
+        height: 10px;
+        width: 100%;
+        background-color: $yellow;
+        position: absolute;
+        bottom: 2px;
+        z-index: -1;
+    }
 }
