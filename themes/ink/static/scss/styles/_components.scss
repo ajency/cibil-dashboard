@@ -256,7 +256,6 @@
     .img-container{
       position: relative;
       z-index: 1;
-      overflow: hidden;
       &:before{
         content: '';
         height: 157px;
