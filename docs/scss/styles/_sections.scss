@@ -7,6 +7,11 @@
     text-align: center;
     text-transform: uppercase;
   }
+  @include media-breakpoint-up (lg){
+    .section-heading{
+      text-align: left;
+    }
+  }
   @include media-breakpoint-down(md) {
     background-color: $light;
     padding-top: 30px;
