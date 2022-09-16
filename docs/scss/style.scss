@@ -88,6 +88,9 @@ p {
 .page-container {
   display: block;
   width: 100%;
+  @include media-breakpoint-up(xl) { 
+    width: 80%;
+ }
 }
 .page-inner-container {
   max-width: 928px;
