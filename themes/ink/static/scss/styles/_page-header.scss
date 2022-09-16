@@ -3,8 +3,40 @@
   background-color: $light-blue;
   border-bottom: 1px solid $border-color;
   &__wraper {
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .breadcrumb {
+      background-color: transparent;
+      padding: 0px;
+      margin-bottom: 20px;
+      .breadcrumb-item {
+        margin: 0;
+        a {
+          background-color: $light;
+          min-height: 30px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 4px 14px;
+          color: $grey;
+          font-size: 14px;
+          line-height: 24px;
+        }
+        &.active {
+          a {
+            font-weight: $intro-regular;
+            color: $dark;
+          }
+        }
+        & + .breadcrumb-item {
+          position: relative;
+          &::before {
+            font-size: 0px;
+            content: url(../images/static-images/right-arrow-grey.svg);
+          }
+        }
+      }
+    }
     .page-title,
     .page-desc {
       font-weight: $intro-regular;
@@ -32,12 +64,15 @@
     &__wraper {
       padding-top: 30px;
       padding-bottom: 30px;
+      .breadcrumb{
+        margin-bottom: 30px;
+      }
       .page-title {
         margin-bottom: 20px;
         font-size: 24px;
         line-height: 30px;
       }
-      .page-desc{
+      .page-desc {
         font-weight: $intro-book;
       }
     }
