@@ -13,10 +13,7 @@ $grey: #707070;
 $primary-blue: #00a6ca;
 $light-blue-2: #f6f7fc;
 $light: #fff;
-<<<<<<< Updated upstream
 $primary-yellow: #FCD800;
-=======
-$yellow: #FCD800;
 
 /* gradients */
 $gradient-blue: linear-gradient(
@@ -26,7 +23,6 @@ $gradient-blue: linear-gradient(
   #d3e0f8 22.84%,
   #f1f6ff 100%
 );
->>>>>>> Stashed changes
 
 /* fonts */
 $intro: "Intro";
@@ -51,7 +47,6 @@ $intro-book: 400;
   color: $black;
 }
 
-<<<<<<< Updated upstream
 @mixin intro-regular-16 {
     font-family: 'Intro';
     font-weight: $intro-regular;
@@ -63,11 +58,9 @@ $intro-book: 400;
 *{
     outline: none !important;
     box-shadow: none;
-=======
 * {
   outline: none !important;
   box-shadow: none;
->>>>>>> Stashed changes
 }
 
 body {
@@ -213,7 +206,6 @@ header {
   }
 }
 
-<<<<<<< Updated upstream
 .nav-list {
     display: flex;
     flex-direction: column;
@@ -265,19 +257,6 @@ footer{
         @include media-breakpoint-down(sm) {
             margin-bottom: 20px;
         }
-=======
-footer {
-  width: 100%;
-  padding: 20px 0;
-  border-top: 1px solid #dddddd;
-  text-align: center;
-  .footer-text {
-    @include intro-book-14;
-    color: $dark;
-    margin-bottom: 12px;
-    @include media-breakpoint-down(sm) {
-      margin-bottom: 20px;
->>>>>>> Stashed changes
     }
   }
   .footer-list {
