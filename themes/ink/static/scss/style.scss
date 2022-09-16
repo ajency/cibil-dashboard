@@ -5,12 +5,13 @@ $light-blue: #f5f9ff;
 $black: #2c2c2c;
 $border-color: #a1b3cd;
 $border-color-1:#D5DDEB;
+$border-color-2:#ABABAB;
 $primary-blue: #00a6ca;
 $primary-orange: #F16E00;
 $dark: #000;
 $primary-blue: #00A6CA;
+$light-blue-2:#f6f7fc;
 $light: #fff;
-
 
 /* fonts */
 $intro: "Intro";
@@ -50,13 +51,13 @@ p {
   font-size: 16px;
   line-height: 24px;
 }
-// .page-width {
-//   display: block;
-//   max-width: calc(1146px - 56px);
-//   padding: 0 20px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
+/* .page-width {
+   display: block;
+   max-width: calc(1010px - 40px);
+  padding: 0 20px;
+   margin-left: auto;
+  margin-right: auto;
+} */
 .desktop-view{
     @include media-breakpoint-down(lg) {
         display: none !important;

@@ -1,7 +1,9 @@
 {{ define "main" }}
 
-{{ partial "page-header" (dict "icon_url" "images/static-images/alerts-icon.svg") }}
+    {{ partial "page-header" (dict "icon_url" "images/static-images/alerts-icon.svg") }}
 
     {{ partial "cibil-alerts" (dict "section_heading" "WITH CIBIL ALERTS YOU GET" )}}
+
+    {{ partial "faq.html" (dict "section_heading" "Frequently Asked Questions")}}
 
 {{end}}
