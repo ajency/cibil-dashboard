@@ -72,10 +72,10 @@ p {
   max-width: 1106px;
 //   padding: 0 48px;
   padding: 0 60px;
-//   margin-left: auto;
   margin-right: auto;
   @include media-breakpoint-down(lg) {
     padding: 0 20px;
+    margin-left: auto;
   }
 }
 .main-container {
