@@ -340,6 +340,43 @@ $intro-book: 400;
         display: block;
       }
   }
+  .upgrade-plan-tooltip-container{
+    position: relative;
+    margin-left: 12px;
+    cursor: pointer;
+    .upgrade-plan-tooltip{
+      @include intro-book-14;
+      border-radius: 4px;
+      padding: 8px;
+      width: 215px;
+      position: absolute;
+      background-color: #fff;
+      left: 0;
+      bottom: calc(100% + 14px);
+      box-shadow: 2px 2px 16px rgba(0, 71, 255, 0.2);
+      z-index: 2;
+      display: none;
+      &::after {
+          content: '';
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 16px solid #fff;
+          position: absolute;
+          left: 5px;
+          top: 92%;
+      }
+    }
+    &:hover{
+      .upgrade-plan-tooltip{
+        display: block;
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
   .mobile-nav-list {
     display: none;
     position: absolute;
