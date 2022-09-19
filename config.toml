@@ -1,5 +1,6 @@
-baseURL = "https://ajency.github.io/cibil-dashboard/"
-languageCode = "en-us"
-title = "CIBIL Dashboard"
-theme = "ink"
-publishDir = "docs"
+baseURL = ''
+languageCode = 'en-us'
+title = 'Cibil Dashboard'
+theme = 'dashboard'
+publishDir =  'docs'
+
