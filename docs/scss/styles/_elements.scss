@@ -38,12 +38,16 @@
     line-height: 16px;
     text-transform: uppercase;
     outline: none !important;
+    cursor: pointer;
     &-border{
         background-color: #fff;
         border: 1px solid #F16E00;
     }
+    &-yellow{
+        background-color: $primary-yellow !important;
+        font-weight: $intro-regular;
+    }
 }
-
 .highlight{
     position: relative;
     display: inline-flex;

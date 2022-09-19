@@ -128,7 +128,7 @@ $intro-book: 400;
     min-width: 260px;
     background-color: $primary-blue;
     .logo-container {
-      padding: 60px 0 43px 30px;
+      padding: 60px 0 10px 30px;
     }
     @include media-breakpoint-down(lg) {
       display: none;
@@ -315,7 +315,31 @@ $intro-book: 400;
       }
     }
   }
-
+  .upgrade-account-card {
+      margin: 20px;
+      padding: 20px;
+      background: #006685;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      @include intro-book-14;
+      color: #fff;
+      max-width: 380px;
+      .card-title{
+        margin-bottom: 15px;
+        font-weight: $intro-bold;
+        display: flex;
+        align-items: center;
+        svg{
+          margin-right: 10px;
+          position: relative;
+          bottom: 2px;
+        }
+      }
+      span{
+        margin-bottom: 12px;
+        display: block;
+      }
+  }
   .mobile-nav-list {
     display: none;
     position: absolute;
