@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cibil Dashboard</title>
-    <link>/</link>
+    <link>https://ajency.github.io/cibil-dashboard/</link>
     <description>Recent content on Cibil Dashboard</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Sep 2022 01:27:29 +0530</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Sep 2022 01:27:29 +0530</lastBuildDate><atom:link href="https://ajency.github.io/cibil-dashboard/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Upgrade Plan</title>
-      <link>/overview_free/upgrade-plan/</link>
+      <link>https://ajency.github.io/cibil-dashboard/overview_free/upgrade-plan/</link>
       <pubDate>Sat, 17 Sep 2022 14:49:38 +0530</pubDate>
       
-      <guid>/overview_free/upgrade-plan/</guid>
+      <guid>https://ajency.github.io/cibil-dashboard/overview_free/upgrade-plan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Alerts</title>
-      <link>/overview_free/alerts/</link>
+      <link>https://ajency.github.io/cibil-dashboard/overview_free/alerts/</link>
       <pubDate>Sat, 17 Sep 2022 14:47:32 +0530</pubDate>
       
-      <guid>/overview_free/alerts/</guid>
+      <guid>https://ajency.github.io/cibil-dashboard/overview_free/alerts/</guid>
       <description></description>
     </item>
     
