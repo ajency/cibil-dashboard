@@ -13,6 +13,7 @@ $primary-blue: #00a6ca;
 $primary-orange: #f16e00;
 $dark: #000;
 $grey: #707070;
+$dark1:#565656;
 $primary-blue: #00a6ca;
 $light-blue-2: #f6f7fc;
 $light: #fff;
@@ -116,7 +117,7 @@ $intro-book: 400;
     }
   }
   .page-inner-container {
-    max-width: 928px;
+    max-width: 838px;
     margin-left: auto;
     margin-right: auto;
     //   padding-left: 45px;
@@ -494,8 +495,18 @@ $intro-book: 400;
     display: none;
   }
 }
+.hide-sm-down {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
 .hide-lg-up {
   @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+.hide-md-up {
+  @include media-breakpoint-up(md) {
     display: none;
   }
 }

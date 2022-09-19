@@ -25,8 +25,8 @@
 
 //faq section
 .faq-section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   &__wraper {
     .section-heading-1 {
       margin-bottom: 10px;
@@ -36,6 +36,7 @@
     background-color: $light-blue-2;
     padding-top: 30px;
     padding-bottom: 14px;
+    margin-bottom: 0px;
     .section-heading-1 {
       text-transform: uppercase;
       margin-bottom: 24px;
@@ -150,5 +151,85 @@
   }
   @include media-breakpoint-down(md){
     margin-top: 80px;
+  }
+  @include media-breakpoint-down(sm){
+    margin-bottom: 40px;
+  }
+}
+
+
+// subscription features section
+.subscription-features{
+  margin-bottom: 80px;
+  &__wraper{
+    .section-heading, .description{
+      text-align: center;
+    }
+    .section-heading{
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .description{
+      margin-bottom: 40px;
+      letter-spacing: 0.02em;
+      font-weight: $intro-regular;
+      max-width: 316px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 24px;
+      font-size: 16px;
+    }
+  }
+  @include media-breakpoint-down(sm){
+    margin-bottom: 40px;
+    padding-top:40px;
+    padding-bottom: 40px;
+    background: $light-blue-2;
+    .page-inner-container{
+      padding-left: 26px;
+      padding-right: 26px;
+    }
+    &__wraper{
+      .section-heading{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+// get more features
+.get-more-features{
+  margin-bottom: 75px;
+  &__wraper{
+    .section-heading{
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .feature-cards-wraper{
+      display: flex;
+      justify-content: space-between;
+      column-gap: 22px;
+    }
+  }
+  @include media-breakpoint-up(md){
+    &__wraper{
+      .feature-cards-wraper{
+        flex-wrap: wrap;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    margin-bottom: 40px;
+    &__wraper{
+      .section-heading{
+        max-width: 227px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+      }
+      .feature-cards-wraper{
+        flex-direction: column;
+      }
+    }
   }
 }

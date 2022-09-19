@@ -1,0 +1,38 @@
+[
+    {
+        "heading": "What are CIBIL Subscription Plans?",
+        "content": "These are time-based subscription plans for your CIBIL Score & Report. You can refresh your CIBIL Score & Report daily during the subscription period and have an option to choose either a 1 month (₹ 550/-), 6 months (₹ 800/-) or 12 months (₹ 1200/-) plan. Depending upon the Plan that you choose, you also get access to other CIBIL features like CIBIL Alerts, Score Simulator, Personalized Loan Offers, Credit Monitoring and Dispute Assistance.",
+        "collapsed": true,
+        "unique_id": "6"
+    },
+    {
+        "heading": "How do I purchase a CIBIL Subscription plan?",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "collapsed": false,
+        "unique_id": "7"
+    },
+    {
+        "heading": "What is Credit Monitoring?",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "collapsed": false,
+        "unique_id": "8"
+    },
+    {
+        "heading": "How long will I be able to access/view my products?",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "collapsed": false,
+        "unique_id": "9"
+    },
+    {
+        "heading": "How does CIBIL pricing work?",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "collapsed": false,
+        "unique_id": "10"
+    },
+    {
+        "heading": "What forms of payments do you accept?",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "collapsed": false,
+        "unique_id": "11"
+    }
+]

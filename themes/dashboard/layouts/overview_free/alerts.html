@@ -4,6 +4,6 @@
 
 {{ partial "cibil-alerts" (dict "section_heading" "WITH CIBIL ALERTS YOU GET" )}}
 
-{{ partial "faq.html" (dict "section_heading" "Frequently Asked Questions")}}
+{{ partial "faq.html" (dict "section_heading" "Frequently Asked Questions" "faq" .Site.Data.alerts_faq )}}
 
 {{end}}
