@@ -28,4 +28,8 @@ $(function(){
         }
         $('.mobile-nav-list').toggleClass('opened');
     })
+    $('.overview-list .overview-item').click(function(e){
+        e.preventDefault();
+        $('.overview-list').toggleClass('opened')
+    })
 })

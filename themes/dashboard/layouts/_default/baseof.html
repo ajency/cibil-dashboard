@@ -4,10 +4,10 @@
     <body>
         <div class="main-container">
             <div class="nav-container">
-                {{ partial "navigation-desktop.html"}}
+                {{ partial "navigation-desktop.html" . }}
             </div>
             <div class="page-container">
-                {{ partial "header.html"}}
+                {{ partial "header.html" . }}
                 {{- block "main" . -}}{{- end -}}
                 {{ partial  "footer.html"}}
             </div>
