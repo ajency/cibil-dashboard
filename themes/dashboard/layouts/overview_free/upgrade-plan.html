@@ -1,5 +1,6 @@
 {{ define "main" }}
 
     {{ partial "main-banner.html" }}
+    {{partial "upgrade-plans" (dict "upgradePlans" .Site.Data.upgrade_plans )}}
 
 {{end}}

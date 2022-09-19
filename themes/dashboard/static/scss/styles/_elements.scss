@@ -38,6 +38,10 @@
     line-height: 16px;
     text-transform: uppercase;
     outline: none !important;
+    &-border{
+        background-color: #fff;
+        border: 1px solid #F16E00;
+    }
 }
 
 .highlight{

@@ -98,3 +98,14 @@
     }
   }
 }
+
+// upgrade plans section
+.upgrade-plans {
+  margin-bottom: 80px;
+  margin-top: -38px;
+  &__wraper {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 22px;
+  }
+}

@@ -1,0 +1,83 @@
+[
+    {
+        "plan_name":"Basic",
+        "plan_duration":"1 Month",
+        "discount_price":"₹550",
+        "upgrade_button_text":"UPGRADE NOW",
+        "upgrade_link":"#",
+        "recommended": false,
+        "most_popular": false,
+        "features":[
+            {
+                "icon":"images/static-images/dashboard-icon.svg",
+                "content":"Unlimited access to your CIBIL dashboard "
+            },
+            {
+                "icon":"images/static-images/simulator-icon.svg",
+                "content":"Make the right credit decisions with Score Simulator"
+            },
+            {
+                "icon":"images/static-images/offers-icon.svg",
+                "content":"Get personalized loan offers "
+            }
+        ]
+    },
+    {
+        "plan_name":"Standard",
+        "plan_duration":"6 Months",
+        "discount_price":"₹800",
+        "discount": "71%",
+        "price":"₹3300",
+        "upgrade_button_text":"UPGRADE NOW",
+        "upgrade_link":"#",
+        "recommended": false,
+        "most_popular": false,
+        "features":[
+            {
+                "icon":"images/static-images/dashboard-icon.svg",
+                "content":"Unlimited access to your CIBIL dashboard "
+            },
+            {
+                "icon":"images/static-images/simulator-icon.svg",
+                "content":"Make the right credit decisions with Score Simulator"
+            },
+            {
+                "icon":"images/static-images/offers-icon.svg",
+                "content":"Get personalized loan offers "
+            },
+            {
+                "icon":"images/static-images/alerts-icon-blue.svg",
+                "content":"24x7 credit monitoring with CIBIL Alerts "
+            }
+        ]
+    },
+    {
+        "plan_name":"Premium",
+        "plan_duration":"12 Months",
+        "discount_price":"₹1200",
+        "discount": "81%",
+        "price":"₹6600",
+        "upgrade_button_text":"UPGRADE NOW",
+        "upgrade_link":"#",
+        "recommended": true,
+        "most_popular": true,
+        "features":[
+            {
+                "icon":"images/static-images/dashboard-icon.svg",
+                "content":"Unlimited access to your CIBIL dashboard "
+            },
+            {
+                "icon":"images/static-images/simulator-icon.svg",
+                "content":"Make the right credit decisions with Score Simulator"
+            },
+            {
+                "icon":"images/static-images/offers-icon.svg",
+                "content":"Get personalized loan offers "
+            },
+            {
+                "icon":"images/static-images/alerts-icon-blue.svg",
+                "content":"24x7 credit monitoring with CIBIL Alerts "
+            }
+        ]
+    }
+]
