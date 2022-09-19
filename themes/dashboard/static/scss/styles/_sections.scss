@@ -88,12 +88,49 @@
     }
   }
   @include media-breakpoint-down(sm) {
+    padding-top: 30px;
+    padding-bottom: 25.47px;
     &__wraper {
       flex-direction: column;
       justify-content: center;
       text-align: center;
       .left-side {
-        margin-bottom: 50px;
+        margin-bottom: 60px;
+      }
+      .banner-heading {
+        font-size: 18px;
+        line-height: 18px;
+        .highlight {
+          margin-bottom: 10px;
+          font-size: 24px;
+          line-height: 30px;
+          font-weight: $intro-bold;
+          &:after {
+            bottom: 0px;
+          }
+        }
+        .full-width {
+          display: flex;
+          justify-content: center;
+        }
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+      .username {
+        margin-bottom: 16px;
+        font-size: 24px;
+        line-height: 30px;
+      }
+      .img-container {
+        padding-left: 11px;
+        padding-right: 11px;
+        &:before {
+          background-image: url(../images/static-images/dotted-bg-small-mob.png);
+          width: 127.09px;
+          height: 95px;
+          left: 16px;
+        }
       }
     }
   }
