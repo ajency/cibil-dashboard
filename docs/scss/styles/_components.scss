@@ -353,12 +353,16 @@
     width: 100%;
     margin-bottom: 40px;
   }
+}
+.plan, .plan-tab-content{
   .plan-features {
     text-align: left;
+    margin-bottom: 0px;
     .feature {
       letter-spacing: 0.02em;
       display: flex;
       align-items: flex-start;
+      margin-bottom: 0px;
       .icon {
         max-width: 28px;
         margin-right: 25px;
@@ -373,16 +377,17 @@
 
 @include media-breakpoint-down(md) {
   .plan-tabs {
+    flex-wrap: nowrap;
     .nav-item {
-      min-width: 124px;
+      width: 100%;
       .nav-link {
         width: 100%;
         height: 100%;
         background-color: $light-blue-2;
         border: 1px solid $border-color-4;
         border-radius: 0;
-        border-top-color: #f6f7fc;
-        border-right-color: #f6f7fc;
+        border-top-color: $light-blue-2;
+        border-right-color: $light-blue-2;
         text-align: left;
         padding: 10px;
         display: flex;
@@ -391,7 +396,7 @@
         padding-bottom: 40px;
         position: relative;
         &:first-child {
-          border-left-color: #f6f7fc;
+          border-left-color: $light-blue-2;
         }
         &.active {
           background-color: $light;
@@ -402,8 +407,29 @@
       &:first-child {
         .nav-link {
           border-top-left-radius: 4px;
+          &.active{
+            border-right-color: $light;
+          }
         }
       }
+      &:not(:first-child){
+        .nav-link{
+          border-right-color: $border-color-4;
+        }
+      }
+      &:not(:last-child){
+        .nav-link{
+          border-left-color: $border-color-4;
+        }
+      }
+      &:last-child{
+        .nav-link{
+          &.active{
+            border-left-color: $light;
+          }
+        }
+      }
+
       .plan-name {
         font-size: 14px;
         line-height: 24px;
@@ -438,6 +464,11 @@
         color: #2c2c2c;
         padding: 0px 10px;
       }
+      .popular-tag {
+        top: -30px;
+        padding: 0 10px;
+        font-size: 14px;
+      }
       .prices {
         display: flex;
         align-items: center;
@@ -464,6 +495,23 @@
     border-radius: 0px 0px 6px 6px;
     .tab-pane {
       padding: 20px 10px;
+      .cibil-button{
+        width: 100%;
+        color: $light !important;
+        font-weight: $intro-regular;
+      }
+      .plan-features{
+        .feature{
+          font-size: 14px;
+          .icon{
+            margin-right: 18px;
+            margin-top: 0px;
+          }
+          &:not(:last-child){
+            margin-bottom: 16px;
+          }
+        }
+      }
     }
   }
 }
