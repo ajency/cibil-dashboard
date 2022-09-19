@@ -233,3 +233,30 @@
     }
   }
 }
+//upgrade plan tab
+.uprade-pan-tab {
+  background-color: #E5EDFC;
+  .uprade-pan-tab-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    p{
+      margin: 0;
+      img{
+        margin-right: 16px;
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      p{
+        margin-bottom: 20px;
+        display: flex;
+        align-items: flex-start;
+      }
+    }
+  }
+}
