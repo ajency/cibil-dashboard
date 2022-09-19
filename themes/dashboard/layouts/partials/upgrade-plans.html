@@ -27,5 +27,42 @@
             </div>
         </div>
         {{ end }}
+        <div class="plan-tabs-container hide-lg-up">
+            <ul class="nav nav-tabs plan-tabs" id="plansTab" role="tablist">
+                {{ range .upgradePlans }}
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link {{ if eq .active_tab true }}active{{ end }}" id="{{ anchorize .plan_name }}-tab" data-toggle="tab" data-target="#{{anchorize .plan_name}}" type="button" role="tab" aria-controls="{{ anchorize .plan_name }}" aria-selected="true">
+                    <p class="plan-name">{{ .plan_name }}</p>
+                    <p class="plan-duration">{{ .plan_duration }}</p>
+                    <div class="prices">
+                        <span class="discount-price">{{ .discount_price }}</span>
+                        <span class="plan-price {{ if not .price }}empty-height{{ end }}">{{ .price }}</span>
+                    </div>
+                    {{ if eq .most_popular true }}
+                    <p class="popular-tag">Most Popular</p>
+                    {{ end }}
+                    {{ if .discount }}<span class="discount">Save {{ .discount }}</span>{{ end }}
+                  </button>
+                </li>
+                {{ end }}
+              </ul>
+              <div class="tab-content plan-tab-content" id="myTabContent">
+                {{ range .upgradePlans }}
+                <div class="tab-pane fade {{ if eq .active_tab true }}show active{{ end }}" id="{{ anchorize .plan_name }}" role="tabpanel" aria-labelledby="{{anchorize .plan_name}}-tab">
+                    {{ if .upgrade_link }}
+                    <a href="{{ .upgrade_link }}" class="cibil-button">{{ .upgrade_button_text }}</a>
+                    <hr class="horizontal-seperator">
+                    {{ end }}
+                    {{ if .features }}
+                    <ul class="plan-features">
+                        {{ range .features }}
+                        <li class="feature"><img src="{{ .icon | relURL }}" alt="" class="icon">{{ .content }}</li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                </div>
+                {{ end }}
+              </div>
+        </div>
     </div>
 </div>

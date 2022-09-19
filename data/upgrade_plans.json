@@ -7,6 +7,7 @@
         "upgrade_link":"#",
         "recommended": false,
         "most_popular": false,
+        "active_tab":  true,
         "features":[
             {
                 "icon":"images/static-images/dashboard-icon.svg",
@@ -32,6 +33,7 @@
         "upgrade_link":"#",
         "recommended": false,
         "most_popular": false,
+        "active_tab":  false,
         "features":[
             {
                 "icon":"images/static-images/dashboard-icon.svg",
@@ -61,6 +63,7 @@
         "upgrade_link":"#",
         "recommended": true,
         "most_popular": true,
+        "active_tab":  false,
         "features":[
             {
                 "icon":"images/static-images/dashboard-icon.svg",

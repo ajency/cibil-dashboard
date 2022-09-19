@@ -144,5 +144,11 @@
     display: flex;
     justify-content: space-between;
     column-gap: 22px;
+    .plan-tabs-container{
+      width: 100%;
+    }
+  }
+  @include media-breakpoint-down(md){
+    margin-top: 80px;
   }
 }
