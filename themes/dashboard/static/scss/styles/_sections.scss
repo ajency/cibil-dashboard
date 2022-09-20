@@ -271,6 +271,9 @@
             width: 100%;
             margin-bottom: 18px;
             margin-top: 23px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
           }
           .cibil-link {
             text-align: center;
@@ -281,12 +284,10 @@
   }
   @include media-breakpoint-up(md) {
     padding-top: 40px;
-    padding-bottom: 56px;
+    padding-bottom: 50px;
     &__wraper {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      column-gap: 118px;
       .simulator-section {
         width: calc(45% - 59px);
         &__wraper {
@@ -299,6 +300,23 @@
       }
       .smart-analysis-section {
         width: calc(55% - 59px);
+      }
+    }
+  }
+  @include media-breakpoint-only(md){
+    &__wraper{
+      .simulator-section{
+        width: calc(45% - 20px);
+        &__wraper{
+          .simulator-container{
+            .cibil-button{
+              max-width: 293.33px;
+            }
+          }
+        }
+      }
+      .smart-analysis-section{
+        width: calc(55% - 20px);
       }
     }
   }
@@ -319,6 +337,31 @@
               margin-bottom: 15.3px;
             }
           }
+        }
+      }
+      .section-heading{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+// smart analysis section
+.smart-analysis-section {
+  .link-container {
+    .icon {
+      margin-right: 14px;
+    }
+  }
+  @include media-breakpoint-down(sm){
+    .link-container{
+      .icon{
+        margin-right: 6px;
+      }
+      .cibil-link{
+        line-height: 22px;
+        &::before{
+          bottom: 4px;
         }
       }
     }

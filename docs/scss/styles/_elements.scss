@@ -3,16 +3,27 @@
   font-weight: $intro-bold;
   font-size: 24px;
   line-height: 24px;
+  text-transform: uppercase;
   &-1 {
     font-weight: $intro-bold;
     font-size: 24px;
     line-height: 30px;
     letter-spacing: 0.02em;
   }
+  &-small {
+    font-size: 18px;
+    line-height: 18px;
+  }
   @include media-breakpoint-down(lg) {
     font-size: 16px;
     &-1 {
       color: $primary-blue;
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &-small {
       font-size: 16px;
       line-height: 16px;
     }
@@ -76,7 +87,7 @@
     }
   }
 }
-.highlight-color{
+.highlight-color {
   color: $primary-blue;
 }
 .cibil-link {
@@ -98,6 +109,27 @@
     position: absolute;
     left: 0px;
     bottom: 0px;
+  }
+  &-right-icon {
+    .icon {
+      margin-right: 0px !important;
+      margin-left: 10px;
+      width: 11px;
+    }
+    &:before {
+      max-width: calc(100% - 21px);
+    }
+  }
+  @include media-breakpoint-down(sm){
+    &-right-icon{
+      .icon{
+        margin-left: 6px;
+        width: 12px;
+      }
+      &:before {
+        max-width: calc(100% - 18px);
+      }
+    }
   }
 }
 .group {
