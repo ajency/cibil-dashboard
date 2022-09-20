@@ -179,6 +179,13 @@
         }
       }
     }
+    img {
+      border: 1px solid $border-color-3;
+      border-radius: 6px;
+      overflow: hidden;
+      padding: 10px;
+      max-width: 100%;
+    }
   }
   @include media-breakpoint-up(md) {
     .faq-content {
@@ -583,24 +590,24 @@
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-  .card-content{
+  .card-content {
     letter-spacing: 0.02em;
     color: $dark1;
     margin-bottom: 0px;
   }
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(md) {
     max-width: calc(50% - 11px);
   }
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     padding-left: 40px;
     padding-right: 40px;
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 20px;
     }
-    .icon{
+    .icon {
       margin-bottom: 30px;
     }
-    .card-heading{
+    .card-heading {
       margin-bottom: 10px;
     }
   }
