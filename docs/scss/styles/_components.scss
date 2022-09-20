@@ -716,19 +716,53 @@
       }
     }
   }
-  @include media-breakpoint-down(md){
+  @include media-breakpoint-down(md) {
     margin-bottom: 20px;
     padding: 16px;
-    ul{
-      li{
+    ul {
+      li {
         font-size: 14px;
         line-height: 14px;
-        &:not(:last-child){
+        &:not(:last-child) {
           margin-bottom: 12px;
         }
-        .icon{
-          width:18px;
+        .icon {
+          width: 18px;
         }
+      }
+    }
+  }
+}
+
+// report cta
+.report-cta {
+  background: #f1f6ff;
+  border-radius: 8px;
+  padding: 30px 20px;
+  &__wraper {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 20px;
+    p {
+      margin-bottom: 20px;
+      max-width: 320px;
+      letter-spacing: 0.02em;
+    }
+    .cta-icon {
+      width: 64px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px;
+    &__wraper {
+      .cta-icon {
+        width: 48px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        max-width: 259px;
       }
     }
   }

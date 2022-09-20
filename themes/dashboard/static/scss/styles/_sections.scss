@@ -285,6 +285,7 @@
   @include media-breakpoint-up(md) {
     padding-top: 40px;
     padding-bottom: 50px;
+    margin-bottom: 111px;
     &__wraper {
       display: flex;
       justify-content: space-between;
@@ -303,19 +304,19 @@
       }
     }
   }
-  @include media-breakpoint-only(md){
-    &__wraper{
-      .simulator-section{
+  @include media-breakpoint-only(md) {
+    &__wraper {
+      .simulator-section {
         width: calc(45% - 20px);
-        &__wraper{
-          .simulator-container{
-            .cibil-button{
+        &__wraper {
+          .simulator-container {
+            .cibil-button {
               max-width: 293.33px;
             }
           }
         }
       }
-      .smart-analysis-section{
+      .smart-analysis-section {
         width: calc(55% - 20px);
       }
     }
@@ -323,6 +324,7 @@
   @include media-breakpoint-down(sm) {
     padding-top: 20px;
     padding-bottom: 40px;
+    margin-bottom: 40px;
     &__wraper {
       .simulator-section {
         margin-bottom: 40px;
@@ -339,7 +341,7 @@
           }
         }
       }
-      .section-heading{
+      .section-heading {
         margin-bottom: 20px;
       }
     }
@@ -353,14 +355,14 @@
       margin-right: 14px;
     }
   }
-  @include media-breakpoint-down(sm){
-    .link-container{
-      .icon{
+  @include media-breakpoint-down(sm) {
+    .link-container {
+      .icon {
         margin-right: 6px;
       }
-      .cibil-link{
+      .cibil-link {
         line-height: 22px;
-        &::before{
+        &::before {
           bottom: 4px;
         }
       }
@@ -394,13 +396,13 @@
   .scenario-header {
     display: flex;
     justify-content: space-between;
-    background: #E5EDFC;
+    background: #e5edfc;
     align-items: center;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
-    .minimize{
-      svg{
-        &:last-child{
+    .minimize {
+      svg {
+        &:last-child {
           display: none;
         }
       }
@@ -415,24 +417,24 @@
     margin: 0;
     display: flex;
     align-items: center;
-    a{
+    a {
       padding: 13px 20px;
       display: inline-block;
       cursor: pointer;
-      &:last-child{
-        background-color: #D9E3F5;
+      &:last-child {
+        background-color: #d9e3f5;
         padding: 12px;
       }
     }
   }
-  .scenario.blank{
+  .scenario.blank {
     .scenatio-cta {
       visibility: hidden;
     }
   }
   .scenario-body {
-    background: #F9F9F9;
-    border: 1px solid #EDEDED;
+    background: #f9f9f9;
+    border: 1px solid #ededed;
     border-radius: 0 0 10px 10px;
     padding: 20px 16px 10px;
   }
@@ -443,7 +445,7 @@
   }
   .scenario-option {
     background: $light;
-    border: 1px solid #EDEDED;
+    border: 1px solid #ededed;
     border-radius: 3px;
     padding: 10px 10px 10px 20px;
     letter-spacing: 0.02em;
@@ -454,23 +456,23 @@
     margin-bottom: 10px;
     cursor: pointer;
     min-height: 70px;
-    &:hover{
+    &:hover {
       border-color: $primary-blue;
     }
-    svg{
+    svg {
       width: 26px;
       margin-right: 16px;
     }
-    span{
-      width: calc(100% - 42px)
+    span {
+      width: calc(100% - 42px);
     }
   }
-  .option-card{
+  .option-card {
     display: none;
     .option-card-title {
       letter-spacing: 0.02em;
       margin-bottom: 30px;
-      img{
+      img {
         margin-left: 10px;
       }
     }
@@ -482,44 +484,69 @@
   }
   .scenario-cta {
     margin-top: 30px;
-    .smiluate-now-cta{
+    .smiluate-now-cta {
       font-weight: 600;
       margin-right: 20px;
     }
   }
-  .scenario{
-    &.closed{
-      .scenario-header{
+  .scenario {
+    &.closed {
+      .scenario-header {
         border-radius: 10px 10px 0 10px;
-        .minimize{
-          svg{
+        .minimize {
+          svg {
             display: none;
-            &:last-child{
+            &:last-child {
               display: block;
             }
           }
         }
       }
-      .scenario-body{
+      .scenario-body {
         display: none;
       }
     }
   }
-  @include media-breakpoint-down(md){
+  @include media-breakpoint-down(md) {
     flex-direction: column-reverse;
-    .scenario-option{
+    .scenario-option {
       border-radius: 8px;
       width: 100%;
       padding: 10px;
       margin-bottom: 16px;
       min-height: unset;
-      &:last-child{
+      &:last-child {
         margin-bottom: 10px;
       }
     }
-    .scenario-container, .score-display-container {
+    .scenario-container,
+    .score-display-container {
       width: 100%;
       padding: 0;
     }
+  }
+}
+
+// cibil report section
+.cibil-report-section {
+  margin-bottom: 60px;
+  &__wraper {
+    width: 100%;
+    .section-heading {
+      margin-bottom: 20px;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &__wraper {
+      .column-container {
+        display: flex;
+        .report-cta {
+          width: calc(60% - 10px);
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 40px;
   }
 }

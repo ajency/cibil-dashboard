@@ -1,0 +1,7 @@
+<div class="overview-section">
+    <div class="page-width overview-section__wraper">
+        {{ partial "simulator-section" (dict "simulator" .Site.Data.simulator) }}
+        
+        {{ partial "smart-analysis" (dict "section_heading" "Smart analysis of your CIBIL Score" "score_analysis" .Site.Data.score_analysis "link_text_desk" "VIEW DETAILED ANALYSIS OF YOUR CREDIT PROFILE" "link_text_mob" "DETAILED ANALYSIS" "link" "#" )}}
+    </div>
+</div>
