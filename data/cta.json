@@ -4,7 +4,7 @@
     "feature_title": "ALerts on multi platform",
     "feature_description": "Get alerts via Email, SMS and App",
     "button": "Upgrade to view alerts",
-    "button_link": "/overview_free/upgrade-plan",
+    "button_link": "/cibil-dashboard/overview_free/upgrade-plan/",
     "image_path_desk": "images/dynamic-images/multiplatform.svg",
     "image_path_mob": "images/dynamic-images/multiplatform-mob.svg"
   },
@@ -13,7 +13,7 @@
     "feature_title": "Alerts on changes to your credit profile",
     "feature_description": "Track changes in your personal details, CIBIL Score, and credit utilization.",
     "button": "Upgrade to view alerts",
-    "button_link": "/overview_free/upgrade-plan",
+    "button_link": "/cibil-dashboard/overview_free/upgrade-plan/",
     "image_path_desk": "images/dynamic-images/credit-profile-changes.svg",
     "image_path_mob": "images/dynamic-images/credit-profile-changes-mob.svg"
   },
@@ -22,7 +22,7 @@
     "feature_title": "Alerts on enquiries",
     "feature_description": "Track and identify any unwanted enquiries being made",
     "button": "Upgrade to view alerts",
-    "button_link": "/overview_free/upgrade-plan",
+    "button_link": "/cibil-dashboard/overview_free/upgrade-plan/",
     "image_path_desk": "images/dynamic-images/enquiries.svg",
     "image_path_mob": "images/dynamic-images/enquiries-mob.svg"
   }
