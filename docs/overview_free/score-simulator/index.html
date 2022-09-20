@@ -409,7 +409,7 @@ Free Account</p>
 
                             <span>Clear the outstanding balances (Active credit cards)</span>
                         </div>
-                        <div class="scenario-option">
+                        <div class="scenario-option" onclick="addOption(this, 'clearAccountBalance')">
                             <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="13" cy="13" r="12" stroke="#00A6CA" stroke-width="2"/>
 <path d="M14.2821 9.28205C14.2821 8.57399 13.7081 8 13 8C12.2919 8 11.7179 8.57399 11.7179 9.28205V11.7179H9.28205C8.57399 11.7179 8 12.2919 8 13C8 13.7081 8.57399 14.2821 9.28205 14.2821H11.7179V16.7179C11.7179 17.426 12.2919 18 13 18C13.7081 18 14.2821 17.426 14.2821 16.7179V14.2821H16.7179C17.426 14.2821 18 13.7081 18 13C18 12.2919 17.426 11.7179 16.7179 11.7179H14.2821V9.28205Z" fill="#00A6CA"/>
@@ -478,6 +478,46 @@ Free Account</p>
                             <div class="custom-radio-input">
                                 <input type="radio" name="clearBalance" id="no" value="no">
                                 <label for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="option-card" type="clearAccountBalance">
+                        <p class="option-card-title"><span>Clear the outstanding balances on your active accounts (s)</span><img src="/cibil-dashboard/images/static-images/grey-info.svg"/></p>
+                        <div class="options-container">
+
+                            <div class="group long-radio">
+                                <input name="chooseAccountRadio" onchange="chooseAccount(this)" type="radio" id="allaccount" value="allaccount" checked>
+                                <label for="allaccount">Clear all outstanding</label>
+                            </div>
+                            <div class="group long-radio">
+                                <input name="chooseAccountRadio" onchange="chooseAccount(this)" type="radio" id="chooseaccount" value="chooseaccount">
+                                <label for="chooseaccount">Choose accounts to pay</label>
+                            </div>
+
+                            <div class="chooseAccount-wrapper">
+                                <div class="group">
+                                    <label for="loantype">Choose account to pay</label>
+                                    <input type="hidden" id="loantype">
+                                    <div class="custom-select-input">
+                                        <span class="custom-select-value">Account Name / xx 1234</span>
+                                        <div class="custom-select-options">
+                                            <span>Account Name / xx 5674</span>
+                                            <span class="selected">Account Name / xx 1234</span>
+                                            <span>Account Name / xx 1266</span>
+                                        </div>
+                                    </div>
+                                    <span class="message"></span>
+                                </div>
+                                <div class="group">
+                                    <label for="amount">Choose how much to pay</label>
+                                    <div class="input-holder">
+                                        <span class="currency">₹</span>
+                                        <input class="input-currency" type="number" id="amount">
+                                    </div>
+                                    <span class="message">Added amount cannot be higher than the outstanding balance on this account</span>
+                                </div>
                             </div>
                         </div>
                     </div>

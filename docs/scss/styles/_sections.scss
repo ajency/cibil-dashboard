@@ -489,6 +489,15 @@
       margin-right: 20px;
     }
   }
+  .chooseAccount-wrapper {
+    display: none;
+    justify-content: flex-start;
+    flex-flow: wrap;
+    width: 100%;
+    &.active{
+      display: flex;
+    }
+  }
   .scenario {
     &.closed {
       .scenario-header {

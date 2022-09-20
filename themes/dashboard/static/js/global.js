@@ -109,3 +109,12 @@ function minimizeScenario(element){
     let parentElement = $(element).parents('.scenario')
     parentElement.toggleClass('closed')
 }
+function chooseAccount(element){
+    let parentElement = $(element).parents('.options-container')
+    if(parentElement.find('[name=chooseAccountRadio]:checked').val() == 'chooseaccount'){
+        parentElement.find('.chooseAccount-wrapper').addClass('active')
+    }
+    else{
+        parentElement.find('.chooseAccount-wrapper').removeClass('active')
+    }
+}

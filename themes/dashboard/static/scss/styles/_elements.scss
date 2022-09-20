@@ -211,6 +211,43 @@
     @include intro-regular-14;
     color: #D74025;
   }
+  &.long-radio {
+    background: $light;
+    border-radius: 6px;
+    margin-bottom: 22px;
+    label{
+      padding: 16px 10px 14px 40px;
+      position: relative;
+      @include intro-book-14;
+      &::after{
+        content: '';
+        width: 16px;
+        height: 16px;
+        border: 1px solid $black;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+      }
+    }
+    input{
+      display: none;
+    }
+    input[type=radio]:checked+label{
+      &::before{
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: $primary-blue;
+        position: absolute;
+        top: 50%;
+        left: 19px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+      }
+    }
+  }
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
