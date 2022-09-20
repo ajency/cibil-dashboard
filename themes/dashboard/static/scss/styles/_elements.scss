@@ -1,65 +1,71 @@
-.section-heading{
-    color: $primary-blue;
+.section-heading {
+  color: $primary-blue;
+  font-weight: $intro-bold;
+  font-size: 24px;
+  line-height: 24px;
+  &-1 {
     font-weight: $intro-bold;
-    font-size: 24px;
-    line-height: 24px;
-    &-1{
-        font-weight: $intro-bold;
-        font-size: 24px;
-        line-height: 30px;
-        letter-spacing: 0.02em;
-    }
-    @include media-breakpoint-down(lg){
-        font-size: 16px;
-        &-1{
-            color: $primary-blue;
-            font-size: 16px;
-            line-height: 16px;
-        }
-    }
-}
-.banner-heading {
-    font-weight: $intro-regular;
     font-size: 24px;
     line-height: 30px;
+    letter-spacing: 0.02em;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 16px;
+    &-1 {
+      color: $primary-blue;
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+}
+.banner-heading {
+  font-weight: $intro-regular;
+  font-size: 24px;
+  line-height: 30px;
 }
 .cibil-button {
-    height: 50px;
-    background: $primary-orange;
-    border-radius: 25px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 19px 32px;
-    color: #2C2C2C !important;
-    text-decoration: none !important;
-    font-weight: $intro-bold;
-    font-size: 16px;
-    line-height: 16px;
-    text-transform: uppercase;
-    outline: none !important;
-    cursor: pointer;
-    &-border{
-        background-color: #fff;
-        border: 1px solid #F16E00;
-    }
-    &-yellow{
-        background-color: $primary-yellow !important;
-        font-weight: $intro-regular;
-    }
+  height: 50px;
+  background-color: $primary-orange;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 19px 32px;
+  color: #2c2c2c !important;
+  text-decoration: none !important;
+  font-weight: $intro-bold;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  outline: none !important;
+  cursor: pointer;
+  &-border {
+    background-color: $light;
+    border: 1px solid $primary-orange;
+  }
+  &-yellow {
+    background-color: $primary-yellow !important;
+    font-weight: $intro-regular;
+  }
 }
-.highlight{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    z-index: 1;
-    &:after{
-        content:"";
-        height: 10px;
-        width: 100%;
-        background-color: $primary-yellow;
-        position: absolute;
-        bottom: 2px;
-        z-index: -1;
+.highlight {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  z-index: 1;
+  &:after {
+    content: "";
+    height: 10px;
+    width: 100%;
+    background-color: $primary-yellow;
+    position: absolute;
+    bottom: 9px;
+    z-index: -1;
+  }
+  @include media-breakpoint-down(sm) {
+    &:after {
+      bottom: 4px;
+      height: 7px;
     }
+  }
 }

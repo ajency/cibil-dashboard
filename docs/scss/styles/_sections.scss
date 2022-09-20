@@ -16,9 +16,9 @@
   @include media-breakpoint-down(sm) {
     background-color: $light;
     padding-top: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
     .section-heading {
-      margin-bottom: 47px;
+      margin-bottom: 30px;
     }
   }
 }
@@ -37,9 +37,10 @@
     padding-top: 30px;
     padding-bottom: 14px;
     margin-bottom: 0px;
+    margin-top: 40px;
     .section-heading-1 {
       text-transform: uppercase;
-      margin-bottom: 24px;
+      margin-bottom: 14px;
     }
   }
 }
@@ -47,7 +48,7 @@
 // banner section
 .banner-section {
   background: $gradient-blue;
-  padding-top: 33px;
+  padding-top: 18px;
   padding-bottom: 52px;
   &__wraper {
     display: flex;
@@ -61,21 +62,6 @@
       margin-bottom: 4px;
     }
     .img-container {
-      position: relative;
-      z-index: 1;
-      &:before {
-        content: "";
-        height: 157px;
-        width: 100%;
-        max-width: 265px;
-        background-image: url(../images/static-images/dotted-bg-small.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        position: absolute;
-        left: -5px;
-        top: -15px;
-        z-index: -1;
-      }
       img {
         width: 100%;
       }
@@ -85,53 +71,50 @@
     &__wraper {
       .left-side {
         margin-top: 37px;
+        .banner-heading {
+          .highlight {
+            font-size: 32px;
+            line-height: 44px;
+          }
+        }
       }
     }
   }
   @include media-breakpoint-down(sm) {
     padding-top: 30px;
-    padding-bottom: 25.47px;
+    padding-bottom: 29px;
     &__wraper {
       flex-direction: column;
       justify-content: center;
       text-align: center;
       .left-side {
-        margin-bottom: 60px;
+        margin-bottom: 10px;
       }
       .banner-heading {
-        font-size: 18px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 24px;
         .highlight {
-          margin-bottom: 10px;
-          font-size: 24px;
-          line-height: 30px;
           font-weight: $intro-bold;
-          &:after {
-            bottom: 0px;
-          }
         }
         .full-width {
           display: flex;
           justify-content: center;
         }
-        &:not(:last-child) {
-          margin-bottom: 20px;
+        &.subtext {
+          font-weight: $intro-book;
+          &:not(:last-child) {
+            margin-bottom: 6px;
+          }
         }
       }
       .username {
-        margin-bottom: 16px;
+        margin-bottom: 10px;
         font-size: 24px;
         line-height: 30px;
       }
       .img-container {
-        padding-left: 11px;
-        padding-right: 11px;
-        &:before {
-          background-image: url(../images/static-images/dotted-bg-small-mob.png);
-          width: 127.09px;
-          height: 95px;
-          left: 16px;
-        }
+        padding-left: 42px;
+        padding-right: 42px;
       }
     }
   }
@@ -145,31 +128,31 @@
     display: flex;
     justify-content: space-between;
     column-gap: 22px;
-    .plan-tabs-container{
+    .plan-tabs-container {
       width: 100%;
     }
   }
-  @include media-breakpoint-down(md){
-    margin-top: 80px;
+  @include media-breakpoint-down(md) {
+    margin-top: 60px;
   }
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     margin-bottom: 40px;
   }
 }
 
-
 // subscription features section
-.subscription-features{
+.subscription-features {
   margin-bottom: 80px;
-  &__wraper{
-    .section-heading, .description{
+  &__wraper {
+    .section-heading,
+    .description {
       text-align: center;
     }
-    .section-heading{
+    .section-heading {
       text-transform: uppercase;
       margin-bottom: 12px;
     }
-    .description{
+    .description {
       margin-bottom: 40px;
       letter-spacing: 0.02em;
       font-weight: $intro-regular;
@@ -180,17 +163,17 @@
       font-size: 16px;
     }
   }
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     margin-bottom: 40px;
-    padding-top:40px;
+    padding-top: 40px;
     padding-bottom: 40px;
     background: $light-blue-2;
-    .page-inner-container{
+    .page-inner-container {
       padding-left: 26px;
       padding-right: 26px;
     }
-    &__wraper{
-      .section-heading{
+    &__wraper {
+      .section-heading {
         margin-bottom: 10px;
       }
     }
@@ -198,53 +181,54 @@
 }
 
 // get more features
-.get-more-features{
+.get-more-features {
   margin-bottom: 75px;
-  &__wraper{
-    .section-heading{
+  &__wraper {
+    .section-heading {
       margin-bottom: 40px;
       text-align: center;
     }
-    .feature-cards-wraper{
+    .feature-cards-wraper {
       display: flex;
       justify-content: space-between;
       column-gap: 22px;
     }
   }
-  @include media-breakpoint-up(md){
-    &__wraper{
-      .feature-cards-wraper{
+  @include media-breakpoint-up(md) {
+    &__wraper {
+      .feature-cards-wraper {
         flex-wrap: wrap;
       }
     }
   }
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     margin-bottom: 40px;
-    &__wraper{
-      .section-heading{
+    &__wraper {
+      .section-heading {
         max-width: 227px;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;
       }
-      .feature-cards-wraper{
+      .feature-cards-wraper {
         flex-direction: column;
       }
     }
   }
 }
+
 //upgrade plan tab
 .uprade-pan-tab {
-  background-color: #E5EDFC;
-  .uprade-pan-tab-container{
+  background-color: #e5edfc;
+  .uprade-pan-tab-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 12px;
     padding-bottom: 12px;
-    p{
+    p {
       margin: 0;
-      img{
+      img {
         margin-right: 16px;
       }
     }
@@ -252,7 +236,7 @@
       flex-direction: column;
       padding-top: 20px;
       padding-bottom: 20px;
-      p{
+      p {
         margin-bottom: 20px;
         display: flex;
         align-items: flex-start;
