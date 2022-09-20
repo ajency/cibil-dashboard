@@ -1,0 +1,132 @@
+<div class="page-width">
+    <div class="score-simulator-section">
+        <div class="scenario-container">
+            <p class="scenario-container-title">What happens if I...</p>
+            
+            <div class="scenario blank">
+                <div class="scenario-header">
+                    <p class="scenario-name">Add Scenario 1</p>
+                    <p class="scenatio-cta">
+                        <a class="minimize" onclick="minimizeScenario(this)">{{partial "icons/black-minimize"}} {{partial "icons/black-plus"}}</a>
+                        <a onclick="closeScenario(this)">{{partial "icons/black-close"}}</a>
+                    </p>
+                </div>
+                <div class="scenario-body">
+                    <!-- options -->
+                    <div class="scenario-options">
+                        <div class="scenario-option" onclick="addOption(this, 'missPayment')">
+                            {{ partial "icons/add"}}
+                            <span>Miss a payment</span>
+                        </div>
+                        <div class="scenario-option" onclick="addOption(this, 'newLoan')">
+                            {{ partial "icons/add"}}
+                            <span>Add a New Loan or Credit Card</span>
+                        </div>
+                        <div class="scenario-option" onclick="addOption(this, 'closeCreditCard')">
+                            {{ partial "icons/add"}}
+                            <span>Close your oldest credit card</span>
+                        </div>
+                        <div class="scenario-option">
+                            {{ partial "icons/add"}}
+                            <span>Add new enquiry</span>
+                        </div>
+                        <div class="scenario-option" onclick="addOption(this, 'clearBalance')">
+                            {{ partial "icons/add"}}
+                            <span>Clear the outstanding balances (Active credit cards)</span>
+                        </div>
+                        <div class="scenario-option">
+                            {{ partial "icons/add"}}
+                            <span>Clear the outstanding balances (Active accounts)</span>
+                        </div>
+                    </div>
+
+                    <!-- option cards -->
+                    <!-- 1 -->
+                    <div class="option-card" type="newLoan">
+                        <p class="option-card-title"><span>Add a New Loan or Credit Cards</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
+                        <div class="options-container">
+                            <div class="group">
+                                <label for="loantype">Type</label>
+                                <input type="hidden" id="loantype">
+                                <div class="custom-select-input">
+                                    <span class="custom-select-value">Home Loan</span>
+                                    <div class="custom-select-options">
+                                        <span>Car Loan</span>
+                                        <span class="selected">Home Loan</span>
+                                        <span>Bike Loan</span>
+                                    </div>
+                                </div>
+                                <span class="message"></span>
+                            </div>
+                            <div class="group">
+                                <label for="amount">Loan Amount/Credit Limit</label>
+                                <div class="input-holder">
+                                    <span class="currency">₹</span>
+                                    <input class="input-currency" type="number" id="amount">
+                                </div>
+                                <span class="message">Min 10,00,000 to Max 30,00,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="option-card" type="missPayment">
+                        <p class="option-card-title"><span>Miss a payment on all Active Loan Accounts and Credit Cards</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
+                        <div class="options-container">
+                            <div class="group">
+                                <label for="pastDueDate">Past Due Date</label>
+                                <input type="hidden" id="pastDueDate">
+                                <div class="custom-select-input">
+                                    <span class="custom-select-value">30 Days</span>
+                                    <div class="custom-select-options">
+                                        <span class="selected">30 Days</span>
+                                        <span >60 Days</span>
+                                    </div>
+                                </div>
+                                <span class="message"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="option-card" type="clearBalance">
+                        <p class="option-card-title"><span>Clear the outstanding balances on all my active credit cards</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
+                        <div class="options-container">
+                            <div class="custom-radio-input">
+                                <input type="radio" name="clearBalance" id="yes" value="yes" checked="checked" >
+                                <label for="yes">Yes</label>
+                            </div>
+                            <div class="custom-radio-input">
+                                <input type="radio" name="clearBalance" id="no" value="no">
+                                <label for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="option-card" type="closeCreditCard">
+                        <p class="option-card-title"><span>Close my oldest credit card</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
+                        <div class="options-container">
+                            <div class="custom-radio-input">
+                                <input type="radio" name="closeCard" id="true" value="yes" checked="checked" >
+                                <label for="true">Yes</label>
+                            </div>
+                            <div class="custom-radio-input">
+                                <input type="radio" name="closeCard" id="false" value="no">
+                                <label for="false">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="scenario-cta">
+                <a class="cibil-button smiluate-now-cta">SIMULATE NOW</a>
+                <a class="primary-link add-scenario">+Add another scenario</a>
+            </div>
+        </div>
+        <div class="score-display-container">
+        </div>
+    </div>
+</div>

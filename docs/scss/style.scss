@@ -47,6 +47,15 @@ $intro-book: 400;
   color: $black;
 }
 
+@mixin intro-book-16 {
+  font-family: "Intro";
+  font-weight: $intro-book;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: $black;
+}
+
 @mixin intro-regular-14 {
   font-family: "Intro";
   font-weight: $intro-regular;
