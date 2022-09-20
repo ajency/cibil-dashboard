@@ -1,0 +1,12 @@
+{{ range .simulator }}
+<div class="simulator-section">
+    <div class="simulator-section__wraper">
+        <div class="simulator-container">
+            {{if .username}}<p class="username">{{.username}}</p>{{end}}
+            {{ partial "simulator" . }}
+            {{if .button_link}}<a href="{{.button_link}}" class="cibil-button">{{.button_text}}</a>{{end}}
+            {{if .link}}<a href="{{.link}}" class="cibil-link">{{.link_text}}</a>{{end}}
+        </div>
+    </div>
+</div>
+{{ end }}

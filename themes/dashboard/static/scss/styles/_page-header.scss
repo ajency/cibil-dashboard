@@ -15,6 +15,7 @@
       .breadcrumb-item {
         margin: 0;
         a {
+          text-transform: capitalize;
           border-radius: 4px;
           background-color: $light;
           min-height: 30px;

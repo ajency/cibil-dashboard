@@ -244,3 +244,83 @@
     }
   }
 }
+
+// overview section
+.overview-section {
+  background-color: $light-blue-3;
+  &__wraper {
+    .simulator-section {
+      &__wraper {
+        position: relative;
+        .simulator-container {
+          text-align: center;
+          background: $light;
+          box-shadow: $shadow-1;
+          border-radius: 8px;
+          padding: 30px 44px 18px;
+          .username {
+            font-weight: $intro-bold;
+            font-size: 24px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: $dark;
+            margin-bottom: 20px;
+          }
+          .cibil-button {
+            width: 100%;
+            margin-bottom: 18px;
+            margin-top: 23px;
+          }
+          .cibil-link {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    padding-top: 40px;
+    padding-bottom: 56px;
+    &__wraper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 118px;
+      .simulator-section {
+        width: calc(45% - 59px);
+        &__wraper {
+          .simulator-container {
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+      }
+      .smart-analysis-section {
+        width: calc(55% - 59px);
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    &__wraper {
+      .simulator-section {
+        margin-bottom: 40px;
+        &__wraper {
+          .simulator-container {
+            padding: 25.5px 40.33px 15.3px;
+            .username {
+              margin-bottom: 13.39px;
+            }
+            .cibil-button {
+              margin-top: 17.15px;
+              margin-bottom: 15.3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

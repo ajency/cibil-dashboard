@@ -16,6 +16,7 @@ $grey: #707070;
 $dark1:#565656;
 $primary-blue: #00a6ca;
 $light-blue-2: #f6f7fc;
+$light-blue-3:#F1F6FF;
 $light: #fff;
 $primary-yellow: #fcd800;
 
@@ -27,6 +28,9 @@ $gradient-blue: linear-gradient(
   #d3e0f8 22.84%,
   #f1f6ff 100%
 );
+
+/* shadows */
+$shadow-1: 0px 0px 48px rgba(31, 90, 133, 0.2);
 
 /* fonts */
 $intro: "Intro";

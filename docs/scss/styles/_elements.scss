@@ -69,3 +69,27 @@
     }
   }
 }
+.highlight-color{
+  color: $primary-blue;
+}
+.cibil-link {
+  font-weight: $intro-bold;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $black !important;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  &:before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: $black;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+}

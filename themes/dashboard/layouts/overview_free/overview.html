@@ -1,5 +1,12 @@
 {{ define "main" }}
 
-    {{ partial "page-header" . }}
+    <div class="overview-section">
+        <div class="page-width overview-section__wraper">
+            {{ partial "simulator-section" (dict "simulator" .Site.Data.simulator) }}
+            <div class="smart-analysis-section">
+                
+            </div>
+        </div>
+    </div>
 
 {{end}}

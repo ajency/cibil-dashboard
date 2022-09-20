@@ -570,7 +570,6 @@
 }
 
 // feature-card
-
 .feature-card {
   background: #f1f6ff;
   padding: 30px 58px;
@@ -609,6 +608,80 @@
     }
     .card-heading {
       margin-bottom: 10px;
+    }
+  }
+}
+
+// simulator
+.simulator {
+  text-align: center;
+  .score-bar {
+    .cibil-score {
+      font-weight: $intro-bold;
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: -0.01em;
+      color: $dark;
+      margin-bottom: 10px;
+      margin-top: 38px;
+    }
+    .score-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
+      color: $dark;
+      margin-bottom: 0px;
+      b {
+        font-weight: $intro-regular;
+      }
+      strong {
+        font-weight: $intro-bold;
+      }
+    }
+    .bar {
+      position: relative;
+      max-width: 260px;
+      margin-left: auto;
+      margin-right: auto;
+      .bar-image {
+        width: 100%;
+      }
+    }
+    .score-pointer {
+      margin-top: -18px;
+      &__wraper {
+        position: relative;
+        .pointer-image {
+          position: absolute;
+          left: calc(50% - 77px);
+          transform-origin: right center;
+        }
+        &:before,
+        &:after {
+          position: absolute;
+          bottom: -44px;
+          font-weight: $intro-regular;
+          font-size: 14px;
+          line-height: 14px;
+          color: #acacac;
+        }
+        &::before {
+          content: "300";
+          left: 0px;
+        }
+        &::after {
+          content: "900";
+          right: 0px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    .score-bar{
+      .cibil-score{
+        margin-bottom: 2.49px;
+        margin-top: 35.47px;
+      }
     }
   }
 }
