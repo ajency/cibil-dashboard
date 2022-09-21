@@ -59,38 +59,15 @@ $(function () {
     });
   }
     
-    $('.langauge-item').click(function(){
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-        $(".language-selector span").text($(this).text())
-        setTimeout(function(){
-            $(".language-selector, .language-list").removeClass('active')
-            $('.overlay').removeClass('opened')
-        },100)
-    })
-    $('.hamburger').click(function(){
-        $(this).toggleClass('opened');
-        if($('.language-selector').hasClass('active')){
-            $(".language-selector, .language-list").removeClass('active')
-        }
-        else{
-            $('.overlay').toggleClass('opened')
-        }
-        $('.mobile-nav-list').toggleClass('opened');
-    })
-    $('.overview-list .overview-item').click(function(e){
-        e.preventDefault();
-        $('.overview-list').toggleClass('opened')
-    })
-    $('.custom-select-input').click(function(){
-        $(this).toggleClass('opened')
-    })
-    $('.custom-select-options span').click(function(){
-        $(this).siblings().removeClass("selected")
-        $(this).addClass('selected')
-        $(this).parents('.custom-select-input').find('.custom-select-value').text($(this).text())
-        $('#loantype').val($(this).text())
-    })    
+  $('.custom-select-input').click(function(){
+      $(this).toggleClass('opened')
+  })
+  $('.custom-select-options span').click(function(){
+      $(this).siblings().removeClass("selected")
+      $(this).addClass('selected')
+      $(this).parents('.custom-select-input').find('.custom-select-value').text($(this).text())
+      $('#loantype').val($(this).text())
+  })    
 })
 function addOption(element, option){
     $('.scenario-options').hide();
