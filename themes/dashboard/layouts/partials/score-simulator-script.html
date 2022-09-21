@@ -241,6 +241,8 @@
     }
 
     function deleteScenario(element){
+        let counter = parseInt($('#counter').val()) - 1;
+        $('#counter').val(counter)
         let parentElement = $(element).parents('.scenario')
         let optionValue = parentElement.find('.option-card:visible').attr('type')
         let value = $('#optionsAdded').val();
