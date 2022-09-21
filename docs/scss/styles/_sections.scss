@@ -304,7 +304,7 @@
       }
     }
   }
-  @include media-breakpoint-only(md) {
+  @include media-breakpoint-between(md, xl){
     &__wraper {
       .simulator-section {
         width: calc(45% - 20px);
@@ -537,7 +537,7 @@
 }
 
 // cibil report section
-.cibil-report-section {
+.cibil-report-ctas {
   margin-bottom: 60px;
   &__wraper {
     width: 100%;

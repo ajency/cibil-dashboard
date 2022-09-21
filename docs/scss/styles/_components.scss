@@ -278,7 +278,7 @@
     align-items: center;
 
     .discount {
-      background: #fcd800;
+      background: $primary-yellow;
       border-radius: 12px;
       padding: 6px 0px;
       font-weight: 700;
@@ -429,7 +429,7 @@
         position: absolute;
         bottom: -1px;
         left: -1px;
-        background-color: #fcd800;
+        background-color: $primary-yellow;
         font-size: 14px;
         line-height: 24px;
         text-align: center;
@@ -571,7 +571,7 @@
 
 // feature-card
 .feature-card {
-  background: #f1f6ff;
+  background: $light-blue-3;
   padding: 30px 58px;
   display: flex;
   justify-content: center;
@@ -663,7 +663,7 @@
           font-weight: $intro-regular;
           font-size: 14px;
           line-height: 14px;
-          color: #acacac;
+          color: $grey-1;
         }
         &::before {
           content: "300";
@@ -695,7 +695,7 @@
 }
 .good-result,
 .bad-result {
-  background: #ffffff;
+  background: $light;
   border-radius: 8px;
   margin-bottom: 10px;
   ul {
@@ -736,9 +736,11 @@
 
 // report cta
 .report-cta {
-  background: #f1f6ff;
+  background: $light-blue-3;
   border-radius: 8px;
   padding: 30px 20px;
+  display: flex;
+  align-items: center;
   &__wraper {
     display: flex;
     align-items: flex-start;
@@ -791,14 +793,14 @@
     align-items: center;
     column-gap: 27px;
     .cta-icon {
-      background: #fbd602;
+      background: $yellow;
       border-radius: 6px;
       padding: 30px 42px 24px 41px;
     }
     .content {
       .desc {
         letter-spacing: 0.02em;
-        color: #ffffff;
+        color: $light;
         margin-bottom: 0px;
         font-weight: $intro-regular;
       }
@@ -846,8 +848,8 @@
 }
 .video-js {
   .vjs-big-play-button {
-    background-color: #fff !important;
-    color: #2c2c2c;
+    background-color: $light !important;
+    color: $black;
     width: 50px !important;
     height: 50px !important;
     padding: 0 !important;

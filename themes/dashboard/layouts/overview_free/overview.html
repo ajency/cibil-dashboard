@@ -2,6 +2,8 @@
 
     {{ partial "overview-section" . }}
 
-    {{ partial "cibil-report-section" (dict "section_heading" "CIBIL Report") }}
+    {{ partial "cibil-report-ctas" (dict "section_heading" "CIBIL Report") }}
+
+    {{ partial "credit-summary-ctas" (dict "section_heading" "OVERVIEW OF YOUR CREDIT SUMMARY" "last_refresh_prefix" "as of your last refresh on" "last_refresh_date" "19th Apr'22" ) }}
 
 {{end}}
