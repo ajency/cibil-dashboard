@@ -1,4 +1,4 @@
-<div class="video-cta" style="background-image: url(..{{.cta_bg_image}});" data-toggle="modal" data-target="#video-CTA-modal">
+<div class="video-cta" style="background-image: url(..{{.cta_bg_image}});" data-toggle="modal" data-target="#{{.popup_id}}">
     <div class="video-cta__wraper">
         <div class="cta-icon">
             <img src="{{ .cta_icon | relURL }}" alt="">
@@ -11,8 +11,7 @@
 </div>
 
   <!-- Video CTA Modal -->
-
-  <div class="modal fade" id="video-CTA-modal" tabindex="-1" role="dialog" aria-labelledby="video-CTA-modal-title" aria-hidden="true">
+  <div class="modal fade" id="{{.popup_id}}" tabindex="-1" role="dialog" aria-labelledby="{{.popup_id}}-title" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
