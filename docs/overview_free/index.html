@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
 <link rel="stylesheet" href="/cibil-dashboard/css/style.css">
+<link rel="stylesheet" href="/cibil-dashboard/css/video-js.css">
 </head>
     <body class="overview">
         <div class="main-container">
@@ -397,15 +398,66 @@ Free Account</p>
   <div class="page-width cibil-report-section__wraper">
     <p class="section-heading section-heading-small">CIBIL Report</p>
     <div class="column-container">
+
       <div class="report-cta">
     <div class="report-cta__wraper">
         <img src="/cibil-dashboard/images/static-images/cibil-report-icon.svg" alt="" class="cta-icon">
         <div class="content">
-            <p>Get your personalized CIBIL Report to plan your financial future.</p>
+            <p class="desc">Get your personalized CIBIL Report to plan your financial future.</p>
             <a href="#" class="cibil-link cibil-link-right-icon">VIEW YOUR CIBIL REPORT<img src="/cibil-dashboard/images/static-images/arrow-right-icon.svg" alt="" class="icon"></a>
         </div>
     </div>
+</div>
+
+      <div class="video-cta" style="background-image: url(../images/dynamic-images/video-cta-bg.png);" data-toggle="modal" data-target="#video-CTA-modal">
+    <div class="video-cta__wraper">
+        <div class="cta-icon">
+            <img src="/cibil-dashboard/images/static-images/video-icon.svg" alt="">
+        </div>
+        <div class="content">
+            <div class="play-button"><img src="/cibil-dashboard/images/static-images/play-icon.svg" alt=""></div>
+            <p class="desc">Watch this video to know more about your CIBIL Score &amp; Report</p>
+        </div>
+    </div>
+</div>
+
+  
+
+  <div class="modal fade" id="video-CTA-modal" tabindex="-1" role="dialog" aria-labelledby="video-CTA-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title">All you need to know about the CIBIL Score and Report TransUnion CIBIL</p>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><img src="/cibil-dashboard/images/static-images/close-icon.svg" alt=""></span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <video
+            id="download-now-video"
+            class="video-js"
+            controls
+            preload="auto"
+            width="680"
+            height="326"
+            poster=""
+            data-setup="{}"
+          >
+            <source src="/cibil-dashboard/videos/download-now.mp4" type="video/mp4" />
+            <source src="/cibil-dashboard/videos/download-now.webm" type="video/webm" />
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that
+              <a href="https://videojs.com/html5-video-support/" target="_blank"
+                >supports HTML5 video</a
+              >
+            </p>
+          </video>
+        </div>
       </div>
+    </div>
+  </div>
+
     </div>
   </div>
 </div>
@@ -426,6 +478,7 @@ Free Account</p>
 <script src="/cibil-dashboard/js/jquery.min.js"></script>
 <script src="/cibil-dashboard/js/bootstrap.bundle.min.js"></script>
 <script src="/cibil-dashboard/js/global.js"></script>
+<script src="/cibil-dashboard/js/video.min.js"></script>
 <script src="/cibil-dashboard/js/scripts.js"></script>
 
             </div>

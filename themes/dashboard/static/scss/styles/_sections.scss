@@ -545,12 +545,16 @@
       margin-bottom: 20px;
     }
   }
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     &__wraper {
       .column-container {
         display: flex;
+        justify-content: space-between;
         .report-cta {
-          width: calc(60% - 10px);
+          width: calc(57% - 10px);
+        }
+        .video-cta {
+          width: calc(43% - 10px);
         }
       }
     }
