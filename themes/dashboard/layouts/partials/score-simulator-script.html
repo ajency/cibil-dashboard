@@ -39,13 +39,20 @@
         let html = `
             <div class="scenario blank">
                 <div class="scenario-header">
+                    <div class="confirmation">
+                        <span class="confirmation-text">
+                            Are you sure you want to remove this Scenario?
+                        </span>
+                        <span class="warning-cta" onclick="deleteScenario(this)">{{partial "icons/confirm-yellow"}}</span>
+                        <span class="warning-cta"onclick="cancelAction(this)">{{ partial "icons/cancel-yellow" }}</span>
+                    </div>
                     <p class="scenario-name">Add Scenario ${counter}</p>
                     <p class="scenatio-cta">
                         <a class="minimize" onclick="minimizeScenario(this)">{{partial "icons/black-minimize"}} <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14 7H0" stroke="#2C2C2C" stroke-width="1.6"/>
                         <path d="M7 4.11765e-07L7 14" stroke="#2C2C2C" stroke-width="1.6"/>
                         </svg></a>
-                        <a onclick="closeScenario(this)">{{partial "icons/black-close"}}</a>
+                        <a onclick="showConfirmation(this)">{{partial "icons/black-close"}}</a>
                     </p>
                 </div>
                 <div class="scenario-body">
@@ -215,7 +222,7 @@
                                 </div>
                             </div>
                             <div class="group message-group"></div>
-                            <div class="group message-group">
+                            <div class="group message-group" style="margin-right: 0">
                                 <span class="message">Added amount cannot be higher than the outstanding balance on this account</span>
                             </div>
                             <div class="addPaymnet-container">
@@ -231,5 +238,20 @@
         $(element).parents('.scenario-body').append(html)
         $(element).parents('.scenario').removeClass('blank');
         $('.scenario-list').removeClass('hasBlank')
+    }
+
+    function deleteScenario(element){
+        let parentElement = $(element).parents('.scenario')
+        let optionValue = parentElement.find('.option-card:visible').attr('type')
+        let value = $('#optionsAdded').val();
+        $('#optionsAdded').val(value.replace(optionValue+",",""));
+        parentElement.remove();
+    }
+    function cancelAction(element){
+        $(element).parent().removeClass('show');
+    }
+    function showConfirmation(element){
+        $(element).parents('.scenario-header').find('.confirmation').addClass('show');
+        console.log($(element).parents('.scenario-header'))
     }
 </script>

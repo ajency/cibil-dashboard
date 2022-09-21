@@ -174,7 +174,8 @@
     color: $dark;
     display: block;
     position: relative;
-    &.input-currency {
+    width: 100%;
+    &.input-currency{
       padding-left: 30px;
     }
   }

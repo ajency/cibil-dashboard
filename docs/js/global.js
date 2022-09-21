@@ -80,7 +80,6 @@ function customSelectOption(element){
 }
 function closeScenario(element){
     let parentElement = $(element).parents('.scenario')
-    console.log(parentElement.find('.option-card:visible').attr('type'))
     let optionValue = parentElement.find('.option-card:visible').attr('type')
     let value = $('#optionsAdded').val();
     $('#optionsAdded').val(value.replace(optionValue+",",""));
