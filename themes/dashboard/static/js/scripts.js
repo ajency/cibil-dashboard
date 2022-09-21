@@ -21,3 +21,22 @@ $("#video-CTA-modal").on("hide.bs.modal", function (e) {
   player.play("pause");
   player.muted(true);
 });
+
+// banner cta
+$(".banner-cta").each( function(){
+  $bannerHeight = $(this).attr("data-height");
+  $(this).css("height", $bannerHeight);
+});
+
+
+// tooltip
+$(".cibil-tooltip").hover(function(){
+  var position = $(this).position();
+  console.log("left:"+ position.left + ", top:"+ position.top);
+  $(this).children(".tooltip-content").toggle();
+});
+$(".cibil-tooltip").click(function(){
+  var position = $(this).position();
+  console.log("left:"+ position.left + ", top:"+ position.top);
+  $(this).children(".tooltip-content").toggle();
+});

@@ -304,7 +304,7 @@
       }
     }
   }
-  @include media-breakpoint-between(md, xl){
+  @include media-breakpoint-between(md, xl) {
     &__wraper {
       .simulator-section {
         width: calc(45% - 20px);
@@ -499,7 +499,7 @@
     justify-content: flex-start;
     flex-flow: wrap;
     width: 100%;
-    &.active{
+    &.active {
       display: flex;
     }
   }
@@ -603,15 +603,68 @@
         display: flex;
         justify-content: space-between;
         .report-cta {
-          width: calc(57% - 10px);
+          width: calc(57% - 11px);
         }
         .video-cta {
-          width: calc(43% - 10px);
+          width: calc(43% - 11px);
         }
       }
     }
   }
   @include media-breakpoint-down(sm) {
     margin-bottom: 40px;
+  }
+}
+
+// credit summary section
+.credit-summary-ctas {
+  margin-bottom: 60px;
+  &__wraper {
+    .subheading-light {
+      margin-bottom: 30px;
+    }
+    .small-ctas {
+      &__wraper {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        border-bottom: 2px solid $light-blue-5;
+        column-gap: 20px;
+        &:not(:last-child){
+          margin-bottom: 20px;
+        }
+        .summary-number-cta {
+          width: calc(50% - 15.5px);
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__wraper {
+      .ctas-container {
+        display: flex;
+        justify-content: space-between;
+        .small-ctas {
+          width: calc(57% - 11px);
+        }
+        .medium-ctas {
+          width: calc(43% - 11px);
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    &__wraper{
+      .section-heading{
+        margin-bottom: 10px;
+      }
+      .small-ctas{
+        margin-bottom: 30px;
+        &__wraper{
+          column-gap: 40px;
+          padding-bottom: 30px;
+        }
+      }
+    }
   }
 }

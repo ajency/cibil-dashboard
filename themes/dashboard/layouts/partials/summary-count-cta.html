@@ -1,0 +1,17 @@
+<div class="summary-count-cta">
+    <p class="summary-count">
+        {{if .summary_number}}
+            {{.summary_number}}
+        {{ end }}
+        {{if or .summary_years .summary_months }}
+            {{.summary_years}}<span>y</span>{{.summary_months}}<span>m</span>
+        {{ end }}
+    </p>
+    <p class="summary-title">{{.summary_title}}</p>
+    <p class="summary-rating {{if .rating}}{{.rating}}{{end}}">{{.rating_text}}</p>
+    {{if .tooltip_content}}
+        {{ partial "tooltip" . }}
+    {{end}}
+    <p class="summary-details">{{.summary_details}}</p>
+    {{if .cta_link}}<a href="{{.cta_link}}" class="cibil-link cibil-link-right-icon">{{.cta_text}}</a>{{end}}
+</div>

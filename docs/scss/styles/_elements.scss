@@ -34,8 +34,15 @@
   font-size: 24px;
   line-height: 30px;
 }
-
-.primary-link{
+.subheading {
+  &-light {
+    font-size: 16px;
+    line-height: 16px;
+    color: $grey-1;
+    font-weight: 600;
+  }
+}
+.primary-link {
   @include intro-book-16;
   text-decoration-line: underline !important;
   color: $primary-blue !important;
@@ -80,6 +87,12 @@
     bottom: 9px;
     z-index: -1;
   }
+  &-text-blue {
+    color: $primary-blue;
+  }
+  &-text-black {
+    color: $black;
+  }
   @include media-breakpoint-down(sm) {
     &:after {
       bottom: 4px;
@@ -87,9 +100,7 @@
     }
   }
 }
-.highlight-color {
-  color: $primary-blue;
-}
+
 .cibil-link {
   font-weight: $intro-bold;
   font-size: 14px;
@@ -112,8 +123,8 @@
   }
   &-right-icon {
     padding-right: 23px;
-    &:after{
-      content: '';
+    &:after {
+      content: "";
       width: 13px;
       height: 12px;
       background-image: url(/cibil-dashboard/images/static-images/arrow-right-icon.svg);
@@ -126,12 +137,11 @@
       max-width: calc(100% - 23px);
     }
   }
-  @include media-breakpoint-down(sm){
-    &-right-icon{
+  @include media-breakpoint-down(sm) {
+    &-right-icon {
       padding-right: 20px;
-      &:after{
+      &:after {
         width: 14px;
-        top: -0.5px;
       }
       &:before {
         max-width: calc(100% - 20px);
@@ -146,15 +156,16 @@
   width: calc(50% - 10px);
   position: relative;
 
-  &:nth-of-type(odd){
+  &:nth-of-type(odd) {
     margin-right: 20px;
   }
-  label{
+  label {
     @include intro-regular-16;
     color: $dark;
     margin-bottom: 2px;
   }
-  input, .custom-select-value{
+  input,
+  .custom-select-value {
     @include intro-book-16;
     color: $dark;
     background: $light;
@@ -163,13 +174,13 @@
     color: $dark;
     display: block;
     position: relative;
-    &.input-currency{
+    &.input-currency {
       padding-left: 30px;
     }
   }
-  .custom-select-value{
-    &::after{
-      content: '';
+  .custom-select-value {
+    &::after {
+      content: "";
       width: 11px;
       height: 6px;
       background-image: url(/cibil-dashboard/images/static-images/grey-arrow.svg);
@@ -183,7 +194,7 @@
       transform: translateY(-50%);
     }
   }
-  .custom-select-input{
+  .custom-select-input {
     position: relative;
     cursor: pointer;
   }
@@ -197,11 +208,12 @@
     top: 100%;
     left: 0;
     z-index: 5;
-    span{
+    span {
       display: block;
       padding: 5px 16px;
       cursor: pointer;
-      &:hover, &.selected{
+      &:hover,
+      &.selected {
         font-weight: 600;
         background-color: $light-blue-4;
         color: $primary-blue;
@@ -209,26 +221,26 @@
     }
   }
 
-  .custom-select-input.opened{
+  .custom-select-input.opened {
     .custom-select-options {
       display: block;
     }
   }
   .message {
     @include intro-regular-14;
-    color: #D74025;
+    color: #d74025;
   }
   &.long-radio {
     background: $light;
     border-radius: 6px;
     margin-bottom: 22px;
-    label{
+    label {
       padding: 16px 10px 14px 40px;
       position: relative;
       cursor: pointer;
       @include intro-book-14;
-      &::after{
-        content: '';
+      &::after {
+        content: "";
         width: 16px;
         height: 16px;
         border: 1px solid $black;
@@ -239,12 +251,12 @@
         border-radius: 50%;
       }
     }
-    input{
+    input {
       display: none;
     }
-    input[type=radio]:checked+label{
-      &::before{
-        content: '';
+    input[type="radio"]:checked + label {
+      &::before {
+        content: "";
         width: 8px;
         height: 8px;
         background-color: $primary-blue;
@@ -262,11 +274,11 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.input-holder{
+.input-holder {
   position: relative;
 }
 .currency {
@@ -283,18 +295,18 @@ input[type=number] {
   z-index: 2;
 }
 
-.custom-radio-input{
-  input[type=radio]{
+.custom-radio-input {
+  input[type="radio"] {
     opacity: 0;
     width: 0;
     display: none;
-    &:checked+label{
+    &:checked + label {
       background-color: $primary-blue;
       border-color: $primary-blue;
       color: $light;
     }
   }
-  label{
+  label {
     padding: 12px 22px 12px 22px;
     border: 1px solid $grey-1;
     color: $grey;
@@ -302,14 +314,57 @@ input[type=number] {
     cursor: pointer;
   }
 }
-@include media-breakpoint-down(sm){
-  .group{
+@include media-breakpoint-down(sm) {
+  .group {
     width: 100%;
     margin-right: 0 !important;
     max-width: 100%;
     margin-bottom: 20px;
-    input, .custom-select-value{
+    input,
+    .custom-select-value {
       width: 100%;
+    }
+  }
+}
+
+.cibil-tooltip {
+  height: 16px;
+  width: 16px;
+  display: inline-flex;
+  background-image: url(/cibil-dashboard/images/static-images/tooltip-question.svg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-left: 4px;
+  margin-bottom: -2px;
+  .tooltip-content {
+    display: none;
+    background: $black;
+    position: absolute;
+    top: 40px;
+    left: -15px;
+    z-index: 1;
+    padding: 10px 12px;
+    border-radius: 6px;
+    &__wraper {
+      width: 266px;
+      overflow: hidden;
+      color: $light;
+      letter-spacing: 0.02em;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &:after{
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 14px solid $black;
+      position: absolute;
+      left: 12px;
+      top: -14px;
     }
   }
 }
