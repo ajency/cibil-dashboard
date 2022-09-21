@@ -69,18 +69,26 @@ $(function () {
       $('#loantype').val($(this).text())
   })    
 })
-function addOption(element, option){
-    $('.scenario-options').hide();
-    let optionElement = $(element).parents('.scenario-body').find("[type="+option+"]")
-    $(element).parents('.scenario').removeClass('blank')
-    optionElement.show();
+function customSelectInput(element){
+  $(element).toggleClass('opened')
+}
+function customSelectOption(element){
+  $(element).siblings().removeClass("selected")
+  $(element).addClass('selected')
+  $(element).parents('.custom-select-input').find('.custom-select-value').text($(element).text())
+  $('#loantype').val($(element).text())
 }
 function closeScenario(element){
     let parentElement = $(element).parents('.scenario')
+    console.log(parentElement.find('.option-card:visible').attr('type'))
+    let optionValue = parentElement.find('.option-card:visible').attr('type')
+    let value = $('#optionsAdded').val();
+    $('#optionsAdded').val(value.replace(optionValue+",",""));
     parentElement.addClass('blank')
     parentElement.find('.scenario-options').show()
-    parentElement.find('.option-card').hide()
+    parentElement.find('.option-card').remove()
     parentElement.removeClass('closed')
+    $(element).parents('.scenario-list').addClass('hasBlank');
 }
 function minimizeScenario(element){
     let parentElement = $(element).parents('.scenario')

@@ -468,7 +468,7 @@
     }
   }
   .option-card {
-    display: none;
+    // display: none;
     .option-card-title {
       letter-spacing: 0.02em;
       margin-bottom: 30px;
@@ -480,6 +480,11 @@
       display: flex;
       justify-content: flex-start;
       flex-flow: wrap;
+    }
+  }
+  .scenario-list.hasBlank{
+    & + .scenario-cta .add-scenario{
+      display: none;
     }
   }
   .scenario-cta {
@@ -516,6 +521,40 @@
       }
     }
   }
+  .addPaymnet-container, .message-group{
+    display: none
+  }
+  .message-group{
+    margin-right: 20px;
+  }
+  .addPaymnet-container{
+    width: 100%;
+  }
+  .chooseAccount-wrapper.active{
+    & ~ .addPaymnet-container, & ~ .message-group {
+      display: block
+    } 
+  }
+  .addPayment{
+    @include intro-regular-16;
+    color: $dark !important;
+    text-decoration: underline !important;
+    cursor: pointer;
+  }
+  .group-wrap {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    flex-flow: wrap;
+    justify-content: flex-start;
+  }
+  .scenario-list{
+    .scenario{
+      &:not(:last-child){
+        margin-bottom: 30px;
+      }
+    }
+  }
   @include media-breakpoint-down(md) {
     flex-direction: column-reverse;
     .scenario-option {
@@ -532,6 +571,19 @@
     .score-display-container {
       width: 100%;
       padding: 0;
+    }
+    .scenario-cta{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .smiluate-now-cta{
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      .add-scenario{
+        font-weight: 600;
+      }
     }
   }
 }

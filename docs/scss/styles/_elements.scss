@@ -225,6 +225,7 @@
     label{
       padding: 16px 10px 14px 40px;
       position: relative;
+      cursor: pointer;
       @include intro-book-14;
       &::after{
         content: '';
