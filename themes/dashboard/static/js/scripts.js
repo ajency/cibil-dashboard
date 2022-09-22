@@ -66,13 +66,16 @@ $(function() {
       let leftPosition =  tooltip_trigger.position().left;
       let elHeight = tooltip_trigger.height()*2.2;
       let elWidth = tooltip_trigger.width()*70/100;
+
+      let arrowPosition = (leftPosition);
   
       if ( (leftPosition-elWidth) < 0 ){
         tooltip_box.css({"top":topPosition+elHeight, "left":leftPosition});
         $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{left: '+ leftPosition +'px;}</style>');
       } else{
         tooltip_box.css({"top":topPosition+elHeight, "left": (leftPosition - elWidth)});
-        console.log("top:"+topPosition+elHeight, "left:"+ (leftPosition - elWidth));
+        console.log(arrowPosition);
+        $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{right: calc('+ arrowPosition +'px - 130%) !important;}</style>');
       }
     }
   
