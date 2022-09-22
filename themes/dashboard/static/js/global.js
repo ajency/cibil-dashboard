@@ -31,13 +31,16 @@ $(function () {
   });
 
   // animated simulator
-  $(".simulator .score-bar").each(function () {
+  $(".simulator:not(.empty-simulator) .score-bar").each(function () {
     updateScore(0);
   });
   function updateScore($initialScore) {
-    $(".simulator .score-bar").each(function () {
+    $(".simulator:not(.empty-simulator) .score-bar").each(function () {
       var $pointer = $(this).find(".score-pointer .pointer-image");
       var $val = $(this).find(".cibil-score");
+
+      /* console.log($val.text()); */
+
       var oldperc = parseInt($val.text(), 10);
       var perc = oldperc - 300;
       var $outputPerc = $(".outputPerc");
