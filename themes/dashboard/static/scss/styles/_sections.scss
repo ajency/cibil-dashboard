@@ -828,6 +828,65 @@
   }
 }
 
+// personal loan offers section
+.personal-loan-offers-section {
+  margin-bottom: 60px;
+  &__wraper {
+    .offers-n-partners {
+      background: $light;
+      box-shadow: $shadow-blue;
+      border-radius: 12px;
+      padding: 30px 25px;
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 18px;
+        .section-title {
+          margin-bottom: 0px;
+          font-size: 16px;
+          line-height: 16px;
+          letter-spacing: 0.02em;
+        }
+      }
+      .offers {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 40px;
+    .section-heading {
+      margin-bottom: 10px;
+    }
+    &__wraper {
+      .offers-n-partners {
+        box-shadow: none;
+        padding: 0;
+        .section-head {
+          flex-direction: column;
+          row-gap: 20px;
+          margin-bottom: 20px;
+          .section-title{
+            line-height: 24px;
+            max-width: 359px;
+          }
+        }
+        .offers {
+          margin-left: -9px;
+          margin-right: -9px;
+        }
+        .hide-sm-down{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 //cibil report
 .report-bar {
   background-color: #E5EDFC;

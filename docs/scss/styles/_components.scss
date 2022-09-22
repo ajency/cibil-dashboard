@@ -1128,8 +1128,114 @@
     &__wraper {
       display: flex;
       flex-direction: column-reverse;
-      .cibil-link{
+      .cibil-link {
         margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+// offer box
+.offer {
+  background: $light-blue-3;
+  border-radius: 12px;
+  padding: 20px 11px;
+  display: inline-flex;
+  margin-bottom: 20px;
+  width: calc((100% / 4) - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+  &__wraper {
+    width: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 2fr auto;
+    align-items: center;
+    p {
+      margin-bottom: 0px;
+    }
+    .offer-icon {
+      width: 32px;
+      margin-right: 17px;
+      svg {
+        width: 100%;
+      }
+    }
+    .offer-title {
+      font-weight: $intro-regular;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+    }
+    .offer-count {
+      background: $light;
+      border: 1px solid #006685;
+      border-radius: 21px;
+      height: 30px;
+      width: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 13px;
+      font-weight: $intro-bold;
+      font-size: 14px;
+      line-height: 14px;
+      color: $secondary-denim;
+    }
+  }
+  &.no-offers {
+    .offer__wraper {
+      .offer-title,
+      .offer-count {
+        color: $grey-1;
+      }
+      .offer-icon {
+        svg {
+          path {
+            fill: $grey-1;
+          }
+        }
+      }
+      .offer-count {
+        border-color: $seperator-line-color;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    width: calc((100% / 3) - 20px);
+  }
+  @include media-breakpoint-down(sm) {
+    width: calc(50% - 18px);
+    margin: 10px 9px;
+    min-height: 86px;
+    align-items: flex-start;
+    padding: 16px;
+    padding-left: 10px;
+    &__wraper {
+      align-items: start;
+      .offer-title {
+        font-size: 14px;
+        line-height: 16px;
+      }
+      .offer-icon{
+        width: 31px;
+        margin-right: 13px;
+      }
+      .offer-count{
+        height: 32px;
+        width: 32px;
+        background-color: $primary-yellow;
+        border: none;
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 3px;
+      }
+    }
+    &.no-offers{
+      .offer__wraper{
+        .offer-count{
+          background-color: $light;
+        }
       }
     }
   }

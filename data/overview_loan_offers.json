@@ -1,0 +1,46 @@
+[
+  {
+    "total_offers": 24,
+    "offers": [
+      {
+        "offer_title": "Credit<br>Card",
+        "offer_count": 2,
+        "icon_partial": "icons/credit-card-icon.html"
+      },
+      {
+        "offer_title": "Personal<br>Loan",
+        "offer_count": 5,
+        "icon_partial": "icons/personal-loan-icon.html"
+      },
+      {
+        "offer_title": "Business<br>Loan",
+        "offer_count": 3,
+        "icon_partial": "icons/business-loan-icon.html"
+      },
+      {
+        "offer_title": "Home<br>Loan",
+        "offer_count": 0,
+        "icon_partial": "icons/home-loan-icon.html"
+      },
+      {
+        "offer_title": "Loan Against<br>Property",
+        "offer_count": 2,
+        "icon_partial": "icons/property-loan-icon.html"
+      },
+      {
+        "offer_title": "Auto<br>Loan",
+        "offer_count": 12,
+        "icon_partial": "icons/auto-loan-icon.html"
+      },
+      {
+        "offer_title": "Financial<br>Products",
+        "offer_count": 1,
+        "icon_partial": "icons/financial-products-icon.html"
+      }
+    ],
+    "link": "#",
+    "link_text": "EDIT INFORMATION",
+    "button_link": "#",
+    "button_text": "SHOW ALL OFFERS"
+  }
+]
