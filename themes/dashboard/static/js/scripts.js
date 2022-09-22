@@ -28,15 +28,69 @@ $(".banner-cta").each( function(){
   $(this).css("height", $bannerHeight);
 });
 
+$(function() {
+  if ($(window).width() < 767) {
+    // circular usage
+    $('.card-usage').easyPieChart({
+      size: 64,
+      barColor: "#00A6CA",
+      scaleLength: 0,
+      lineWidth: 4,
+      trackColor: "#F1F6FF",
+      lineCap: "round",
+      animate: 1000,
+    });
+  } else{
+    // circular usage
+    $('.card-usage').easyPieChart({
+      size: 64,
+      barColor: "#00A6CA",
+      scaleLength: 0,
+      lineWidth: 5.5,
+      trackColor: "#F1F6FF",
+      lineCap: "round",
+      animate: 1000,
+    });
+  }
+});
 
-// tooltip
-$(".cibil-tooltip").hover(function(){
-  var position = $(this).position();
-  console.log("left:"+ position.left + ", top:"+ position.top);
-  $(this).children(".tooltip-content").toggle();
-});
-$(".cibil-tooltip").click(function(){
-  var position = $(this).position();
-  console.log("left:"+ position.left + ", top:"+ position.top);
-  $(this).children(".tooltip-content").toggle();
-});
+  /* tooltip */
+  $(".tooltip-toggle").each(function(){
+    var tooltip_trigger = $(this);
+    var tooltipBoxId = tooltip_trigger.next();
+    var tooltip_box = $(tooltipBoxId);
+    var tooltip_box_arrow = $(".tooltip-box .tooltip-box__wraper:before");
+  
+    let calculatePosition = () => {
+      let topPosition = tooltip_trigger.position().top;
+      let leftPosition =  tooltip_trigger.position().left;
+      let elHeight = tooltip_trigger.height()*2.2;
+      let elWidth = tooltip_trigger.width()*70/100;
+  
+      if ( (leftPosition-elWidth) < 0 ){
+        tooltip_box.css({"top":topPosition+elHeight, "left":leftPosition});
+        $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{left: '+ leftPosition +'px;}</style>');
+      } else{
+        tooltip_box.css({"top":topPosition+elHeight, "left": (leftPosition - elWidth)});
+        console.log("top:"+topPosition+elHeight, "left:"+ (leftPosition - elWidth));
+      }
+    }
+  
+    let showTooltip = () => {
+      tooltip_box.removeClass("hide");
+      tooltip_box.addClass("show");
+    }
+  
+    let hideTooltip = () => {
+      tooltip_box.removeClass("show");
+      tooltip_box.addClass("hide");
+    }
+  
+    tooltip_trigger.mouseover(function(){
+      calculatePosition();
+      showTooltip();
+    });
+    tooltip_trigger.mouseout(function(){
+      hideTooltip();
+    });
+  });

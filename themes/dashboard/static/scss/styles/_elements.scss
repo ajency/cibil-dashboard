@@ -175,7 +175,7 @@
     display: block;
     position: relative;
     width: 100%;
-    &.input-currency{
+    &.input-currency {
       padding-left: 30px;
     }
   }
@@ -328,6 +328,7 @@ input[type="number"] {
   }
 }
 
+/* tooltip */
 .cibil-tooltip {
   height: 16px;
   width: 16px;
@@ -339,33 +340,63 @@ input[type="number"] {
   position: relative;
   margin-left: 4px;
   margin-bottom: -2px;
-  .tooltip-content {
-    display: none;
+}
+
+/* tooltip box */
+.tooltip-box {
+  max-width: 266px;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  z-index: 9;
+  &.show,
+  &.hide {
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  }
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  &.hide {
+    opacity: 0;
+    transform: translateY(10px);
+    visibility: hidden;
+  }
+  &__wraper {
     background: $black;
-    position: absolute;
-    top: 40px;
-    left: -15px;
-    z-index: 1;
-    padding: 10px 12px;
+    max-width: 405px;
     border-radius: 6px;
-    &__wraper {
-      width: 266px;
-      overflow: hidden;
-      color: $light;
-      letter-spacing: 0.02em;
-      font-size: 14px;
-      line-height: 24px;
-    }
-    &:after{
+    padding: 10px 15px 6px 12px;
+    font-family: $intro-book;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $light;
+    position: relative;
+    z-index: 9;
+    &:before {
       content: "";
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-bottom: 14px solid $black;
+      background-color: $black;
+      width: 26px;
+      height: 26px;
       position: absolute;
-      left: 12px;
-      top: -14px;
+      top: -7px;
+      left: 10px;
+      z-index: -1;
+      border-radius: 2px;
+      transform: rotate(45deg);
+    }
+    p {
+      margin-bottom: 0px;
+    }
+  }
+  @media (max-width: 480px) {
+    &__wraper {
+      max-width: calc(100% - 20px);
     }
   }
 }

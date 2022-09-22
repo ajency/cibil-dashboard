@@ -775,6 +775,7 @@
     }
   }
   @include media-breakpoint-down(sm){
+    margin-bottom: 40px;
     &__wraper{
       .section-heading{
         margin-bottom: 10px;

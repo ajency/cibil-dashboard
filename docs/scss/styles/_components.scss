@@ -964,10 +964,30 @@
       color: $red;
     }
   }
+  .card-usage-box {
+    margin-bottom: 16.5px;
+    .card-usage {
+      display: inline-flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      .usage-value {
+        position: absolute;
+        font-weight: $intro-bold;
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+        color: $dark;
+      }
+    }
+  }
   @include media-breakpoint-down(sm) {
     width: 50%;
     .summary-count {
       margin-bottom: 20px;
+    }
+    .card-usage-box{
+      margin-bottom: 12px;
     }
     .summary-details {
       font-size: 14px;
@@ -993,7 +1013,7 @@
   padding: 20px 20px 30px;
   height: 230px;
   position: relative;
-  .bg-image{
+  .bg-image {
     position: absolute;
     z-index: -1;
     left: 0;
@@ -1037,6 +1057,10 @@
     }
   }
   @include media-breakpoint-down(sm) {
+    padding-bottom: 20px;
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
     &__wraper {
       .cta-content {
         max-width: 157px;
