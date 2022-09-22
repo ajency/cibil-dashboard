@@ -41,6 +41,28 @@
     "link": "#",
     "link_text": "EDIT INFORMATION",
     "button_link": "#",
-    "button_text": "SHOW ALL OFFERS"
+    "button_text": "SHOW ALL OFFERS",
+    "partners":[
+      {
+        "premium_partner": true,
+        "partner_logo": "images/dynamic-images/bajaj-finserv-logo.svg",
+        "partner_title": "Bajaj Finserv"
+      },
+      {
+        "premium_partner": true,
+        "partner_logo": "images/dynamic-images/aditya-birla-finance-logo.svg",
+        "partner_title": "Aditya Birla Finance"
+      },
+      {
+        "premium_partner": true,
+        "partner_logo": "images/dynamic-images/digit-logo.svg",
+        "partner_title": "DIGIT"
+      },
+      {
+        "premium_partner": true,
+        "partner_logo": "images/dynamic-images/hdfc-home-loans-logo.svg",
+        "partner_title": "HDFC Home Loans"
+      }
+    ]
   }
 ]

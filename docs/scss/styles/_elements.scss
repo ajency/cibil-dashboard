@@ -196,8 +196,8 @@
     font-size: 12px;
     border: 0.4px solid $grey-1;
     border-radius: 8px;
-    span{
-      &:before{
+    span {
+      &:before {
         bottom: 6px;
         max-width: calc(100% - 28px);
       }
@@ -476,12 +476,45 @@ input[type="number"] {
   }
 }
 
-.cibil-link-dark{
+.cibil-link-dark {
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
   text-decoration-line: underline;
-  color: #2C2C2C !important;
+  color: #2c2c2c !important;
   display: flex;
   cursor: pointer;
+}
+
+//slick
+.slick-dots {
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+  li {
+    margin-bottom: 0px;
+    line-height: 0;
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+    button {
+      font-size: 0px;
+      padding: 0;
+      margin: 0;
+      width: 20px;
+      height: 6px;
+      background: $light-blue-3;
+      border: none;
+      border-radius: 30px;
+      transition: all 0.2s ease-in-out;
+    }
+    &.slick-active {
+      button {
+        width: 36px;
+        background: $primary-blue;
+      }
+    }
+  }
 }

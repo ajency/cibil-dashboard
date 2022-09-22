@@ -4,7 +4,7 @@
     </div>
     <div class="page-width personal-loan-offers-section__wraper">
         <div class="offers-n-partners">
-            {{ range .offers_list }}
+            {{ range .offers_n_partners }}
                 {{if ge .total_offers 1}}
                     <div class="section-head">
                         <p class="section-title">
@@ -21,6 +21,22 @@
                     </div>
                     {{if .button_link}}<a href="{{.button_link}}" class="cibil-button hide-sm-down">{{.button_text}}</a>{{end}}
                 {{end}}
+                    <div class="section-head our-partners">
+                        <p class="section-title">Our Partners</p>
+                    </div>
+                    <div class="partners">
+                        {{range .partners}}
+                            <div class="partner">
+                                <div class="partner__wraper">
+                                    <div class="logo-container {{if eq .premium_partner true}}premium-partner{{end}}">
+                                        <img src="{{.partner_logo | relURL }}" title="{{.partner_title}}" alt="{{.partner_title}}" class="partner-logo">
+                                    </div>
+                                    <p class="partner-title">{{.partner_title}}</p>
+                                </div>
+                            </div>
+                        {{end}}
+                    </div>
+                    {{if .button_link}}<a href="{{.button_link}}" class="cibil-button hide-md-up">{{.button_text}}</a>{{end}}
             {{end}}
         </div>
     </div>

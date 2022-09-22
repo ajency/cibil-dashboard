@@ -1217,11 +1217,11 @@
         font-size: 14px;
         line-height: 16px;
       }
-      .offer-icon{
+      .offer-icon {
         width: 31px;
         margin-right: 13px;
       }
-      .offer-count{
+      .offer-count {
         height: 32px;
         width: 32px;
         background-color: $primary-yellow;
@@ -1231,12 +1231,59 @@
         margin-left: 3px;
       }
     }
-    &.no-offers{
-      .offer__wraper{
-        .offer-count{
+    &.no-offers {
+      .offer__wraper {
+        .offer-count {
           background-color: $light;
         }
       }
+    }
+  }
+}
+
+// partner slide
+.partner {
+  &__wraper {
+    min-width: 160px;
+    .logo-container {
+      background: $light;
+      border: 1px solid $seperator-line-color;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 15px;
+      &.premium-partner{
+        position: relative;
+        &:before {
+          content: url(../images/static-images/premium-partner-tag.svg);
+          position: absolute;
+          left: -6px;
+          top: -8px;
+        }
+      }
+    }
+    .partner-title {
+      margin-bottom: 0px;
+      background: $seperator-line-color;
+      height: 40px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 13px 15px;
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: $intro-regular;
+    }
+  }
+  @media(max-width:576px){
+    &__wraper{
+      max-width: 140px;
+      min-width: 140px;
     }
   }
 }
