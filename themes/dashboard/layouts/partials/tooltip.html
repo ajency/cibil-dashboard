@@ -1,4 +1,5 @@
-<div class="cibil-tooltip tooltip-toggle" tooltip-target="#tooltipBox">
+
+<div class="cibil-tooltip {{ if eq .tooltip_type "info" }}cibil-tooltip-info{{end}} tooltip-toggle" tooltip-target="#tooltipBox">
 </div>
 <!-- tooltips | start -->
 <div class="tooltip-box {{if eq .tooltip_right true }}tooltip-box-right{{ end}}" id="tooltipBox">

@@ -408,26 +408,28 @@
         }
       }
     }
-    .confirmation{
+    .confirmation {
       display: none;
       position: absolute;
       right: 0;
       top: 0;
       height: 100%;
       align-items: center;
-      background-color: #FFF7C9;
-      &.show{ display: flex; }
-      .confirmation-text{
+      background-color: #fff7c9;
+      &.show {
+        display: flex;
+      }
+      .confirmation-text {
         @include intro-book-14;
         color: $dark;
         padding-left: 20px;
         padding-right: 16px;
-        @media (max-width: 360px){
+        @media (max-width: 360px) {
           font-size: 12px;
           line-height: 16px;
         }
       }
-      .warning-cta{
+      .warning-cta {
         margin-right: 10px;
         cursor: pointer;
         font-size: 0;
@@ -509,16 +511,16 @@
       justify-content: flex-start;
       flex-flow: wrap;
     }
-    &[type=clearAccountBalance]{
+    &[type="clearAccountBalance"] {
       padding-right: 30px;
-      & .options-container{
+      & .options-container {
         max-width: 580px;
       }
     }
-    .group-wrap{
+    .group-wrap {
       position: relative;
     }
-    .delete-group{
+    .delete-group {
       cursor: pointer;
       position: absolute;
       bottom: 25px;
@@ -529,8 +531,8 @@
       }
     }
   }
-  .scenario-list.hasBlank{
-    & + .scenario-cta .add-scenario{
+  .scenario-list.hasBlank {
+    & + .scenario-cta .add-scenario {
       display: none;
     }
   }
@@ -568,21 +570,23 @@
       }
     }
   }
-  .addPaymnet-container, .message-group{
-    display: none
+  .addPaymnet-container,
+  .message-group {
+    display: none;
   }
-  .message-group{
-      margin-right: 20px;
+  .message-group {
+    margin-right: 20px;
   }
-  .addPaymnet-container{
+  .addPaymnet-container {
     width: 100%;
   }
-  .chooseAccount-wrapper.active{
-    & ~ .addPaymnet-container, & ~ .message-group {
-      display: block
-    } 
+  .chooseAccount-wrapper.active {
+    & ~ .addPaymnet-container,
+    & ~ .message-group {
+      display: block;
+    }
   }
-  .addPayment{
+  .addPayment {
     @include intro-regular-16;
     color: $dark !important;
     text-decoration: underline !important;
@@ -595,36 +599,35 @@
     flex-flow: wrap;
     justify-content: flex-start;
   }
-  .scenario-list{
-    .scenario{
-      &:not(:last-child){
+  .scenario-list {
+    .scenario {
+      &:not(:last-child) {
         margin-bottom: 30px;
       }
     }
   }
 
-
-  .score-display-container{
-    .score-wrap{
+  .score-display-container {
+    .score-wrap {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
       flex-direction: column;
-      .score-message{
+      .score-message {
         margin-top: 39px;
         @include intro-book-16;
         color: #707070;
         margin-bottom: 6px;
       }
-      .score-refresh-link{
+      .score-refresh-link {
         @include intro-regular-16;
         font-weight: $intro-bold;
         margin-bottom: 10px;
         text-decoration: underline;
       }
-      .score-display-box{
-        border: 1px solid #B8C9E9;
+      .score-display-box {
+        border: 1px solid #b8c9e9;
         border-radius: 8px;
         padding: 30px;
         display: flex;
@@ -651,58 +654,57 @@
       width: 100%;
       padding: 0;
     }
-    .scenario-cta{
+    .scenario-cta {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      .smiluate-now-cta{
+      .smiluate-now-cta {
         width: 100%;
         margin-bottom: 30px;
       }
-      .add-scenario{
+      .add-scenario {
         font-weight: 600;
       }
     }
-    .score-display-container{
-      .score-wrap{
-        .score-display-box{
+    .score-display-container {
+      .score-wrap {
+        .score-display-box {
           flex-direction: row;
           justify-content: space-between;
           padding: 30px 0 12px;
-          & > div{
+          & > div {
             width: 50%;
             padding-left: 12px;
             padding-right: 20px;
-            &:nth-of-type(even){
+            &:nth-of-type(even) {
               padding-left: 20px;
               padding-right: 12px;
             }
             // padding: 20px;
           }
 
-          hr{
+          hr {
             display: none;
           }
           @include media-breakpoint-down(md) {
-            & > div:last-child{
+            & > div:last-child {
               position: relative;
-              &::after{
-                content: '';
+              &::after {
+                content: "";
                 width: 1px;
                 height: 70%;
                 position: absolute;
                 left: 0px;
                 top: 0;
                 background-color: rgba(184, 201, 233, 1);
-                ;
               }
             }
-            .score-bar .cibil-score{
+            .score-bar .cibil-score {
               font-size: 24px;
               line-height: 32px;
             }
-            .score-bar .score-pointer__wraper .pointer-image{
+            .score-bar .score-pointer__wraper .pointer-image {
               width: 40%;
               left: calc(50% - 40%);
             }
@@ -712,19 +714,19 @@
     }
   }
 }
-.empty-simulator{
-  .cibil-score{
+.empty-simulator {
+  .cibil-score {
     display: none;
   }
-  .score-text{
+  .score-text {
     margin-top: 20px;
   }
   @include media-breakpoint-down(md) {
-    .cibil-score{
+    .cibil-score {
       display: block;
       margin-top: -18px !important;
     }
-    .score-text{
+    .score-text {
       margin-top: 2.49px;
     }
   }
@@ -772,7 +774,7 @@
         padding-bottom: 20px;
         border-bottom: 2px solid $light-blue-5;
         column-gap: 20px;
-        &:not(:last-child){
+        &:not(:last-child) {
           margin-bottom: 20px;
         }
         .summary-number-cta {
@@ -795,19 +797,33 @@
       }
     }
   }
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     margin-bottom: 40px;
-    &__wraper{
-      .section-heading{
+    &__wraper {
+      .section-heading {
         margin-bottom: 10px;
       }
-      .small-ctas{
+      .small-ctas {
         margin-bottom: 30px;
-        &__wraper{
+        &__wraper {
           column-gap: 40px;
           padding-bottom: 30px;
         }
       }
+    }
+  }
+}
+
+// score history
+.cibil-score-history {
+  margin-bottom: 60px;
+  .section-heading {
+    margin-bottom: 20px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 40px;
+    .colored-container {
+      background-color: $light-blue-3;
     }
   }
 }

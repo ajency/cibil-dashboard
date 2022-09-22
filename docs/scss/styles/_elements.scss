@@ -13,6 +13,7 @@
   &-small {
     font-size: 18px;
     line-height: 18px;
+    display: inline-flex;
   }
   @include media-breakpoint-down(lg) {
     font-size: 16px;
@@ -340,6 +341,12 @@ input[type="number"] {
   position: relative;
   margin-left: 4px;
   margin-bottom: -2px;
+  &-info {
+    width: 23px;
+    height: 23px;
+    background-image: url(/cibil-dashboard/images/static-images/tooltip-info.svg);
+    margin-bottom: -5px;
+  }
 }
 
 /* tooltip box */
@@ -365,7 +372,7 @@ input[type="number"] {
     opacity: 0;
     transform: translateY(10px);
     visibility: hidden;
-    display:none;
+    display: none;
   }
   &__wraper {
     background: $black;
@@ -395,16 +402,16 @@ input[type="number"] {
       margin-bottom: 0px;
     }
   }
-  @include media-breakpoint-down(sm){
-    &__wraper{
+  @include media-breakpoint-down(sm) {
+    &__wraper {
       max-width: calc(100% - 20px);
     }
     &-right {
       &.show {
         right: 0;
         left: inherit !important;
-        .tooltip-box__wraper{
-          &:before{
+        .tooltip-box__wraper {
+          &:before {
             left: inherit;
             right: 7px;
           }

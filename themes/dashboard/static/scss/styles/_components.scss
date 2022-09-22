@@ -986,7 +986,7 @@
     .summary-count {
       margin-bottom: 20px;
     }
-    .card-usage-box{
+    .card-usage-box {
       margin-bottom: 12px;
     }
     .summary-details {
@@ -1058,7 +1058,7 @@
   }
   @include media-breakpoint-down(sm) {
     padding-bottom: 20px;
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 20px;
     }
     &__wraper {
@@ -1073,6 +1073,63 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+// score history
+.score-history {
+  background-color: $light-blue-3;
+  border-radius: 12px;
+  padding: 30px;
+  &__wraper {
+    .history-graph {
+      .empty-graph {
+        width: 100%;
+      }
+    }
+    .history-details {
+      &__wraper {
+        .unsubscribed {
+          .content {
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__wraper {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 27px;
+      .history-graph {
+        width: 75%;
+      }
+      .history-details {
+        width: 25%;
+        &__wraper {
+          height: 100%;
+          .unsubscribed {
+            min-height: calc(100% - 23px);
+            background: $light;
+            border-radius: 8px;
+            padding: 20px;
+            padding-right: 24px;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px 0px;
+    &__wraper {
+      display: flex;
+      flex-direction: column-reverse;
+      .cibil-link{
+        margin-bottom: 25px;
       }
     }
   }
