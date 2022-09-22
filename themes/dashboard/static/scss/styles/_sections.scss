@@ -443,6 +443,8 @@
     margin: 0;
     display: flex;
     align-items: center;
+    font-size: 0;
+    line-height: 0;
     a {
       padding: 13px 20px;
       display: inline-block;
@@ -506,6 +508,25 @@
       display: flex;
       justify-content: flex-start;
       flex-flow: wrap;
+    }
+    &[type=clearAccountBalance]{
+      padding-right: 30px;
+      & .options-container{
+        max-width: 580px;
+      }
+    }
+    .group-wrap{
+      position: relative;
+    }
+    .delete-group{
+      cursor: pointer;
+      position: absolute;
+      bottom: 25px;
+      left: calc(100% + 10px);
+      transform: translateY(50%);
+      @include media-breakpoint-down(sm) {
+        bottom: 45px;
+      }
     }
   }
   .scenario-list.hasBlank{
