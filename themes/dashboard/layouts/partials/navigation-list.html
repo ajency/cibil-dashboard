@@ -11,7 +11,7 @@
             <a href="" class="sublist-item">Loan Offers</a>
         </span>
     </div>
-    <a href="" class="nav-item"><span class="svg-icon-box">{{partial "icons/report-icon"}}</span><span>CIBIL Report</span></a>
+    <a href="/cibil-dashboard/overview_free/cibil-report/" class="nav-item {{ if eq .RelPermalink "/cibil-dashboard/overview_free/cibil-report/" }}active{{end}}"><span class="svg-icon-box">{{partial "icons/report-icon"}}</span><span>CIBIL Report</span></a>
     <a href="" class="nav-item"><span class="svg-icon-box">{{partial "icons/offers-icon"}}</span><span>Loan Offers</span><span class="notify-circle"><span>24</span></span></a>
     <a href="" class="nav-item"><span class="svg-icon-box">{{partial "icons/repayment-icon"}}</span><span>Repayment Option</span></a>
     <a href="/cibil-dashboard/overview_free/alerts/" class="nav-item {{ if eq .RelPermalink "/cibil-dashboard/overview_free/alerts/" }}active{{end}}"><span class="svg-icon-box">{{partial "icons/alerts-icon"}}</span><span>Alerts</span>{{partial "upgrade-plan-tooltip"}}</a>

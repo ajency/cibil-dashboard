@@ -1015,7 +1015,7 @@
       background: #F1F6FF !important;
       border-radius: 8px;
       padding: 19px 16px !important;
-      border: 0 !important;
+      border: 1px solid transparent !important;
       &::after{
         width: 14px;
         height: 10px;
@@ -1131,6 +1131,79 @@
     .cibil-button{
       margin-top: 10px;
       width: 100%;
+    }
+  }
+}
+
+//report - profile info
+.report-table {
+  width: 100%;
+  display: block;
+  background-color: #F9F9F9;
+  padding: 20px;
+  margin-bottom: 20px;
+  .table-title{
+    @include intro-regular-16;
+    font-weight: $intro-bold;
+    color: $primary-blue;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .table-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+    .table-item{
+      padding-right: 10px;
+      margin-bottom: 10px;
+      &:not(:first-child){
+        padding-left: 20px;
+        border-left: 1px solid #DDDDDD;
+      }
+      &:nth-child(5){
+        border: 0;
+        padding-left: 0;
+      }
+      .item-head{
+        @include intro-regular-16;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .item-text{
+        @include intro-book-16;
+      }
+    }
+  }
+  &.table-light{
+    .table-content{
+      background-color: $light;
+      padding: 20px;
+      &:not(:first-child){
+        margin-top: 20px;
+      }
+      .table-item{
+        margin: 0;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .table-title{
+      margin: 0;
+    }
+    .table-content{
+      grid-template-columns: auto auto;
+      column-gap: 10px;
+      row-gap: 0;
+
+      .table-item{
+        padding: 0 !important;
+        border: 0 !important;
+        margin-bottom: 0;
+        margin-top: 20px;
+        &:not(.half){
+          grid-column: 1 / span 2;
+        }
+      }
     }
   }
 }
