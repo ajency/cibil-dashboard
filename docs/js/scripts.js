@@ -75,7 +75,7 @@ $(function() {
       } else{
         tooltip_box.css({"top":topPosition+elHeight, "left": (leftPosition - elWidth)});
         console.log(arrowPosition);
-        $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{right: calc('+ arrowPosition +'px - 130%) !important;}</style>');
+        $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{right: calc('+ arrowPosition +'px - 100%) !important;}</style>');
       }
     }
   
