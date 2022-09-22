@@ -827,3 +827,251 @@
     }
   }
 }
+
+//cibil report
+.report-bar {
+  background-color: #E5EDFC;
+  padding-top: 15px;
+  padding-bottom: 11px;
+  .report-bar-wrap {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.7fr;
+    align-items: center;
+    .report-bar-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100%;
+      &:not(:first-child){
+        border-left: 1px solid #D1C99C;
+        padding-left: 30px;
+      }
+      &:nth-child(2){
+        padding-right: 20px;
+      }
+      svg{
+        margin-right: 9px;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px 0;
+    .report-bar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .report-bar-item {
+        text-align: center;
+        border: 0 !important;
+        padding: 16px 0 !important;
+        position: relative;
+        &:first-child{
+          padding-top: 0 !important;
+        }
+        &:last-child{
+          padding-bottom: 0 !important;
+        }
+        &:not(:first-child)::after{
+          content: '';
+          width: 68px;
+          height: 1px;
+          background-color: #C9DAF9;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
+.report-tabs {
+  padding-top: 20px;
+  margin-bottom: 40px;
+  .reportTabs{
+    display: flex;
+    margin: 0;
+    border-bottom: 2px solid #DDDDDD;
+    .report-nav-item{
+      margin-bottom: 0;
+      button{
+        @include intro-book-16;
+        line-height: 16px;
+        padding: 0 20px 18px;
+        display: flex;
+        align-items: flex-end;
+        border: 0;
+        height: 100%;
+        background: none;
+        position: relative;
+
+        &.active{
+          font-weight: 700;
+          color: $primary-blue;
+          &::before{
+            content: '';
+            width: 100%;
+            height: 6px;
+            background-color: $primary-blue;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+          }
+          &::after{
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid $primary-blue;
+          }
+        }
+
+        img{
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+.report-content{
+  .tab-panel{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+}
+.report-select-group{
+  display: none;
+  width: 100%;
+  max-width: 100%;
+  .report-select-tab{
+    .custom-select-value {
+      background: #F1F6FF !important;
+      border-radius: 8px;
+      padding: 19px 16px !important;
+      border: 0 !important;
+      &::after{
+        width: 14px;
+        height: 10px;
+        background-image: url(/cibil-dashboard/images/static-images/arrow-fill.svg);
+        right: 20px;
+      }
+    }
+    .custom-select-value, .custom-select-options {
+      font-weight: $intro-bold !important;
+      img{
+        margin-right: 10px;
+      }
+    }
+    .custom-select-options{
+      background: #F1F6FF !important;
+      border-radius: 0 0 8px 8px;
+      border-color:#EDEDED;
+      span{
+        padding: 15px 16px;
+      }
+    }
+  }
+  .report-select-tab.opened{
+    .custom-select-value {
+      border: 1px solid #EDEDED !important;
+      border-bottom: 0 !important;
+      border-radius: 8px 8px 0 0;
+      &::after{
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .report-tabs {
+      padding-top: 30px;
+      margin-bottom: 30px;
+  }
+  .report-select-group{
+    display: block !important;
+  }
+  .reportTabs{
+    display: none !important;
+  }
+}
+
+//report-summary
+.report-summary-container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 250px;
+  .summary-title{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #2C2C2C;
+  }
+  .summary-pointers{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    img{
+      width: 35px;
+      height: auto;
+      margin-right: 10px;
+    }
+    p{
+      @include intro-book-16;
+      color: #707070;
+      margin-bottom: 20px;
+      display: flex;
+    }
+  }
+  .cibil-button{
+    margin-top: 20px;
+  }
+  & > div{
+    width: 48%;
+    &:last-child{
+      width: 45%;
+
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 40px;
+    flex-direction: column-reverse;
+    & > div{
+      width: 100% !important;
+      overflow: hidden;
+      &:last-child{
+        width: calc(100% + 40px) !important;
+        margin: 0 -20px;
+        height: 300px;
+        img{
+          object-fit: cover;
+        }
+      }
+    }
+    .summary-title{
+      font-weight: $intro-regular;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    .cibil-button{
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+}

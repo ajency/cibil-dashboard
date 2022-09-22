@@ -62,15 +62,21 @@ $(function () {
     });
   }
     
-  $('.custom-select-input').click(function(){
-      $(this).toggleClass('opened')
+  // $('.custom-select-input').click(function(){
+  //     $(this).toggleClass('opened')
+  // })
+  // $('.custom-select-options span').click(function(){
+  //     $(this).siblings().removeClass("selected")
+  //     $(this).addClass('selected')
+  //     $(this).parents('.custom-select-input').find('.custom-select-value').text($(this).text())
+  //     $('#loantype').val($(this).text())
+  // })
+  $('.report-nav-link').click(function(){
+    $('.report-nav-link').removeClass('active');
+    $(this).addClass('active');
+    $('.report-content .tab-panel').removeClass('active');
+    $($(this).data('target')).addClass('active')
   })
-  $('.custom-select-options span').click(function(){
-      $(this).siblings().removeClass("selected")
-      $(this).addClass('selected')
-      $(this).parents('.custom-select-input').find('.custom-select-value').text($(this).text())
-      $('#loantype').val($(this).text())
-  })    
 })
 function customSelectInput(element){
   $(element).toggleClass('opened')
@@ -80,6 +86,11 @@ function customSelectOption(element){
   $(element).addClass('selected')
   $(element).parents('.custom-select-input').find('.custom-select-value').text($(element).text())
   $('#loantype').val($(element).text())
+}
+function customSelectTab(element){
+  $(element).siblings().removeClass("selected")
+  $(element).addClass('selected')
+  $(element).parents('.custom-select-input').find('.custom-select-value').html($(element).html())
 }
 function closeScenario(element){
     let parentElement = $(element).parents('.scenario')
