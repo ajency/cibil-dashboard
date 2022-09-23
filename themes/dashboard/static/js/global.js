@@ -104,6 +104,17 @@ $(function () {
       $('.smiluate-now-cta').addClass('disabled')
     }
   })
+
+
+  // smooth scroll
+  $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+    $('.hamburger.opened').click()
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 80
+    }, 500);
+});
+
 })
 function customSelectInput(element){
   $(element).toggleClass('opened')

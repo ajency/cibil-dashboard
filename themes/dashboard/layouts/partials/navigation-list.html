@@ -4,11 +4,11 @@
     <div class='overview-list {{ if eq .RelPermalink "/cibil-dashboard/overview_free/" }}overview-toggle active opened{{end}}'>
         <a href="/cibil-dashboard/overview_free/" class="nav-item overview-item {{ if eq .RelPermalink "/cibil-dashboard/overview_free/" }}active{{end}}"><span class="svg-icon-box">{{partial "icons/home-icon"}}</span><span>Overview</span>{{ partial "icons/arrow-white"}}</a>
         <span class="sublist">
-            <a href="" class="sublist-item">CIBIL Report</a>
-            <a href="" class="sublist-item">Credit Summary</a>
-            <a href="" class="sublist-item">CIBIL Score History</a>
+            <a href="#cibil-report" class="sublist-item">CIBIL Report</a>
+            <a href="#credit-summary" class="sublist-item">Credit Summary</a>
+            <a href="#cibil-score-history" class="sublist-item">CIBIL Score History</a>
             <a href="" class="sublist-item">Social Comparision</a>
-            <a href="" class="sublist-item">Loan Offers</a>
+            <a href="#loan-offers" class="sublist-item">Loan Offers</a>
         </span>
     </div>
     <a href="/cibil-dashboard/overview_free/cibil-report/" class="nav-item {{ if eq .RelPermalink "/cibil-dashboard/overview_free/cibil-report/" }}active{{end}}"><span class="svg-icon-box">{{partial "icons/report-icon"}}</span><span>CIBIL Report</span></a>
