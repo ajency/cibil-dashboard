@@ -9,7 +9,7 @@
             <div class="page-container">
                 {{ partial "header.html" . }}
                 {{- block "main" . -}}{{- end -}}
-                {{ partial  "footer.html"}}
+                {{ partial  "footer.html" . }}
             </div>
             <div class="overlay"></div>
         </div>

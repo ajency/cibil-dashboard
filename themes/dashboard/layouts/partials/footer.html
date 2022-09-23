@@ -17,3 +17,23 @@
 <script src="{{"js/jquery.easypiechart.min.js" | relURL}}"></script>
 <script src="{{"js/slick.min.js" | relURL}}"></script>
 <script src="{{"js/scripts.js" | relURL}}"></script>
+
+{{ if eq .RelPermalink "/cibil-dashboard/overview_free/" }}
+<script>
+    // video player
+    var player = videojs("download-now-video", {
+    fluid: true
+    });
+
+    $("#video-CTA-modal").on("show.bs.modal", function (e) {
+    player.play("muted");
+    player.muted(false);
+    });
+
+    $("#video-CTA-modal").on("hide.bs.modal", function (e) {
+    player.pause();
+    player.play("pause");
+    player.muted(true);
+    });
+</script>
+{{end}}

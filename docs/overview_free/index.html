@@ -472,12 +472,12 @@ Free Account</p>
                 <div class="small-ctas__wraper">
                     <div class="summary-count-cta">
     
-    <p class="summary-count">
-        
-            7
-        
-        
-    </p>
+        <p class="summary-count">
+    
+        7
+    
+    
+</p>
     
     
     <p class="summary-title">TOTAL accounts</p>
@@ -501,12 +501,12 @@ Free Account</p>
 
                     <div class="summary-count-cta">
     
-    <p class="summary-count">
-        
-            9
-        
-        
-    </p>
+        <p class="summary-count">
+    
+        9
+    
+    
+</p>
     
     
     <p class="summary-title">Credit enquiries</p>
@@ -533,8 +533,8 @@ Free Account</p>
     
     
     <div class="card-usage-box">
-        <div class="card-usage" data-percent="45" data-scale-color="#00A6CA"><span class="usage-value">45%</span></div>
-    </div>
+    <div class="card-usage" data-percent="45" data-scale-color="#00A6CA"><span class="usage-value">45%</span></div>
+</div>
     
     <p class="summary-title">Credit card usage</p>
     <p class="summary-rating average">Opportunity to Improve</p>
@@ -557,12 +557,12 @@ Free Account</p>
                     
                     <div class="summary-count-cta">
     
-    <p class="summary-count">
-        
-        
-        13<span>y</span>10<span>m</span>
-        
-    </p>
+        <p class="summary-count">
+    
+    
+    13<span>y</span>10<span>m</span>
+    
+</p>
     
     
     <p class="summary-title">Credit age</p>
@@ -845,6 +845,25 @@ Free Account</p>
 <script src="/cibil-dashboard/js/jquery.easypiechart.min.js"></script>
 <script src="/cibil-dashboard/js/slick.min.js"></script>
 <script src="/cibil-dashboard/js/scripts.js"></script>
+
+
+<script>
+    
+    var player = videojs("download-now-video", {
+    fluid: true
+    });
+
+    $("#video-CTA-modal").on("show.bs.modal", function (e) {
+    player.play("muted");
+    player.muted(false);
+    });
+
+    $("#video-CTA-modal").on("hide.bs.modal", function (e) {
+    player.pause();
+    player.play("pause");
+    player.muted(true);
+    });
+</script>
 
             </div>
             <div class="overlay"></div>

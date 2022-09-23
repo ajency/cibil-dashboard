@@ -1,18 +1,9 @@
 <div class="summary-count-cta">
     {{ if or .summary_number .summary_years .summary_months }}
-    <p class="summary-count">
-        {{if .summary_number}}
-            {{.summary_number}}
-        {{ end }}
-        {{if or .summary_years .summary_months }}
-        {{ if .summary_years}}{{.summary_years}}<span>y{{end}}</span>{{if .summary_months}}{{.summary_months}}<span>m{{end}}</span>
-        {{ end }}
-    </p>
+        {{ partial "summary-count" .}}
     {{end}}
     {{if .summary_usage}}
-    <div class="card-usage-box">
-        <div class="card-usage" data-percent="{{.summary_usage}}" data-scale-color="#00A6CA"><span class="usage-value">{{.summary_usage}}%</span></div>
-    </div>
+    {{ partial "summary-usage" .}}
     {{end}}
     <p class="summary-title">{{.summary_title}}</p>
     <p class="summary-rating {{if .rating}}{{.rating}}{{end}}">{{.rating_text}}</p>
