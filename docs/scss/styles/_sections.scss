@@ -1287,34 +1287,33 @@
         margin: 0;
       }
     }
-    & > .table-content:nth-of-type(n+6) {
+    & > .table-content:nth-of-type(n + 6) {
       display: none;
     }
   }
-  .showAllLink{
-    span:nth-child(2){
+  .showAllLink {
+    span:nth-child(2) {
       display: none;
     }
   }
   &.expanded {
-    &.table-light{
-      & > .table-content:nth-of-type(n+6) {
+    &.table-light {
+      & > .table-content:nth-of-type(n + 6) {
         display: grid;
       }
     }
-    .showAllLink{
-      span:nth-child(2){
+    .showAllLink {
+      span:nth-child(2) {
         display: block;
       }
-      span:first-child{
+      span:first-child {
         display: none;
       }
-      svg{
+      svg {
         transform: rotate(180deg);
       }
     }
   }
-
 
   @include media-breakpoint-down(sm) {
     .table-title {
@@ -1335,8 +1334,8 @@
         }
       }
     }
-    &.table-light{
-      .table-content{
+    &.table-light {
+      .table-content {
         row-gap: 20px;
       }
     }
@@ -1352,7 +1351,7 @@
   .slick-slide {
     height: inherit !important;
   }
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(md) {
     .slick-dots {
       margin-top: 16px;
     }
@@ -1362,6 +1361,7 @@
   }
 }
 
+<<<<<<< Updated upstream
 //clear dues
 .clear-dues-bar {
   display: block;
@@ -1403,10 +1403,124 @@
     }
     .cibil-button{
       min-width: 262px;
+=======
+// all accounts
+.accounts-container {
+  background: $light-blue;
+  padding: 30px;
+  padding-bottom: 0px;
+  margin-bottom: 38px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .account_status {
+    font-weight: $intro-bold;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    &:before {
+      content: "";
+      height: 12px;
+      width: 12px;
+      background-color: $grey;
+      margin-right: 6px;
+      margin-bottom: 2px;
+      border-radius: 100%;
+    }
+  }
+  .columnStyle {
+    display: flex;
+    align-items: center;
+    .head-col {
+      letter-spacing: 0.02em;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: calc(100% / 4);
+      margin-bottom: 0px;
+      &:not(:last-child) {
+        border-right: 1px solid #dddddd;
+      }
+      &:nth-child(2) {
+        max-width: 172px;
+      }
+      &:nth-child(1) {
+        max-width: 208px;
+      }
+    }
+  }
+  .account-head {
+    padding: 22px 0px 12px;
+    .head-col {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+  .card {
+    border: none !important;
+    background: transparent;
+    border-top: 1px solid #c0cee4 !important;
+    border-radius: 0;
+    .card-header-link {
+      p {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+    .card-header {
+      background-color: transparent;
+      border: none;
+      padding-top: 22px;
+      padding-bottom: 20px;
+      padding: 22px 0px 20px;
+      position: relative;
+      .card-header-link {
+        &:before {
+          content: "";
+          height: 20px;
+          width: 20px;
+          background-image: url(../images/static-images/down-arrow-icon.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          right: 0px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      &.show {
+        .card-header-link {
+          &:before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &.open_accounts {
+    .account_status {
+      color: $secondary-dark-green;
+      &::before {
+        background-color: $secondary-dark-green;
+      }
+    }
+  }
+  &.closed_accounts {
+    background: #f9f9f9;
+    .account_status {
+      color: $secondary-red;
+      &::before {
+        background-color: $secondary-red;
+      }
+>>>>>>> Stashed changes
     }
   }
   @include media-breakpoint-down(sm) {
     padding: 20px;
+<<<<<<< Updated upstream
 
     .bar-content{
       flex-direction: column;
@@ -1420,9 +1534,77 @@
             &:first-child{
               margin-bottom: 20px;
             }
+=======
+    .account-head {
+      display: none;
+    }
+    .card {
+      border: none !important;
+      background: #ffffff;
+      margin: 20px 0px;
+      &:last-child{
+        margin-bottom: 0px;
+      }
+      .card-header {
+        padding: 20px 20px;
+        .card-header-link {
+          align-items: flex-start;
+          flex-direction: column;
+          &::before {
+            right: 20px;
+          }
+          .head-col {
+            width: 100%;
+            border: none !important;
+            padding-left: 0;
+            padding-right: 0;
+            font-size: 16px;
+            line-height: 24px;
+            display: flex;
+            flex-direction: column;
+            b {
+              font-weight: $intro-book;
+            }
+            &:not(:last-child) {
+              margin-bottom: 20px;
+            }
+            &:before {
+              font-weight: $intro-regular;
+              margin-bottom: 6px;
+            }
+            &:nth-child(1) {
+              &::before {
+                content: "Member Name";
+              }
+            }
+            &:nth-child(2) {
+              &::before {
+                content: "Account Type";
+              }
+            }
+            &:nth-child(3) {
+              &::before {
+                content: "Account Number";
+              }
+            }
+            &:nth-child(4) {
+              &::before {
+                content: "Ownership";
+              }
+            }
+>>>>>>> Stashed changes
           }
         }
       }
     }
+<<<<<<< Updated upstream
   }
 }
+=======
+    &.open_accounts,
+    &.closed_accounts {
+      background: #f9f9f9;
+    }
+  }
+}
+>>>>>>> Stashed changes

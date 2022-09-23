@@ -1,0 +1,76 @@
+<p class="section-heading section-heading-small">ALL ACCOUNTS</p>
+
+{{range .all_accounts}}
+    {{if .open_accounts}}
+        <div class="accounts-container open_accounts">
+            <p class="account_status">OPEN ACCOUNTS</p>
+            <div class="account-head columnStyle">
+                <p class="head-col">Member Name</p>
+                <p class="head-col">Account Type</p>
+                <p class="head-col">Account Number</p>
+                <p class="head-col">Ownership</p>
+            </div>
+            <div class="account-body">
+                <div class="accordion accountsAccordion" id="accountsAccordion">
+                    {{range $index, $accountsElement := .open_accounts}}
+                    <div class="card">
+                    <div class="card-header {{if eq .collapsed true }}show{{end}}" id="heading{{$index}}">
+                        <div class="card-header-link columnStyle" data-toggle="collapse" data-target="#collapse{{$index}}" aria-expanded="{{if eq .collapsed true }}true{{else}}false{{end}}" aria-controls="collapse{{$index}}">
+                            <p class="head-col"><b>{{.member_name}}</b></p>
+                            <p class="head-col">{{.account_type}}</p>
+                            <p class="head-col">{{.account_number}}</p>
+                            <p class="head-col">{{.ownership}}</p>
+                        </div>
+                        
+                    </div>
+                
+                    <div id="collapse{{$index}}" class="collapse account-collapse {{if eq .collapsed true }}show{{end}}" aria-labelledby="heading{{$index}}" data-parent="#accountsAccordion">
+                        <div class="card-body">
+                        <div class="card-body__wraper">
+                            Content
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    {{end}}
+                </div>
+            </div>
+        </div>
+    {{end}}
+    {{if .closed_accounts}}
+        <div class="accounts-container closed_accounts">
+            <p class="account_status">CLOSED ACCOUNTS</p>
+            <div class="account-head columnStyle">
+                <p class="head-col">Member Name</p>
+                <p class="head-col">Account Type</p>
+                <p class="head-col">Account Number</p>
+                <p class="head-col">Ownership</p>
+            </div>
+            <div class="account-body">
+                <div class="accordion accountsAccordion" id="accountsAccordion">
+                    {{range $index, $accountsElement := .closed_accounts}}
+                    <div class="card">
+                    <div class="card-header {{if eq .collapsed true }}show{{end}}" id="heading-{{$index}}">
+                        <div class="card-header-link columnStyle" data-toggle="collapse" data-target="#collapse-{{$index}}" aria-expanded="{{if eq .collapsed true }}true{{else}}false{{end}}" aria-controls="collapse-{{$index}}">
+                            <p class="head-col"><b>{{.member_name}}</b></p>
+                            <p class="head-col">{{.account_type}}</p>
+                            <p class="head-col">{{.account_number}}</p>
+                            <p class="head-col">{{.ownership}}</p>
+                        </div>
+                        
+                    </div>
+                
+                    <div id="collapse-{{$index}}" class="collapse account-collapse {{if eq .collapsed true }}show{{end}}" aria-labelledby="heading-{{$index}}" data-parent="#accountsAccordion">
+                        <div class="card-body">
+                        <div class="card-body__wraper">
+                            Content
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    {{end}}
+                </div>
+            </div>
+        </div>
+    {{end}}
+{{end}}

@@ -129,3 +129,11 @@ $(".account-summary-slider").slick({
     }
   ]
 });
+
+//account summary
+$(".account-collapse").on("show.bs.collapse", function () {
+  console.log($(this).prev().addClass("show"));
+});
+$(".account-collapse").on("hide.bs.collapse", function () {
+  console.log($(this).prev().removeClass("show"));
+});
