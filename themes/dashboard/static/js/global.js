@@ -80,6 +80,7 @@ $(function () {
     let selectElement = $('.custom-select-options span[data-target="'+$(this).data('target')+'"]')
     selectElement.addClass('selected')
     $('#report-select-value').html(selectElement.html())
+    checkAccountVisibility()
   })
 
   $('.toggle-popup').click(function(e){
@@ -121,6 +122,7 @@ function customSelectTab(element){
   $($(element).data('target')).addClass('active');
   $('.report-nav-link').removeClass('active');
   $('.report-nav-link[data-target="'+$(element).data('target')+'"]').addClass('active');
+  checkAccountVisibility();
 }
 function closeScenario(element){
     let parentElement = $(element).parents('.scenario')
@@ -149,4 +151,13 @@ function chooseAccount(element){
 
 function showAllEnquiries(element){
   $(element).parent().toggleClass('expanded')
+}
+
+function checkAccountVisibility(){
+  if($('#account').is(':visible')){
+    enableAccountSlider()
+  }
+  else{
+    disableAccountSlider()
+  }
 }

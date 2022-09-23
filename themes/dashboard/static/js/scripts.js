@@ -112,23 +112,29 @@ $(".partners").slick({
 });
 
 //account summary slider
-$(".account-summary-slider").slick({
-  speed: 1000,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  arrows: false,
-  dots: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 576,
-      settings:{
-        speed: 600
+function enableAccountSlider(){
+  $(".account-summary-slider").slick({
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings:{
+          speed: 600
+        }
       }
-    }
-  ]
-});
+    ]
+  });
+}
+
+function disableAccountSlider(){
+  $(".account-summary-slider").slick('unslick')
+}
 
 //account summary
 $(".account-collapse").on("show.bs.collapse", function () {

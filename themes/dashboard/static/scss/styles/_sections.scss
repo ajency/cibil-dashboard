@@ -1359,6 +1359,9 @@
   @include media-breakpoint-down(sm) {
     margin-bottom: 40px;
   }
+  & > .account-summary:not(:first-child) {
+    display: none;
+  }
 }
 
 // all accounts
