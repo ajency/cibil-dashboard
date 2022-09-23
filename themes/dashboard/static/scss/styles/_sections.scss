@@ -941,7 +941,7 @@
       }
       .offers-n-partners {
         .partners {
-          margin-left: 0px;
+          margin-left: -20px;
           margin-right: -20px;
           .slick-list {
             margin: 0 -10.5px;
@@ -1024,7 +1024,7 @@
 }
 .report-tabs {
   padding-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   .reportTabs {
     display: flex;
     margin: 0;
@@ -1143,6 +1143,7 @@
 
 //report-summary
 .report-summary-container {
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 250px;
@@ -1187,6 +1188,7 @@
   }
 
   @include media-breakpoint-down(sm) {
+    margin-top: 30px;
     margin-bottom: 40px;
     flex-direction: column-reverse;
     & > div {

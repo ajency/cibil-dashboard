@@ -105,18 +105,7 @@ $(".partners").slick({
     {
       breakpoint: 576,
       settings: {
-        centerMode: false,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        speed: 600,
-        autoplaySpeed: 0,
-        autoplay: false,
-        dots: true,
-        accesibility: true,
-        draggable: true,
-        swipe: true,
-        touchMove: true,
-        pauseOnHover: false,
+        
       },
     },
   ],
