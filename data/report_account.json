@@ -133,13 +133,13 @@
                       }
                     ],
                     "shortforms": [
-                      "STD: Standard",
-                      "DBT: Doubtful",
-                      "###: Number of Days Past Due",
-                      "SMA: Special Mention Account",
-                      "SUB: Substandard",
-                      "LSS: Loss",
-                      "XXX: Not Reported"
+                      "<b>STD</b>: Standard",
+                      "<b>DBT</b>: Doubtful",
+                      "<b>###</b>: Number of Days Past Due",
+                      "<b>SMA</b>: Special Mention Account",
+                      "<b>SUB</b>: Substandard",
+                      "<b>LSS</b>: Loss",
+                      "<b>XXX</b>: Not Reported"
                     ]
                   }
                 ]
