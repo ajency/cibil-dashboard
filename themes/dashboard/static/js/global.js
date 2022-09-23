@@ -81,6 +81,19 @@ $(function () {
     selectElement.addClass('selected')
     $('#report-select-value').html(selectElement.html())
   })
+
+  $('.toggle-popup').click(function(e){
+    e.preventDefault();
+    let id = $(this).data('target');
+    $('#'+id).addClass('opened')
+  })
+  $('.popup-agree').click(function(e){
+    e.preventDefault()
+    $(this).parents('.popup').addClass('success')
+  })
+  $('.close-popup').click(function(){
+    $(this).parents('.popup').removeClass('opened success')
+  })
 })
 function customSelectInput(element){
   $(element).toggleClass('opened')

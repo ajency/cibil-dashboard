@@ -721,6 +721,28 @@
   .score-text {
     margin-top: 20px;
   }
+  .bar{
+    &:before,
+    &:after {
+      position: absolute;
+      bottom: 5%;
+      font-weight: $intro-regular;
+      font-size: 14px;
+      line-height: 14px;
+      color: $grey-1;
+      @media (max-width:499px){
+        bottom: 0;
+      }
+    }
+    &::before {
+      content: "300";
+      left: 0px;
+    }
+    &::after {
+      content: "900";
+      right: 0px;
+    }
+  }
   @include media-breakpoint-down(md) {
     .cibil-score {
       display: block;
@@ -1337,5 +1359,70 @@
   }
   @include media-breakpoint-down(sm) {
     margin-bottom: 40px;
+  }
+}
+
+//clear dues
+.clear-dues-bar {
+  display: block;
+  width: 100%;
+  padding: 20px 30px 20px 52px;
+  background: #FFF7C9;
+  .bar-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg{
+      margin-right: 10px;
+    }
+    .clear-dues-text{
+      @include intro-book-14;
+      margin: 0;
+      margin-right: 10px;
+      display: flex;
+      & > span{
+        & > span{
+          display: block;
+          &:first-child{
+            margin-bottom: 2px;
+          }
+        }
+      }
+      .red ,.black, .grey{
+        font-weight: $intro-regular;
+      }
+      .red {
+        color: rgba(215, 64, 37, 1)
+      }
+      .black{
+        color: $black;
+      }
+      .grey{
+        color: rgba(172, 172, 172, 1);
+      }
+    }
+    .cibil-button{
+      min-width: 262px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px;
+
+    .bar-content{
+      flex-direction: column;
+      svg{
+        min-width: 20px;
+      }
+      .clear-dues-text{
+        & > span{
+          & > span{
+            margin-bottom: 16px;
+            &:first-child{
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -538,3 +538,111 @@ input[type="number"] {
     }
   }
 }
+
+// popup
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $light;
+  border: 1px solid #DDE0EF;
+  border-radius: 6px;
+  width: 80%;
+  max-width: 840px;
+  max-height: 90vh;
+  overflow-y: scroll;
+  z-index: 999;
+
+  .popup-hedear {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 30px 30px 20px;
+    border-bottom: 1px solid #DDE0EF;
+    position: relative;
+    color: $primary-blue;
+    text-transform: uppercase;
+  }
+  .popup-body {
+    padding: 30px;
+    @include intro-book-16;
+    .content-head{
+      font-weight: $intro-regular;
+      margin-bottom: 10px;
+    }
+    .content-text{
+      margin-bottom: 30px;
+    }
+  }
+
+  .close-popup{
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
+  }
+  .success-body {
+    display: none;
+    padding: 60px 20px 80px;
+    text-align: center;
+    svg{
+      margin-bottom: 40px;
+    }
+    .content-head{
+      font-weight: $intro-regular;
+      font-size: 32px;
+      line-height: 44px;
+      letter-spacing: -0.01em;
+      color: #2C2C2C;
+       margin-bottom: 20px;
+    }
+    .content-text{
+      font-weight: $intro-regular;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: #707070;
+      max-width: 420px;
+      margin: auto;
+    }
+  }
+  &.success{
+    .success-body{
+      display: block;
+    }
+    .popup-body, .popup-hedear{
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(sm){
+    .popup-hedear, .popup-body{
+      padding: 20px;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+}
+.popup-overlay{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 998;
+}
+.popup.opened{
+  display: block;
+  & + .popup-overlay{
+    display: block;
+  }
+}
