@@ -911,7 +911,7 @@
           flex-direction: column;
           row-gap: 20px;
           margin-bottom: 20px;
-          &.our-partners{
+          &.our-partners {
             margin-bottom: 17px;
           }
           .section-title {
@@ -943,12 +943,16 @@
         .partners {
           margin-left: 0px;
           margin-right: -20px;
-          .slick-list{
+          .slick-list {
             margin: 0 -10.5px;
             margin-left: 6px;
-            &:after{
+            &:after {
               right: 10.5px;
-              background: linear-gradient(270deg, rgba(255, 252, 252, 0.97) 7.59%, rgba(255, 255, 255, 0) 76.15%);
+              background: linear-gradient(
+                270deg,
+                rgba(255, 252, 252, 0.97) 7.59%,
+                rgba(255, 255, 255, 0) 76.15%
+              );
             }
           }
           .slick-slide {
@@ -1089,7 +1093,7 @@
       border-radius: 8px;
       padding: 19px 16px !important;
       border: 1px solid transparent !important;
-      &::after{
+      &::after {
         width: 14px;
         height: 10px;
         background-image: url(/cibil-dashboard/images/static-images/arrow-fill.svg);
@@ -1213,71 +1217,90 @@
 .report-table {
   width: 100%;
   display: block;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   padding: 20px;
   margin-bottom: 20px;
-  .table-title{
+  .table-title {
     @include intro-regular-16;
     font-weight: $intro-bold;
     color: $primary-blue;
     margin-bottom: 20px;
     text-transform: uppercase;
   }
-  .table-content{
+  .table-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 30px;
-    .table-item{
+    .table-item {
       padding-right: 10px;
       margin-bottom: 10px;
-      &:not(:first-child){
+      &:not(:first-child) {
         padding-left: 20px;
-        border-left: 1px solid #DDDDDD;
+        border-left: 1px solid #dddddd;
       }
-      &:nth-child(5){
+      &:nth-child(5) {
         border: 0;
         padding-left: 0;
       }
-      .item-head{
+      .item-head {
         @include intro-regular-16;
         display: block;
         margin-bottom: 10px;
       }
-      .item-text{
+      .item-text {
         @include intro-book-16;
       }
     }
   }
-  &.table-light{
-    .table-content{
+  &.table-light {
+    .table-content {
       background-color: $light;
       padding: 20px;
-      &:not(:first-child){
+      &:not(:first-child) {
         margin-top: 20px;
       }
-      .table-item{
+      .table-item {
         margin: 0;
       }
     }
   }
   @include media-breakpoint-down(sm) {
-    .table-title{
+    .table-title {
       margin: 0;
     }
-    .table-content{
+    .table-content {
       grid-template-columns: auto auto;
       column-gap: 10px;
       row-gap: 0;
 
-      .table-item{
+      .table-item {
         padding: 0 !important;
         border: 0 !important;
         margin-bottom: 0;
         margin-top: 20px;
-        &:not(.half){
+        &:not(.half) {
           grid-column: 1 / span 2;
         }
       }
     }
+  }
+}
+
+// account summary slider
+.account-summary-slider {
+  margin-bottom: 60px;
+  .slick-track {
+    display: flex !important;
+  }
+  .slick-slide {
+    height: inherit !important;
+  }
+  @include media-breakpoint-up(md){
+    .slick-dots {
+      margin-top: 16px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 40px;
   }
 }

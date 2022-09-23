@@ -4,6 +4,6 @@
 
 {{ partial "report-bar"}}
 
-{{ partial "report-section" (dict "reportData" .Site.Data.profile_details )}}
+{{ partial "report-section" (dict "reportData" .Site.Data.profile_details "accountData" .Site.Data.report_account )}}
 
 {{ end }}

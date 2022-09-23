@@ -1,0 +1,87 @@
+[
+    {
+        "summary_slides":[
+            {
+                "summary_usage": 45,
+                "summary_title": "Credit card usage",
+                "summary_date": "as of 19th Apr'22",
+                "summary_rating": "POOR",
+                "summary_content":[
+                    {
+                        "content_title": "How does this impact my score?",
+                        "content_description": "Lenders generally like to see that you aren't using too much of your available credit. The more credit you use, the harder it may to be pay back."
+                    }
+                ],
+                "related_article":[
+                    {
+                        "article_image": "images/dynamic-images/article-1.png",
+                        "article_title": "Credit Utilization Ratio: How it Works & How to Improve It?",
+                        "article_link": "#",
+                        "article_link_text": "Read full Article"
+                    }
+                ]
+            },
+            {
+                "summary_number": 9,
+                "summary_title": "Credit enquiries",
+                "summary_date": "as of 19th Apr'22",
+                "summary_rating": "good",
+                "summary_content":[
+                    {
+                        "content_title": "How does this impact my score?",
+                        "content_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    }
+                ],
+                "related_article":[
+                    {
+                        "article_image": "images/dynamic-images/article-2.png",
+                        "article_title": "7 Steps Towards Maintaining A Healthy CIBIL Score",
+                        "article_link": "#",
+                        "article_link_text": "Read full Article"
+                    }
+                ]
+            },
+            {
+                "summary_number": 7,
+                "summary_title": "total accounts",
+                "summary_date": "as of 19th Apr'22",
+                "summary_rating": "good",
+                "summary_content":[
+                    {
+                        "content_title": "How does this impact my score?",
+                        "content_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    }
+                ],
+                "related_article":[
+                    {
+                        "article_image": "images/dynamic-images/article-3.png",
+                        "article_title": "Build A Positive Credit Profile With Good Credit Habits",
+                        "article_link": "#",
+                        "article_link_text": "Read full Article"
+                    }
+                ]
+            },
+            {
+                "summary_years": 4,
+                "summary_months": 3,
+                "summary_title": "credit age",
+                "summary_date": "as of 19th Apr'22",
+                "summary_rating": "poor",
+                "summary_content":[
+                    {
+                        "content_title": "How does this impact my score?",
+                        "content_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    }
+                ],
+                "related_article":[
+                    {
+                        "article_image": "images/dynamic-images/article-4.png",
+                        "article_title": "Top 5 Tips To Boost Your Credit Health",
+                        "article_link": "#",
+                        "article_link_text": "Read full Article"
+                    }
+                ]
+            }
+        ]
+    }
+]

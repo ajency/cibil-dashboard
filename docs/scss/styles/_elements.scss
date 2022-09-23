@@ -497,23 +497,29 @@ input[type="number"] {
     margin-bottom: 0px;
     line-height: 0;
     &:not(:last-child) {
-      margin-right: 6px;
+      margin-right: 10px;
     }
     button {
       font-size: 0px;
       padding: 0;
       margin: 0;
-      width: 20px;
-      height: 6px;
-      background: $light-blue-3;
+      width: 10px;
+      height: 10px;
+      background: $light-blue-6;
       border: none;
       border-radius: 30px;
       transition: all 0.2s ease-in-out;
     }
     &.slick-active {
       button {
-        width: 36px;
         background: $primary-blue;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    li{
+      &:not(:last-child) {
+        margin-right: 8px;
       }
     }
   }
