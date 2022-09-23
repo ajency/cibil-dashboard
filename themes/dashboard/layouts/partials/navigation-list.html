@@ -1,8 +1,8 @@
 <div class="nav-list">
     {{ partial "account-upgrade-card"}}
     <!-- {{ .RelPermalink }} -->
-    <div class="overview-list active opened">
-        <a href="/cibil-dashboard/overview_free/" class="nav-item overview-item {{ if eq .RelPermalink "/cibil-dashboard/overview_free/alerts/" }}active{{end}}"><span class="svg-icon-box">{{partial "icons/home-icon"}}</span><span>Overview</span>{{ partial "icons/arrow-white"}}</a>
+    <div class='overview-list {{ if eq .RelPermalink "/cibil-dashboard/overview_free/" }}overview-toggle active opened{{end}}'>
+        <a href="/cibil-dashboard/overview_free/" class="nav-item overview-item {{ if eq .RelPermalink "/cibil-dashboard/overview_free/" }}active{{end}}"><span class="svg-icon-box">{{partial "icons/home-icon"}}</span><span>Overview</span>{{ partial "icons/arrow-white"}}</a>
         <span class="sublist">
             <a href="" class="sublist-item">CIBIL Report</a>
             <a href="" class="sublist-item">Credit Summary</a>

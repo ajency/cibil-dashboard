@@ -25,7 +25,7 @@ $(function () {
     }
     $(".mobile-nav-list").toggleClass("opened");
   });
-  $(".overview-list .overview-item").click(function (e) {
+  $(".overview-list.overview-toggle .overview-item").click(function (e) {
     e.preventDefault();
     $(".overview-list").toggleClass("opened");
   });
@@ -76,6 +76,10 @@ $(function () {
     $(this).addClass('active');
     $('.report-content .tab-panel').removeClass('active');
     $($(this).data('target')).addClass('active')
+    $('.custom-select-options span').removeClass("selected");
+    let selectElement = $('.custom-select-options span[data-target="'+$(this).data('target')+'"]')
+    selectElement.addClass('selected')
+    $('#report-select-value').html(selectElement.html())
   })
 })
 function customSelectInput(element){
@@ -91,6 +95,10 @@ function customSelectTab(element){
   $(element).siblings().removeClass("selected")
   $(element).addClass('selected')
   $(element).parents('.custom-select-input').find('.custom-select-value').html($(element).html())
+  $('.report-content .tab-panel').removeClass('active');
+  $($(element).data('target')).addClass('active');
+  $('.report-nav-link').removeClass('active');
+  $('.report-nav-link[data-target="'+$(element).data('target')+'"]').addClass('active');
 }
 function closeScenario(element){
     let parentElement = $(element).parents('.scenario')
