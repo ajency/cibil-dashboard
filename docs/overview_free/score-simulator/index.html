@@ -440,7 +440,7 @@ Free Account</p>
             </div>
 
             <div class="scenario-cta">
-                <a class="cibil-button smiluate-now-cta" href="/cibil-dashboard/overview_free/upgrade-plan/">SIMULATE NOW</a>
+                <a class="cibil-button smiluate-now-cta disabled" href="/cibil-dashboard/overview_free/upgrade-plan/">SIMULATE NOW</a>
                 <a class="primary-link add-scenario" onclick="addScenario()">+Add another scenario</a>
             </div>
         </div>
@@ -746,7 +746,7 @@ Free Account</p>
 
     function addOption(element, option){
         let value = $('#optionsAdded').val();
-        $('#optionsAdded').val(value+option+",");
+        $('#optionsAdded').val(value+option+",").trigger('change');;
         $(element).parents('.scenario').find('.scenario-options').hide();
         let html= '';
 
@@ -894,7 +894,7 @@ Free Account</p>
         let parentElement = $(element).parents('.scenario')
         let optionValue = parentElement.find('.option-card:visible').attr('type')
         let value = $('#optionsAdded').val();
-        $('#optionsAdded').val(value.replace(optionValue+",",""));
+        $('#optionsAdded').val(value.replace(optionValue+",","")).trigger('change');;
         parentElement.remove();
     }
     function cancelAction(element){

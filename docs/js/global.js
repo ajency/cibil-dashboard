@@ -94,6 +94,15 @@ $(function () {
   $('.close-popup').click(function(){
     $(this).parents('.popup').removeClass('opened success')
   })
+  $('#optionsAdded').change(function(){
+    console.log('ran')
+    if($(this).val() != ""){
+      $('.smiluate-now-cta').removeClass('disabled')
+    }
+    else{
+      $('.smiluate-now-cta').addClass('disabled')
+    }
+  })
 })
 function customSelectInput(element){
   $(element).toggleClass('opened')
@@ -117,7 +126,7 @@ function closeScenario(element){
     let parentElement = $(element).parents('.scenario')
     let optionValue = parentElement.find('.option-card:visible').attr('type')
     let value = $('#optionsAdded').val();
-    $('#optionsAdded').val(value.replace(optionValue+",",""));
+    $('#optionsAdded').val(value.replace(optionValue+",","")).trigger('change');
     parentElement.addClass('blank')
     parentElement.find('.scenario-options').show()
     parentElement.find('.option-card').remove()

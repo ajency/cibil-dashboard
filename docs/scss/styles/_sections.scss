@@ -1361,49 +1361,6 @@
   }
 }
 
-<<<<<<< Updated upstream
-//clear dues
-.clear-dues-bar {
-  display: block;
-  width: 100%;
-  padding: 20px 30px 20px 52px;
-  background: #FFF7C9;
-  .bar-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    svg{
-      margin-right: 10px;
-    }
-    .clear-dues-text{
-      @include intro-book-14;
-      margin: 0;
-      margin-right: 10px;
-      display: flex;
-      & > span{
-        & > span{
-          display: block;
-          &:first-child{
-            margin-bottom: 2px;
-          }
-        }
-      }
-      .red ,.black, .grey{
-        font-weight: $intro-regular;
-      }
-      .red {
-        color: rgba(215, 64, 37, 1)
-      }
-      .black{
-        color: $black;
-      }
-      .grey{
-        color: rgba(172, 172, 172, 1);
-      }
-    }
-    .cibil-button{
-      min-width: 262px;
-=======
 // all accounts
 .accounts-container {
   background: $light-blue;
@@ -1515,26 +1472,10 @@
       &::before {
         background-color: $secondary-red;
       }
->>>>>>> Stashed changes
     }
   }
   @include media-breakpoint-down(sm) {
     padding: 20px;
-<<<<<<< Updated upstream
-
-    .bar-content{
-      flex-direction: column;
-      svg{
-        min-width: 20px;
-      }
-      .clear-dues-text{
-        & > span{
-          & > span{
-            margin-bottom: 16px;
-            &:first-child{
-              margin-bottom: 20px;
-            }
-=======
     .account-head {
       display: none;
     }
@@ -1592,19 +1533,78 @@
                 content: "Ownership";
               }
             }
->>>>>>> Stashed changes
           }
         }
       }
     }
-<<<<<<< Updated upstream
-  }
-}
-=======
     &.open_accounts,
     &.closed_accounts {
       background: #f9f9f9;
     }
   }
 }
->>>>>>> Stashed changes
+
+//clear dues
+.clear-dues-bar {
+  display: block;
+  width: 100%;
+  padding: 20px 30px 20px 52px;
+  background: #FFF7C9;
+  .bar-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg{
+      margin-right: 10px;
+    }
+    .clear-dues-text{
+      @include intro-book-14;
+      margin: 0;
+      margin-right: 10px;
+      display: flex;
+      & > span{
+        & > span{
+          display: block;
+          &:first-child{
+            margin-bottom: 2px;
+          }
+        }
+      }
+      .red ,.black, .grey{
+        font-weight: $intro-regular;
+      }
+      .red {
+        color: rgba(215, 64, 37, 1)
+      }
+      .black{
+        color: $black;
+      }
+      .grey{
+        color: rgba(172, 172, 172, 1);
+      }
+    }
+    .cibil-button{
+      min-width: 262px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px;
+
+    .bar-content{
+      flex-direction: column;
+      svg{
+        min-width: 20px;
+      }
+      .clear-dues-text{
+        & > span{
+          & > span{
+            margin-bottom: 16px;
+            &:first-child{
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

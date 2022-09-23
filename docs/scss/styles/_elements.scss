@@ -647,3 +647,8 @@ input[type="number"] {
     display: block;
   }
 }
+.disabled{
+  pointer-events: none !important;
+  background-color: #DDDDDD !important;
+  color: $light !important;
+}
