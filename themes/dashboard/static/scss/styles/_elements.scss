@@ -486,6 +486,20 @@ input[type="number"] {
   cursor: pointer;
 }
 
+.showAllLink{
+  @include intro-regular-16;
+  text-decoration: underline;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto 0;
+  text-align: center;
+  svg{
+    margin-left: 10px;
+  }
+}
+
 //slick
 .slick-dots {
   margin-bottom: 0px;

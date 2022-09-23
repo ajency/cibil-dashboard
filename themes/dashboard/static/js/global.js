@@ -124,3 +124,7 @@ function chooseAccount(element){
         parentElement.find('.chooseAccount-wrapper').removeClass('active')
     }
 }
+
+function showAllEnquiries(element){
+  $(element).parent().toggleClass('expanded')
+}

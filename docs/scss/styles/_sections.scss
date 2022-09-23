@@ -1263,7 +1263,35 @@
         margin: 0;
       }
     }
+    & > .table-content:nth-of-type(n+6) {
+      display: none;
+    }
   }
+  .showAllLink{
+    span:nth-child(2){
+      display: none;
+    }
+  }
+  &.expanded {
+    &.table-light{
+      & > .table-content:nth-of-type(n+6) {
+        display: grid;
+      }
+    }
+    .showAllLink{
+      span:nth-child(2){
+        display: block;
+      }
+      span:first-child{
+        display: none;
+      }
+      svg{
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+
   @include media-breakpoint-down(sm) {
     .table-title {
       margin: 0;
@@ -1281,6 +1309,11 @@
         &:not(.half) {
           grid-column: 1 / span 2;
         }
+      }
+    }
+    &.table-light{
+      .table-content{
+        row-gap: 20px;
       }
     }
   }
