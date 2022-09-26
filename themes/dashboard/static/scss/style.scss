@@ -501,6 +501,11 @@ footer {
     font-weight: $intro-regular;
     text-transform: uppercase;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      background-color: #cdf6ff;
+      color: $primary-blue;
+    }
     &.active {
       background-color: #cdf6ff;
       color: $primary-blue;
