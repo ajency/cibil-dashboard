@@ -391,6 +391,7 @@ header {
     box-shadow: 2px 2px 16px rgba(0, 71, 255, 0.2);
     z-index: 2;
     opacity: 0;
+    transform: translateY(10px);
     visibility: hidden;
     transition: all 0.3s ease-in-out;
     &::after {
@@ -408,6 +409,7 @@ header {
   &:hover {
     .upgrade-plan-tooltip {
       visibility: visible;
+      transform: translateY(0);
       opacity: 1;
     }
   }
