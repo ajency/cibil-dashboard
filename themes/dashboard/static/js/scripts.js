@@ -115,7 +115,7 @@ $(".partners").slick({
 function enableAccountSlider(){
   $(".account-summary-slider").slick({
     speed: 1000,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     arrows: false,
     dots: true,
@@ -143,3 +143,15 @@ $(".account-collapse").on("show.bs.collapse", function () {
 $(".account-collapse").on("hide.bs.collapse", function () {
   console.log($(this).prev().removeClass("show"));
 });
+
+// tabs redirect
+var hash = location.hash.replace(/^#/, '');  // ^ means starting, meaning only match the first hash
+$tabsParent =  $(".reportTabs");
+$panelParent = $(".report-content .tab-content");
+console.log(hash);
+if (hash) {
+    $tabsParent.find(".report-nav-item button").removeClass("active");
+    $('.report-nav-item button[data-target="#' + hash + '"]').addClass("active");
+    $panelParent.find(".tab-panel").removeClass("active");
+    $('.tab-panel[id="' + hash + '"]').addClass("active");
+}
