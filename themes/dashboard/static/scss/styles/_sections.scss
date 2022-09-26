@@ -617,7 +617,7 @@
       .score-message {
         margin-top: 39px;
         @include intro-book-16;
-        color: #707070;
+        color: $grey;
         margin-bottom: 6px;
       }
       .score-refresh-link {
@@ -1093,7 +1093,7 @@
         img {
           margin-right: 10px;
         }
-        @media (min-width:768px) and (max-width:1280px){
+        @media (min-width: 768px) and (max-width: 1280px) {
           font-size: 14px;
         }
       }
@@ -1179,7 +1179,7 @@
     font-size: 24px;
     line-height: 30px;
     letter-spacing: 0.02em;
-    color: #2c2c2c;
+    color: $black;
   }
   .summary-pointers {
     display: flex;
@@ -1193,7 +1193,7 @@
     }
     p {
       @include intro-book-16;
-      color: #707070;
+      color: $grey;
       margin-bottom: 20px;
       display: flex;
     }
@@ -1808,17 +1808,25 @@
           flex-direction: column;
           row-gap: 6px;
           font-weight: 400;
-          border-color: #EDEDED;
-          span{
-            b{
+          border-color: #ededed;
+          span {
+            b {
               font-weight: $intro-regular;
             }
           }
         }
-        .bold-title{
+        .bold-title {
           font-weight: 600;
         }
       }
     }
+  }
+}
+
+// detailed analysis
+.detailed-analysis-section{
+    margin-bottom: 278px;
+  @include media-breakpoint-down(sm){
+    margin-bottom: 30px;
   }
 }

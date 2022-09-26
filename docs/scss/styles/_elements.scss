@@ -158,7 +158,7 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: $black;
+  color: $black !important;
   text-decoration: none !important;
   span {
     position: relative;
@@ -286,7 +286,7 @@
   }
   .message {
     @include intro-regular-14;
-    color: #d74025;
+    color: $secondary-red;
   }
   &.long-radio {
     background: $light;
@@ -482,7 +482,7 @@ input[type="number"] {
   font-size: 16px;
   line-height: 16px;
   text-decoration-line: underline;
-  color: #2c2c2c !important;
+  color: $black !important;
   display: flex;
   cursor: pointer;
 }
@@ -548,7 +548,7 @@ input[type="number"] {
   left: 50%;
   transform: translate(-50%, -50%);
   background: $light;
-  border: 1px solid #DDE0EF;
+  border: 1px solid $light-blue-7;
   border-radius: 6px;
   width: 80%;
   max-width: 840px;
@@ -561,7 +561,7 @@ input[type="number"] {
     font-size: 16px;
     line-height: 24px;
     padding: 30px 30px 20px;
-    border-bottom: 1px solid #DDE0EF;
+    border-bottom: 1px solid $light-blue-7;
     position: relative;
     color: $primary-blue;
     text-transform: uppercase;
@@ -597,7 +597,7 @@ input[type="number"] {
       font-size: 32px;
       line-height: 44px;
       letter-spacing: -0.01em;
-      color: #2C2C2C;
+      color: $black;
        margin-bottom: 20px;
     }
     .content-text{
@@ -606,7 +606,7 @@ input[type="number"] {
       line-height: 24px;
       text-align: center;
       letter-spacing: 0.02em;
-      color: #707070;
+      color: $grey;
       max-width: 420px;
       margin: auto;
     }
@@ -649,6 +649,6 @@ input[type="number"] {
 }
 .disabled{
   pointer-events: none !important;
-  background-color: #DDDDDD !important;
+  background-color: $border-color-4 !important;
   color: $light !important;
 }

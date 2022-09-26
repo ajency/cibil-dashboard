@@ -971,8 +971,8 @@
       position: relative;
       align-items: center;
       justify-content: center;
-        background: $light;
-        border-radius: 100%;
+      background: $light;
+      border-radius: 100%;
       .usage-value {
         position: absolute;
         font-weight: $intro-bold;
@@ -1171,7 +1171,7 @@
     }
     .offer-count {
       background: $light;
-      border: 1px solid #006685;
+      border: 1px solid $secondary-denim;
       border-radius: 21px;
       height: 30px;
       width: 30px;
@@ -1294,7 +1294,6 @@
 .account-summary {
   background: $light-yellow;
   &__wraper {
-
     padding: 30px 39px 30px 20px;
     .summary {
       .wrap {
@@ -1312,7 +1311,7 @@
         text-transform: uppercase;
         margin-bottom: 14px;
       }
-      .summary-count{
+      .summary-count {
         margin-bottom: 0;
       }
       .card-usage-box {
@@ -1362,7 +1361,7 @@
         }
         .desc {
           letter-spacing: 0.02em;
-          &:last-child{
+          &:last-child {
             margin-bottom: 0px;
           }
         }
@@ -1394,42 +1393,107 @@
       .summary {
         border-right: 1px solid $border-color-5;
         padding-right: 14px;
-        width:70%;
+        width: 70%;
       }
       .related-article {
         padding-left: 30px;
-        width:30%;
+        width: 30%;
       }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__wraper {
+      padding: 20px;
+      .summary {
+        border-bottom: 1px solid $border-color-5;
+        padding-bottom: 20px;
+        & > .wrap {
+          column-gap: 20px;
+        }
+        .summary-count-cta {
+          width: auto;
+        }
+        .summary-title {
+          margin-bottom: 10px;
+        }
+      }
+      .related-article {
+        padding-top: 20px;
+        .section-title {
+          margin-bottom: 20px;
+        }
+        .article-image {
+          margin-bottom: 10px;
+        }
+        .article-title {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
+
+// score
+.cibil-score {
+  &__wraper {
+    border: 1px solid $seperator-line-color;
+    border-radius: 4px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+    .score {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: -0.01em;
+      color: $secondary-dark-green;
+      margin-bottom: 10px;
+    }
+    .subtext {
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: $dark;
+      margin-bottom: 4px;
+    }
+    .desc {
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      color: $grey;
+      margin-bottom: 0px;
     }
   }
   @include media-breakpoint-down(sm){
     &__wraper{
+      border-radius: 8px;
+      margin-top: 30px;
+      .subtext{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+// content box
+.content-box {
+  &:not(:last-child){
+    margin-bottom: 30px;
+  }
+  &__wraper {
+    background: $light-yellow;
+    padding: 30px 58px 30px 20px;
+    letter-spacing: 0.02em;
+    color: $dark;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 20px;
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+    &__wraper {
       padding: 20px;
-      .summary{
-        border-bottom: 1px solid $border-color-5;
-        padding-bottom: 20px;
-        & > .wrap{
-          column-gap: 20px;
-        }
-        .summary-count-cta{
-          width:auto;
-        }
-        .summary-title{
-          margin-bottom: 10px;
-        }
-      }
-      .related-article{
-        padding-top: 20px;
-        .section-title{
-          margin-bottom: 20px;
-        }
-        .article-image{
-          margin-bottom: 10px;
-        }
-        .article-title{
-          margin-bottom: 16px;
-        }
-      }
+      line-height: 24px;
+      color: $black;
     }
   }
 }
