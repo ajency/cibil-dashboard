@@ -112,7 +112,15 @@ $(".partners").slick({
 });
 
 //account summary slider
+
 function enableAccountSlider(){
+  $(".account-summary-slider").on("init", function (e, slickInstance) {
+    const params = new URLSearchParams(window.location.search);
+    const myParam = params.get("slideNum");
+    if (Number(myParam)) {
+      slickInstance.slickGoTo(myParam);
+    }
+  });
   $(".account-summary-slider").slick({
     speed: 1000,
     autoplay: false,
@@ -148,10 +156,10 @@ $(".account-collapse").on("hide.bs.collapse", function () {
 var hash = location.hash.replace(/^#/, '');  // ^ means starting, meaning only match the first hash
 $tabsParent =  $(".reportTabs");
 $panelParent = $(".report-content .tab-content");
-console.log(hash);
 if (hash) {
     $tabsParent.find(".report-nav-item button").removeClass("active");
     $('.report-nav-item button[data-target="#' + hash + '"]').addClass("active");
     $panelParent.find(".tab-panel").removeClass("active");
     $('.tab-panel[id="' + hash + '"]').addClass("active");
+    checkAccountVisibility();
 }
