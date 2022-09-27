@@ -112,15 +112,8 @@ $(".partners").slick({
 });
 
 //account summary slider
-
 function enableAccountSlider(){
-  $(".account-summary-slider").on("init", function (e, slickInstance) {
-    const params = new URLSearchParams(window.location.search);
-    const myParam = params.get("slideNum");
-    if (Number(myParam)) {
-      slickInstance.slickGoTo(myParam);
-    }
-  });
+  let targetSlide = location.hash.split("_")[1];
   $(".account-summary-slider").slick({
     speed: 1000,
     autoplay: false,
@@ -129,6 +122,7 @@ function enableAccountSlider(){
     dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    initialSlide: targetSlide - 1,
     responsive: [
       {
         breakpoint: 576,
@@ -153,7 +147,7 @@ $(".account-collapse").on("hide.bs.collapse", function () {
 });
 
 // tabs redirect
-var hash = location.hash.replace(/^#/, '');  // ^ means starting, meaning only match the first hash
+var hash = location.hash.replace(/^#/, '').split('_')[0];
 $tabsParent =  $(".reportTabs");
 $panelParent = $(".report-content .tab-content");
 if (hash) {
@@ -163,3 +157,5 @@ if (hash) {
     $('.tab-panel[id="' + hash + '"]').addClass("active");
     checkAccountVisibility();
 }
+
+// slide redirect
