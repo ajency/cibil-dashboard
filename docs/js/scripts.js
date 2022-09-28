@@ -113,7 +113,10 @@ $(".partners").slick({
 
 //account summary slider
 function enableAccountSlider(){
-  let targetSlide = location.hash.split("_")[1];
+  let targetSlide = 1;
+  if(location.hash){
+    targetSlide = location.hash.split("_")[1];
+  }
   $(".account-summary-slider").slick({
     speed: 1000,
     autoplay: false,
