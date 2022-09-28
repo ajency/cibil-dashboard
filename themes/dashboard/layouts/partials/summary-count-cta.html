@@ -1,4 +1,4 @@
-<div class="summary-count-cta">
+<div class="summary-count-cta {{if .classes}}{{.classes}}{{end}}">
     {{ if or .summary_number .summary_years .summary_months }}
         {{ partial "summary-count" .}}
     {{end}}

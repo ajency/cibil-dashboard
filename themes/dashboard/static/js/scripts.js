@@ -51,14 +51,15 @@ $(function() {
       let elHeight = tooltip_trigger.height()*2.2;
       let elWidth = tooltip_trigger.width()*70/100;
 
-      let arrowPosition = (leftPosition);
+      let windowWidth = $( document ).width();
+      let arrowPosition = (windowWidth - leftPosition)- 45;
   
       if ( (leftPosition-elWidth) < 0 ){
         tooltip_box.css({"top":topPosition+elHeight, "left":leftPosition});
         $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{left: '+ leftPosition +'px;}</style>');
       } else{
         tooltip_box.css({"top":topPosition+elHeight, "left": (leftPosition - elWidth)});
-        $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{right: calc('+ arrowPosition +'px - 100%) !important;}</style>');
+        $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{right:'+ arrowPosition +'px !important;}</style>');
       }
     }
   

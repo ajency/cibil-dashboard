@@ -1003,6 +1003,13 @@
       min-height: 41.6px;
     }
   }
+  @media(max-width:512px){
+    &.vertical-position{
+      .summary-details{
+        margin-top: 44px;
+      }
+    }
+  }
 }
 
 // banner cta
