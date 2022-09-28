@@ -57,22 +57,27 @@
             </div>
 
             <div class="scenario-cta">
-                <a class="cibil-button smiluate-now-cta disabled" href="/cibil-dashboard/overview_free/upgrade-plan/">SIMULATE NOW</a>
+                <a class="cibil-button smiluate-now-cta disabled" onclick="upgradePlan()">SIMULATE NOW</a>
                 <a class="primary-link add-scenario" onclick="addScenario()">+Add another scenario</a>
             </div>
         </div>
         <div class="score-display-container">
             <div class="score-wrap">
-                <p class="score-message">Your current score is 3 days old</p>
-                <a href="" class="score-refresh-link">Refresh Now</a>
+                <div class="link-cta">
+                    <p class="score-message">Your current score is 3 days old</p>
+                    <a href="" class="score-refresh-link">Refresh Now</a>
+                </div>
                 <div class="score-display-box">
-                    <div>
-                        {{ partial "simulator" (dict "cibil_score" "720" "score_text" "<b>Current <strong class='highlight-text-blue'>CIBIL</strong> Score</b>" )}}
+                    <div class="score-display-box__wraper">
+                        <div>
+                            {{ partial "simulator" (dict "cibil_score" "720" "score_text" "<b>Current <strong class='highlight-text-blue'>CIBIL</strong> Score</b>" )}}
+                        </div>
+                        <hr class="horizontal-seperator">
+                        <div>
+                            {{ partial "empty-simulator" (dict "score_text" "<b>Your simulated <strong class='highlight-text-blue'>CIBIL</strong> Score</b>" )}}
+                        </div>
                     </div>
-                    <hr style="    border: 2px solid #B8C9E9;width: 100%;margin: 20px 0;">
-                    <div>
-                        {{ partial "empty-simulator" (dict "score_text" "<b>Your simulated <strong class='highlight-text-blue'>CIBIL</strong> Score</b>" )}}
-                    </div>
+                    {{ partial "upgrade-plan-cta" (dict "heading" "Please upgrade your plan" "cta_text" "UPGRADE NOW" "cta_link" "/cibil-dashboard/overview_free/upgrade-plan" ) }}
                 </div>
             </div>
         </div>

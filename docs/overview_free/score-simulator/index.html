@@ -472,17 +472,20 @@ Free Account</p>
             </div>
 
             <div class="scenario-cta">
-                <a class="cibil-button smiluate-now-cta disabled" href="/cibil-dashboard/overview_free/upgrade-plan/">SIMULATE NOW</a>
+                <a class="cibil-button smiluate-now-cta disabled" onclick="upgradePlan()">SIMULATE NOW</a>
                 <a class="primary-link add-scenario" onclick="addScenario()">+Add another scenario</a>
             </div>
         </div>
         <div class="score-display-container">
             <div class="score-wrap">
-                <p class="score-message">Your current score is 3 days old</p>
-                <a href="" class="score-refresh-link">Refresh Now</a>
+                <div class="link-cta">
+                    <p class="score-message">Your current score is 3 days old</p>
+                    <a href="" class="score-refresh-link">Refresh Now</a>
+                </div>
                 <div class="score-display-box">
-                    <div>
-                        <div class="simulator">
+                    <div class="score-display-box__wraper">
+                        <div>
+                            <div class="simulator">
     <div class="score-bar">
         <div class="bar">
             <img class="bar-image" src="/cibil-dashboard/images/static-images/simulator.svg">
@@ -497,10 +500,10 @@ Free Account</p>
         
     </div>
 </div>
-                    </div>
-                    <hr style="    border: 2px solid #B8C9E9;width: 100%;margin: 20px 0;">
-                    <div>
-                        <div class="simulator empty-simulator">
+                        </div>
+                        <hr class="horizontal-seperator">
+                        <div>
+                            <div class="simulator empty-simulator">
     <div class="score-bar">
         <div class="bar">
             <img class="bar-image" src="/cibil-dashboard/images/static-images/empty-score.svg">
@@ -509,7 +512,14 @@ Free Account</p>
         <p class="score-text"><b>Your simulated <strong class='highlight-text-blue'>CIBIL</strong> Score</b></p>
     </div>
 </div>
+                        </div>
                     </div>
+                    <div class="upgrade-plan-cta" id="upgrade-plan-cta">
+    <div class="upgrade-plan-cta__wraper">
+        <p class="cta-heading">Please upgrade your plan</p>
+        <a href="/cibil-dashboard/overview_free/upgrade-plan" class="cibil-button">UPGRADE NOW</a>
+    </div>
+</div>
                 </div>
             </div>
         </div>

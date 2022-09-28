@@ -187,3 +187,7 @@ function checkAccountVisibility(){
     disableAccountSlider()
   }
 }
+
+function upgradePlan(element){
+  $('.score-display-box').find('.upgrade-plan-cta').show("fast");
+}
