@@ -5,6 +5,7 @@ $(function () {
     if ($(".hamburger").hasClass("opened")) {
       $(".hamburger, .mobile-nav-list").removeClass("opened");
       $(".mobile-nav-list").hide("medium");
+      $(".overlay").addClass("opened");
     } else {
       $(".overlay").toggleClass("opened");
     }
