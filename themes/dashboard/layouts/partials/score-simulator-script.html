@@ -102,13 +102,13 @@
     function addOption(element, option){
         let value = $('#optionsAdded').val();
         $('#optionsAdded').val(value+option+",").trigger('change');;
-        $(element).parents('.scenario').find('.scenario-options').hide();
+        $(element).parents('.scenario').find('.scenario-options').fadeOut('slow');
         let html= '';
 
         console.log(option)
         switch(option){
             case 'missPayment':
-                html = `<div class="option-card" type="missPayment">
+                html = `<div class="option-card" type="missPayment" style="display: none;">
                         <p class="option-card-title"><span>Miss a payment on all Active Loan Accounts and Credit Cards</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
                         <div class="options-container">
                             <div class="group">
@@ -128,7 +128,7 @@
                 break;
             
             case 'newLoan':
-                html = `<div class="option-card" type="newLoan">
+                html = `<div class="option-card" type="newLoan" style="display: none;">
                         <p class="option-card-title"><span>Add a New Loan or Credit Cards</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
                         <div class="options-container">
                             <div class="group">
@@ -157,7 +157,7 @@
                 break;
 
             case 'closeCreditCard':
-                html = `<div class="option-card" type="closeCreditCard">
+                html = `<div class="option-card" type="closeCreditCard" style="display: none;">
                         <p class="option-card-title"><span>Close my oldest credit card</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
                         <div class="options-container">
                             <div class="custom-radio-input">
@@ -173,7 +173,7 @@
                 break;
 
             case 'clearBalance':
-                html = `<div class="option-card" type="clearBalance">
+                html = `<div class="option-card" type="clearBalance" style="display: none;">
                         <p class="option-card-title"><span>Clear the outstanding balances on all my active credit cards</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
                         <div class="options-container">
                             <div class="custom-radio-input">
@@ -189,7 +189,7 @@
                 break;
 
             case 'clearAccountBalance':
-                html = `<div class="option-card" type="clearAccountBalance">
+                html = `<div class="option-card" type="clearAccountBalance" style="display: none;">
                         <p class="option-card-title"><span>Clear the outstanding balances on your active accounts (s)</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
                         <div class="options-container">
 
@@ -238,7 +238,9 @@
 
         console.log(html)
 
+        // $(element).parents('.scenario-body').hide()
         $(element).parents('.scenario-body').append(html)
+        setTimeout(function(){$(element).parents('.scenario-body').find('.option-card').fadeIn('slow')},500)
         $(element).parents('.scenario').removeClass('blank');
         $('.scenario-list').removeClass('hasBlank')
     }

@@ -156,8 +156,11 @@ function closeScenario(element){
     let value = $('#optionsAdded').val();
     $('#optionsAdded').val(value.replace(optionValue+",","")).trigger('change');
     parentElement.addClass('blank')
-    parentElement.find('.scenario-options').show()
-    parentElement.find('.option-card').remove()
+    parentElement.find('.option-card').fadeOut(600)
+    setTimeout(function(){
+      parentElement.find('.option-card').remove()
+      parentElement.find('.scenario-options').fadeIn()
+    },500)
     parentElement.removeClass('closed')
     $(element).parents('.scenario-list').addClass('hasBlank');
 }
