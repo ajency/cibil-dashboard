@@ -470,7 +470,7 @@
       padding: 20px 10px;
       .cibil-button {
         width: 100%;
-        color: $light !important;
+        color: $dark !important;
         font-weight: $intro-regular;
       }
       .plan-features {
@@ -1463,11 +1463,11 @@
       margin-bottom: 0px;
     }
   }
-  @include media-breakpoint-down(sm){
-    &__wraper{
+  @include media-breakpoint-down(sm) {
+    &__wraper {
       border-radius: 8px;
       margin-top: 30px;
-      .subtext{
+      .subtext {
         margin-bottom: 10px;
       }
     }
@@ -1476,7 +1476,7 @@
 
 // content box
 .content-box {
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-bottom: 30px;
   }
   &__wraper {
@@ -1487,13 +1487,23 @@
   }
   @include media-breakpoint-down(sm) {
     margin-bottom: 20px;
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 20px;
     }
     &__wraper {
       padding: 20px;
       line-height: 24px;
       color: $black;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  #repayment-popup {
+    .cibil-button {
+      &.popup-agree {
+        width: 100%;
+      }
     }
   }
 }

@@ -19,7 +19,7 @@
     },
     {
         "heading": "Where will the alert be delivered?",
-        "content": "An email notification for Alerts will be delivered to your registered email ID. You can view the details under the <b>Alerts tab</b> by logging into your CIBIL account.<br><br><a class=\"cibil-link\" href=\"https://myscore.cibil.com/CreditView/login.page?enterprise=CIBIL&utm_source=alertsfaqpage\">Click here to log in and check now<a/>.",
+        "content": "An email notification for Alerts will be delivered to your registered email ID. You can view the details under the <b>Alerts tab</b> by logging into your CIBIL account.<br><br><a class=\"cibil-link\" href=\"https://myscore.cibil.com/CreditView/login.page?enterprise=CIBIL&utm_source=alertsfaqpage\">Click here to log in and check now</a>.",
         "collapsed": false,
         "unique_id": "4"
     },

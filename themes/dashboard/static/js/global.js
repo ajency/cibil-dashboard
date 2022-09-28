@@ -97,7 +97,6 @@ $(function () {
     $(this).parents('.popup').removeClass('opened success')
   })
   $('#optionsAdded').change(function(){
-    console.log('ran')
     if($(this).val() != ""){
       $('.smiluate-now-cta').removeClass('disabled')
     }

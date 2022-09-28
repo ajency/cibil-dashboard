@@ -1,9 +1,9 @@
 //faq
 $(".faq-collapse").on("show.bs.collapse", function () {
-  console.log($(this).prev().addClass("show"));
+  $(this).prev().addClass("show");
 });
 $(".faq-collapse").on("hide.bs.collapse", function () {
-  console.log($(this).prev().removeClass("show"));
+  $(this).prev().removeClass("show");
 });
 
 // banner cta
@@ -58,7 +58,6 @@ $(function() {
         $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{left: '+ leftPosition +'px;}</style>');
       } else{
         tooltip_box.css({"top":topPosition+elHeight, "left": (leftPosition - elWidth)});
-        console.log(arrowPosition);
         $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{right: calc('+ arrowPosition +'px - 100%) !important;}</style>');
       }
     }
@@ -140,10 +139,10 @@ function disableAccountSlider(){
 
 //account summary
 $(".account-collapse").on("show.bs.collapse", function () {
-  console.log($(this).prev().addClass("show"));
+  $(this).prev().addClass("show");
 });
 $(".account-collapse").on("hide.bs.collapse", function () {
-  console.log($(this).prev().removeClass("show"));
+  $(this).prev().removeClass("show");
 });
 
 // tabs redirect
