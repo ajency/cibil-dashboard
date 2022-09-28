@@ -1,11 +1,23 @@
 $(function () {
   $(".language-selector").click(function (e) {
     $(".language-selector, .language-list").toggleClass("active");
+    $(".language-list").toggle("medium");
     if ($(".hamburger").hasClass("opened")) {
       $(".hamburger, .mobile-nav-list").removeClass("opened");
+      $(".mobile-nav-list").hide("medium");
     } else {
       $(".overlay").toggleClass("opened");
     }
+  });
+  $(document).click(function(){
+    $(".language-list").hide("medium");
+    $(".overlay").toggleClass("opened");
+  });
+  $(".language-list, .language-selector").click(function(e){
+    e.stopPropagation();
+  });
+  $(".language-list .langauge-item").click(function(e){
+    $(".language-list").toggle("medium");
   });
   $(".langauge-item").click(function () {
     $(this).siblings().removeClass("active");
@@ -24,6 +36,7 @@ $(function () {
       $(".overlay").toggleClass("opened");
     }
     $(".mobile-nav-list").toggleClass("opened");
+    $(".mobile-nav-list").toggle("medium");
   });
   $(".overview-list .toggle-button").click(function (e) {
     e.preventDefault();

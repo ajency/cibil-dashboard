@@ -429,17 +429,15 @@ header {
 .mobile-nav-list {
   display: none;
   position: absolute;
-  width: 100%;
+  width: 100% !important;
   left: 0;
+  opacity: 1 !important;
   top: 100%;
   background-color: $primary-blue;
   border-top: 1px solid $light;
   z-index: 100;
   max-height: calc(100vh - 60px);
   overflow-y: scroll;
-  &.opened {
-    display: block;
-  }
 }
 .overlay {
   @include media-breakpoint-down(lg) {
@@ -506,7 +504,8 @@ footer {
   display: none;
   left: 0;
   top: calc(100% + 10px);
-  width: 205px;
+  opacity: 1 !important;
+  width: 205px !important;
   background: #ffffff;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   .langauge-item {
@@ -528,7 +527,7 @@ footer {
 
   @include media-breakpoint-down(lg) {
     top: 100%;
-    width: 100%;
+    width: 100% !important;
     .langauge-item {
       padding-left: 20px;
       text-transform: capitalize;
@@ -539,9 +538,6 @@ footer {
         color: $primary-blue;
       }
     }
-  }
-  &.active {
-    display: block;
   }
 }
 
