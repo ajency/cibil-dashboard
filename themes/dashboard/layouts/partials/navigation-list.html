@@ -2,13 +2,17 @@
     {{ partial "account-upgrade-card"}}
     <!-- {{ .RelPermalink }} -->
     <div class='overview-list {{ if eq .RelPermalink "/cibil-dashboard/overview_free/" }}overview-toggle active opened{{end}}'>
-        <a href="/cibil-dashboard/overview_free/" class="nav-item overview-item {{ if eq .RelPermalink "/cibil-dashboard/overview_free/" }}active{{end}}"><span class="svg-icon-box">{{partial "icons/home-icon"}}</span><span>Overview</span>{{ partial "icons/arrow-white"}}</a>
+        <div class="has-sublist">
+            <a href="/cibil-dashboard/overview_free/" class="nav-item overview-item {{ if eq .RelPermalink "/cibil-dashboard/overview_free/" }}active{{end}}"><span class="svg-icon-box">{{partial "icons/home-icon"}}</span><span>Overview</span></a><span class="toggle-button">{{ partial "icons/arrow-white"}}</span>
+        </div>
         <span class="sublist">
-            <a href="#cibil-report" class="sublist-item">CIBIL Report</a>
-            <a href="#credit-summary" class="sublist-item">Credit Summary</a>
-            <a href="#cibil-score-history" class="sublist-item">CIBIL Score History</a>
-            <a href="" class="sublist-item">Social Comparision</a>
-            <a href="#loan-offers" class="sublist-item">Loan Offers</a>
+            <div class="sublist__wraper">
+                <a href="{{if ne .RelPermalink "/cibil-dashboard/overview_free/" }}/cibil-dashboard/overview_free/{{end}}#cibil-report" class="sublist-item">CIBIL Report</a>
+                <a href="{{if ne .RelPermalink "/cibil-dashboard/overview_free/" }}/cibil-dashboard/overview_free/{{end}}#credit-summary" class="sublist-item">Credit Summary</a>
+                <a href="{{if ne .RelPermalink "/cibil-dashboard/overview_free/" }}/cibil-dashboard/overview_free/{{end}}#cibil-score-history" class="sublist-item">CIBIL Score History</a>
+                <a href="" class="sublist-item">Social Comparision</a>
+                <a href="{{if ne .RelPermalink "/cibil-dashboard/overview_free/" }}/cibil-dashboard/overview_free/{{end}}#loan-offers" class="sublist-item">Loan Offers</a>
+            </div>
         </span>
     </div>
     <a href="/cibil-dashboard/overview_free/cibil-report/" class="nav-item {{ if eq .RelPermalink "/cibil-dashboard/overview_free/cibil-report/" }}active{{end}}"><span class="svg-icon-box">{{partial "icons/report-icon"}}</span><span>CIBIL Report</span></a>

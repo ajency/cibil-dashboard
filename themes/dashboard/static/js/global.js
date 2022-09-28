@@ -25,9 +25,10 @@ $(function () {
     }
     $(".mobile-nav-list").toggleClass("opened");
   });
-  $(".overview-list.overview-toggle .overview-item").click(function (e) {
+  $(".overview-list .toggle-button").click(function (e) {
     e.preventDefault();
     $(".overview-list").toggleClass("opened");
+    $(this).parent().next(".sublist").toggle("medium");
   });
 
   // animated simulator
