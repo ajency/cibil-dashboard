@@ -160,5 +160,3 @@ if (hash) {
     $('.tab-panel[id="' + hash + '"]').addClass("active");
     checkAccountVisibility();
 }
-
-// slide redirect
