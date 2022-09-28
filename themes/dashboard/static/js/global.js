@@ -11,7 +11,7 @@ $(function () {
   });
   $(document).click(function(){
     $(".language-list").hide("medium");
-    $(".overlay").toggleClass("opened");
+    $(".overlay").removeClass("opened");
   });
   $(".language-list, .language-selector").click(function(e){
     e.stopPropagation();
