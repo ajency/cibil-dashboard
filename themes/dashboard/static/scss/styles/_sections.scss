@@ -640,6 +640,7 @@
         border-radius: 8px;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         width: 100%;
         &__wraper{
           padding: 30px;
