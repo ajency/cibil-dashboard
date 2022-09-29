@@ -1,0 +1,63 @@
+<div class="page-width">
+    <p class="loan-offers-settings">
+        <span>We have found <b>24 offers</b> tailored to your profile.</span>
+        <a id="edit-info">{{ partial "icons/settings"}}EDIT INFORMATION</a>
+    </p>
+
+
+    <div class="report-tabs loan-offers-tabs">
+        <ul class="reportTabs loanTabs" id="loanTab">
+            <li class="report-nav-item" role="presentation">
+                <button class="report-nav-link active" id="summary-tab" data-target="#summary" role="tab"
+                    aria-controls="summary"><span class="offer-count"><b>12</b></span>Credit Card</button>
+            </li>
+            <li class="report-nav-item" role="presentation">
+                <button class="report-nav-link" id="profile-tab" data-target="#profile" role="tab"
+                    aria-controls="profile"><span class="offer-count"><b>4</b></span>Personal</button>
+            </li>
+            <li class="report-nav-item" role="presentation">
+                <button class="report-nav-link" id="account-tab" data-target="#account"><span class="offer-count"><b>2</b></span>Business</button>
+            </li>
+            <li class="report-nav-item" role="presentation">
+                <button class="report-nav-link" id="enquiry-tab" data-target="#enquiry" role="tab"
+                    aria-controls="enquiry"><span class="offer-count"><b>2</b></span>Home</button>
+            </li>
+            <li class="report-nav-item" role="presentation">
+                <button class="report-nav-link" id="enquiry-tab" data-target="#enquiry" role="tab"
+                    aria-controls="enquiry"><span class="offer-count"><b>1</b></span>Loan Against Property</button>
+            </li>
+            <li class="report-nav-item" role="presentation">
+                <button class="report-nav-link" id="enquiry-tab" data-target="#enquiry" role="tab"
+                    aria-controls="enquiry"><span class="offer-count"><b>1</b></span>Auto</button>
+            </li>
+            <li class="report-nav-item" role="presentation">
+                <button class="report-nav-link" id="enquiry-tab" data-target="#enquiry" role="tab"
+                    aria-controls="enquiry" disabled><span class="offer-count"><b>0</b></span>Financial Products</button>
+            </li>
+        </ul>
+        <div class="group report-select-group">
+            <div class="custom-select-input report-select-tab" onclick="customSelectInput(this)">
+                <span class="custom-select-value" id="report-select-value">Credit Card<span class="offer-count"><b>12</b></span></span>
+                <div class="custom-select-options">
+                    <span data-target="#summary" onclick="customSelectTab(this)" class="selected">Credit Card<span class="offer-count"><b>12</b></span></span>
+                    <span data-target="#profile" onclick="customSelectTab(this)" >Personal<span class="offer-count"><b>4</b></span></span>
+                    <span data-target="#account" onclick="customSelectTab(this)" >Business<span class="offer-count"><b>2</b></span></span>
+                    <span data-target="#enquiry" onclick="customSelectTab(this)" >Home<span class="offer-count"><b>2</b></span></span>
+                    <span data-target="#enquiry" onclick="customSelectTab(this)" >Loan Against Property<span class="offer-count"><b>1</b></span></span>
+                    <span data-target="#enquiry" onclick="customSelectTab(this)" >Auto<span class="offer-count"><b>1</b></span></span>
+                    <span data-target="#enquiry" onclick="customSelectTab(this)" class="disabled">Financial Products<span class="offer-count"><b>0</b></span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="report-content loan-offers-content">
+        <div class="tab-content">
+            <div class="tab-panel active" id="summary"  aria-labelledby="summary-tab">{{partial "loan-offers-card"}}</div>
+            <div class="tab-panel" id="profile"  aria-labelledby="profile-tab">{{partial "report-profile" . }}</div>
+            <div class="tab-panel" id="account"  aria-labelledby="account-tab">{{ partial "report-account" . }}</div>
+            <div class="tab-panel" id="enquiry"  aria-labelledby="enquiry-tab">{{partial "report-enquiry" . }}</div>
+        </div>
+    </div>
+
+</div>

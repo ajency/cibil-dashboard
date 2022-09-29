@@ -231,6 +231,11 @@
       img {
         margin-right: 16px;
       }
+      a{
+        color: $black;
+        font-weight: $intro-bold;
+        text-decoration: underline;
+      }
     }
     @include media-breakpoint-down(lg) {
       flex-direction: column;
@@ -1930,5 +1935,229 @@
   margin-bottom: 278px;
   @include media-breakpoint-down(sm) {
     margin-bottom: 30px;
+  }
+}
+
+//loan-offers
+.loan-offers-settings{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 30px 0 24px;
+
+  span{
+    @include intro-regular-16;
+    b{
+      position: relative;
+      &::after{
+        content: '';
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        display: block;
+        left: 0;
+        bottom: 2px;
+        z-index: -1;
+        background-color: $primary-yellow;
+      }
+    }
+  }
+  a{
+    @include intro-regular-16;
+    text-decoration: underline !important;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-end;
+    font-weight: 700;
+    svg{
+      margin-right: 7px;
+    }
+  }
+}
+
+.offer-count {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-content: center;
+  border: 1px solid $black;
+  border-radius: 50%;
+  background-color: $light;
+  margin-bottom: 12px;
+  b{
+    line-height: 1;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.loan-offers-tabs {
+  padding: 0;
+  margin-bottom: 10px;
+  .loanTabs {
+    border: 0;
+    border-radius: 12px;
+    background-color: #F1F6FF;
+    padding: 10px 0;
+    display: flex;
+    overflow: hidden;
+    .report-nav-item{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      button{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 10px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 0 10px;
+        &.active{
+          font-weight: $intro-regular;
+          color: $dark;
+          position: unset;
+          .offer-count {
+            background-color: $primary-blue;
+            border-color: $primary-blue;
+            color: $light;
+          }
+          &::after{
+            content: '';
+            height: 10px;
+            width: calc(100% + 2px);
+            top: 100%;
+            left: -1px;
+            background-color: $primary-yellow;
+            border: none;
+            transform: none;
+          }
+          &::before{
+            content: none;
+          }
+        }
+        &:disabled{
+          color: #ACACAC;
+          .offer-count {
+            border-color: #ACACAC;
+            color: #ACACAC;
+          }
+        }
+      }
+      &:not(:last-child){
+          border-right: 1px solid #DDDDDD;
+      }
+    }
+  }
+  .report-select-group {
+    .report-select-tab{
+      .custom-select-options{
+        span {
+          padding: 15px 16px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .offer-count {
+            margin-bottom: 0;
+            padding: 0;
+            display: grid;
+            place-content: center;
+          }
+          &.disabled{
+            background-color: transparent !important;
+            color: #ACACAC !important;
+            .offer-count{
+              border-color: transparent;
+            }
+          }
+          &.selected{
+            .offer-count{
+              background-color: $primary-blue;
+              color: $light;
+              border-color: $primary-blue;
+            }
+          }
+        }
+      }
+      .custom-select-value{
+        padding: 16px !important;
+        .offer-count{
+          margin-left: 10px;
+          margin-bottom: 0;
+          display: -ms-inline-grid;
+          display: -moz-inline-grid;
+          display: inline-grid;
+          background-color: $primary-blue;
+          color: $light;
+          border-color: $primary-blue;
+        }
+      }
+    }
+  }
+}
+.offer-card-list{
+  .offers-card{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px 20px;
+
+    .company-container{
+      span{
+        display: flex;
+        border: 1px solid #DDDDDD;
+        border-radius: 6px;
+        width: 130px;
+        height: 60px;
+        margin-bottom: 8px;
+        justify-content: center;
+        align-items: center;
+      }
+      label{
+        font-weight: $intro-regular;
+        font-size: 14px;
+        line-height: 14px;
+        text-overflow: ellipsis;
+        margin: 0;
+        max-width: 130px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+    .offer-info {
+      display: flex;
+      li{
+        list-style: none;
+        font-weight: $intro-book;
+        font-size: 14px;
+        line-height: 14px;
+        color: #707070;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        span{
+          &:last-child{
+            margin-top: 16px;
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: $intro-regular;
+            letter-spacing: 0.02em;
+            color: $black; 
+          }
+        }
+      }
+    }
+    .offer-cta {
+      display: flex;
+      flex-direction: column;
+      .cibil-link{
+        width: auto;
+        color: #707070;
+        margin-top: 16px;
+      }
+    }
   }
 }
