@@ -262,7 +262,7 @@
           background: $light;
           box-shadow: $shadow-1;
           border-radius: 8px;
-          padding: 30px;
+          padding: 40px 30px;
           padding-bottom: 0px;
           overflow: hidden;
           .username {
@@ -275,7 +275,8 @@
             margin-bottom: 20px;
           }
           .score-text {
-            margin-bottom: 30px;
+            margin-bottom: 29px;
+            line-height: 18px;
           }
           .simulator-links {
             background: $light;
@@ -301,6 +302,40 @@
         }
       }
     }
+    .right-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      .report-cta{
+        background: #FFFFFF;
+        .section-heading-small{
+          margin-bottom: 14px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(xl){
+    &__wraper{
+      align-items: stretch;
+      .simulator-section{
+        height: auto;
+        &__wraper{
+          height: 100%;
+          .simulator-container{
+            height: 100%;
+            .simulator-links{
+              position: absolute;
+              width: 100%;
+              margin: 0;
+              bottom: 0;
+              left: 0;
+              border-bottom-left-radius: 8px;
+              border-bottom-right-radius: 8px;
+            }
+          }
+        }
+      }
+    }
   }
   @include media-breakpoint-up(md) {
     padding-top: 40px;
@@ -310,7 +345,7 @@
       display: flex;
       justify-content: space-between;
       .simulator-section,
-      .smart-analysis-section {
+      .right-panel {
         width: calc(50% - 11px);
       }
     }
@@ -337,7 +372,7 @@
             .simulator-links {
               flex-direction: column;
               row-gap: 22px;
-              .cibil-button{
+              .cibil-button {
                 max-width: 232px;
               }
             }
@@ -348,8 +383,8 @@
   }
   @include media-breakpoint-down(sm) {
     padding-top: 20px;
-    padding-bottom: 40px;
-    margin-bottom: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
     &__wraper {
       .simulator-section {
         margin-bottom: 20px;
@@ -363,19 +398,19 @@
               margin-top: 17.15px;
               margin-bottom: 15.3px;
             }
-            .cibil-score{
+            .cibil-score {
               margin-bottom: 10px;
             }
-            .score-text{
+            .score-text {
               margin-bottom: 0px;
               font-size: 16px;
             }
-            .simulator-links{
+            .simulator-links {
               box-shadow: none;
               padding: 0px;
               margin-top: 19px;
               flex-direction: column-reverse;
-              .cibil-button{
+              .cibil-button {
                 margin: 0;
               }
             }
@@ -385,27 +420,8 @@
       .section-heading {
         margin-bottom: 20px;
       }
-    }
-  }
-}
-
-// smart analysis section
-.smart-analysis-section {
-  .link-container {
-    .icon {
-      margin-right: 14px;
-    }
-  }
-  @include media-breakpoint-down(sm) {
-    .link-container {
-      .icon {
-        margin-right: 6px;
-      }
-      .cibil-link {
-        line-height: 22px;
-        &::before {
-          bottom: 4px;
-        }
+      .right-panel{
+        gap: 20px;
       }
     }
   }
@@ -837,29 +853,15 @@
 
 // cibil report section
 .cibil-report-ctas {
-  margin-bottom: 60px;
+  margin-bottom: 43px;
   &__wraper {
     width: 100%;
     .section-heading {
       margin-bottom: 20px;
     }
   }
-  @include media-breakpoint-up(md) {
-    &__wraper {
-      .column-container {
-        display: flex;
-        justify-content: space-between;
-        .report-cta {
-          width: calc(57% - 11px);
-        }
-        .video-cta {
-          width: calc(43% - 11px);
-        }
-      }
-    }
-  }
   @include media-breakpoint-down(sm) {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 

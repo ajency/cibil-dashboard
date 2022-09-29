@@ -1,10 +1,10 @@
 <div class="video-cta" style="background-image: url(..{{.cta_bg_image}});" data-toggle="modal" data-target="#{{.popup_id}}">
     <div class="video-cta__wraper">
-        <div class="cta-icon">
-            <img src="{{ .cta_icon | relURL }}" alt="">
+        <div class="cta-thumbnail">
+            <div class="play-button"><img src="{{ "/images/static-images/play-icon.svg" | relURL }}" alt=""></div>
+            <img class="cta-icon" src="{{ .cta_icon | relURL }}" alt="">
         </div>
         <div class="content">
-            <div class="play-button"><img src="{{ "/images/static-images/play-icon.svg" | relURL }}" alt=""></div>
             <p class="desc">{{.content}}</p>
         </div>
     </div>

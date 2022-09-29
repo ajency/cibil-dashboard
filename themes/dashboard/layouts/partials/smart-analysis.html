@@ -1,6 +1,7 @@
 <div class="smart-analysis-section">
     {{ if .section_heading}}<p class="section-heading section-heading-small">{{ .section_heading}}</p>{{end}}
     {{ range .score_analysis }}
+        {{ if or .good_result .bad_result}}
         <div class="result-container">
             {{ if .good_result }}
             <div class="good-result">
@@ -25,6 +26,16 @@
             </div>
             {{ end }}
         </div>
+        {{end}}
+        {{ if .key_highlights}}
+            <div class="key-highlights">
+                <div class="key-highlights__wraper">
+                    {{range .key_highlights}}
+                        <div class="key-highlight"><span>{{ . | safeHTML}}</span></div>
+                    {{end}}
+                </div>
+            </div>
+        {{end}}
     {{end}}
     {{ if .link }}
         <div class="link-container">
