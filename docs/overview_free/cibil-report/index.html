@@ -336,9 +336,8 @@ Free Account</p>
     <div class="report-tabs">
         <ul class="reportTabs" id="reportTab">
             <li class="report-nav-item" role="presentation">
-                <button class="report-nav-link active" id="summary-tab" data-target="#summary" role="tab"
-                    aria-controls="summary"><img src='/cibil-dashboard/images/static-images/report-summary.svg'>CIBIL
-                    Summary</button>
+                <button class="report-nav-link" id="account-tab" data-target="#account"><img
+                        src='/cibil-dashboard/images/static-images/account-info.svg'>Account Information</button>
             </li>
             <li class="report-nav-item" role="presentation">
                 <button class="report-nav-link" id="profile-tab" data-target="#profile" role="tab"
@@ -346,282 +345,30 @@ Free Account</p>
                     Information</button>
             </li>
             <li class="report-nav-item" role="presentation">
-                <button class="report-nav-link" id="account-tab" data-target="#account"><img
-                        src='/cibil-dashboard/images/static-images/account-info.svg'>Account Information</button>
-            </li>
-            <li class="report-nav-item" role="presentation">
                 <button class="report-nav-link" id="enquiry-tab" data-target="#enquiry" role="tab"
                     aria-controls="enquiry"><img src='/cibil-dashboard/images/static-images/enquiry-info.svg'>Enquiry
                     Information</button>
+            </li>
+            <li class="report-nav-item" role="presentation">
+                <button class="report-nav-link active" id="summary-tab" data-target="#summary" role="tab"
+                    aria-controls="summary"><img src='/cibil-dashboard/images/static-images/report-summary.svg'>CIBIL
+                    Summary</button>
             </li>
         </ul>
         <div class="group report-select-group">
             <div class="custom-select-input report-select-tab" onclick="customSelectInput(this)">
                 <span class="custom-select-value" id="report-select-value"><img src='/cibil-dashboard/images/static-images/report-summary.svg'>CIBIL Summary</span>
                 <div class="custom-select-options">
-                    <span data-target="#summary" onclick="customSelectTab(this)" class="selected"><img src='/cibil-dashboard/images/static-images/report-summary.svg'>CIBIL Summary</span>
                     <span data-target="#profile" onclick="customSelectTab(this)" ><img src='/cibil-dashboard/images/static-images/profile-info.svg'>Profile Information</span>
                     <span data-target="#account" onclick="customSelectTab(this)" ><img src='/cibil-dashboard/images/static-images/account-info.svg'>Account Information</span>
                     <span data-target="#enquiry" onclick="customSelectTab(this)" ><img src='/cibil-dashboard/images/static-images/enquiry-info.svg'>Enquiry Information</span>
+                    <span data-target="#summary" onclick="customSelectTab(this)" class="selected"><img src='/cibil-dashboard/images/static-images/report-summary.svg'>CIBIL Summary</span>
                 </div>
             </div>
         </div>
     </div>
     <div class="report-content">
         <div class="tab-content">
-            <div class="tab-panel active" id="summary"  aria-labelledby="summary-tab"><div class="report-summary-container">
-    <div class="">
-        <p class="summary-title">Upgrade now to see the current details of your CIBIL Score & Report</p>
-        <div class="summary-pointers">
-            <p><img src="/cibil-dashboard/images/static-images/credit-health.svg" alt=""><span>Get an overview of your credit health, credit worthyness and credit utilization.</span></p>
-            <p><img src="/cibil-dashboard/images/static-images/job-profile.svg" alt=""><span>Get an overview of your job profile and financials as reported by lenders.</span></p>
-            <p><img src="/cibil-dashboard/images/static-images/payment-history.svg" alt=""><span>See all the credit facilities availed, enquiries made and payment history.</span></p>
-        </div>
-        <a href="/cibil-dashboard/overview_free/upgrade-plan" class="cibil-button">Upgrade Now</a>
-    </div>
-    <div class="">
-        <img src="/cibil-dashboard/images/static-images/report-summary-cover.png" alt="">
-    </div>
-</div></div>
-            <div class="tab-panel" id="profile"  aria-labelledby="profile-tab"><div class="report-profile">
-    
-        <div class="report-table ">
-    <p class="table-title">Personal Details</p>
-    
-        <div class="table-content">
-            
-                <p class="table-item ">
-                    <span class="item-head">Name</span>
-                    <span class="item-text">Rahul Kumar Varma</span>
-                </p>
-            
-                <p class="table-item half">
-                    <span class="item-head">Date of Birth</span>
-                    <span class="item-text">14/07/1963</span>
-                </p>
-            
-                <p class="table-item half">
-                    <span class="item-head">Gender</span>
-                    <span class="item-text">Male</span>
-                </p>
-            
-        </div>
-    
-    
-</div>
-    
-        <div class="report-table ">
-    <p class="table-title">Identification Details</p>
-    
-        <div class="table-content">
-            
-                <p class="table-item ">
-                    <span class="item-head">Identification Type</span>
-                    <span class="item-text">Income Tax PAN Card(e)</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">ID Number</span>
-                    <span class="item-text">BIMPB8931P</span>
-                </p>
-            
-                <p class="table-item half">
-                    <span class="item-head">Issue Date</span>
-                    <span class="item-text">--</span>
-                </p>
-            
-                <p class="table-item half">
-                    <span class="item-head">Expiry Date</span>
-                    <span class="item-text">--</span>
-                </p>
-            
-        </div>
-    
-    
-</div>
-    
-        <div class="report-table table-light">
-    <p class="table-title">Address Details</p>
-    
-        <div class="table-content">
-            
-                <p class="table-item ">
-                    <span class="item-head">Address</span>
-                    <span class="item-text">1st Floor, Panjim Convention Center, Vistar Estates, Mala, Rua de Ourém, Neugi Nagar, Panaji, Goa 403001</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Category</span>
-                    <span class="item-text">Residence Address</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Residence Code</span>
-                    <span class="item-text">--</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Date Reported</span>
-                    <span class="item-text">11/02/2021</span>
-                </p>
-            
-        </div>
-    
-        <div class="table-content">
-            
-                <p class="table-item ">
-                    <span class="item-head">Address</span>
-                    <span class="item-text">NH 66, Alto Porvorim, Pilerne, Goa 403521</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Category</span>
-                    <span class="item-text">Office Address</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Residence Code</span>
-                    <span class="item-text">--</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Date Reported</span>
-                    <span class="item-text">11/02/2021</span>
-                </p>
-            
-        </div>
-    
-    
-</div>
-    
-        <div class="report-table table-light">
-    <p class="table-title">Contact Details</p>
-    
-        <div class="table-content">
-            
-                <p class="table-item ">
-                    <span class="item-head">Telephone Number Type</span>
-                    <span class="item-text">Office Phone (e)</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Telephone Number</span>
-                    <span class="item-text">987654321</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Telephone Extension</span>
-                    <span class="item-text">--</span>
-                </p>
-            
-        </div>
-    
-        <div class="table-content">
-            
-                <p class="table-item ">
-                    <span class="item-head">Telephone Number Type</span>
-                    <span class="item-text">Personal Number (e)</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Telephone Number</span>
-                    <span class="item-text">786543216</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Telephone Extension</span>
-                    <span class="item-text">--</span>
-                </p>
-            
-        </div>
-    
-        <div class="table-content">
-            
-                <p class="table-item ">
-                    <span class="item-head">Telephone Number Type</span>
-                    <span class="item-text">Office Phone (e)</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Telephone Number</span>
-                    <span class="item-text">987654321</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Telephone Extension</span>
-                    <span class="item-text">--</span>
-                </p>
-            
-        </div>
-    
-    
-</div>
-    
-        <div class="report-table table-light">
-    <p class="table-title">Email Details</p>
-    
-        <div class="table-content">
-            
-                <p class="table-item ">
-                    <span class="item-head">Email ID</span>
-                    <span class="item-text">rahul@gmail.com</span>
-                </p>
-            
-        </div>
-    
-        <div class="table-content">
-            
-                <p class="table-item ">
-                    <span class="item-head">Email ID</span>
-                    <span class="item-text">rahul10@gmail.com</span>
-                </p>
-            
-        </div>
-    
-    
-</div>
-    
-        <div class="report-table ">
-    <p class="table-title">employment Details</p>
-    
-        <div class="table-content">
-            
-                <p class="table-item half">
-                    <span class="item-head">Account Type</span>
-                    <span class="item-text">Loan</span>
-                </p>
-            
-                <p class="table-item half">
-                    <span class="item-head">Date Reported</span>
-                    <span class="item-text">21/10/2021</span>
-                </p>
-            
-                <p class="table-item half">
-                    <span class="item-head">Occupation</span>
-                    <span class="item-text">General Manager</span>
-                </p>
-            
-                <p class="table-item half">
-                    <span class="item-head">Income</span>
-                    <span class="item-text">₹80,000</span>
-                </p>
-            
-                <p class="table-item half">
-                    <span class="item-head">Monthly / Annual Income Indicator</span>
-                    <span class="item-text">₹40,000</span>
-                </p>
-            
-                <p class="table-item half">
-                    <span class="item-head">Net / Gross Income Indicator</span>
-                    <span class="item-text">₹80,000</span>
-                </p>
-            
-        </div>
-    
-    
-</div>
-    
-</div></div>
             <div class="tab-panel" id="account"  aria-labelledby="account-tab">
 
     <div class="account-summary-slider">
@@ -1738,6 +1485,245 @@ Free Account</p>
 
 
 </div>
+            <div class="tab-panel" id="profile"  aria-labelledby="profile-tab"><div class="report-profile">
+    
+        <div class="report-table ">
+    <p class="table-title">Personal Details</p>
+    
+        <div class="table-content">
+            
+                <p class="table-item ">
+                    <span class="item-head">Name</span>
+                    <span class="item-text">Rahul Kumar Varma</span>
+                </p>
+            
+                <p class="table-item half">
+                    <span class="item-head">Date of Birth</span>
+                    <span class="item-text">14/07/1963</span>
+                </p>
+            
+                <p class="table-item half">
+                    <span class="item-head">Gender</span>
+                    <span class="item-text">Male</span>
+                </p>
+            
+        </div>
+    
+    
+</div>
+    
+        <div class="report-table ">
+    <p class="table-title">Identification Details</p>
+    
+        <div class="table-content">
+            
+                <p class="table-item ">
+                    <span class="item-head">Identification Type</span>
+                    <span class="item-text">Income Tax PAN Card(e)</span>
+                </p>
+            
+                <p class="table-item ">
+                    <span class="item-head">ID Number</span>
+                    <span class="item-text">BIMPB8931P</span>
+                </p>
+            
+                <p class="table-item half">
+                    <span class="item-head">Issue Date</span>
+                    <span class="item-text">--</span>
+                </p>
+            
+                <p class="table-item half">
+                    <span class="item-head">Expiry Date</span>
+                    <span class="item-text">--</span>
+                </p>
+            
+        </div>
+    
+    
+</div>
+    
+        <div class="report-table table-light">
+    <p class="table-title">Address Details</p>
+    
+        <div class="table-content">
+            
+                <p class="table-item ">
+                    <span class="item-head">Address</span>
+                    <span class="item-text">1st Floor, Panjim Convention Center, Vistar Estates, Mala, Rua de Ourém, Neugi Nagar, Panaji, Goa 403001</span>
+                </p>
+            
+                <p class="table-item ">
+                    <span class="item-head">Category</span>
+                    <span class="item-text">Residence Address</span>
+                </p>
+            
+                <p class="table-item ">
+                    <span class="item-head">Residence Code</span>
+                    <span class="item-text">--</span>
+                </p>
+            
+                <p class="table-item ">
+                    <span class="item-head">Date Reported</span>
+                    <span class="item-text">11/02/2021</span>
+                </p>
+            
+        </div>
+    
+        <div class="table-content">
+            
+                <p class="table-item ">
+                    <span class="item-head">Address</span>
+                    <span class="item-text">NH 66, Alto Porvorim, Pilerne, Goa 403521</span>
+                </p>
+            
+                <p class="table-item ">
+                    <span class="item-head">Category</span>
+                    <span class="item-text">Office Address</span>
+                </p>
+            
+                <p class="table-item ">
+                    <span class="item-head">Residence Code</span>
+                    <span class="item-text">--</span>
+                </p>
+            
+                <p class="table-item ">
+                    <span class="item-head">Date Reported</span>
+                    <span class="item-text">11/02/2021</span>
+                </p>
+            
+        </div>
+    
+    
+</div>
+    
+        <div class="report-table table-light">
+    <p class="table-title">Contact Details</p>
+    
+        <div class="table-content">
+            
+                <p class="table-item ">
+                    <span class="item-head">Telephone Number Type</span>
+                    <span class="item-text">Office Phone (e)</span>
+                </p>
+            
+                <p class="table-item ">
+                    <span class="item-head">Telephone Number</span>
+                    <span class="item-text">987654321</span>
+                </p>
+            
+                <p class="table-item ">
+                    <span class="item-head">Telephone Extension</span>
+                    <span class="item-text">--</span>
+                </p>
+            
+        </div>
+    
+        <div class="table-content">
+            
+                <p class="table-item ">
+                    <span class="item-head">Telephone Number Type</span>
+                    <span class="item-text">Personal Number (e)</span>
+                </p>
+            
+                <p class="table-item ">
+                    <span class="item-head">Telephone Number</span>
+                    <span class="item-text">786543216</span>
+                </p>
+            
+                <p class="table-item ">
+                    <span class="item-head">Telephone Extension</span>
+                    <span class="item-text">--</span>
+                </p>
+            
+        </div>
+    
+        <div class="table-content">
+            
+                <p class="table-item ">
+                    <span class="item-head">Telephone Number Type</span>
+                    <span class="item-text">Office Phone (e)</span>
+                </p>
+            
+                <p class="table-item ">
+                    <span class="item-head">Telephone Number</span>
+                    <span class="item-text">987654321</span>
+                </p>
+            
+                <p class="table-item ">
+                    <span class="item-head">Telephone Extension</span>
+                    <span class="item-text">--</span>
+                </p>
+            
+        </div>
+    
+    
+</div>
+    
+        <div class="report-table table-light">
+    <p class="table-title">Email Details</p>
+    
+        <div class="table-content">
+            
+                <p class="table-item ">
+                    <span class="item-head">Email ID</span>
+                    <span class="item-text">rahul@gmail.com</span>
+                </p>
+            
+        </div>
+    
+        <div class="table-content">
+            
+                <p class="table-item ">
+                    <span class="item-head">Email ID</span>
+                    <span class="item-text">rahul10@gmail.com</span>
+                </p>
+            
+        </div>
+    
+    
+</div>
+    
+        <div class="report-table ">
+    <p class="table-title">employment Details</p>
+    
+        <div class="table-content">
+            
+                <p class="table-item half">
+                    <span class="item-head">Account Type</span>
+                    <span class="item-text">Loan</span>
+                </p>
+            
+                <p class="table-item half">
+                    <span class="item-head">Date Reported</span>
+                    <span class="item-text">21/10/2021</span>
+                </p>
+            
+                <p class="table-item half">
+                    <span class="item-head">Occupation</span>
+                    <span class="item-text">General Manager</span>
+                </p>
+            
+                <p class="table-item half">
+                    <span class="item-head">Income</span>
+                    <span class="item-text">₹80,000</span>
+                </p>
+            
+                <p class="table-item half">
+                    <span class="item-head">Monthly / Annual Income Indicator</span>
+                    <span class="item-text">₹40,000</span>
+                </p>
+            
+                <p class="table-item half">
+                    <span class="item-head">Net / Gross Income Indicator</span>
+                    <span class="item-text">₹80,000</span>
+                </p>
+            
+        </div>
+    
+    
+</div>
+    
+</div></div>
             <div class="tab-panel" id="enquiry"  aria-labelledby="enquiry-tab"><div class="report-enquiry">
     
         <div class="report-table table-light">
@@ -1760,11 +1746,6 @@ Free Account</p>
                     <span class="item-text">Credit Card</span>
                 </p>
             
-                <p class="table-item ">
-                    <span class="item-head">Enquiry Amount</span>
-                    <span class="item-text">₹1,00,000</span>
-                </p>
-            
         </div>
     
         <div class="table-content">
@@ -1784,11 +1765,6 @@ Free Account</p>
                     <span class="item-text">Home Loan</span>
                 </p>
             
-                <p class="table-item ">
-                    <span class="item-head">Enquiry Amount</span>
-                    <span class="item-text">₹2,50,000</span>
-                </p>
-            
         </div>
     
         <div class="table-content">
@@ -1806,11 +1782,6 @@ Free Account</p>
                 <p class="table-item ">
                     <span class="item-head">Enquiry Purpose</span>
                     <span class="item-text">Personal Loan</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Enquiry Amount</span>
-                    <span class="item-text">₹86,000</span>
                 </p>
             
         </div>
@@ -1832,11 +1803,6 @@ Free Account</p>
                     <span class="item-text">Credit Card</span>
                 </p>
             
-                <p class="table-item ">
-                    <span class="item-head">Enquiry Amount</span>
-                    <span class="item-text">₹50,000</span>
-                </p>
-            
         </div>
     
         <div class="table-content">
@@ -1854,11 +1820,6 @@ Free Account</p>
                 <p class="table-item ">
                     <span class="item-head">Enquiry Purpose</span>
                     <span class="item-text">Car Loan</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Enquiry Amount</span>
-                    <span class="item-text">₹4,00,000</span>
                 </p>
             
         </div>
@@ -1880,11 +1841,6 @@ Free Account</p>
                     <span class="item-text">Credit Card</span>
                 </p>
             
-                <p class="table-item ">
-                    <span class="item-head">Enquiry Amount</span>
-                    <span class="item-text">₹1,00,000</span>
-                </p>
-            
         </div>
     
         <div class="table-content">
@@ -1902,11 +1858,6 @@ Free Account</p>
                 <p class="table-item ">
                     <span class="item-head">Enquiry Purpose</span>
                     <span class="item-text">Home Loan</span>
-                </p>
-            
-                <p class="table-item ">
-                    <span class="item-head">Enquiry Amount</span>
-                    <span class="item-text">₹2,50,000</span>
                 </p>
             
         </div>
@@ -1928,11 +1879,6 @@ Free Account</p>
                     <span class="item-text">Personal Loan</span>
                 </p>
             
-                <p class="table-item ">
-                    <span class="item-head">Enquiry Amount</span>
-                    <span class="item-text">₹86,000</span>
-                </p>
-            
         </div>
     
      <span class="showAllLink" onclick="showAllEnquiries(this)"><span>Show All Enquiries</span><span>Show less Enquires</span><svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1941,6 +1887,20 @@ Free Account</p>
 </span> 
 </div>
     
+</div></div>
+            <div class="tab-panel active" id="summary"  aria-labelledby="summary-tab"><div class="report-summary-container">
+    <div class="">
+        <p class="summary-title">Upgrade now to see the current details of your CIBIL Score & Report</p>
+        <div class="summary-pointers">
+            <p><img src="/cibil-dashboard/images/static-images/credit-health.svg" alt=""><span>Get an overview of your credit health, credit worthyness and credit utilization.</span></p>
+            <p><img src="/cibil-dashboard/images/static-images/job-profile.svg" alt=""><span>Get an overview of your job profile and financials as reported by lenders.</span></p>
+            <p><img src="/cibil-dashboard/images/static-images/payment-history.svg" alt=""><span>See all the credit facilities availed, enquiries made and payment history.</span></p>
+        </div>
+        <a href="/cibil-dashboard/overview_free/upgrade-plan" class="cibil-button">Upgrade Now</a>
+    </div>
+    <div class="">
+        <img src="/cibil-dashboard/images/static-images/report-summary-cover.png" alt="">
+    </div>
 </div></div>
         </div>
     </div>

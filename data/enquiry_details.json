@@ -16,10 +16,6 @@
                     {
                         "title": "Enquiry Purpose",
                         "desc": "Credit Card"
-                    },
-                    {
-                        "title": "Enquiry Amount",
-                        "desc": "₹1,00,000"
                     }
                 ]
             },
@@ -36,10 +32,6 @@
                     {
                         "title": "Enquiry Purpose",
                         "desc": "Home Loan"
-                    },
-                    {
-                        "title": "Enquiry Amount",
-                        "desc": "₹2,50,000"
                     }
                 ]
             },
@@ -56,10 +48,6 @@
                     {
                         "title": "Enquiry Purpose",
                         "desc": "Personal Loan"
-                    },
-                    {
-                        "title": "Enquiry Amount",
-                        "desc": "₹86,000"
                     }
                 ]
             },
@@ -76,10 +64,6 @@
                     {
                         "title": "Enquiry Purpose",
                         "desc": "Credit Card"
-                    },
-                    {
-                        "title": "Enquiry Amount",
-                        "desc": "₹50,000"
                     }
                 ]
             },
@@ -96,10 +80,6 @@
                     {
                         "title": "Enquiry Purpose",
                         "desc": "Car Loan"
-                    },
-                    {
-                        "title": "Enquiry Amount",
-                        "desc": "₹4,00,000"
                     }
                 ]
             },
@@ -116,10 +96,6 @@
                     {
                         "title": "Enquiry Purpose",
                         "desc": "Credit Card"
-                    },
-                    {
-                        "title": "Enquiry Amount",
-                        "desc": "₹1,00,000"
                     }
                 ]
             },
@@ -136,10 +112,6 @@
                     {
                         "title": "Enquiry Purpose",
                         "desc": "Home Loan"
-                    },
-                    {
-                        "title": "Enquiry Amount",
-                        "desc": "₹2,50,000"
                     }
                 ]
             },
@@ -156,10 +128,6 @@
                     {
                         "title": "Enquiry Purpose",
                         "desc": "Personal Loan"
-                    },
-                    {
-                        "title": "Enquiry Amount",
-                        "desc": "₹86,000"
                     }
                 ]
             }
