@@ -2310,3 +2310,118 @@
     }
   }
 }
+.compare-offer-footer {
+  background: $primary-yellow;
+  padding: 20px 0;
+  margin-bottom: 36px;
+  position: sticky;
+  bottom: 0;
+  p{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    margin-bottom: 15px;
+  }
+  .compare-list {
+    display: flex;
+    justify-content: flex-start;
+    .compare-tab {
+      display: flex;
+      padding: 5px 14px 5px 5px;
+      background: white;
+      border-radius: 8px;
+      align-items: center;
+      margin-right: 20px;
+      max-width: 230px;
+      width: 100%;
+      p{
+        margin: 0;
+        margin-left: 10px;
+        margin-right: 20px;
+        font-weight: $intro-regular;
+      }
+      span{
+        &:first-child{
+          width: 65px;
+          height: 40px;
+          border: 1px solid #DDDDDD;
+          border-radius: 6px;
+          padding: 5px;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      &:empty{
+        position: relative;
+        &::after{
+          content: 'Click ‘add to compare’';
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          display: grid;
+          place-content: center;
+          @include intro-regular-14;
+          color: #707070;
+          padding: 5px;
+          text-align: center;
+        }
+      }
+    }
+    & > .cibil-button{
+      margin-left: auto;
+      text-align: center;
+    }
+  }
+  @include media-breakpoint-down(sm){
+    padding: 10px 0 14px;
+    p{
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .compare-list {
+      flex-flow: wrap;
+      .compare-tab {
+        flex: 1;
+        flex-direction: column;
+        padding: 6px;
+        position: relative;
+        &:last-of-type{
+          margin-right: 0;
+        }
+        .remove-compare-tab {
+          position: absolute;
+          right: 2px;
+          top: 5px;
+          width: 20px;
+          height: 20px;
+          svg{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &:empty{
+          background: #feef99;
+          border: 1px dashed #2c2c2c;
+          &::after{
+            color: $black;
+          }
+        }
+      }
+      & > .cibil-button{
+        width: 100%;
+        text-align: center;
+        margin-top: 14px;
+        background: #f16e00;
+        font-size: 14px;
+        line-height: 14px;
+        color: #fff !important;
+      }
+    }
+  }
+}
