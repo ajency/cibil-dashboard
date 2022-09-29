@@ -1969,9 +1969,28 @@
     display: flex;
     align-items: flex-end;
     font-weight: 700;
+    cursor: pointer;
     svg{
       margin-right: 7px;
     }
+  }
+
+  @include media-breakpoint-down(sm){
+      flex-direction: column;
+      margin: 30px 0 30px;
+      align-items: center;
+      span{
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      a{
+        width: 100%;
+        justify-content: center;
+        font-size: 12px;
+        padding: 10px;
+        border: 0.4px solid #ACACAC;
+        border-radius: 8px;
+      }
   }
 }
 
@@ -1994,7 +2013,7 @@
 
 .loan-offers-tabs {
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   .loanTabs {
     border: 0;
     border-radius: 12px;
@@ -2100,12 +2119,22 @@
   }
 }
 .offer-card-list{
+  margin-bottom: 40px;
   .offers-card{
     display: flex;
     justify-content: space-between;
     padding: 30px 30px 20px;
+    box-shadow: 2px 2px 16px rgba(0, 71, 255, 0.2);
+    border-radius: 12px;
+    margin-top: 20px;
+
+    .offer-info-wrap{
+      display: flex;
+      align-items: center;
+    }
 
     .company-container{
+      margin-right: 40px;
       span{
         display: flex;
         border: 1px solid #DDDDDD;
@@ -2129,6 +2158,9 @@
     }
     .offer-info {
       display: flex;
+      height: fit-content;
+      height: -webkit-fit-content;
+      height: -moz-fot-content;
       li{
         list-style: none;
         font-weight: $intro-book;
@@ -2137,7 +2169,8 @@
         color: #707070;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
+        margin-right: 30px;
         span{
           &:last-child{
             margin-top: 16px;
@@ -2153,10 +2186,71 @@
     .offer-cta {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       .cibil-link{
         width: auto;
-        color: #707070;
+        color: #707070 !important;
         margin-top: 16px;
+        cursor: pointer;
+        text-transform: none;
+        &::before{
+          width: calc(100% - 8px);
+          background-color: #707070;
+          right: 0;
+          left: unset;
+        }
+      }
+    }
+    &.premium-partner {
+      position: relative;
+      &:before {
+        content: url(../images/static-images/premium-partner-tag.svg);
+        position: absolute;
+        left: -6px;
+        top: -8px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .offers-card{
+      padding: 20px;
+      flex-direction: column;
+      .offer-info-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        .company-container {
+          margin: 0;
+          width: 100%;
+          border-bottom: 1px solid #EDEDED;
+          margin-bottom: 20px;
+          label {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          max-width: 100%;
+          // margin-bottom: 10px;
+          }
+        }
+        .offer-info {
+          display: grid !important;
+          grid-template-columns: 1fr 1fr;
+          width: 100%;
+          column-gap: 0;
+          row-gap: 20px;
+          margin-bottom: 20px;
+          li{
+            margin: 0;
+          }
+        }
+      }
+      .offer-cta{
+        padding-top: 20px;
+        border-top: 1px solid #EDEDED;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
       }
     }
   }
