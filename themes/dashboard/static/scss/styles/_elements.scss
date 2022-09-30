@@ -114,8 +114,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none !important;
-  &:before {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.1em;
+  /* text-decoration: none !important; */
+  /* &:before {
     content: "";
     height: 1px;
     width: 100%;
@@ -123,7 +126,7 @@
     position: absolute;
     left: 0px;
     bottom: 0px;
-  }
+  } */
   &-right-icon {
     padding-right: 23px;
     &:after {

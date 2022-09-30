@@ -1,4 +1,4 @@
-<div class="upgrade-plans">
+<div class="upgrade-plans" id="upgradePlansPricing">
     <div class="page-width upgrade-plans__wraper">
         {{ range .upgradePlans }}
         <div class="hide-md-down plan {{ if eq .recommended true }}recommended{{ end }}">
@@ -19,7 +19,7 @@
                     {{ if .features }}
                     <ul class="plan-features">
                         {{ range .features }}
-                        <li class="feature"><img src="{{ .icon | relURL }}" alt="" class="icon">{{ .content }}</li>
+                        <li class="feature"><img src="{{ .icon | relURL }}" alt="" class="icon"><span>{{ .content | safeHTML }}</span></li>
                         {{ end }}
                     </ul>
                     {{ end }}
@@ -56,7 +56,7 @@
                     {{ if .features }}
                     <ul class="plan-features">
                         {{ range .features }}
-                        <li class="feature"><img src="{{ .icon | relURL }}" alt="" class="icon">{{ .content }}</li>
+                        <li class="feature"><img src="{{ .icon | relURL }}" alt="" class="icon"><span>{{ .content | safeHTML }}</span></li>
                         {{ end }}
                     </ul>
                     {{ end }}

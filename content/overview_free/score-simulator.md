@@ -5,6 +5,6 @@ draft: false
 layout: score-simulator
 
 icon_url: "images/static-images/score-simulator-yellow.svg"
-description: Look into your credit future. Find out in advance how your credit actions affect your CIBIL score.
+description: Make the right credit decisions with score simulator. Find out how your credit actions can impact your CIBIL Score.
 ---
 

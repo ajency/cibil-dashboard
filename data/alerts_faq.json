@@ -13,13 +13,13 @@
     },
     {
         "heading": "When will I get an alert?",
-        "content": "You will get an email alert if there is any change that can impact/influence your CIBIL Score and Report, such as:<br><br><ul><li>New Account added</li><li>Change in Utilization</li><li>Delinquency Change</li><li>New Address added</li><li>New Phone Number added</li><li>Change in CIBIL Score</li></ul><br>This feature is designed to deliver real time CIBIL Score and Report Alerts, straight into your mailbox.",
+        "content": "You will get an email alert if there is any change that can impact/influence your CIBIL Score and Report, such as:<br><br><ul><li>New Enquiry added</li><li>New Account added</li><li>Change in Utilization</li><li>Delinquency Change</li><li>New Address added</li><li>New Phone Number added</li><li>Change in CIBIL Score</li></ul><br>This feature is designed to deliver real time CIBIL Score and Report Alerts, straight into your mailbox, or as SMS and app notifications.",
         "collapsed": false,
         "unique_id": "3"
     },
     {
         "heading": "Where will the alert be delivered?",
-        "content": "An email notification for Alerts will be delivered to your registered email ID. You can view the details under the <b>Alerts tab</b> by logging into your CIBIL account.<br><br><a class=\"cibil-link\" href=\"https://myscore.cibil.com/CreditView/login.page?enterprise=CIBIL&utm_source=alertsfaqpage\">Click here to log in and check now</a>.",
+        "content": "An email notification for Alerts will be delivered to your registered email ID. You can view the details under the <b>Alerts tab</b> by logging into your CIBIL account.<br><br><a class=\"cibil-link\" href=\"https://myscore.cibil.com/CreditView/login.page?enterprise=CIBIL&utm_source=alertsfaqpage\" target='_blank'>Click here to log in and check now</a>.<br><br>You will also be receiving Alerts as on SMS on your registered mobile number. If you access CIBIL dashboard with CIBIL mobile app, you will receive Alerts as app notifications.",
         "collapsed": false,
         "unique_id": "4"
     },
@@ -31,7 +31,7 @@
     },
     {
         "heading": "How can I get access to Alerts?",
-        "content": "If you have a CIBIL subscription plan for 6 months or 12 months, you will be able to access the Alerts feature. If you have checked your CIBIL Score and Report for Free or have registered for a one-month subscription and would like to subscribe for this new feature, <a class=\"cibil-link\" href=\"/cibil-dashboard/overview_free/upgrade-plan/\">Click here</a>.",
+        "content": "If you have a CIBIL subscription plan for 6 months or 12 months, you will be able to access the Alerts feature. If you have checked your CIBIL Score and Report for Free or have registered for a one-month subscription and would like to subscribe for this new feature, <a class=\"cibil-link\" href=\"https://www.cibil.com/select-plan\" target='_blank'>Click here</a>.",
         "collapsed": false,
         "unique_id": "6"
     },

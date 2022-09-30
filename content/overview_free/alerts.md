@@ -5,5 +5,5 @@ draft: false
 layout: alerts
 
 icon_url: "images/static-images/alerts-icon.svg"
-description: CIBIL Alerts helps you stay connected to your credit profile making it easier for you to be in touch with your latest CIBIL score whenever it’s refreshed.
+description: CIBIL Alerts helps you stay updated and aware of key changes in your credit profile. Alerts is available with your 6-month and 12-month subscription plans.
 ---

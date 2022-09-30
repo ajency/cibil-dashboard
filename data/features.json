@@ -17,7 +17,7 @@
   {
     "icon": "images/static-images/alerts-icon1.svg",
     "feature_heading": "CIBIL Alerts",
-    "description": "24x7 credit monitoring with CIBIL Alerts. Safeguard against identity theft with email & SMS notifications.",
+    "description": "24x7 credit monitoring with CIBIL Alerts. Safeguard against identity theft with email, SMS and app notifications.",
     "image_path_desk": "images/dynamic-images/cibil-alerts-feature.png",
     "image_path_mob": "images/dynamic-images/cibil-alerts-feature-mob.png"
   },

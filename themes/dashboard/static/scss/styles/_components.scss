@@ -226,6 +226,9 @@
     border-color: $primary-blue;
     border-width: 2px;
   }
+  @include media-breakpoint-up(lg){
+    width: calc(100% /3);
+  }
 }
 .plan,
 .plan-tabs {
@@ -375,6 +378,9 @@
           background-color: $light;
           border: 1px solid $border-color-4;
           border-bottom-color: $light;
+        }
+        &:not(.active){
+          border-top-color: $border-color-4;
         }
       }
       &:first-child {
@@ -999,7 +1005,7 @@
     margin-top: 20px;
     letter-spacing: 0.02em;
     margin-bottom: 20px;
-    max-width: 259px;
+    max-width: 258px;
   }
   .summary-rating {
     font-size: 14px;
@@ -1045,6 +1051,7 @@
     .summary-details {
       font-size: 14px;
       line-height: 20px;
+      min-height: 72px;
     }
     .summary-title {
       max-width: 124px;
@@ -1054,13 +1061,13 @@
       min-height: 41.6px;
     }
   }
-  @media (max-width: 512px) {
+  /* @media (max-width: 512px) {
     &.vertical-position {
       .summary-details {
         margin-top: 44px;
       }
     }
-  }
+  } */
 }
 
 // banner cta

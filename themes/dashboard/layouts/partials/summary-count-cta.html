@@ -6,10 +6,10 @@
     {{ partial "summary-usage" .}}
     {{end}}
     <p class="summary-title">{{.summary_title}}</p>
-    <p class="summary-rating {{if .rating}}{{.rating}}{{end}}">{{.rating_text}}</p>
+    <!-- <p class="summary-rating {{if .rating}}{{.rating}}{{end}}">{{.rating_text}}</p>
     {{if .tooltip_content}}
         {{ partial "tooltip" . }}
-    {{end}}
+    {{end}} -->
     <p class="summary-details">{{.summary_details}}</p>
     {{if .cta_link}}<a href="{{.cta_link}}" class="cibil-link cibil-link-right-icon">{{.cta_text}}</a>{{end}}
 </div>

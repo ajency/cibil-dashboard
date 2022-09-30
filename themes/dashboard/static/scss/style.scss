@@ -159,6 +159,7 @@ p {
   background-color: $primary-blue;
   .logo-container {
     padding: 60px 0 10px 30px;
+    margin-bottom: 20px;
   }
   @include media-breakpoint-down(lg) {
     display: none;

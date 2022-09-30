@@ -5,6 +5,6 @@ draft: false
 layout: report
 
 icon_url: "images/static-images/report-icon.svg"
-description: An overview of your credit health, credit-worthiness and credit utilization.
+description: An overview of your credit profile.
 ---
 

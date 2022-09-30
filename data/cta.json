@@ -1,8 +1,8 @@
 [
   {
     "image_alignment": "image-right",
-    "feature_title": "ALerts on multi platform",
-    "feature_description": "Get alerts via Email, SMS and App",
+    "feature_title": "Alerts On Multiple Platforms",
+    "feature_description": "Get alerts via Email, SMS and App notifications",
     "button": "Upgrade to view alerts",
     "button_link": "/cibil-dashboard/overview_free/upgrade-plan/",
     "image_path_desk": "images/dynamic-images/multiplatform.svg",
