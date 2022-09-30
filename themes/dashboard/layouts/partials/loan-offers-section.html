@@ -1,7 +1,7 @@
 <div class="compare-offer-header">
     <div class="page-width">
         <div class="compare-header-wrap">
-            <a class="resetOffers cibil-button cibil-button-border">Go Back</a>
+            <a class="resetOffers cibil-button cibil-button-border" onclick="resetCompare()">Go Back</a>
             <p>Comparing 3 Credit Card offers</p>
         </div>
     </div>
@@ -71,21 +71,22 @@
 
 </div>
 
-<div class="compare-offer-footer">
+<div class="compare-offer-footer hide">
     <div class="page-width">
         <div class="compare-header-wrap">
             <p>Comparing 3 Credit Card offers</p>
             <div class="compare-list">
-                <div class="compare-tab">
+                <!-- <div class="compare-tab" data-index="1">
                     <span>
                         <img src="/cibil-dashboard/images/dynamic-images/bajaj-finserv-logo.svg" class="company-logo">
                     </span>
                     <p>₹8,00,000</p>
-                    <span class="remove-compare-tab">{{ partial "icons/popup-close"}}</span>
-                </div>
+                    <span class="remove-compare-tab" onclick="removeFromCompare(this)" data-target="1">{{ partial "icons/popup-close"}}</span>
+                </div> -->
                 <div class="compare-tab"></div>
                 <div class="compare-tab"></div>
-                <a  class="compare-now-offers cibil-button cibil-button-border">COMPARE</a>
+                <div class="compare-tab"></div>
+                <a  class="compare-now-offers cibil-button cibil-button-border" onclick="compareOffers()">COMPARE</a>
             </div>
         </div>
     </div>

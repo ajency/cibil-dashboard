@@ -2196,7 +2196,12 @@
         margin-top: 16px;
         cursor: pointer;
         text-transform: none;
-        &::before {
+        span{
+          &:last-child{
+            display: none;
+          }
+        }
+        &::before{
           width: calc(100% - 8px);
           background-color: #707070;
           right: 0;
@@ -2211,6 +2216,29 @@
         position: absolute;
         left: -6px;
         top: -8px;
+      }
+    }
+    &.selected{
+      border: 2px solid #FCD800;
+      .offer-cta {
+        .cibil-link{
+          span{
+            display: none;
+            &:last-child{
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.comparing{
+    .offers-card{
+      &:not(.selected){
+        display: none;
+      }
+      .offer-cta .cibil-link{
+        visibility: hidden;
       }
     }
   }
@@ -2258,6 +2286,7 @@
   }
 }
 .compare-offer-header {
+  display: none;
   background: $primary-yellow;
   padding: 20px 0;
   margin-bottom: 36px;
@@ -2309,6 +2338,14 @@
       }
     }
   }
+  &.show{
+    display: block;
+    & + .page-width{
+      .loan-offers-tabs, .loan-offers-settings{
+        display: none;
+      }
+    }
+  }
 }
 .compare-offer-footer {
   background: $primary-yellow;
@@ -2335,7 +2372,8 @@
       margin-right: 20px;
       max-width: 230px;
       width: 100%;
-      p {
+      order: 0;
+      p{
         margin: 0;
         margin-left: 10px;
         margin-right: 20px;
@@ -2376,6 +2414,7 @@
     & > .cibil-button {
       margin-left: auto;
       text-align: center;
+      order: 5;
     }
   }
   @include media-breakpoint-down(sm) {
@@ -2391,7 +2430,8 @@
         flex-direction: column;
         padding: 6px;
         position: relative;
-        &:last-of-type {
+        width: calc(33% - 14px);
+        &:last-of-type{
           margin-right: 0;
         }
         .remove-compare-tab {
@@ -2423,6 +2463,9 @@
         color: $light !important;
       }
     }
+  }
+  &.hide{
+    display: none !important;
   }
 }
 
