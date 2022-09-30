@@ -562,6 +562,10 @@
     .option-card-title {
       letter-spacing: 0.02em;
       margin-bottom: 30px;
+      font-size: 0;
+      & > *{
+        font-size: initial;
+      }
       img {
         margin-left: 10px;
       }

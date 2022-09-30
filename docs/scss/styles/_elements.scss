@@ -473,13 +473,27 @@ input[type="number"] {
     max-width: 405px;
     border-radius: 6px;
     padding: 10px 15px 6px 12px;
-    font-family: $intro-book;
+    font-weight: $intro-book;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.02em;
     color: $light;
     position: relative;
     z-index: 9;
+    // max-height: 190px;
+    // overflow-y: scroll;
+
+    // &::-webkit-scrollbar{
+    //   width: 0;
+    //   display: none;
+    // }
+
+    // &::-webkit-scrollbar-track{
+    //   width: 0;
+    //   display: none;
+    // }
+
+
     &:before {
       content: "";
       background-color: $black;

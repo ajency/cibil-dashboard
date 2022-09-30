@@ -106,10 +106,11 @@
         let html= '';
 
         console.log(option)
+        // <wimg src="{{"images/static-images/grey-info.svg" | relURL}}"/>
         switch(option){
             case 'missPayment':
                 html = `<div class="option-card" type="missPayment" style="display: none;">
-                        <p class="option-card-title"><span>Miss a payment on all Active Loan Accounts and Credit Cards</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
+                        <div class="option-card-title"><span>Miss a payment on all Active Loan Accounts and Credit Cards</span>{{ partial "tooltip" (dict "tooltip_type" "info" "tooltip_content" "Simulates the impact of missed EMIs/payments on all active loan accounts and credit cards as reported on the consumer’s credit report.<br>Paying on time, every time can help you build a high CIBIL score. Late payments can negatively impact your credit score. Lenders may view late payments as a sign of irresponsible credit behavior and this may affect your access to credit and loans in the future.")}}</div>
                         <div class="options-container">
                             <div class="group">
                                 <label for="pastDueDate">Past Due Date</label>
@@ -130,7 +131,7 @@
             
             case 'newLoan':
                 html = `<div class="option-card" type="newLoan" style="display: none;">
-                        <p class="option-card-title"><span>Add a New Loan or Credit Cards</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
+                        <div class="option-card-title"><span>Add a New Loan or Credit Cards</span>{{ partial "tooltip" (dict "tooltip_type" "info" "tooltip_content" "See the impact of adding a new loan / credit card.<br>While applying for new credit cards and loans, make sure its in moderation as you do not want to give lenders the impression that you are continuously looking for credit. You should maintain a balanced mix of secured and unsecured loans as too many unsecured loans may be viewed negatively.")}}</div>
                         <div class="options-container">
                             <div class="group">
                                 <label for="loantype">Type</label>
@@ -160,7 +161,7 @@
 
             case 'closeCreditCard':
                 html = `<div class="option-card" type="closeCreditCard" style="display: none;">
-                        <p class="option-card-title"><span>Close my oldest credit card</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
+                        <div class="option-card-title"><span>Close my oldest credit card</span>{{ partial "tooltip" (dict "tooltip_type" "info" "tooltip_content" "Check the impact of closing your oldest credit card.<br>A longer credit history can help in predicting your future credit behavior more accurately. In general, longer the duration of a clean credit history, the higher is your CIBIL score.")}}</div>
                         <div class="options-container">
                             <div class="custom-radio-input">
                                 <input type="radio" name="closeCard" id="true" value="yes" >
@@ -176,7 +177,7 @@
 
             case 'clearBalance':
                 html = `<div class="option-card" type="clearBalance" style="display: none;">
-                        <p class="option-card-title"><span>Clear the outstanding balances on all my active credit cards</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
+                        <div class="option-card-title"><span>Clear the outstanding balances on all my active credit cards</span>{{ partial "tooltip" (dict "tooltip_type" "info" "tooltip_content" " See how paying off all outstanding balance on your credit cards will impact your CIBIL Score. Controlling your outstanding balances indicates a reduced repayment burden which may positively impact your CIBIL score.")}}</div>
                         <div class="options-container">
                             <div class="custom-radio-input">
                                 <input type="radio" name="clearBalance" id="yes" value="yes" >
@@ -192,7 +193,7 @@
 
             case 'clearAccountBalance':
                 html = `<div class="option-card" type="clearAccountBalance" style="display: none;">
-                        <p class="option-card-title"><span>Clear the outstanding balances on your active accounts (s)</span><img src="{{"images/static-images/grey-info.svg" | relURL}}"/></p>
+                        <div class="option-card-title"><span>Clear the outstanding balances on your active accounts (s)</span>{{ partial "tooltip" (dict "tooltip_type" "info" "tooltip_content" "Assess how your credit score is impacted when the outstanding balances on your accounts are settled.<br>Having your outstanding balances under control means less repayment burden, which can positively impact your credit score.")}}</div>
                         <div class="options-container">
 
                             <div class="group long-radio">
@@ -244,6 +245,7 @@
         setTimeout(function(){$(element).parents('.scenario-body').find('.option-card').fadeIn('slow')},500)
         $(element).parents('.scenario').removeClass('blank');
         $('.scenario-list').removeClass('hasBlank')
+        setTimeout(addTooltip(),500)
     }
 
     function deleteScenario(element){

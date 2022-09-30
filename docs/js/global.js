@@ -132,7 +132,7 @@ $(function () {
 })
 function customSelectInput(element){
   $(element).toggleClass('opened')
-  $('.custom-select-options').toggle('fast');
+  $(element).find('.custom-select-options').toggle('fast');
 }
 function customSelectOption(element){
   $(element).siblings().removeClass("selected")
