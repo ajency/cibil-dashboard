@@ -194,3 +194,7 @@ function checkAccountVisibility(){
 function upgradePlan(element){
   $('.score-display-box').find('.upgrade-plan-cta').show("fast");
 }
+
+function toggleShrink(){
+  $('.concent-text').toggleClass('shrink')
+}
