@@ -2827,3 +2827,149 @@
     }
   }
 }
+
+.edit-info-header{
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 0 24px;
+  a{
+    &:first-child{
+      @include intro-regular-16;
+      color: $primary-blue !important;
+      &::before {
+        content: url(../images/static-images/left-arrow-blue.svg);
+        margin-right: 10px;
+        top: 2px;
+        position: relative;
+      }
+      display: none
+    }
+    &:last-child{
+      color: $primary-blue !important;
+      text-decoration: underline !important;
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0;
+      svg{
+        margin-right: 7px;
+      }
+      & > *{
+        color: $primary-blue !important;
+      }
+      span{
+        &::after{
+          background-image: url(/cibil-dashboard/images/static-images/settings-blue.svg)
+        }
+        &::before{
+          background-color: $primary-blue !important;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px 0 20px;
+    justify-content: flex-start;
+    a{
+      &:first-child{
+        display: block;
+      }
+      &:last-child{
+        display: none;
+      }
+    }
+  }
+}
+
+
+.edit-info-tab{
+  background: #FFFFFF;
+  box-shadow: 2px 2px 16px rgba(0, 71, 255, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 200px;
+  & > p{
+    @include intro-regular-16;
+    margin-bottom: 17px;
+  }
+  .edit-info-wrap{
+    display: flex;
+    margin-bottom: 4px;
+    .group{
+      margin-right: 20px;
+      flex: 1;
+      max-width: 100%;
+      margin-bottom: 20px;
+      &:last-child{
+        margin-right: 0;
+      }
+      label{
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .edit-info-cta-wrap{
+    .cibil-link{
+      font-weight: $intro-regular;
+      margin-left: 30px;
+    }
+  }
+  .personal-loan-offers-section__wraper{
+    .offers-n-partners{
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      padding-top: 40px;
+    }
+  }
+  .input-city{
+    position: relative;
+    &::after{
+      content: url('/cibil-dashboard/images/static-images/search-input.svg');
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-35%);
+      display: block;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 40px;
+    box-shadow: none;
+    padding: 0;
+    .edit-info-wrap{
+      flex-direction: column;
+    }
+    .edit-info-cta-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .cibil-link{
+        margin: 0;
+      }
+      .cibil-button{
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.loan-offer-js{
+  .edit-info-tab, .edit-info-header{
+    display: none;
+  }
+  &.edit{
+    & > *{
+      display: none;
+    }
+    & > .edit-info-tab{
+      display: block;
+    }
+    & > .edit-info-header{
+      display: flex;
+    }
+  }
+}

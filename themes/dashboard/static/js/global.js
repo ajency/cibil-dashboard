@@ -198,3 +198,13 @@ function upgradePlan(element){
 function toggleShrink(){
   $('.concent-text').toggleClass('shrink')
 }
+
+function editOInfoToggle(){
+  resetCompare()
+  $('.loan-offer-js').toggleClass('edit');
+}
+
+function submitEditInfo(){
+  resetCompare()
+  $('.loan-offer-js').toggleClass('edit');
+}

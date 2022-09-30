@@ -7,10 +7,10 @@
     </div>
 </div>
 
-<div class="page-width">
+<div class="page-width loan-offer-js">
     <p class="loan-offers-settings">
         <span>We have found <b>24 offers</b> tailored to your profile.</span>
-        <a id="edit-info">{{ partial "icons/settings"}}EDIT INFORMATION</a>
+        <a onclick="editOInfoToggle()" id="edit-info">{{ partial "icons/settings"}}EDIT INFORMATION</a>
     </p>
 
 
@@ -63,10 +63,73 @@
     <div class="report-content loan-offers-content">
         <div class="tab-content">
             <div class="tab-panel active" id="summary"  aria-labelledby="summary-tab">{{partial "loan-offers-card"}}</div>
-            <div class="tab-panel" id="profile"  aria-labelledby="profile-tab">{{partial "report-profile" . }}</div>
-            <div class="tab-panel" id="account"  aria-labelledby="account-tab">{{ partial "report-account" . }}</div>
-            <div class="tab-panel" id="enquiry"  aria-labelledby="enquiry-tab">{{partial "report-enquiry" . }}</div>
+            <div class="tab-panel" id="profile"  aria-labelledby="profile-tab">{{partial "loan-offers-card"}}</div>
+            <div class="tab-panel" id="account"  aria-labelledby="account-tab">{{partial "loan-offers-card"}}</div>
+            <div class="tab-panel" id="enquiry"  aria-labelledby="enquiry-tab">{{partial "loan-offers-card"}}</div>
         </div>
+    </div>
+
+    <p class="edit-info-header">
+        <a onclick="editOInfoToggle()" class="">Go Back</a>
+        <a onclick="editOInfoToggle()" class="cibil-link-button">{{ partial "icons/settings-blue"}}EDIT INFORMATION</a>
+    </p>
+    <div class="edit-info-tab">
+        <p>Please edit your information below.</p>
+        <div class="edit-info-wrap">
+            <div class="group">
+                <label for="amount">City</label>
+                <div class="input-holder input-city">
+                    <input class="" type="text" placeholder="Select City" id="city">
+                </div>
+            </div>
+            <div class="group">
+                <label for="loantype">Income Type</label>
+                <input type="hidden" id="loantype">
+                <div class="custom-select-input" onclick="customSelectInput(this)">
+                    <span class="custom-select-value">Self-Employed</span>
+                    <div class="custom-select-options">
+                        <span onclick="customSelectOption(this)" class="selected">Self-Employed</span>
+                        <span onclick="customSelectOption(this)" >Salaraid</span>
+                    </div>
+                </div>
+                <span class="message"></span>
+            </div>
+            <div class="group">
+                <label for="amount">Monthly Income</label>
+                <div class="input-holder">
+                    <span class="currency">₹</span>
+                    <input class="input-currency" placeholder="Enter Monthly Income" type="number" id="amount">
+                </div>
+            </div>
+        </div>
+        <div class="edit-info-cta-wrap">
+            <a onclick="submitEditInfo()" class="cibil-button">Submit</a>
+            <a onclick="editOInfoToggle()" class="cibil-link">Cancel</a>
+        </div>
+
+        <!-- slider code -->
+        <div class="personal-loan-offers-section__wraper">
+            <div class="offers-n-partners">
+                {{ range .offers_n_partners }}
+                <div class="section-head our-partners">
+                    <p class="section-title">Our Partners</p>
+                </div>
+                <div class="partners">
+                    {{range .partners}}
+                        <div class="partner">
+                            <div class="partner__wraper">
+                                <div class="logo-container {{if eq .premium_partner true}}premium-partner{{end}}">
+                                    <img src="{{.partner_logo | relURL }}" title="{{.partner_title}}" alt="{{.partner_title}}" class="partner-logo">
+                                </div>
+                                <p class="partner-title">{{.partner_title}}</p>
+                            </div>
+                        </div>
+                    {{end}}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+
     </div>
 
 </div>
