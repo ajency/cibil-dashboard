@@ -53,11 +53,12 @@
 }
 .cibil-button {
   background-color: $primary-orange;
+  border-color: $primary-orange;
   border-radius: 25px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 17px 32px;
+  padding: 16px 32px;
   color: $black !important;
   text-decoration: none !important;
   font-weight: $intro-bold;
@@ -687,4 +688,15 @@ input[type="number"] {
   pointer-events: none !important;
   background-color: $border-color-4 !important;
   color: $light !important;
+}
+
+.page-background{
+  &.blue{
+    background-color: $light-blue;
+  }
+  @include media-breakpoint-down(sm){
+    &.blue{
+      background-color: $light;
+    }
+  }
 }

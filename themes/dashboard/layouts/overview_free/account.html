@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+    {{ partial "page-header" . }}
+
+    <div class="page-background blue">
+
+        {{ partial "tabs-vertical-icons" (dict "account_tabs" .Site.Data.account_tabs ) }}
+
+    </div>
+
+{{end}}

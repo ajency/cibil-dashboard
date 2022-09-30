@@ -6,7 +6,16 @@
     <description>Recent content on Cibil Dashboard</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Sep 2022 10:31:17 +0530</lastBuildDate><atom:link href="https://ajency.github.io/cibil-dashboard/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Sep 2022 09:43:20 +0530</lastBuildDate><atom:link href="https://ajency.github.io/cibil-dashboard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Account</title>
+      <link>https://ajency.github.io/cibil-dashboard/overview_free/my-account/</link>
+      <pubDate>Fri, 30 Sep 2022 09:43:20 +0530</pubDate>
+      
+      <guid>https://ajency.github.io/cibil-dashboard/overview_free/my-account/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Loan Offers</title>
       <link>https://ajency.github.io/cibil-dashboard/overview_free/loan-offers/</link>
