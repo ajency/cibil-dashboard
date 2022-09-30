@@ -4,7 +4,7 @@
 <!-- tooltips | start -->
 <div class="tooltip-box {{if eq .tooltip_right true }}tooltip-box-right{{ end}}" id="tooltipBox">
   <div class="tooltip-box__wraper">
-    {{.tooltip_content}}
+    {{.tooltip_content | safeHTML }}
   </div>
 </div>
 <!-- tooltips | end -->
