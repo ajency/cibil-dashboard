@@ -38,9 +38,9 @@
         "icon_partial": "icons/financial-products-icon.html"
       }
     ],
-    "link": "#",
+    "link": "/cibil-dashboard/overview_free/loan-offers/",
     "link_text": "EDIT INFORMATION",
-    "button_link": "#",
+    "button_link": "/cibil-dashboard/overview_free/loan-offers/",
     "button_text": "SHOW ALL OFFERS",
     "partners":[
       {

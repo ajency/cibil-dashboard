@@ -22,7 +22,7 @@
     },
     {
         "heading": "Where will the alert be delivered?",
-        "content": "An email notification for Alerts will be delivered to your registered email ID. You can view the details under the <b>Alerts tab</b> by logging into your CIBIL account.<br><br><a class=\"cibil-link\" href=\"https://myscore.cibil.com/CreditView/login.page?enterprise=CIBIL&utm_source=alertsfaqpage\" target='_blank'>Click here to log in and check now</a>.<br><br>You will also be receiving Alerts as on SMS on your registered mobile number. If you access CIBIL dashboard with CIBIL mobile app, you will receive Alerts as app notifications.",
+        "content": "An email notification for Alerts will be delivered to your registered email ID. You can view the details under the Alerts tab by logging into your CIBIL account.<br><br><a class=\"cibil-link\" href=\"https://myscore.cibil.com/CreditView/login.page?enterprise=CIBIL&utm_source=alertsfaqpage\" target='_blank'>Click here to log in and check now</a>.<br><br>You will also be receiving Alerts as SMS on your registered mobile number. If you access CIBIL dashboard with CIBIL mobile app, Alerts will be received as app notifications.",
         "collapsed": false,
         "unique_id": "4"
     },
