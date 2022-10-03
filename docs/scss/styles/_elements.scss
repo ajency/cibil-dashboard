@@ -142,12 +142,40 @@
     &:before {
       max-width: calc(100% - 23px);
     }
-    &.download-icon{
+    &.download-icon {
       padding-right: 27px;
-      &:before{
+      &:before {
         max-width: calc(100% - 27px);
       }
-      &:after{
+      &:after {
+        background-image: url(/cibil-dashboard/images/static-images/download-dark-icon.svg);
+        width: 19px;
+        height: 13px;
+        margin-bottom: -1px;
+      }
+    }
+  }
+  &-left-icon {
+    padding-left: 23px;
+    &:after {
+      content: "";
+      width: 13px;
+      height: 12px;
+      background-image: url(/cibil-dashboard/images/static-images/arrow-left-icon.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0px;
+    }
+    &:before {
+      max-width: calc(100% - 23px);
+    }
+    &.download-icon {
+      padding-right: 27px;
+      &:before {
+        max-width: calc(100% - 27px);
+      }
+      &:after {
         background-image: url(/cibil-dashboard/images/static-images/download-dark-icon.svg);
         width: 19px;
         height: 13px;
@@ -166,6 +194,15 @@
         max-width: calc(100% - 20px);
       }
     }
+    &-left-icon {
+      padding-left: 20px;
+      &:after {
+        width: 14px;
+      }
+      &:before {
+        max-width: calc(100% - 20px);
+      }
+    }
   }
 }
 
@@ -177,19 +214,19 @@
     width: 27px;
     margin-bottom: 3px;
   }
-  .cibil-link{
+  .cibil-link {
     line-height: 22px;
-    &:before{
+    &:before {
       bottom: 3px;
     }
   }
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-bottom: 12px;
   }
   @include media-breakpoint-down(sm) {
     gap: 17px;
-    .cibil-link{
-      &:before{
+    .cibil-link {
+      &:before {
         bottom: 4px;
       }
     }
@@ -493,7 +530,6 @@ input[type="number"] {
     //   display: none;
     // }
 
-
     &:before {
       content: "";
       background-color: $black;
@@ -707,13 +743,57 @@ input[type="number"] {
   color: $light !important;
 }
 
-.page-background{
-  &.blue{
+.page-background {
+  &.blue {
     background-color: $light-blue;
   }
-  @include media-breakpoint-down(sm){
-    &.blue{
+  @include media-breakpoint-down(sm) {
+    &.blue {
       background-color: $light;
     }
   }
+}
+
+//scrollbar
+.cibil-scrollbar {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+
+  &::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background-color: #f1f6ff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f1f6ff;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: $primary-blue;
+  }
+}
+
+//list 
+.cibil-list{
+    li {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      position: relative;
+      padding-left: 26px;
+      margin-bottom: 0px;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 8px;
+        height: 4px;
+        width: 4px;
+        background: $dark;
+        border-radius: 100%;
+      }
+    }
 }

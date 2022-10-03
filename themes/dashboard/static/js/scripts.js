@@ -206,3 +206,7 @@ function addTooltip(){
     });
   })
 };
+
+$(".close-button").click( function(){
+  $(this).parents().eq(1).hide("fast");
+});
