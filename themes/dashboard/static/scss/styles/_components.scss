@@ -935,6 +935,7 @@
     width: calc(100% - 40px);
     .modal-content {
       border-radius: 12px;
+      overflow: hidden;
       .modal-body,
       .modal-header {
         border: none;
@@ -943,12 +944,19 @@
         padding: 6px 20px 20px;
       }
       .modal-header {
-        padding: 18px 20px 6px;
+        padding: 20px 20px 6px;
+        &.no-title {
+          justify-content: flex-end;
+        }
         .close {
           padding: 0;
           opacity: 1;
           border: 0;
-          margin: 2px 0px 0px 20px;
+          margin: 0px 0px 0px 20px;
+          img{
+            height: 26px;
+            width: 26px;
+          }
         }
         .modal-title {
           font-weight: $intro-regular;
@@ -1715,15 +1723,15 @@
       margin-bottom: 0px;
     }
   }
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     padding: 16px 0px 12px;
-    &__wraper{
+    &__wraper {
       gap: 40px;
       align-items: flex-start;
     }
-    &__body{
+    &__body {
       align-items: flex-start;
-      .bar-icon{
+      .bar-icon {
         margin-right: 14px;
       }
     }
@@ -1802,38 +1810,36 @@
             }
           }
           .button-group {
-            display: flex;
-            flex-direction: column;
             grid-gap: 30px;
-            align-items: center;
           }
         }
       }
     }
   }
-  @include media-breakpoint-down(sm){
-    &.modal{
-      .modal-dialog{
-        .modal-content{
-          .modal-body{
+  @include media-breakpoint-down(sm) {
+    &.modal {
+      .modal-dialog {
+        .modal-content {
+          .modal-body {
             padding-bottom: 30px;
-            .banner{
+            .banner {
               margin-bottom: 21px;
             }
-            .button-group{
+            .button-group {
               grid-gap: 20px;
             }
-            .details{
+            .details {
               padding-left: 12px;
               padding-right: 10px;
-              .heading{
+              .heading {
                 margin-bottom: 8px;
                 max-width: 183px;
               }
-              .content{
+              .content {
                 padding-right: 11px;
               }
-              .cibil-list li, .header{
+              .cibil-list li,
+              .header {
                 font-size: 14px;
               }
             }
@@ -1841,5 +1847,84 @@
         }
       }
     }
+  }
+}
+
+// upgrade plan popup
+.upgradePlanPopup {
+  .modal-dialog {
+    max-width: 368px;
+    .modal-content {
+      .modal-header {
+        padding-bottom: 4px;
+      }
+      .modal-body {
+        padding-top: 0px;
+        table {
+          width: 100%;
+          letter-spacing: 0.02em;
+          font-weight: 600;
+          tr{
+            td{
+              padding-top: 5px;
+              padding-bottom: 5px;
+              &:first-child{
+                text-align: left;
+              }
+              &:last-child{
+                text-align: right;
+              }
+            }
+            &:first-child{
+              td{
+                padding-top: 0px;
+              }
+            }
+            &:last-child{
+              td{
+                padding-bottom: 10px;
+              }
+            }
+          }
+        }
+        .coupon-discount{
+          display: none;
+        }
+        .subtotal{
+          border-top: 1px solid #DDDDDD;
+        }
+        .plan-name {
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+          font-weight: 700;
+          margin-bottom: 8px;
+        }
+        .plan-price {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 30px;
+        }
+        .coupon-discount{
+          color: $secondary-dark-green;
+        }
+        form{
+          background: #F9F9F9;
+          margin: -20px;
+          margin-top: auto;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+
+#couponForm{
+  .button-group{
+    button{
+      width: 100%;
+    }
+  }
+  .form-group{
+    margin-bottom: 20px;
   }
 }

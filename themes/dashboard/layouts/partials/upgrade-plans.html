@@ -10,12 +10,10 @@
                     <div class="plan-header">
                         <p class="plan-name">{{ .plan_name }}</p>
                         <p class="plan-duration">{{ .plan_duration }}</p>
-                        <div class="inline-wraper"><p class="discount-price">{{ .discount_price }}{{ if .discount }}<span class="discount">Save {{ .discount }}</span>{{ end }}</p></div>
-                        <div class="inline-wraper"><p class="plan-price {{ if not .price }}empty-height{{ end }}">{{ .price }}</p></div>
+                        <div class="inline-wraper"><p class="discount-price">₹<span class="ammount">{{ .discount_price }}</span>{{ if .discount }}<span class="discount">Save {{ .discount }}</span>{{ end }}</p></div>
+                        <div class="inline-wraper"><p class="plan-price {{ if not .price }}empty-height{{ end }}">{{if .price }}₹{{ .price }}{{end}}</p></div>
                     </div>
-                    {{ if .upgrade_link }}
-                    <a href="{{ .upgrade_link }}" class="cibil-button {{ if eq .recommended false }}cibil-button-border{{ end }}">{{ .upgrade_button_text }}</a>
-                    {{ end }}
+                    <a data-toggle="modal" data-target="#{{ anchorize .plan_name }}-popup" class="CouponFormToggle cibil-button {{ if eq .recommended false }}cibil-button-border{{ end }}" popup-link ="{{ anchorize .plan_name }}-popup">{{ .upgrade_button_text }}</a>
                     {{ if .features }}
                     <ul class="plan-features">
                         {{ range .features }}
@@ -35,8 +33,8 @@
                     <p class="plan-name">{{ .plan_name }}</p>
                     <p class="plan-duration">{{ .plan_duration }}</p>
                     <div class="prices">
-                        <span class="discount-price">{{ .discount_price }}</span>
-                        <span class="plan-price {{ if not .price }}empty-height{{ end }}">{{ .price }}</span>
+                        <span class="discount-price">₹{{ .discount_price }}</span>
+                        <span class="plan-price {{ if not .price }}empty-height{{ end }}">{{if .price }}₹{{ .price }}{{end}}</span>
                     </div>
                     {{ if eq .most_popular true }}
                     <p class="popular-tag">Most Popular</p>
@@ -49,10 +47,8 @@
               <div class="tab-content plan-tab-content" id="myTabContent">
                 {{ range .upgradePlans }}
                 <div class="tab-pane fade {{ if eq .active_tab true }}show active{{ end }}" id="{{ anchorize .plan_name }}" role="tabpanel" aria-labelledby="{{anchorize .plan_name}}-tab">
-                    {{ if .upgrade_link }}
-                    <a href="{{ .upgrade_link }}" class="cibil-button">{{ .upgrade_button_text }}</a>
+                    <a data-toggle="modal" data-target="#{{ anchorize .plan_name }}-popup" class="CouponFormToggle cibil-button">{{ .upgrade_button_text }}</a>
                     <hr class="horizontal-seperator">
-                    {{ end }}
                     {{ if .features }}
                     <ul class="plan-features">
                         {{ range .features }}
@@ -66,3 +62,37 @@
         </div>
     </div>
 </div>
+
+<!-- upgrade plan popup -->
+{{ range .upgradePlans }}
+<div class="modal fade upgradePlanPopup" id="{{ anchorize .plan_name }}-popup" tabindex="-1" role="dialog" aria-labelledby="{{ anchorize .plan_name }}-popup-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header no-title">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><img src="{{ "images/static-images/close-icon.svg" | relURL }}" alt=""></span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p class="plan-name">{{ .plan_name }}</p>
+            <table class="payment">
+                <tr class="plan-price">
+                    <td class="plan-duration">{{ .plan_duration }}</td>
+                    <td class="plan-price-ammount">₹<span class="ammount">{{ .discount_price }}</span></td>
+                </tr>
+                <!-- display discount -->
+                <tr class="coupon-discount d-none">
+                    <td><span class="discount">0</span>% Discount Applied</td>
+                    <td>- <span class="discount-ammount">0</span>₹</td>
+                </tr>
+                <tr class="subtotal">
+                    <td>Subtotal</td>
+                    <td>₹<span class="subtotal-ammount"></span></td>
+                </tr>
+            </table>
+            {{partial "forms/coupon-form" }}
+        </div>
+      </div>
+    </div>
+</div>
+{{end}}

@@ -207,6 +207,34 @@ function addTooltip(){
   })
 };
 
-$(".close-button").click( function(){
+//revert bar
+$(".revert-bar .close-button").click( function(){
   $(this).parents().eq(1).hide("fast");
+});
+
+$(".reset-field").next("input").on('keyup change', function(){
+    $(this).prev(".reset-field").show("fast");
+    if ($(this).val() == ''){
+      $(this).prev(".reset-field").hide("fast");
+    }
+});
+
+// coupon code form
+$(".reset-field").click(function(){
+  $(this).next("input").val('');
+  $(this).hide("fast");
+});
+
+$(".CouponFormToggle").click(function(){
+  let couponPopup = $("#"+$(this).attr("popup-link"));
+
+  let planPrice = couponPopup.find(".plan-price-ammount .ammount").text();
+  let disountedPrice = couponPopup.find(".coupon-discount .discount-ammount").text();
+
+  let subtotalVal = parseInt(planPrice) ;
+
+  if(disountedPrice){
+    subtotalVal = parseInt(planPrice)-parseInt(disountedPrice) ;
+  }
+  couponPopup.find(".subtotal .subtotal-ammount").text(subtotalVal);
 });
