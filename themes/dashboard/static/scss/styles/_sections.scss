@@ -2199,6 +2199,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-align: center;
       .cibil-link {
         width: auto;
         color: #707070 !important;
@@ -2215,6 +2216,11 @@
           background-color: #707070;
           right: 0;
           left: unset;
+        }
+      }
+      .cibil-button{
+        @include media-breakpoint-up(lg){
+          min-width: 168px;
         }
       }
     }

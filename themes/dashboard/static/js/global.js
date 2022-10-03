@@ -96,6 +96,7 @@ $(function () {
     selectElement.addClass('selected')
     $('#report-select-value').html(selectElement.html())
     checkAccountVisibility()
+    resetCompare()
   })
 
   $('.toggle-popup').click(function(e){
@@ -149,6 +150,7 @@ function customSelectTab(element){
   $('.report-nav-link').removeClass('active');
   $('.report-nav-link[data-target="'+$(element).data('target')+'"]').addClass('active');
   checkAccountVisibility();
+  resetCompare();
 }
 function closeScenario(element){
     let parentElement = $(element).parents('.scenario')
