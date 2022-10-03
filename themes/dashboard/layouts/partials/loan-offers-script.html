@@ -1,5 +1,8 @@
 <script>
     function addToCompare(element) {
+        if($('.compare-offer-footer .compare-list > .compare-tab:not(:empty)').length >= 3){
+            return
+        }
         $(element).attr('onclick','removeFromCompare(this)');
         let parent = $(element).parents('.offers-card')
         parent.addClass('selected');
