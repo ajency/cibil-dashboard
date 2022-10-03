@@ -7,9 +7,12 @@
     },
     {
         "heading": "How does Alerts help me?",
-        "content": "It is very important to monitor your Score and Report regularly for any changes as reported by credit institutions. The Alerts feature does this credit monitoring for you. In case the information updated on your report is incorrect, you can immediately raise a dispute for the same.",
+        "content": "It is very important to monitor your Score and Report regularly for any changes as reported by credit institutions. The Alerts feature does this credit monitoring for you. In case the information updated on your report is incorrect, you can immediately raise a dispute for the same.<div data-toggle='modal' data-target='#faqVideoPopup1' class='faq-video-cta' data-title='All you need to know about the CIBIL Score and Report TransUnion CIBIL' data-thumbnail='../../images/dynamic-images/faq-video-thumbnail.png'></div>",
         "collapsed": false,
-        "unique_id": "2"
+        "unique_id": "2",
+        "video_popup_id": "faqVideoPopup1",
+        "video_mp4": "videos/download-now.mp4",
+        "video_webm": "videos/download-now.webm"
     },
     {
         "heading": "When will I get an alert?",

@@ -900,10 +900,8 @@
 }
 
 // video player
-.download-now-video-dimensions {
-  width: 100%;
-}
 .video-js {
+  width: 100% !important;
   .vjs-big-play-button {
     background-color: $light !important;
     color: $black;
@@ -953,7 +951,7 @@
           opacity: 1;
           border: 0;
           margin: 0px 0px 0px 20px;
-          img{
+          img {
             height: 26px;
             width: 26px;
           }
@@ -1864,34 +1862,34 @@
           width: 100%;
           letter-spacing: 0.02em;
           font-weight: 600;
-          tr{
-            td{
+          tr {
+            td {
               padding-top: 5px;
               padding-bottom: 5px;
-              &:first-child{
+              &:first-child {
                 text-align: left;
               }
-              &:last-child{
+              &:last-child {
                 text-align: right;
               }
             }
-            &:first-child{
-              td{
+            &:first-child {
+              td {
                 padding-top: 0px;
               }
             }
-            &:last-child{
-              td{
+            &:last-child {
+              td {
                 padding-bottom: 10px;
               }
             }
           }
         }
-        .coupon-discount{
+        .coupon-discount {
           display: none;
         }
-        .subtotal{
-          border-top: 1px solid #DDDDDD;
+        .subtotal {
+          border-top: 1px solid #dddddd;
         }
         .plan-name {
           letter-spacing: 0.02em;
@@ -1904,11 +1902,11 @@
           font-size: 24px;
           line-height: 30px;
         }
-        .coupon-discount{
+        .coupon-discount {
           color: $secondary-dark-green;
         }
-        form{
-          background: #F9F9F9;
+        form {
+          background: #f9f9f9;
           margin: -20px;
           margin-top: auto;
           padding: 20px;
@@ -1918,13 +1916,43 @@
   }
 }
 
-#couponForm{
-  .button-group{
-    button{
+#couponForm {
+  .button-group {
+    button {
       width: 100%;
     }
   }
-  .form-group{
+  .form-group {
     margin-bottom: 20px;
+  }
+}
+// faq video cta
+.faq-video-cta {
+  width: 100%;
+  max-width: 505px;
+  height: 265px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  margin-top: 20px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  &:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/static-images/play-icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    left: calc(50% - 30px);
+    top: calc(50% - 30px);
+  }
+  @include media-breakpoint-down(sm) {
+    max-width: 347px;
+    max-height: 182px;
   }
 }

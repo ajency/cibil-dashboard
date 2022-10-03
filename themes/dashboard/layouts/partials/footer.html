@@ -37,3 +37,22 @@
     });
 </script>
 {{end}}
+{{ if eq .RelPermalink "/cibil-dashboard/overview_free/alerts/" }}
+<script>
+    // video player
+    var player = videojs("faqVideo", {
+    fluid: true
+    });
+
+    $("#faqVideoPopup1").on("show.bs.modal", function (e) {
+    player.play("muted");
+    player.muted(false);
+    });
+
+    $("#faqVideoPopup1").on("hide.bs.modal", function (e) {
+    player.pause();
+    player.play("pause");
+    player.muted(true);
+    });
+</script>
+{{end}}

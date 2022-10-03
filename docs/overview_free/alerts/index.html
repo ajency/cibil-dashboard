@@ -427,7 +427,7 @@
             aria-labelledby="heading2"
             data-parent="#accordion"
           >
-            <div class="faq-body faq-content">It is very important to monitor your Score and Report regularly for any changes as reported by credit institutions. The Alerts feature does this credit monitoring for you. In case the information updated on your report is incorrect, you can immediately raise a dispute for the same.</div>
+            <div class="faq-body faq-content">It is very important to monitor your Score and Report regularly for any changes as reported by credit institutions. The Alerts feature does this credit monitoring for you. In case the information updated on your report is incorrect, you can immediately raise a dispute for the same.<div data-toggle='modal' data-target='#faqVideoPopup1' class='faq-video-cta' data-title='All you need to know about the CIBIL Score and Report TransUnion CIBIL' data-thumbnail='../../images/dynamic-images/faq-video-thumbnail.png'></div></div>
           </div>
         </div>
         
@@ -572,6 +572,59 @@
 </div>
 
 
+
+
+  
+
+  
+  <div class="modal fade" id="faqVideoPopup1" tabindex="-1" role="dialog" aria-labelledby="faqVideoPopup1-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title"></p>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><img src="/cibil-dashboard/images/static-images/close-icon.svg" alt=""></span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <video
+            id="faqVideo"
+            class="video-js"
+            controls
+            preload="auto"
+            width="680"
+            height="326"
+            poster=""
+            data-setup="{}"
+          >
+            <source src="/cibil-dashboard/videos/download-now.mp4" type="video/mp4" />
+            <source src="/cibil-dashboard/videos/download-now.webm" type="video/webm" />
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that
+              <a href="https://videojs.com/html5-video-support/" target="_blank"
+                >supports HTML5 video</a
+              >
+            </p>
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
 <footer>
     <div class="page-width ">
         <p class="footer-text">© Copyright 2022 TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.</p>
@@ -592,6 +645,25 @@
 <script src="/cibil-dashboard/js/slick.min.js"></script>
 <script src="/cibil-dashboard/js/scripts.js"></script>
 
+
+
+<script>
+    
+    var player = videojs("faqVideo", {
+    fluid: true
+    });
+
+    $("#faqVideoPopup1").on("show.bs.modal", function (e) {
+    player.play("muted");
+    player.muted(false);
+    });
+
+    $("#faqVideoPopup1").on("hide.bs.modal", function (e) {
+    player.pause();
+    player.play("pause");
+    player.muted(true);
+    });
+</script>
 
             </div>
             <div class="overlay"></div>
