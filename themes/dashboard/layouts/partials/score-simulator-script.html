@@ -38,7 +38,7 @@
         counter > 4 ? $('.add-scenario').hide(): '';
         $('#counter').val(counter)
         let addedOptions = $('#optionsAdded').val().split(",");
-        console.log(addedOptions)
+        //console.log(addedOptions)
         let html = `
             <div class="scenario blank">
                 <div class="scenario-header">
@@ -105,7 +105,7 @@
         $(element).parents('.scenario').find('.scenario-options').fadeOut('slow');
         let html= '';
 
-        console.log(option)
+        //console.log(option)
         // <wimg src="{{"images/static-images/grey-info.svg" | relURL}}"/>
         switch(option){
             case 'missPayment':
@@ -151,7 +151,7 @@
                                 <label for="amount">Loan Amount/Credit Limit</label>
                                 <div class="input-holder">
                                     <span class="currency">₹</span>
-                                    <input class="input-currency" type="number" id="amount">
+                                    <input class="input-currency" type="number" id="amount" onkeyup="validateLoanAmount(this)">
                                 </div>
                                 <span class="message">Min 10,00,000 to Max 30,00,000</span>
                             </div>
@@ -238,7 +238,7 @@
                 break;
         }
 
-        console.log(html)
+        //console.log(html)
 
         // $(element).parents('.scenario-body').hide()
         $(element).parents('.scenario-body').append(html)
@@ -262,10 +262,18 @@
     }
     function showConfirmation(element){
         $(element).parents('.scenario-header').find('.confirmation').addClass('show');
-        console.log($(element).parents('.scenario-header'))
+        //console.log($(element).parents('.scenario-header'))
     }
     function deleteGroup(element){
         $(element).parents('.group-wrap').remove();
-
+    }
+    function validateLoanAmount(element){
+        let loanAmount = $(element).val();
+        
+        if (loanAmount >= 1000000 && loanAmount <= 3000000  ){
+            $(element).parent().next(".message").hide("fast");
+        }else{
+            $(element).parent().next(".message").show("fast");
+        }find
     }
 </script>
