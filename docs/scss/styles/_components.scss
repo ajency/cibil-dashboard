@@ -1924,6 +1924,16 @@
   }
   .form-group {
     margin-bottom: 20px;
+    input,
+    textarea {
+      background: $light !important;
+      color: $dark !important;
+    }
+    .message {
+      font-weight: $intro-regular !important;
+      font-size: 16px !important;
+      margin-top: 8px;
+    }
   }
 }
 // faq video cta
@@ -1954,5 +1964,94 @@
   @include media-breakpoint-down(sm) {
     max-width: 347px;
     max-height: 182px;
+  }
+}
+
+// note
+.dashboard-note {
+  background: #ffffff;
+  border: 1px solid #acacac;
+  border-radius: 6px;
+  padding: 15px 14px;
+  &__wraper {
+    display: flex;
+    grid-gap: 20px;
+    .note-icon {
+      height: 30px;
+      width: 30px;
+      object-fit: contain;
+      object-position: center;
+      margin-top: -4px;
+    }
+    .note-content {
+      letter-spacing: 0.02em;
+      .cibil-link {
+        font-size: inherit;
+      }
+    }
+  }
+  &.type-content {
+    border-radius: 0;
+    padding: 0;
+    padding-top: 20px;
+    border: none;
+    border-top: 1px solid #dddddd;
+    color: #707070;
+    font-weight: 600;
+  }
+}
+
+//notification form
+#notificationForm {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+// notification
+.dashboard-notification {
+  background: #ffffff;
+  border: 1px solid #dde0ef;
+  border-radius: 6px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .section-heading {
+    padding: 20px;
+    border-bottom: 1px solid #dde0ef;
+    width: 100%;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0px;
+  }
+  .content {
+    display: flex;
+    grid-gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+    b{
+      font-weight: $intro-regular;
+    }
+    .cibil-link{
+      font-size: inherit;
+    }
+    .notification-icon {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    .content {
+      padding-top: 16px;
+      grid-gap: 17px;
+      .cibil-link {
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
   }
 }

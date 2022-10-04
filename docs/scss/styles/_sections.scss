@@ -563,7 +563,7 @@
       letter-spacing: 0.02em;
       margin-bottom: 30px;
       font-size: 0;
-      & > *{
+      & > * {
         font-size: initial;
       }
       img {
@@ -1268,6 +1268,11 @@
     letter-spacing: 0.02em;
     color: $black;
   }
+  .summary-desc {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
   .summary-pointers {
     display: flex;
     align-items: flex-start;
@@ -1285,7 +1290,7 @@
       margin-bottom: 20px;
       display: flex;
       align-items: flex-start;
-      span{
+      span {
         width: calc(100% - 32px);
       }
     }
@@ -1308,6 +1313,10 @@
     margin-top: 30px;
     margin-bottom: 40px;
     flex-direction: column-reverse;
+    .summary-desc {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
     & > div {
       width: 100% !important;
       overflow: hidden;
@@ -2206,20 +2215,20 @@
         margin-top: 16px;
         cursor: pointer;
         text-transform: none;
-        span{
-          &:last-child{
+        span {
+          &:last-child {
             display: none;
           }
         }
-        &::before{
+        &::before {
           width: calc(100% - 8px);
           background-color: #707070;
           right: 0;
           left: unset;
         }
       }
-      .cibil-button{
-        @include media-breakpoint-up(lg){
+      .cibil-button {
+        @include media-breakpoint-up(lg) {
           min-width: 168px;
         }
       }
@@ -2233,13 +2242,13 @@
         top: -8px;
       }
     }
-    &.selected{
-      border: 2px solid #FCD800;
+    &.selected {
+      border: 2px solid #fcd800;
       .offer-cta {
-        .cibil-link{
-          span{
+        .cibil-link {
+          span {
             display: none;
-            &:last-child{
+            &:last-child {
               display: block;
             }
           }
@@ -2247,12 +2256,12 @@
       }
     }
   }
-  &.comparing{
-    .offers-card{
-      &:not(.selected){
+  &.comparing {
+    .offers-card {
+      &:not(.selected) {
         display: none;
       }
-      .offer-cta .cibil-link{
+      .offer-cta .cibil-link {
         visibility: hidden;
       }
     }
@@ -2353,10 +2362,11 @@
       }
     }
   }
-  &.show{
+  &.show {
     display: block;
-    & + .page-width{
-      .loan-offers-tabs, .loan-offers-settings{
+    & + .page-width {
+      .loan-offers-tabs,
+      .loan-offers-settings {
         display: none;
       }
     }
@@ -2388,7 +2398,7 @@
       max-width: 230px;
       width: 100%;
       order: 0;
-      p{
+      p {
         margin: 0;
         margin-left: 10px;
         margin-right: 20px;
@@ -2446,7 +2456,7 @@
         padding: 6px;
         position: relative;
         width: calc(33% - 14px);
-        &:last-of-type{
+        &:last-of-type {
           margin-right: 0;
         }
         .remove-compare-tab {
@@ -2479,7 +2489,7 @@
       }
     }
   }
-  &.hide{
+  &.hide {
     display: none !important;
   }
 }
@@ -2491,8 +2501,9 @@
   &__wraper {
     nav {
       .nav-tabs {
-          border-bottom: none !important;
-          background-color: transparent;
+        border-bottom: none !important;
+        background-color: transparent;
+        flex-wrap: nowrap;
         .nav-link {
           background: $light;
           padding: 14px 20px;
@@ -2507,32 +2518,40 @@
           position: relative;
           border-right-color: $border-color-4;
           border-color: $light;
-          &:not(:last-child){
+          .tab-icon{
+            height: 29px;
+            overflow:hidden;
+            svg{
+              height: 100%;
+              display: block;
+            }
+          }
+          &:not(:last-child) {
             border-right: 1px solid $border-color-4;
           }
-          &:last-child{
+          &:last-child {
             border-right-color: $light;
           }
-          .tab-title{
+          .tab-title {
             margin: 0px;
             font-weight: $intro-regular;
             max-width: 103px;
             text-align: left;
           }
-          &.active{
+          &.active {
             color: $black;
-            .tab-title{
+            .tab-title {
               font-weight: $intro-bold;
             }
-            .tab-icon{
-              svg{
-                path:not(.default){
+            .tab-icon {
+              svg {
+                path:not(.default) {
                   fill: $primary-blue;
                 }
               }
             }
           }
-          &:not(.active){
+          &:not(.active) {
             border-bottom-color: $border-color-4;
           }
         }
@@ -2544,18 +2563,21 @@
       background: $light;
       .tab-pane {
         padding: 30px 20px;
+        .dashboard-form {
+          max-width: 582px;
+        }
       }
     }
   }
-  @include media-breakpoint-up(md){
-    &__wraper{
-      nav{
-        .nav-tabs{
-          .nav-link{
+  @include media-breakpoint-up(md) {
+    &__wraper {
+      nav {
+        .nav-tabs {
+          .nav-link {
             min-width: 200px;
-            &.active{
-              &:before{
-                content: '';
+            &.active {
+              &:before {
+                content: "";
                 height: 6px;
                 width: 100%;
                 background-color: $primary-blue;
@@ -2569,33 +2591,40 @@
       }
     }
   }
-  @include media-breakpoint-down(sm){
-    &__wraper{
-      nav{
-        .nav-tabs{
-          .nav-link{
+  @include media-breakpoint-down(sm) {
+    padding-top: 20px;
+    &__wraper {
+      nav {
+        .nav-tabs {
+          .nav-link {
+            min-height: 110px;
             flex-grow: 1;
+            width: calc(100%/3);
+            padding: 10px 12px;
             border-color: $light-blue-7;
-            .tab-title{
+            .tab-icon{
+              height: 23px;
+            }
+            .tab-title {
               color: $black;
             }
-            &:not(:last-child){
+            &:not(:last-child) {
               border-right-color: $light-blue-2;
             }
-            &:first-child{
+            &:first-child {
               border-top-left-radius: 8px;
             }
-            &:last-child{
+            &:last-child {
               border-top-right-radius: 8px;
             }
-            &.active{
-              border-bottom-color:$light ;
+            &.active {
+              border-bottom-color: $light;
               border-right-color: $light;
-              &:last-child{
+              &:last-child {
                 border-right-color: $light-blue-7;
               }
             }
-            &:not(.active){
+            &:not(.active) {
               background: $light-blue-2;
               border-bottom-color: $light-blue-7;
               border-top-color: $light-blue-2;
@@ -2603,10 +2632,10 @@
           }
         }
       }
-      .tab-content{
+      .tab-content {
         border: 1px solid $light-blue-7;
         border-radius: 0px 0px 8px 8px;
-        .tab-pane{
+        .tab-pane {
           padding: 20px 16px 30px;
         }
       }
@@ -2614,17 +2643,12 @@
   }
 }
 
-
-
-
-
-
 //offers popup
-.offersPopup{
+.offersPopup {
   .offer-info-wrap {
     display: flex;
     align-items: center;
-  
+
     .company-container {
       margin-right: 40px;
       text-align: center;
@@ -2677,32 +2701,32 @@
       }
     }
   }
-  .popup-body{
+  .popup-body {
     .content-head {
       font-weight: $intro-bold;
       text-transform: uppercase;
       color: $primary-blue;
     }
-    .content-text{
-      span{
+    .content-text {
+      span {
         display: block;
-        & + .cibil-link{
-          span{
-            &:first-child{
+        & + .cibil-link {
+          span {
+            &:first-child {
               display: none;
             }
           }
         }
-        &.shrink{
+        &.shrink {
           display: -webkit-box;
           overflow: hidden;
           text-overflow: ellipsis;
           -webkit-box-orient: vertical !important;
           -webkit-line-clamp: 2;
-          & + .cibil-link{
-            span{
+          & + .cibil-link {
+            span {
               display: none;
-              &:first-child{
+              &:first-child {
                 display: block;
               }
             }
@@ -2710,12 +2734,12 @@
         }
       }
     }
-    .cibil-link{
+    .cibil-link {
       text-transform: none;
       font-weight: $intro-regular;
       cursor: pointer;
     }
-    .toggle-text{
+    .toggle-text {
       margin-top: 10px;
     }
   }
@@ -2723,40 +2747,40 @@
   .offer-benefits {
     display: flex;
     margin: 20px 0;
-    & > div{
+    & > div {
       width: 50%;
       padding: 20px;
-      background: #F9F9F9;
-      &:last-child{
-        background-color: #EDEDED;
+      background: #f9f9f9;
+      &:last-child {
+        background-color: #ededed;
       }
-      p{
+      p {
         display: flex;
         margin-bottom: 10px;
-        & > span{
-          &:first-child{
+        & > span {
+          &:first-child {
             width: 20px;
             margin-right: 15px;
           }
         }
         @include intro-book-14;
-        &.head{
+        &.head {
           font-weight: $intro-regular;
-          & > span{
-            &:last-child{
-              & > span{
+          & > span {
+            &:last-child {
+              & > span {
                 display: block;
                 margin-top: 5px;
-                span{
+                span {
                   font-weight: $intro-book;
                   display: block;
-                  &.list{
+                  &.list {
                     list-style: disc;
                     display: block;
                     padding-left: 20px;
                     position: relative;
-                    &::after{
-                      content:'\2022';
+                    &::after {
+                      content: "\2022";
                       position: absolute;
                       left: 0;
                       top: 50%;
@@ -2772,7 +2796,7 @@
     }
   }
   @include media-breakpoint-down(sm) {
-    .popup-body{
+    .popup-body {
       padding-bottom: 0;
     }
     .offer-info-wrap {
@@ -2808,18 +2832,18 @@
       flex-direction: column;
       border-radius: 8px;
       overflow: hidden;
-      & > div{
+      & > div {
         width: 100%;
       }
     }
-    .btn-wrap{
+    .btn-wrap {
       position: sticky;
       bottom: 0;
       padding: 20px 0;
       background: #fff;
       display: block;
-      &::after{
-        content: '';
+      &::after {
+        content: "";
         position: absolute;
         left: 0;
         bottom: 0;
@@ -2829,21 +2853,21 @@
         z-index: -1;
       }
     }
-    .cibil-button{
+    .cibil-button {
       width: 100%;
     }
-    .content-text{
+    .content-text {
       margin-bottom: 0 !important;
     }
   }
 }
 
-.edit-info-header{
+.edit-info-header {
   display: flex;
   justify-content: flex-end;
   padding: 30px 0 24px;
-  a{
-    &:first-child{
+  a {
+    &:first-child {
       @include intro-regular-16;
       color: $primary-blue !important;
       &::before {
@@ -2852,26 +2876,26 @@
         top: 2px;
         position: relative;
       }
-      display: none
+      display: none;
     }
-    &:last-child{
+    &:last-child {
       color: $primary-blue !important;
       text-decoration: underline !important;
       text-transform: uppercase;
       font-weight: 700;
       cursor: pointer;
       letter-spacing: 0;
-      svg{
+      svg {
         margin-right: 7px;
       }
-      & > *{
+      & > * {
         color: $primary-blue !important;
       }
-      span{
-        &::after{
-          background-image: url(/cibil-dashboard/images/static-images/settings-blue.svg)
+      span {
+        &::after {
+          background-image: url(/cibil-dashboard/images/static-images/settings-blue.svg);
         }
-        &::before{
+        &::before {
           background-color: $primary-blue !important;
         }
       }
@@ -2880,62 +2904,61 @@
   @include media-breakpoint-down(sm) {
     padding: 20px 0 20px;
     justify-content: flex-start;
-    a{
-      &:first-child{
+    a {
+      &:first-child {
         display: block;
       }
-      &:last-child{
+      &:last-child {
         display: none;
       }
     }
   }
 }
 
-
-.edit-info-tab{
-  background: #FFFFFF;
+.edit-info-tab {
+  background: #ffffff;
   box-shadow: 2px 2px 16px rgba(0, 71, 255, 0.2);
   border-radius: 12px;
   padding: 30px;
   margin-bottom: 200px;
-  & > p{
+  & > p {
     @include intro-regular-16;
     margin-bottom: 17px;
   }
-  .edit-info-wrap{
+  .edit-info-wrap {
     display: flex;
     margin-bottom: 4px;
-    .group{
+    .group {
       margin-right: 20px;
       flex: 1;
       max-width: 100%;
       margin-bottom: 20px;
-      &:last-child{
+      &:last-child {
         margin-right: 0;
       }
-      label{
+      label {
         margin-bottom: 5px;
       }
     }
   }
-  .edit-info-cta-wrap{
-    .cibil-link{
+  .edit-info-cta-wrap {
+    .cibil-link {
       font-weight: $intro-regular;
       margin-left: 30px;
     }
   }
-  .personal-loan-offers-section__wraper{
-    .offers-n-partners{
+  .personal-loan-offers-section__wraper {
+    .offers-n-partners {
       border-radius: 0;
       box-shadow: none;
       padding: 0;
       padding-top: 40px;
     }
   }
-  .input-city{
+  .input-city {
     position: relative;
-    &::after{
-      content: url('/cibil-dashboard/images/static-images/search-input.svg');
+    &::after {
+      content: url("/cibil-dashboard/images/static-images/search-input.svg");
       position: absolute;
       right: 15px;
       top: 50%;
@@ -2947,7 +2970,7 @@
     margin-bottom: 40px;
     box-shadow: none;
     padding: 0;
-    .edit-info-wrap{
+    .edit-info-wrap {
       flex-direction: column;
     }
     .edit-info-cta-wrap {
@@ -2956,10 +2979,10 @@
       justify-content: center;
       align-items: center;
 
-      .cibil-link{
+      .cibil-link {
         margin: 0;
       }
-      .cibil-button{
+      .cibil-button {
         width: 100%;
         margin-bottom: 30px;
       }
@@ -2967,19 +2990,36 @@
   }
 }
 
-.loan-offer-js{
-  .edit-info-tab, .edit-info-header{
+.loan-offer-js {
+  .edit-info-tab,
+  .edit-info-header {
     display: none;
   }
-  &.edit{
-    & > *{
+  &.edit {
+    & > * {
       display: none;
     }
-    & > .edit-info-tab{
+    & > .edit-info-tab {
       display: block;
     }
-    & > .edit-info-header{
+    & > .edit-info-header {
       display: flex;
+    }
+  }
+}
+
+// account
+.my-account{
+  .page-background{
+    &.blue{
+      padding-bottom: 60px;
+    }
+  }
+  @include media-breakpoint-down(sm){
+    .page-background{
+      &.blue{
+        padding-bottom: 40px;
+      }
     }
   }
 }

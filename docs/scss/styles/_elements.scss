@@ -183,6 +183,9 @@
       }
     }
   }
+  &.default-case{
+    text-transform: inherit;
+  }
 
   @include media-breakpoint-down(sm) {
     &-right-icon {
@@ -812,11 +815,21 @@ input[type="number"] {
     flex-direction: column;
     margin-bottom: 30px;
     position: relative;
+    &.error {
+      .message{
+        color: $secondary-red;
+        font-weight: $intro-regular;
+      }
+      input, textarea{
+        background: #FFFFFF !important;
+        border: 2px solid #D74025 !important;
+      }
+    }
   }
-  .input-btn-wraper {
+  .input-icons-wraper {
     position: relative;
   }
-  .reset-field {
+  .reset-field, .show-password, .hide-password {
     position: absolute;
     right: 16px;
     top: calc(50% - 10.5px);
@@ -824,21 +837,62 @@ input[type="number"] {
     width: 18px !important;
     height: 21px !important;
     cursor: pointer;
-    img{
+    img {
       display: block;
+    }
+  }
+  .show-password, .hide-password{
+    width: 29px !important;
+    height: 16px !important;
+    top: calc(52px - 10.5px);
+    img{
+      margin-left: auto;
+      height: 100% !important;
     }
   }
   .message {
     margin-bottom: 0px;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: $intro-book;
+    font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    &:empty{
+    color: $dark;
+    margin-top: 6px;
+    &:empty {
       display: none;
     }
-    &.error {
-      color: $secondary-red;
+  }
+  .message-box {
+    margin-bottom: 30px;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #000000;
+    font-weight: 400;
+    width: 100% !important;
+    display: none;
+    &__wraper{
+      display: flex;
+      grid-gap: 10px;
+    }
+    &.success {
+      background: #dcecbd;
+      position: relative;
+      .message-box__wraper{
+        &:before {
+          content: "";
+          width: 20px;
+          height: 20px;
+          position: relative;
+          top: 2px;
+          background-image: url(../images/static-images/checkmark-light-icon.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+      }
     }
   }
   label {
@@ -852,13 +906,92 @@ input[type="number"] {
   input,
   textarea {
     width: 100%;
-    background: #ffffff;
-    border: 1px solid #acacac !important;
+    background: $light;
+    border: 1px solid $grey-1 !important;
     padding: 12px 16px;
-    font-weight: 600;
+    font-weight: $intro-book;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    color: #2c2c2c;
+    color: $dark;
+    transition: color 0.3 ease-in-out, background 0.3 ease-in-out;
+  }
+  .cibil-button {
+    min-width: 144px;
+  }
+  .checkbox-wraper {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    label {
+      width: 100%;
+      position: relative;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      grid-gap: 14px;
+      font-weight: $intro-book;
+      &:before {
+        content: "";
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: 1px solid $black;
+        border-radius: 2px;
+        padding: 7px;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+    }
+    input[type="checkbox"] {
+      margin-right: 14px;
+      padding: 0;
+      height: initial;
+      width: initial;
+      margin-bottom: 0;
+      display: none;
+      cursor: pointer;
+    }
+    input:checked + label:before{
+      background-color: $black;
+    }
+    input:checked + label:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 5.2px;
+      height: 9.2px;
+      border: solid $light;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px $light inset !important;
+    box-shadow: 0 0 0 30px $light inset !important;
+    font-family: "Intro" !important;
+  }
+  @include media-breakpoint-down(sm){
+    .form-group{
+      margin-bottom: 20px;
+    }
+    .message{
+      margin-top: 10px;
+    }
+    .message-box{
+      margin-bottom: 20px;
+      border-radius: 8px;
+      grid-gap: 4px;
+    }
+    .cibil-button{
+      width: 100%;
+    }
   }
 }

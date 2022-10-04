@@ -4,7 +4,15 @@
 
     <div class="page-background blue">
 
-        {{ partial "tabs-vertical-icons" (dict "account_tabs" .Site.Data.account_tabs ) }}
+        <div class="page-width">
+
+            {{ partial "tabs-vertical-icons" (dict "account_tabs" .Site.Data.account_tabs ) }}
+
+            {{partial "notification" (dict "notification_title" "Free Annual CIBIL Score and Report" "notification_content" "You are eligible for your Free Annual CIBIL Score and Report.<br><a href='#' class='cibil-link default-case'>Get your Free Annual CIBIL Score and Report</a>")}}
+
+            {{partial "notification" (dict "notification_title" "Free Annual CIBIL Score and Report" "notification_content" "Your next Free Annual CIBIL Score and Report will become<br>available on <b>01/01/2022</b>")}}
+
+        </div>
 
     </div>
 
