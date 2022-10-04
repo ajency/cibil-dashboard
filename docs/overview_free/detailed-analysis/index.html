@@ -349,7 +349,39 @@
 <script src="/cibil-dashboard/js/scripts.js"></script>
 
 
+<script>
+    
+    $(".faq-video-cta").each(function(){
+    let thumbnail = $(this).data("thumbnail");
 
+    $(this).css("background","linear-gradient(0deg, rgba(0, 166, 202, 0.9), rgba(0, 166, 202, 0.9)), url("+thumbnail+")");
+
+    $(this).click(function(){
+        let videoTitle = $(this).data("title");
+        let videoPopup = $(this).data("target");
+        let videoElement = $(videoPopup).find("video").attr("id");
+
+        $(videoPopup).find(".modal-title").text(videoTitle);
+
+        
+        var player = videojs(videoElement, {
+        fluid: true
+        });
+
+        $(videoPopup).on("show.bs.modal", function (e) {
+            player.play("muted");
+            player.muted(false);
+        });
+
+        $(videoPopup).on("hide.bs.modal", function (e) {
+            player.pause();
+            player.play("pause");
+            player.muted(true);
+        });
+    });
+
+    });
+</script>
             </div>
             <div class="overlay"></div>
         </div>

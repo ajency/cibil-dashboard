@@ -36,7 +36,7 @@
 
 
 <!-- FAQ Video Popup | start -->
-{{ range .faq }}
+{{ range $index, $faq:= .faq }}
   {{if or .video_mp4 .video_webm}}
   <div class="modal fade" id="{{.video_popup_id}}" tabindex="-1" role="dialog" aria-labelledby="{{.video_popup_id}}-title" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -49,7 +49,7 @@
         </div>
         <div class="modal-body">
             <video
-            id="faqVideo"
+            id="faqVideo-{{$index}}"
             class="video-js"
             controls
             preload="auto"

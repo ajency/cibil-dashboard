@@ -238,15 +238,3 @@ $(".CouponFormToggle").click(function(){
   }
   couponPopup.find(".subtotal .subtotal-ammount").text(subtotalVal);
 });
-
-//faq video cta
-$(".faq-video-cta").each(function(){
-  let thumbnail = $(this).data("thumbnail");
-  let videoTitle = $(this).data("title");
-
-
-  $(this).css("background","linear-gradient(0deg, rgba(0, 166, 202, 0.9), rgba(0, 166, 202, 0.9)), url("+thumbnail+")");
-
-  $("#faqVideoPopup").find(".modal-title").text(videoTitle);
-
-});
