@@ -158,7 +158,7 @@ if (hash) {
     $('.report-nav-item button[data-target="#' + hash + '"]').addClass("active");
     $panelParent.find(".tab-panel").removeClass("active");
     $('.tab-panel[id="' + hash + '"]').addClass("active");
-    checkAccountVisibility();
+    //checkAccountVisibility();
 }
 
 //tooltip funciton

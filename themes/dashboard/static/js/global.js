@@ -133,7 +133,9 @@ $(function () {
           scrollTop: $($.attr(this, 'href')).offset().top - 80
       }, 500);
     }
-});
+  });
+
+  enableAccountSlider();
 
 })
 function customSelectInput(element){
