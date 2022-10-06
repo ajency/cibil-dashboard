@@ -318,7 +318,7 @@
     <div class="report-tabs">
         <ul class="reportTabs" id="reportTab">
             <li class="report-nav-item" role="presentation">
-                <button class="report-nav-link" id="account-tab" data-target="#account"><img
+                <button class="report-nav-link active" id="account-tab" data-target="#account"><img
                         src='/cibil-dashboard/images/static-images/account-info.svg'>Account Information</button>
             </li>
             <li class="report-nav-item" role="presentation">
@@ -332,25 +332,25 @@
                     Information</button>
             </li>
             <li class="report-nav-item" role="presentation">
-                <button class="report-nav-link active" id="summary-tab" data-target="#summary" role="tab"
+                <button class="report-nav-link" id="summary-tab" data-target="#summary" role="tab"
                     aria-controls="summary"><img src='/cibil-dashboard/images/static-images/report-summary.svg'>Credit Summary</button>
             </li>
         </ul>
         <div class="group report-select-group">
             <div class="custom-select-input report-select-tab" onclick="customSelectInput(this)">
-                <span class="custom-select-value" id="report-select-value"><img src='/cibil-dashboard/images/static-images/report-summary.svg'>Credit Summary</span>
+                <span class="custom-select-value" id="report-select-value"><img src='/cibil-dashboard/images/static-images/report-summary.svg'>Account Information</span>
                 <div class="custom-select-options">
+                    <span data-target="#account" onclick="customSelectTab(this)" class="selected"><img src='/cibil-dashboard/images/static-images/account-info.svg'>Account Information</span>
                     <span data-target="#profile" onclick="customSelectTab(this)" ><img src='/cibil-dashboard/images/static-images/profile-info.svg'>Profile Information</span>
-                    <span data-target="#account" onclick="customSelectTab(this)" ><img src='/cibil-dashboard/images/static-images/account-info.svg'>Account Information</span>
                     <span data-target="#enquiry" onclick="customSelectTab(this)" ><img src='/cibil-dashboard/images/static-images/enquiry-info.svg'>Enquiry Information</span>
-                    <span data-target="#summary" onclick="customSelectTab(this)" class="selected"><img src='/cibil-dashboard/images/static-images/report-summary.svg'>Credit Summary</span>
+                    <span data-target="#summary" onclick="customSelectTab(this)"><img src='/cibil-dashboard/images/static-images/report-summary.svg'>Credit Summary</span>
                 </div>
             </div>
         </div>
     </div>
     <div class="report-content">
         <div class="tab-content">
-            <div class="tab-panel" id="account"  aria-labelledby="account-tab">
+            <div class="tab-panel active" id="account"  aria-labelledby="account-tab">
 
     <div class="account-summary-slider">
     
@@ -1869,7 +1869,7 @@
 </div>
     
 </div></div>
-            <div class="tab-panel active" id="summary"  aria-labelledby="summary-tab"><div class="report-summary-container">
+            <div class="tab-panel" id="summary"  aria-labelledby="summary-tab"><div class="report-summary-container">
     <div class="">
         <p class="summary-desc">
             Take a quick look at a summary of the different types of accounts you have, the number of accounts you have open, closed and delinquent along with the number of enquiries.
