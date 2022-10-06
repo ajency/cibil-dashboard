@@ -190,12 +190,21 @@ function showAllEnquiries(element){
 }
 
 function checkAccountVisibility(){
-  if($('#account').is(':visible')){
+  if($('#account').is(':visible') && $('.account-summary-slider.slick-initialized').length < 1 ){
     enableAccountSlider()
   }
   else{
-    disableAccountSlider()
+    $('.account-summary-slider.slick-initialized').length && !($('#account').is(':visible')) > 0 ? disableAccountSlider() : '';
   }
+}
+
+function resetCompare(){
+  $('.compare-offer-header').removeClass('show')
+  $('.compare-offer-footer').addClass('hide');
+  $('.compare-offer-footer .compare-list > .compare-tab').html('');
+  $('.offers-card').removeClass('selected');
+  $('.offer-card-list').removeClass('comparing')
+  $('.offers-card .offer-cta .cibil-link').attr('onclick','addToCompare(this)');
 }
 
 function upgradePlan(element){

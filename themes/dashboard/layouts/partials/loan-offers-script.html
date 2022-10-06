@@ -49,14 +49,6 @@
         $('.compare-offer-footer').addClass('hide');
     }
 
-    function resetCompare(){
-        $('.compare-offer-header').removeClass('show')
-        $('.compare-offer-footer').addClass('hide');
-        $('.compare-offer-footer .compare-list > .compare-tab').html('');
-        $('.offers-card').removeClass('selected');
-        $('.offer-card-list').removeClass('comparing')
-        $('.offers-card .offer-cta .cibil-link').attr('onclick','addToCompare(this)');
-    }
     function changeCompareText(count){
         let text = `Comparing ${count} Offers`;
         $(".compare-offer-footer .compare-header-wrap > p").text(text)
