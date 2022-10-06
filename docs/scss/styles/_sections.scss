@@ -1483,10 +1483,12 @@
 
 // all accounts
 .accounts-container {
-  background: $light-blue;
-  padding: 30px 0px;
-  padding-bottom: 0px;
+  background: $light-blue-2;
+  padding: 0px;
   margin-bottom: 40px;
+  border: 1px solid #acacac;
+  border-radius: 8px;
+  overflow: hidden;
   &:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -1495,9 +1497,13 @@
     font-size: 16px;
     line-height: 16px;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
     display: flex;
     align-items: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #acacac;
     &:before {
       content: "";
       height: 12px;
@@ -1529,7 +1535,7 @@
     }
   }
   .account-head {
-    padding: 22px 0px 12px;
+    padding: 21px 0px 12px;
     .head-col {
       font-weight: 700;
       font-size: 14px;
@@ -1580,6 +1586,9 @@
       padding: 0px;
     }
   }
+  .account-body{
+    border-top: 1px solid #C0CEE4;
+  }
 
   &.open_accounts {
     .account_status {
@@ -1590,7 +1599,6 @@
     }
   }
   &.closed_accounts {
-    background: #f9f9f9;
     .account_status {
       color: $secondary-red;
       &::before {
@@ -1612,14 +1620,16 @@
     .card {
       position: relative;
       /* border-top: 1px solid #c0cee4 !important; */
-      &:before {
-        content: "";
-        height: 1px;
-        width: calc(100% - 60px);
-        background-color: $seperator-line-color-1;
-        position: relative;
-        left: 30px;
-        top: 1px;
+      &:not(:first-child){
+        &:before {
+          content: "";
+          height: 1px;
+          width: calc(100% - 60px);
+          background-color: $seperator-line-color-1;
+          position: relative;
+          left: 30px;
+          top: 1px;
+        }
       }
       .card-header {
         .card-header-link {
@@ -1631,14 +1641,24 @@
     }
   }
   @include media-breakpoint-down(sm) {
-    padding: 20px;
+    padding: 0px;
+    .account_status{
+      padding: 22px 20px 18px;
+    }
     .account-head {
       display: none;
+    }
+    .account-body{
+      padding: 20px;
+      border-top: 0;
     }
     .card {
       border: none !important;
       background: $light;
       margin: 20px 0px;
+      &:first-child{
+        margin-top: 0px;
+      }
       &:last-child {
         margin-bottom: 0px;
       }
@@ -1692,10 +1712,6 @@
           }
         }
       }
-    }
-    &.open_accounts,
-    &.closed_accounts {
-      background: #f9f9f9;
     }
   }
 }
@@ -2518,10 +2534,10 @@
           position: relative;
           border-right-color: $border-color-4;
           border-color: $light;
-          .tab-icon{
+          .tab-icon {
             height: 29px;
-            overflow:hidden;
-            svg{
+            overflow: hidden;
+            svg {
               height: 100%;
               display: block;
             }
@@ -2599,10 +2615,10 @@
           .nav-link {
             min-height: 110px;
             flex-grow: 1;
-            width: calc(100%/3);
+            width: calc(100% / 3);
             padding: 10px 12px;
             border-color: $light-blue-7;
-            .tab-icon{
+            .tab-icon {
               height: 23px;
             }
             .tab-title {
@@ -3017,15 +3033,15 @@ b.plus-icon {
 }
 
 // account
-.my-account{
-  .page-background{
-    &.blue{
+.my-account {
+  .page-background {
+    &.blue {
       padding-bottom: 60px;
     }
   }
-  @include media-breakpoint-down(sm){
-    .page-background{
-      &.blue{
+  @include media-breakpoint-down(sm) {
+    .page-background {
+      &.blue {
         padding-bottom: 40px;
       }
     }

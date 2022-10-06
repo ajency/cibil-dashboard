@@ -9,10 +9,12 @@
       background-color: transparent;
       padding: 0px;
       margin-bottom: 20px;
-      & > li:first-child, & > li:nth-child(2)::before {
+      & > li:first-child,
+      & > li:nth-child(2)::before {
         display: none;
       }
       .breadcrumb-item {
+        padding: 0;
         margin: 0;
         a {
           text-transform: capitalize;
@@ -41,6 +43,8 @@
           &::before {
             font-size: 0px;
             content: url(../images/static-images/right-arrow-grey.svg);
+            padding-right: 10px;
+            padding-left: 10px;
           }
         }
       }
@@ -80,7 +84,7 @@
         margin-bottom: 10px;
         font-size: 24px;
         line-height: 30px;
-        .icon{
+        .icon {
           margin-right: 10px;
           width: 36px;
           height: 36px;
