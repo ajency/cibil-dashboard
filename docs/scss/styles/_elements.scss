@@ -1035,26 +1035,6 @@ input[type="number"] {
   gap: 49px;
   margin-top: 10px;
 }
-.introjs-arrow {
-  border: none !important;
-  &.left {
-    content: url(../images/static-images/left-down-arrow.svg);
-    bottom: -71px;
-    top: auto;
-  }
-  &.bottom {
-    content: url(../images/static-images/right-bottom-arrow.svg);
-    bottom: 0;
-    top: auto;
-    right: -69px;
-  }
-  &.top {
-    content: url(../images/static-images/right-top-arrow.svg);
-    bottom: auto;
-    top: 0;
-    right: -69px;
-  }
-}
 .introjs-button {
   border-radius: 4px;
   padding: 13px 25px;
@@ -1083,6 +1063,87 @@ input[type="number"] {
   }
 }
 
-/* .blurred > *:not(.introjs-showElement) {
-  filter: blur(5px);
-} */
+@include media-breakpoint-up(xl) {
+  .introjs-arrow {
+    border: none !important;
+    &.left {
+      content: url(../images/static-images/left-down-arrow.svg);
+      bottom: -71px;
+      top: auto;
+    }
+    &.bottom {
+      content: url(../images/static-images/right-bottom-arrow.svg);
+      bottom: 0;
+      top: auto;
+      right: -69px;
+    }
+    &.top {
+      content: url(../images/static-images/right-top-arrow.svg);
+      bottom: auto;
+      top: 0;
+      right: -69px;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .introjs-tooltip {
+    padding: 20px;
+    bottom: -187px !important;
+    top: auto !important;
+    left: auto !important;
+    right: 20px !important;
+  }
+  .introjs-tooltipbuttons {
+    justify-content: flex-end;
+  }
+  .introjs-arrow {
+    display: block !important;
+    top: -30px !important;
+    right: 20px !important;
+    left: auto !important;
+    border-right-color: transparent !important;
+    border-left-color: transparent !important;
+    border-top-color: transparent !important;
+    border-width: 11px !important;
+    border-bottom-width: 20px !important;
+    border-bottom-color: $primary-yellow !important;
+    bottom: auto !important;
+  }
+  .introjs-button {
+    &.introjs-skipbutton:not(.introjs-donebutton) {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      padding: 0px;
+      background: transparent;
+      color: #2c2c2c !important;
+      text-decoration: underline !important;
+      display: inline-flex;
+      align-items: center;
+      grid-gap: 10px;
+      gap: 10px;
+      &:after {
+        content: url(../images/static-images/skip-icon.svg);
+      }
+    }
+  }
+  .introjs-showElement{
+    position: relative !important;
+    &::after {
+      content: "";
+      height: 77px;
+      display: block;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(26, 64, 78, 0) 36.77%,
+        #1a404e 96.15%
+      );
+    }
+  }
+}

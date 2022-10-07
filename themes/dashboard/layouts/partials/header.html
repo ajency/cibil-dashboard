@@ -18,6 +18,7 @@
                 </a>
             </div>
             <div class="header-list-items">
+                {{if eq .RelPermalink "/cibil-dashboard/overview_free/"}}<a class="header-list-item-mobile how-it-works" href="javascript:void(0);" onclick="howItWorksMob()">{{ partial "icons/question-mark"}}</a>{{end}}
                 <a class="header-list-item-mobile language-selector">{{ partial "svg-language-mobile"}}</a>
                 <a class="header-list-item-mobile">{{ partial "svg-account-mobile"}}</a>
                 <a class="header-list-item-mobile hamburger">{{ partial "svg-hamburger"}}{{ partial "icons/svg-cross"}}</a>
