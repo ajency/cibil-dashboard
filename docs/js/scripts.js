@@ -238,3 +238,42 @@ $(".CouponFormToggle").click(function(){
   }
   couponPopup.find(".subtotal .subtotal-ammount").text(subtotalVal);
 });
+
+function howItWorks(){
+  
+  introJs().setOptions({
+    doneLabel: 'TAKE ME TO MY DASHBOARD',
+    nextLabel: 'Next',
+    hidePrev: true,
+    showStepNumbers: true,
+    showBullets: true,
+    showProgress: false,
+    steps: [
+      {
+        element: document.querySelector('.simulator-section'),
+        intro: 'Your CIBIL Score and last refresh status',
+        position: 'right'
+      },
+      {
+        element: document.querySelector('.key-highlights'),
+        intro: 'Factors affecting your CIBIL Score'
+      },
+      {
+        element: document.querySelector('.nav-list'),
+        intro: 'Explore all available CIBIL features'
+      },
+      {
+        element: document.querySelector('.report-cta'),
+        intro: 'View & download your CIBIL Report'
+      }
+    ]
+  })
+  .onchange(function (targetElement) {
+    let stepNo = $('.introjs-helperNumberLayer').text();
+    $('.steps .stepNumber').text(parseInt(stepNo)+1);
+  })
+  .start();
+  let totalSteps = $('.introjs-bullets ul').children().length;
+  let stepNumber = $('.introjs-helperNumberLayer').text();
+    $(".introjs-tooltip").prepend('<p class="steps"><span class="stepNumber">'+stepNumber+'</span><span class="totalSteps">/'+totalSteps+'</span></p>');
+}
