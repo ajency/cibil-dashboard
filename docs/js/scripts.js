@@ -273,6 +273,7 @@ function howItWorks(){
     $('.steps .stepNumber').text(parseInt(stepNo)+1);
   })
   .start();
+  $('body .main-container').addClass("blurred");
   let totalSteps = $('.introjs-bullets ul').children().length;
   let stepNumber = $('.introjs-helperNumberLayer').text();
     $(".introjs-tooltip").prepend('<p class="steps"><span class="stepNumber">'+stepNumber+'</span><span class="totalSteps">/'+totalSteps+'</span></p>');
