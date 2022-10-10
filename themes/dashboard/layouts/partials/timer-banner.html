@@ -1,13 +1,16 @@
 <div class="page-width">
-    <div class="timer-banner">
+    <div class="timer-banner {{if eq .expired_user true}}expired-user{{end}}">
         <div class="timer-banner__wraper">
             <div class="left-panel">
-                <p class="banner-heading">Renew now to continue using CIBIL features</p>
-                <p class="banner-subheading">Renew your subscription plan right now to ensure you stay connected to your credit profile with your CIBIL Score and Report</p>
-                <a href="upgrade-plan" class="cibil-button">RENEW NOW</a>
+                <p class="banner-heading">{{.heading}}</p>
+                <p class="banner-subheading">{{.subheading}}</p>
+                {{if .cta_link}}<a href="{{.cta_link}}" class="cibil-button">{{.cta_text}}</a>{{end}}
             </div>
+            
             <div class="right-panel">
-                
+                {{if eq .expired_user true}}
+                    
+                {{end}}
             </div>
         </div>
     </div>

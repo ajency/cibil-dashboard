@@ -435,7 +435,7 @@
   .scenario-container {
     width: 70%;
     padding-right: 22px;
-    .upgrade-plan-cta{
+    .upgrade-plan-cta {
       display: none;
     }
   }
@@ -611,7 +611,8 @@
       font-weight: 600;
     }
     @include media-breakpoint-up(md) {
-      .add-scenario, .reset-scenario {
+      .add-scenario,
+      .reset-scenario {
         margin-left: 20px;
       }
     }
@@ -763,7 +764,8 @@
         width: 100%;
         margin-bottom: 30px;
       }
-      .add-scenario, .reset-scenario {
+      .add-scenario,
+      .reset-scenario {
         font-weight: 600;
       }
     }
@@ -3057,7 +3059,11 @@ b.plus-icon {
 
 // timer banner
 .timer-banner {
-  background:radial-gradient(19.11% 89.96% at 95.54% 0%, #FFF8D4 0%, #FEEF93 100%);
+  background: radial-gradient(
+    19.11% 89.96% at 95.54% 0%,
+    #fff8d4 0%,
+    #feef93 100%
+  );
   border-radius: 6px;
   &:not(:last-child) {
     margin-bottom: 40px;
@@ -3065,14 +3071,67 @@ b.plus-icon {
   &:last-child {
     margin-bottom: 60px;
   }
+  .banner-heading,
+  .banner-subheading {
+    letter-spacing: 0.02em;
+    color: #006685;
+  }
+  .banner-heading {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  .banner-subheading {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
   &__wraper {
     display: flex;
-    .left-panel{
+    .left-panel {
       padding: 40px 30px;
+    }
+    .right-panel {
+      background-image: url(../images/static-images/timer-empty.svg);
+      background-repeat: no-repeat;
+      background-position: calc(100% - 8px) calc(100% - 8px);
     }
     .left-panel,
     .right-panel {
       width: 50%;
+    }
+  }
+  &.expired-user {
+    background: #FEEF93;
+    .right-panel {
+      background-image: url(../images/static-images/clock.svg);
+      background-position: 100% 0;
+      background-size: contain;
+    }
+  }
+  @include media-breakpoint-down(sm){
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    &:last-child {
+      margin-bottom: 40px;
+    }
+    &__wraper{
+      flex-direction: column-reverse;
+      .banner-heading{
+        margin-bottom: 20px
+      }
+      .left-panel, .right-panel{
+        width: 100%;
+      }
+      .left-panel{
+        padding: 30px;
+      }
+    }
+    &:not(.expired-user){
+      background: radial-gradient(73.8% 68.81% at 92.51% 90.54%, #FFF8D4 0%, #FEEF93 79.46%);
     }
   }
 }
