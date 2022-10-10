@@ -186,6 +186,9 @@
   &.default-case {
     text-transform: inherit;
   }
+  &.inherit-font{
+    font-size: inherit;
+  }
 
   @include media-breakpoint-down(sm) {
     &-right-icon {
