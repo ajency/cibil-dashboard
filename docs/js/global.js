@@ -210,7 +210,7 @@ function resetCompare(){
 }
 
 function upgradePlan(element){
-  $('.score-display-box').find('.upgrade-plan-cta').show("fast");
+  $('.upgrade-plan-cta').show("fast");
 }
 
 function toggleShrink(){

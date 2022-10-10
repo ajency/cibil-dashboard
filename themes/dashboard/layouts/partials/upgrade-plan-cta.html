@@ -1,6 +1,8 @@
 <div class="upgrade-plan-cta" id="upgrade-plan-cta">
     <div class="upgrade-plan-cta__wraper">
-        <p class="cta-heading">{{.heading}}</p>
-        <a href="{{.cta_link}}" class="cibil-button">{{.cta_text}}</a>
+        <img src="{{ "images/static-images/warning-icon.svg" | relURL}}" alt="" class="cta-icon">
+        <div class="cta-content">
+            {{.content | safeHTML }}
+        </div>
     </div>
 </div>

@@ -435,16 +435,21 @@
   .scenario-container {
     width: 70%;
     padding-right: 22px;
+    .upgrade-plan-cta{
+      display: none;
+    }
   }
   .score-display-container {
     width: 30%;
   }
   .scenario-container-title {
     font-weight: $intro-regular;
-    font-size: 24px;
-    line-height: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 446px;
     color: $black;
-    margin: 57px 0 20px;
+    margin: 57px 0 15px;
   }
   .scenario {
     border-radius: 10px;
@@ -720,7 +725,7 @@
     }
     @include media-breakpoint-down(md) {
       .score-wrap {
-        margin-bottom: 30px !important;
+        margin-bottom: 20px !important;
       }
     }
   }
@@ -745,6 +750,8 @@
     .scenario-container {
       .scenario-container-title {
         margin-top: 0px;
+        margin-bottom: 18px;
+        text-align: center;
       }
     }
     .scenario-cta {
@@ -1586,8 +1593,8 @@
       padding: 0px;
     }
   }
-  .account-body{
-    border-top: 1px solid #C0CEE4;
+  .account-body {
+    border-top: 1px solid #c0cee4;
   }
 
   &.open_accounts {
@@ -1620,7 +1627,7 @@
     .card {
       position: relative;
       /* border-top: 1px solid #c0cee4 !important; */
-      &:not(:first-child){
+      &:not(:first-child) {
         &:before {
           content: "";
           height: 1px;
@@ -1642,13 +1649,13 @@
   }
   @include media-breakpoint-down(sm) {
     padding: 0px;
-    .account_status{
+    .account_status {
       padding: 22px 20px 18px;
     }
     .account-head {
       display: none;
     }
-    .account-body{
+    .account-body {
       padding: 20px;
       border-top: 0;
     }
@@ -1656,7 +1663,7 @@
       border: none !important;
       background: $light;
       margin: 20px 0px;
-      &:first-child{
+      &:first-child {
         margin-top: 0px;
       }
       &:last-child {
@@ -2909,7 +2916,7 @@
       }
       span {
         &::after {
-          background-image: url(/cibil-dashboard/images/static-images/settings-blue.svg);
+          background-image: url(../images/static-images/settings-blue.svg);
         }
         &::before {
           background-color: $primary-blue !important;
@@ -2974,7 +2981,7 @@
   .input-city {
     position: relative;
     &::after {
-      content: url("/cibil-dashboard/images/static-images/search-input.svg");
+      content: url(../images/static-images/search-input.svg);
       position: absolute;
       right: 15px;
       top: 50%;
@@ -3044,6 +3051,28 @@ b.plus-icon {
       &.blue {
         padding-bottom: 40px;
       }
+    }
+  }
+}
+
+// timer banner
+.timer-banner {
+  background:radial-gradient(19.11% 89.96% at 95.54% 0%, #FFF8D4 0%, #FEEF93 100%);
+  border-radius: 6px;
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  &:last-child {
+    margin-bottom: 60px;
+  }
+  &__wraper {
+    display: flex;
+    .left-panel{
+      padding: 40px 30px;
+    }
+    .left-panel,
+    .right-panel {
+      width: 50%;
     }
   }
 }

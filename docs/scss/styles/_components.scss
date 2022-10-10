@@ -1605,22 +1605,28 @@
 }
 // upgrade plan cta
 .upgrade-plan-cta {
-  background: $light-blue-2;
-  padding: 18px 30px 39px;
-  text-align: center;
   letter-spacing: 0.02em;
-  color: $dark;
+  color: #000;
+  background: #FEFBE9;
+  border: 1px solid #EDEDED;
+  border-radius: 8px;
+  padding: 21px 20px 18px;
+  margin-top: 30px;
+  width: 100% !important;
+  .cibil-link{
+    font-weight: 700;
+  }
   &__wraper {
-    max-width: calc(218px + 60px);
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
     .heading {
       margin-bottom: 20px;
     }
   }
   @include media-breakpoint-down(sm) {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 20px;
+    margin-top: 20px;
   }
 }
 
