@@ -214,6 +214,7 @@ function upgradePlan(element){
   $('.scenario-cta .add-scenario').text('Reset Simulation');
   $('.scenario-cta .add-scenario').addClass('reset-scenario').removeClass('add-scenario');
   $('.scenario-cta .reset-scenario').attr("onclick", "resetScenario()");
+  $('.scenario-cta .reset-scenario, .scenario-cta .add-scenario').show()
 }
 
 function toggleShrink(){

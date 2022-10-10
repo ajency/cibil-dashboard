@@ -100,7 +100,22 @@
     }
 
     function resetScenario(){
-        
+        $('.score-simulator-section .scenario-list > .scenario:not(:first-child) .warning-cta').each(function(){
+            deleteScenario($(this))
+        })
+        $('.score-simulator-section .scenario-list > .scenario:first-child .warning-cta').each(function(){
+            closeScenario($(this));
+            cancelAction($(this));
+        })
+        enableAddScenario();
+    }
+
+
+    function enableAddScenario(){
+        $('.upgrade-plan-cta').hide("fast");
+        $('.scenario-cta .reset-scenario').text('+Add another scenario');
+        $('.scenario-cta .reset-scenario').attr("onclick", "addScenario()");
+        $('.scenario-cta .reset-scenario').removeClass('reset-scenario').addClass('add-scenario');
     }
 
     function addOption(element, option){
@@ -254,12 +269,14 @@
 
     function deleteScenario(element){
         let counter = parseInt($('#counter').val()) - 1;
+        counter <= 4 ? $('.add-scenario, .reset-scenario').show(): '';
         $('#counter').val(counter)
         let parentElement = $(element).parents('.scenario')
         let optionValue = parentElement.find('.option-card:visible').attr('type')
         let value = $('#optionsAdded').val();
         $('#optionsAdded').val(value.replace(optionValue+",","")).trigger('change');;
         parentElement.remove();
+        enableAddScenario();
     }
     function cancelAction(element){
         $(element).parent().removeClass('show');
