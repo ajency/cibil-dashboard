@@ -175,7 +175,7 @@ function closeScenario(element){
 }
 function minimizeScenario(element){
     let parentElement = $(element).parents('.scenario')
-    parentElement.toggleClass('closed')
+    parentElement.find('.scenario-body').slideToggle();
 }
 function chooseAccount(element){
     let parentElement = $(element).parents('.options-container')
