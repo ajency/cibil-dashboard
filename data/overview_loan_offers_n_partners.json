@@ -45,7 +45,7 @@
         "tab_link": "/cibil-dashboard/overview_free/loan-offers#enproductsquiry"
       }
     ],
-    "link": "/cibil-dashboard/overview_free/loan-offers/",
+    "link": "/cibil-dashboard/overview_free/loan-offers?editInfo=show",
     "link_text": "EDIT INFORMATION",
     "button_link": "/cibil-dashboard/overview_free/loan-offers/",
     "button_text": "SHOW ALL OFFERS",
