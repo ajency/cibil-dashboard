@@ -13,8 +13,10 @@ $(function () {
   $(document).click(function(){
     $(".language-list").hide("medium");
     $(".overlay").removeClass("opened");
+    $(".mobile-nav-list").hide("medium").removeClass("opened");
+    $(".hamburger").removeClass("opened");
   });
-  $(".language-list, .language-selector").click(function(e){
+  $(".language-list, .language-selector, .hamburger, .overview-toggle").click(function(e){
     e.stopPropagation();
   });
   $(".language-list .langauge-item").click(function(e){
@@ -26,18 +28,23 @@ $(function () {
     $(".language-selector span").text($(this).text());
     setTimeout(function () {
       $(".language-selector, .language-list").removeClass("active");
+      $(".language-list").hide("medium");
       $(".overlay").removeClass("opened");
     }, 100);
   });
   $(".hamburger").click(function () {
-    $(this).toggleClass("opened");
     if ($(".language-selector").hasClass("active")) {
       $(".language-selector, .language-list").removeClass("active");
+      $(".language-list").hide("medium");
     } else {
       $(".overlay").toggleClass("opened");
     }
+    $(this).toggleClass("opened");
     $(".mobile-nav-list").toggleClass("opened");
     $(".mobile-nav-list").toggle("medium");
+    if ($(".hamburger").hasClass("opened")){
+      $(".overlay").addClass("opened");
+    }
   });
   $(".overview-list .toggle-button").click(function (e) {
     e.preventDefault();
