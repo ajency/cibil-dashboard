@@ -584,6 +584,19 @@ footer {
   margin-bottom: 20px;
 }
 
+// how it works -> nav
+.nav-list{
+  &.introjs-showElement{
+    overflow: hidden;
+    .nav-item {
+      background-color: #00a6ca;
+      &.active{
+        background-color: #0095b7;
+      }
+    }
+  }
+}
+
 @import "styles/page-header";
 @import "styles/elements";
 @import "styles/components";
