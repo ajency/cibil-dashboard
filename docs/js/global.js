@@ -120,10 +120,10 @@ $(function () {
   })
   $('#optionsAdded').change(function(){
     if($(this).val() != ""){
-      $('.smiluate-now-cta').removeClass('disabled')
+      // $('.smiluate-now-cta').removeClass('disabled')
     }
     else{
-      $('.smiluate-now-cta').addClass('disabled')
+      // $('.smiluate-now-cta').addClass('disabled')
     }
   })
 
@@ -144,12 +144,23 @@ $(function () {
 
   enableAccountSlider();
 
+  $(document).click(function() {
+    var container = $(".custom-select-input");
+    if (!container.is(event.target) && !container.has(event.target).length) {
+        container.find('.custom-select-options').hide('fast');
+    }
+  });
+
 })
 function customSelectInput(element){
   $(element).toggleClass('opened')
   $(element).find('.custom-select-options').toggle('fast');
 }
 function customSelectOption(element){
+  if(!$(element).hasClass('selected') && $(element).hasClass('valueTarget')){
+    $(element).parents('.options-container').find('.input-currency').val('')
+    $('.scenario-cta .smiluate-now-cta').addClass('disabled');
+  }
   $(element).siblings().removeClass("selected")
   $(element).addClass('selected')
   $(element).parents('.custom-select-input').find('.custom-select-value').text($(element).text())
@@ -182,16 +193,22 @@ function closeScenario(element){
 }
 function minimizeScenario(element){
     let parentElement = $(element).parents('.scenario')
+    $(element).parents('.scenario-header').toggleClass('closed')
     parentElement.find('.scenario-body').slideToggle();
 }
 function chooseAccount(element){
     let parentElement = $(element).parents('.options-container')
     if(parentElement.find('[name=chooseAccountRadio]:checked').val() == 'chooseaccount'){
         parentElement.find('.chooseAccount-wrapper').addClass('active')
+        parentElement.find('.input-currency').attr('required','required')
+        parentElement.find('.input-currency').attr('onchange','checkFilled()')
     }
     else{
         parentElement.find('.chooseAccount-wrapper').removeClass('active')
+        parentElement.find('.input-currency').removeAttr('required')
+        parentElement.find('.input-currency').removeAttr('onchange')
     }
+    checkFilled()
 }
 
 function showAllEnquiries(element){

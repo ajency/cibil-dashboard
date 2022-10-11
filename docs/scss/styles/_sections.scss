@@ -470,6 +470,16 @@
         }
       }
     }
+    &.closed{
+      .minimize {
+        svg {
+          display: none;
+          &:last-child {
+            display: block;
+          }
+        }
+      }
+    }
     .confirmation {
       display: none;
       position: absolute;

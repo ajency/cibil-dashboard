@@ -8,9 +8,9 @@
                 <div class="custom-select-input" onclick="customSelectInput(this)">
                     <span class="custom-select-value">Account Name / xx 1234</span>
                     <div class="custom-select-options">
-                        <span onclick="customSelectOption(this)">Account Name / xx 5674</span>
-                        <span onclick="customSelectOption(this)" class="selected">Account Name / xx 1234</span>
-                        <span onclick="customSelectOption(this)">Account Name / xx 1266</span>
+                        <span onclick="customSelectOption(this)" class="valueTarget">Account Name / xx 5674</span>
+                        <span onclick="customSelectOption(this)" class="selected valueTarget">Account Name / xx 1234</span>
+                        <span onclick="customSelectOption(this)" class="valueTarget">Account Name / xx 1266</span>
                     </div>
                 </div>
                 <span class="message"></span>
@@ -19,7 +19,7 @@
                 <label for="amount">Choose how much to pay</label>
                 <div class="input-holder">
                     <span class="currency">₹</span>
-                    <input class="input-currency" type="number" id="amount">
+                    <input class="input-currency" onkeyup="formatCurrency(this)" type="text" id="amount" required>
                 </div>
             </div>
             <span class="delete-group" onclick="deleteGroup(this)">
@@ -30,6 +30,7 @@
         let parent = $(element).parents('.scenario');
         let accountoption = parent.find('.chooseAccount-wrapper');
         accountoption.append(html)
+        $('.scenario-cta .smiluate-now-cta').addClass('disabled');
     }
 
 
@@ -99,6 +100,7 @@
             `
             $('.scenario-list').append(html)
             $('.scenario-list').addClass('hasBlank');
+            $('.smiluate-now-cta').addClass('disabled')
     }
 
     function resetScenario(){
@@ -109,6 +111,7 @@
             closeScenario($(this));
             cancelAction($(this));
         })
+        $('.scenario-body').show()
         enableAddScenario();
     }
 
@@ -160,10 +163,10 @@
                                 <div class="custom-select-input" onclick="customSelectInput(this)">
                                     <span class="custom-select-value">Home Loan</span>
                                     <div class="custom-select-options">
-                                        <span onclick="customSelectOption(this)" class="selected">Home Loan</span>
-                                        <span onclick="customSelectOption(this)">Credit Card</span>
-                                        <span onclick="customSelectOption(this)" >Auto Loan</span>
-                                        <span onclick="customSelectOption(this)">Personal Loan</span>
+                                        <span onclick="customSelectOption(this)" class="selected valueTarget">Home Loan</span>
+                                        <span onclick="customSelectOption(this)" class="valueTarget">Credit Card</span>
+                                        <span onclick="customSelectOption(this)" class="valueTarget">Auto Loan</span>
+                                        <span onclick="customSelectOption(this)" class="valueTarget">Personal Loan</span>
                                     </div>
                                 </div>
                                 <span class="message"></span>
@@ -172,7 +175,7 @@
                                 <label for="amount">Loan Amount/Credit Limit</label>
                                 <div class="input-holder">
                                     <span class="currency">₹</span>
-                                    <input class="input-currency" type="number" id="amount" onkeyup="validateLoanAmount(this)">
+                                    <input class="input-currency" type="text" id="amount" onkeyup="validateLoanAmount(this);formatCurrency(this)" required>
                                 </div>
                                 <span class="message">Min 10,00,000 to Max 30,00,000</span>
                             </div>
@@ -185,11 +188,11 @@
                         <div class="option-card-title"><span>Close my oldest credit card</span>{{ partial "tooltip" (dict "tooltip_type" "info" "tooltip_content" "Check the impact of closing your oldest credit card.<br>A longer credit history can help in predicting your future credit behavior more accurately. In general, longer the duration of a clean credit history, the higher is your CIBIL score.")}}</div>
                         <div class="options-container">
                             <div class="custom-radio-input">
-                                <input type="radio" name="closeCard" id="true" value="yes" >
+                                <input type="radio" name="closeCard" id="true" value="yes" onchange="checkFilled()" required>
                                 <label for="true">Yes</label>
                             </div>
                             <div class="custom-radio-input">
-                                <input type="radio" name="closeCard" id="false" value="no">
+                                <input type="radio" name="closeCard" id="false" value="no" onchange="checkFilled()" required>
                                 <label for="false">No</label>
                             </div>
                         </div>
@@ -201,11 +204,11 @@
                         <div class="option-card-title"><span>Clear the outstanding balances on all my active credit cards</span>{{ partial "tooltip" (dict "tooltip_type" "info" "tooltip_content" " See how paying off all outstanding balance on your credit cards will impact your CIBIL Score. Controlling your outstanding balances indicates a reduced repayment burden which may positively impact your CIBIL score.")}}</div>
                         <div class="options-container">
                             <div class="custom-radio-input">
-                                <input type="radio" name="clearBalance" id="yes" value="yes" >
+                                <input type="radio" name="clearBalance" id="yes" value="yes" onchange="checkFilled()" required>
                                 <label for="yes">Yes</label>
                             </div>
                             <div class="custom-radio-input">
-                                <input type="radio" name="clearBalance" id="no" value="no">
+                                <input type="radio" name="clearBalance" id="no" value="no" onchange="checkFilled()" required>
                                 <label for="no">No</label>
                             </div>
                         </div>
@@ -233,8 +236,8 @@
                                     <div class="custom-select-input" onclick="customSelectInput(this)">
                                         <span class="custom-select-value">Account Name / xx 1234</span>
                                         <div class="custom-select-options">
-                                            <span onclick="customSelectOption(this)" class="selected">Account Name / xx 1234</span>
-                                            <span onclick="customSelectOption(this)" >Account Name / xx 4567</span>
+                                            <span onclick="customSelectOption(this)" class="selected valueTarget">Account Name / xx 1234</span>
+                                            <span onclick="customSelectOption(this)" class="valueTarget" >Account Name / xx 4567</span>
                                         </div>
                                     </div>
                                     <span class="message"></span>
@@ -243,7 +246,7 @@
                                     <label for="amount">Choose how much to pay</label>
                                     <div class="input-holder">
                                         <span class="currency">₹</span>
-                                        <input class="input-currency" type="number" id="amount">
+                                        <input class="input-currency" onkeyup="formatCurrency(this)" type="text" id="amount">
                                     </div>
                                 </div>
                             </div>
@@ -267,6 +270,7 @@
         $(element).parents('.scenario').removeClass('blank');
         $('.scenario-list').removeClass('hasBlank')
         setTimeout(addTooltip(),500)
+        checkFilled()
     }
 
     function deleteScenario(element){
@@ -278,7 +282,11 @@
         let value = $('#optionsAdded').val();
         $('#optionsAdded').val(value.replace(optionValue+",","")).trigger('change');;
         parentElement.remove();
+        $('.scenario-name').each(function(i){
+            $(this).text('Add Scenario '+(i+1))
+        })
         enableAddScenario();
+        checkFilled()
     }
     function cancelAction(element){
         $(element).parents('.scenario-header').find('.confirmation').fadeOut( "fast").removeClass('show');
@@ -291,12 +299,27 @@
         $(element).parents('.group-wrap').remove();
     }
     function validateLoanAmount(element){
-        let loanAmount = $(element).val();
+        let loanAmount = parseInt($(element).val().replace(/[^\d]/g, ''));
         
         if (loanAmount >= 1000000 && loanAmount <= 3000000  ){
             $(element).parent().next(".message").hide("fast");
         }else{
             $(element).parent().next(".message").show("fast");
         }find
+    }
+
+    function formatCurrency(input){
+        let value = parseInt($(input).val().replace(/[^\d]/g, ''))
+        isNaN(value) ? $(input).val('') : $(input).val(value.toLocaleString('en-IN'))
+        checkFilled()
+    }
+
+    function checkFilled(){
+        let valid = true;
+        $('[required]').each(function() {
+            if ($(this).is(':invalid') || !$(this).val()) valid = false;
+        })
+        if (!valid) $('.smiluate-now-cta').addClass('disabled');
+        else $('.smiluate-now-cta').removeClass('disabled');
     }
 </script>
