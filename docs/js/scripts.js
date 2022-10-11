@@ -317,3 +317,38 @@ function howItWorksMob(){
   let stepNumber = $('.introjs-helperNumberLayer').text();
     $(".introjs-tooltip").prepend('<p class="steps"><span class="stepNumber">'+stepNumber+'</span><span class="totalSteps">/'+totalSteps+'</span></p>');
 }
+
+// countdown banner
+(function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+  let today = new Date(),
+      dd = $('.countdown-timer').data("day"),
+      mm = $('.countdown-timer').data("month"),
+      yyyy = $('.countdown-timer').data("year");
+  expireyDate = mm + "/" + dd + "/" + yyyy;
+  today = mm + "/" + dd + "/" + yyyy;
+  
+  const countDown = new Date(expireyDate).getTime(),
+      x = setInterval(function() { 
+
+        const now = new Date().getTime(),
+        distance = countDown - now;
+
+        document.getElementById("days").innerText = String(Math.floor(distance / (day))).padStart(2, '0'),
+        document.getElementById("hours").innerText = String(Math.floor((distance % (day)) / (hour))).padStart(2, '0'),
+        document.getElementById("minutes").innerText = String(Math.floor((distance % (hour)) / (minute))).padStart(2, '0'),
+        document.getElementById("seconds").innerText = String(Math.floor((distance % (minute)) / second)).padStart(2, '0');
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("days").innerText = "00",
+          document.getElementById("hours").innerText = "00",
+          document.getElementById("minutes").innerText = "00",
+          document.getElementById("seconds").innerText = "00";
+        }
+        //seconds
+      }, 0)
+  }());

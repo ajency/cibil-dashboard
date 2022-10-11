@@ -6,10 +6,12 @@
 
     {{ partial "cibil-report-ctas" . }}
 
+    <div class="page-width">
     {{ partial "timer-banner" (dict "heading" "Renew now to continue using CIBIL features" "subheading" "Renew your subscription plan right now to ensure you stay connected to your credit profile with your CIBIL Score and Report" "cta_link" "upgrade-plan" "cta_text" "RENEW NOW" "expired_user" true ) }}
 
     {{ partial "timer-banner" (dict "heading" "You are eligible for unlimited CIBIL Score & Report" "subheading" "Monitor your credit and improve your loan eligibility." "cta_link" "upgrade-plan" "cta_text" "Get Unlimited Access Now") }}
-
+    </div>
+    
     {{ partial "credit-summary-ctas" (dict "section_heading" "Overview of your Credit Profile" "last_refresh_prefix" "As of your last refresh on" "last_refresh_date" "19th Apr'22" ) }}
 
     {{ partial "cibil-score-history" (dict "section_heading" "CIBIL SCORE HISTORY" "tooltip_content" "Lorem Ipsum is simply dummy text of the printing and typesetting industry." "tooltip_type" "info" ) }}

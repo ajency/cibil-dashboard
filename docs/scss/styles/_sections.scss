@@ -3090,48 +3090,98 @@ b.plus-icon {
   }
   &__wraper {
     display: flex;
+    align-items: center;
+    background-image: url(../images/static-images/timer-empty.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8px) calc(100% - 8px);
     .left-panel {
       padding: 40px 30px;
-    }
-    .right-panel {
-      background-image: url(../images/static-images/timer-empty.svg);
-      background-repeat: no-repeat;
-      background-position: calc(100% - 8px) calc(100% - 8px);
     }
     .left-panel,
     .right-panel {
       width: 50%;
     }
   }
+  .countdown-timer {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      grid-gap: 20px;
+      margin-bottom: 0px;
+      li {
+        margin-bottom: 0px;
+        width: 60px;
+        background: #f2e073;
+        border-radius: 6px;
+        padding: 7px 11px 9px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: #006685;
+        span {
+          font-size: 32px;
+          line-height: 44px;
+          letter-spacing: -0.01em;
+        }
+      }
+    }
+  }
   &.expired-user {
-    background: #FEEF93;
-    .right-panel {
+    background: #feef93;
+    .timer-banner__wraper {
       background-image: url(../images/static-images/clock.svg);
       background-position: 100% 0;
       background-size: contain;
     }
   }
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-up(md) {
+    .right-panel {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 36px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
     &:last-child {
       margin-bottom: 40px;
     }
-    &__wraper{
+    &__wraper {
       flex-direction: column-reverse;
-      .banner-heading{
-        margin-bottom: 20px
+      .banner-heading {
+        margin-bottom: 20px;
       }
-      .left-panel, .right-panel{
+      .left-panel,
+      .right-panel {
         width: 100%;
       }
-      .left-panel{
+      .left-panel {
         padding: 30px;
       }
     }
-    &:not(.expired-user){
-      background: radial-gradient(73.8% 68.81% at 92.51% 90.54%, #FFF8D4 0%, #FEEF93 79.46%);
+    &.expired-user{
+      .timer-banner__wraper{
+        background-size: 295px auto;
+      }
+      .right-panel{
+        padding: 30px 30px 0px;
+      }
+    }
+    &:not(.expired-user) {
+      background: radial-gradient(
+        73.8% 68.81% at 92.51% 90.54%,
+        #fff8d4 0%,
+        #feef93 79.46%
+      );
+      .timer-banner__wraper{
+        background: none;
+      }
     }
   }
 }
