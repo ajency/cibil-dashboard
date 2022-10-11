@@ -3097,10 +3097,6 @@ b.plus-icon {
     .left-panel {
       padding: 40px 30px;
     }
-    .left-panel,
-    .right-panel {
-      width: 50%;
-    }
   }
   .countdown-timer {
     ul {
@@ -3139,10 +3135,25 @@ b.plus-icon {
     }
   }
   @include media-breakpoint-up(md) {
+    &__wraper{
+      gap: 10px;
+      grid-gap: 10px;
+    }
     .right-panel {
       display: flex;
       justify-content: flex-end;
       padding-right: 36px;
+      width: 40%;
+    }
+    .left-panel{
+      width: 60%;
+    }
+    &:not(.expired-user){
+      .left-panel{
+        .banner-heading{
+          max-width: 349px;
+        }
+      }
     }
   }
   @include media-breakpoint-down(sm) {
