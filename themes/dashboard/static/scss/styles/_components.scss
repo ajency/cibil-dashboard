@@ -1210,6 +1210,7 @@
 }
 
 // offer box
+
 .offer {
   background: $light-blue-3;
   border-radius: 12px;
@@ -1219,6 +1220,8 @@
   width: calc((100% / 4) - 20px);
   margin-left: 10px;
   margin-right: 10px;
+  user-select: none;
+  cursor: pointer;
   &__wraper {
     width: 100%;
     width: 100%;
@@ -1258,6 +1261,7 @@
     }
   }
   &.no-offers {
+    cursor: not-allowed;
     .offer__wraper {
       .offer-title,
       .offer-count {
