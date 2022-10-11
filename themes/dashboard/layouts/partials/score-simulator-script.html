@@ -43,11 +43,13 @@
             <div class="scenario blank">
                 <div class="scenario-header">
                     <div class="confirmation">
-                        <span class="confirmation-text">
-                            Are you sure you want to remove this Scenario?
-                        </span>
-                        <span class="warning-cta" onclick="deleteScenario(this)">{{partial "icons/confirm-yellow"}}</span>
-                        <span class="warning-cta"onclick="cancelAction(this)">{{ partial "icons/cancel-yellow" }}</span>
+                        <div class="confirmation__Wraper">
+                            <span class="confirmation-text">
+                                Are you sure you want to remove this Scenario?
+                            </span>
+                            <span class="warning-cta" onclick="deleteScenario(this)">{{partial "icons/confirm-yellow"}}</span>
+                            <span class="warning-cta"onclick="cancelAction(this)">{{ partial "icons/cancel-yellow" }}</span>
+                        </div>
                     </div>
                     <p class="scenario-name">Add Scenario ${counter}</p>
                     <p class="scenatio-cta">
@@ -279,10 +281,10 @@
         enableAddScenario();
     }
     function cancelAction(element){
-        $(element).parent().removeClass('show');
+        $(element).parents('.scenario-header').find('.confirmation').fadeOut( "fast").removeClass('show');
     }
     function showConfirmation(element){
-        $(element).parents('.scenario-header').find('.confirmation').addClass('show');
+        $(element).parents('.scenario-header').find('.confirmation').fadeIn( "fast").addClass('show');
         //console.log($(element).parents('.scenario-header'))
     }
     function deleteGroup(element){

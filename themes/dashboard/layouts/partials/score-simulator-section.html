@@ -8,11 +8,13 @@
                 <div class="scenario blank">
                     <div class="scenario-header">
                         <div class="confirmation">
-                            <span class="confirmation-text">
-                                Are you sure you want to remove this Scenario?
-                            </span>
-                            <span class="warning-cta" onclick="closeScenario(this),cancelAction(this)">{{partial "icons/confirm-yellow"}}</span>
-                            <span class="warning-cta"onclick="cancelAction(this)">{{ partial "icons/cancel-yellow" }}</span>
+                            <div class="confirmation__Wraper">
+                                <span class="confirmation-text">
+                                    Are you sure you want to remove this Scenario?
+                                </span>
+                                <span class="warning-cta" onclick="closeScenario(this),cancelAction(this)">{{partial "icons/confirm-yellow"}}</span>
+                                <span class="warning-cta"onclick="cancelAction(this)">{{ partial "icons/cancel-yellow" }}</span>
+                            </div>
                         </div>
                         <p class="scenario-name">Add Scenario 1</p>
                         <p class="scenatio-cta">
