@@ -211,6 +211,7 @@ function resetCompare(){
 
 function upgradePlan(element){
   $('.upgrade-plan-cta').show("fast");
+  $('.scenario-cta .smiluate-now-cta').addClass('disabled');
   $('.scenario-cta .add-scenario').text('Reset Simulation');
   $('.scenario-cta .add-scenario').addClass('reset-scenario').removeClass('add-scenario');
   $('.scenario-cta .reset-scenario').attr("onclick", "resetScenario()");
