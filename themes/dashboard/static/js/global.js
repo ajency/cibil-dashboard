@@ -159,7 +159,14 @@ function customSelectInput(element){
 function customSelectOption(element){
   if(!$(element).hasClass('selected') && $(element).hasClass('valueTarget')){
     $(element).parents('.options-container').find('.input-currency').val('')
+    $(element).parents('.options-container').find('.loanLimitMessage').show('fast')
     $('.scenario-cta .smiluate-now-cta').addClass('disabled');
+  }
+  let min = $(element).attr('min')
+  let max = $(element).attr('max')
+  if (typeof min !== 'undefined' && min !== false && typeof max !== 'undefined' && max !== false) {
+    $(element).parents('.options-container').find('.loanLimitMessage').text('Min '+parseInt(min).toLocaleString('en-IN')+' to Max '+parseInt(max).toLocaleString('en-IN'))
+    $(element).parents('.options-container').find('.input-currency').attr({'min': min, 'max': max})
   }
   $(element).siblings().removeClass("selected")
   $(element).addClass('selected')

@@ -166,10 +166,10 @@
                                 <div class="custom-select-input" onclick="customSelectInput(this)">
                                     <span class="custom-select-value">Home Loan</span>
                                     <div class="custom-select-options">
-                                        <span onclick="customSelectOption(this)" class="selected valueTarget">Home Loan</span>
-                                        <span onclick="customSelectOption(this)" class="valueTarget">Credit Card</span>
-                                        <span onclick="customSelectOption(this)" class="valueTarget">Auto Loan</span>
-                                        <span onclick="customSelectOption(this)" class="valueTarget">Personal Loan</span>
+                                        <span onclick="customSelectOption(this)" min="1000000" max="3000000" class="selected valueTarget">Home Loan</span>
+                                        <span onclick="customSelectOption(this)" min="2000000" max="4000000" class="valueTarget">Credit Card</span>
+                                        <span onclick="customSelectOption(this)" min="800000" max="3000000" class="valueTarget">Auto Loan</span>
+                                        <span onclick="customSelectOption(this)" min="100000" max="2000000" class="valueTarget">Personal Loan</span>
                                     </div>
                                 </div>
                                 <span class="message"></span>
@@ -178,9 +178,9 @@
                                 <label for="amount">Loan Amount/Credit Limit</label>
                                 <div class="input-holder">
                                     <span class="currency">₹</span>
-                                    <input class="input-currency" type="text" id="amount" onkeyup="validateLoanAmount(this);formatCurrency(this)" required>
+                                    <input class="input-currency" type="text" id="amount" min="1000000" max="3000000" onkeyup="formatCurrency(this);validateLoanAmount(this)" required>
                                 </div>
-                                <span class="message">Min 10,00,000 to Max 30,00,000</span>
+                                <span class="message loanLimitMessage">Min 10,00,000 to Max 30,00,000</span>
                             </div>
                         </div>
                     </div>`;
@@ -310,11 +310,12 @@
     function validateLoanAmount(element){
         let loanAmount = parseInt($(element).val().replace(/[^\d]/g, ''));
         
-        if (loanAmount >= 1000000 && loanAmount <= 3000000  ){
+        if (loanAmount >= $(element).attr('min') && loanAmount <= $(element).attr('max')  ){
             $(element).parent().next(".message").hide("fast");
         }else{
             $(element).parent().next(".message").show("fast");
-        }find
+            $('.smiluate-now-cta').addClass('disabled')
+        }
     }
 
     function formatCurrency(input){
