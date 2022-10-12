@@ -12,11 +12,12 @@
                                 <span class="confirmation-text">
                                     Are you sure you want to remove this Scenario?
                                 </span>
-                                <span class="warning-cta" onclick="closeScenario(this),cancelAction(this)">{{partial "icons/confirm-yellow"}}</span>
+                                <!-- removed closeScenario(this) -->
+                                <span class="warning-cta deleteScenario" onclick="deleteScenario(this),cancelAction(this)">{{partial "icons/confirm-yellow"}}</span>
                                 <span class="warning-cta"onclick="cancelAction(this)">{{ partial "icons/cancel-yellow" }}</span>
                             </div>
                         </div>
-                        <p class="scenario-name">Add Scenario 1</p>
+                        <p class="scenario-name">Add Scenario <span>1</span></p>
                         <p class="scenatio-cta">
                             <a class="minimize" onclick="minimizeScenario(this)">{{partial "icons/black-minimize"}} {{partial "icons/black-plus"}}</a>
                             <a onclick="showConfirmation(this)">{{partial "icons/black-close"}}</a>

@@ -517,6 +517,9 @@
     margin: 0 0 0 16px;
     @include intro-book-16;
     color: $dark;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .scenatio-cta {
     margin: 0;

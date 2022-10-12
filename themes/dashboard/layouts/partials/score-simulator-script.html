@@ -48,11 +48,11 @@
                             <span class="confirmation-text">
                                 Are you sure you want to remove this Scenario?
                             </span>
-                            <span class="warning-cta" onclick="deleteScenario(this)">{{partial "icons/confirm-yellow"}}</span>
+                            <span class="warning-cta deleteScenario" onclick="deleteScenario(this)">{{partial "icons/confirm-yellow"}}</span>
                             <span class="warning-cta"onclick="cancelAction(this)">{{ partial "icons/cancel-yellow" }}</span>
                         </div>
                     </div>
-                    <p class="scenario-name">Add Scenario ${counter}</p>
+                    <p class="scenario-name">Add Scenario <span>${counter}</span></p>
                     <p class="scenatio-cta">
                         <a class="minimize" onclick="minimizeScenario(this)">{{partial "icons/black-minimize"}} <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14 7H0" stroke="#2C2C2C" stroke-width="1.6"/>
@@ -104,14 +104,17 @@
     }
 
     function resetScenario(){
-        $('.score-simulator-section .scenario-list > .scenario:not(:first-child) .warning-cta').each(function(){
-            deleteScenario($(this))
+        // $('.score-simulator-section .scenario-list > .scenario:not(:first-child) .warning-cta').each(function(){
+        //     deleteScenario($(this))
+        // })
+        // $('.score-simulator-section .scenario-list > .scenario:first-child .warning-cta').each(function(){
+        //     closeScenario($(this));
+        //     cancelAction($(this));
+        // })
+        // $('.scenario-body').show()
+        $('.score-simulator-section .scenario-list > .scenario .deleteScenario').each(function(){
+            setTimeout(deleteScenario($(this)),500)
         })
-        $('.score-simulator-section .scenario-list > .scenario:first-child .warning-cta').each(function(){
-            closeScenario($(this));
-            cancelAction($(this));
-        })
-        $('.scenario-body').show()
         enableAddScenario();
     }
 
@@ -271,6 +274,10 @@
         $('.scenario-list').removeClass('hasBlank')
         setTimeout(addTooltip(),500)
         checkFilled()
+
+        let scenarioCount = $(element).parents('.scenario').find('.scenario-name').text().replace(/\D/g,'');
+        let text = $(element).text()
+        $(element).parents('.scenario').find('.scenario-name').text("Scenario "+scenarioCount+" : "+text)
     }
 
     function deleteScenario(element){
@@ -283,10 +290,12 @@
         $('#optionsAdded').val(value.replace(optionValue+",","")).trigger('change');;
         parentElement.remove();
         $('.scenario-name').each(function(i){
-            $(this).text('Add Scenario '+(i+1))
+            // $(this).text('Add Scenario '+(i+1))
+            $(this).text($(this).text().replace(/[0-9]/g,i+1))
         })
         enableAddScenario();
         checkFilled()
+        counter < 1 ? addScenario() : '';
     }
     function cancelAction(element){
         $(element).parents('.scenario-header').find('.confirmation').fadeOut( "fast").removeClass('show');
