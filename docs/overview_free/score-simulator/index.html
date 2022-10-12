@@ -970,7 +970,7 @@
 
         let scenarioCount = $(element).parents('.scenario').find('.scenario-name').text().replace(/\D/g,'');
         let text = $(element).text()
-        $(element).parents('.scenario').find('.scenario-name').text("Scenario "+scenarioCount+" : "+text)
+        $(element).parents('.scenario').find('.scenario-name').html("Scenario "+scenarioCount+"<span class='scenario-heading'> : "+text+"</span>")
     }
 
     function deleteScenario(element){
@@ -995,7 +995,7 @@
     }
     function showConfirmation(element){
         $(element).parents('.scenario-header').find('.confirmation').fadeIn( "fast").addClass('show');
-        //console.log($(element).parents('.scenario-header'))
+        
     }
     function deleteGroup(element){
         $(element).parents('.group-wrap').remove();

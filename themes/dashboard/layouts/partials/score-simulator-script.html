@@ -277,7 +277,7 @@
 
         let scenarioCount = $(element).parents('.scenario').find('.scenario-name').text().replace(/\D/g,'');
         let text = $(element).text()
-        $(element).parents('.scenario').find('.scenario-name').text("Scenario "+scenarioCount+" : "+text)
+        $(element).parents('.scenario').find('.scenario-name').html("Scenario "+scenarioCount+"<span class='scenario-heading'> : "+text+"</span>")
     }
 
     function deleteScenario(element){

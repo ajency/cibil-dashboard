@@ -201,6 +201,7 @@ function closeScenario(element){
 function minimizeScenario(element){
     let parentElement = $(element).parents('.scenario')
     $(element).parents('.scenario-header').toggleClass('closed')
+    $(element).parents('.scenario-header').find('.scenario-heading').fadeToggle("fast");
     parentElement.find('.scenario-body').slideToggle();
 }
 function chooseAccount(element){
