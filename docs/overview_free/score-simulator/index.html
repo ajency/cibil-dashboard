@@ -992,8 +992,10 @@
     }
     function cancelAction(element){
         $(element).parents('.scenario-header').find('.confirmation').fadeOut( "fast").removeClass('show');
+        $(element).parents('.scenario-header').removeClass('confirmationOn');
     }
     function showConfirmation(element){
+        $(element).parents('.scenario-header').addClass('confirmationOn');
         $(element).parents('.scenario-header').find('.confirmation').fadeIn( "fast").addClass('show');
         
     }

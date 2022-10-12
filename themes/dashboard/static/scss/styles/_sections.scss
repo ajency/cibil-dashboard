@@ -463,7 +463,21 @@
     border-radius: 10px 10px 0 0;
     overflow: hidden;
     position: relative;
-    .scenario-heading{
+    @include media-breakpoint-down(sm) {
+      border-radius: 8px 8px 0 0;
+      &.closed {
+        border-radius: 8px;
+      }
+      &.confirmationOn {
+        height: 72px;
+      }
+      .confirmation{
+        .confirmation-text{
+          padding-left: 16px !important;
+        }
+      }
+    }
+    .scenario-heading {
       display: none;
     }
     .minimize {
@@ -473,7 +487,7 @@
         }
       }
     }
-    &.closed{
+    &.closed {
       .minimize {
         svg {
           display: none;
