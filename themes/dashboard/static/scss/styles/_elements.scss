@@ -186,7 +186,7 @@
   &.default-case {
     text-transform: inherit;
   }
-  &.inherit-font{
+  &.inherit-font {
     font-size: inherit;
   }
 
@@ -556,6 +556,10 @@ input[type="number"] {
   @include media-breakpoint-down(sm) {
     &__wraper {
       max-width: calc(100% - 20px);
+      .content {
+        max-height: 190px;
+        overflow-y: scroll;
+      }
     }
     &-right {
       &.show {
@@ -866,6 +870,7 @@ input[type="number"] {
     letter-spacing: 0.02em;
     color: $dark;
     margin-top: 6px;
+    width: 100% !important;
     &:empty {
       display: none;
     }
@@ -982,8 +987,8 @@ input[type="number"] {
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px $light inset !important;
-    box-shadow: 0 0 0 30px $light inset !important;
+    -webkit-box-shadow: 0 0 0 30px rgb(249, 249, 249) inset !important;
+    box-shadow: 0 0 0 30px rgb(249, 249, 249) inset !important;
     font-family: "Intro" !important;
   }
   @include media-breakpoint-down(sm) {
@@ -1132,7 +1137,7 @@ input[type="number"] {
       }
     }
   }
-  .introjs-showElement{
+  .introjs-showElement {
     position: relative !important;
     &::after {
       content: "";

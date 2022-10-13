@@ -53,7 +53,7 @@ $(function() {
 
       let windowWidth = $( document ).width();
       let arrowPosition = (windowWidth - leftPosition)- 45;
-  
+
       if ( (leftPosition-elWidth) < 0 ){
         tooltip_box.css({"top":topPosition+elHeight, "left":leftPosition});
         $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{left: '+ leftPosition +'px;}</style>');

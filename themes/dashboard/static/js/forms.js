@@ -4,8 +4,9 @@ let notificationForm = $("#notificationForm");
 
 //fields
 let username = document.getElementById('username');
-let old_password = document.getElementById('old_password');
 let new_password = document.getElementById('new_password');
+let old_password = document.getElementById('old_password');
+let confirm_password = document.getElementById('confirm_password');
 
 let registered_mobile = document.getElementById('registered_mobile');
 let registered_email = document.getElementById('registered_email');
@@ -19,9 +20,11 @@ let phonePattern = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/im;
 // error messages
 let emptyUsername = "Please enter your username";
 let invalidUsername = "Please enter valid username";
-let wrongPassword = "Entered password does not match, Please enter your valid old password.";
+let passwordNotMatch = "New password & confirm new password does not match, Kindly try again with correct password.";
+let wrongPassword =  "Oops ! Seems like you have entered an incorrect old password. Kindly try again with correct password.";
 let emptyOldPassword = "Please enter your old password";
 let emptyNewPassword = "Please enter your new password";
+let emptyConfirmPassword = "Please re-enter your new password";
 let emptyMobile = "Please enter your registered mobile number";
 let emptyEmail = "Please enter your registered email address";
 let invalidEmail = "Please enter valid email address";
@@ -119,20 +122,20 @@ function phoneValidation(input) {
 
 // password
   function comparePasswords(){
-    var old_pw = $(old_password).val();
-    var new_pw = $(new_password).val();
+    var old_pw = $(new_password).val();
+    var new_pw = $(confirm_password).val();
 
     if (old_pw == new_pw) {
-        showSucces(new_password);
+        showSucces(confirm_password);
     }else{
-        showError(new_password, wrongPassword);
+        showError(confirm_password, passwordNotMatch);
     }
   }
-  $(old_password).on("keyup", function () {
+  $(new_password).on("keyup", function () {
     checkEmpty(this);
     comparePasswords();
   });
-  $(new_password).on("keyup", function () {
+  $(confirm_password).on("keyup", function () {
     comparePasswords();
   });
 
@@ -190,7 +193,7 @@ $(changePasswordForm).submit(function( cpf_event ) {
     let formElement = changePasswordForm;
 
 
-    checkValidations([ {"field":username, "message":emptyUsername},{"field":old_password, "message":emptyOldPassword},{"field":new_password, "message":emptyNewPassword} ], formElement);
+    checkValidations([ {"field":username, "message":emptyUsername},{"field":old_password, "message":emptyOldPassword},{"field":new_password, "message":emptyNewPassword}, {"field":confirm_password, "message":emptyConfirmPassword} ], formElement);
 
 });
 
