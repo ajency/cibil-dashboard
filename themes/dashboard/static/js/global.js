@@ -234,7 +234,7 @@ function checkAccountVisibility(){
 
 function resetCompare(){
   $('.compare-offer-header').removeClass('show')
-  $('.compare-offer-footer').addClass('hide');
+  $('.compare-offer-footer').fadeOut('fast');
   $('.compare-offer-footer .compare-list > .compare-tab').html('');
   $('.offers-card').removeClass('selected');
   $('.offer-card-list').removeClass('comparing')

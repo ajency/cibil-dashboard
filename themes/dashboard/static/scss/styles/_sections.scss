@@ -471,8 +471,8 @@
       &.confirmationOn {
         height: 72px;
       }
-      .confirmation{
-        .confirmation-text{
+      .confirmation {
+        .confirmation-text {
           padding-left: 16px !important;
         }
       }
@@ -2207,6 +2207,7 @@
     box-shadow: 2px 2px 16px rgba(0, 71, 255, 0.2);
     border-radius: 12px;
     margin-top: 20px;
+    border: 1px solid $light;
 
     .offer-info-wrap {
       display: flex;
@@ -2303,7 +2304,7 @@
       }
     }
     &.selected {
-      border: 2px solid #fcd800;
+      border: 1px solid #fcd800;
       .offer-cta {
         .cibil-link {
           span {
@@ -2485,6 +2486,7 @@
           position: absolute;
           left: 0;
           right: 0;
+          top:0;
           width: 100%;
           height: 100%;
           display: grid;
@@ -2516,13 +2518,17 @@
         padding: 6px;
         position: relative;
         width: calc(33% - 14px);
+        min-height: 92px;
+        span:first-child{
+          border: 0;
+        }
         &:last-of-type {
           margin-right: 0;
         }
         .remove-compare-tab {
           position: absolute;
-          right: 2px;
-          top: 5px;
+          right: 4px;
+          top: 4px;
           width: 20px;
           height: 20px;
           svg {
@@ -2545,12 +2551,11 @@
         background: #f16e00;
         font-size: 14px;
         line-height: 14px;
-        color: $light !important;
       }
     }
   }
   &.hide {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -2856,6 +2861,8 @@
     }
   }
   @include media-breakpoint-down(sm) {
+    max-width: calc(100% - 40px);
+    width: 100%;
     .popup-body {
       padding-bottom: 0;
     }
@@ -2913,11 +2920,51 @@
         z-index: -1;
       }
     }
+    .close-popup {
+      right: 12px;
+      top: 12px;
+    }
     .cibil-button {
       width: 100%;
     }
     .content-text {
       margin-bottom: 0 !important;
+    }
+    .popup-content {
+      .popup-body{
+        .offer-info-wrap{
+          .offer-info{
+            margin-bottom: 0px;
+          }
+          .company-container{
+            span{
+              border: 0;
+              justify-content: flex-start;
+              width: 120px;
+              img{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      .success-body {
+        padding: 50px 26px;
+        svg {
+          margin-bottom: 20px;
+          width: 64px;
+          height: 64px;
+        }
+        .content-head {
+          font-size: 24px;
+          line-height: 30px;
+          margin-bottom: 10px;
+        }
+        .content-text {
+          color: #2c2c2c;
+          font-weight: 400;
+        }
+      }
     }
   }
 }
