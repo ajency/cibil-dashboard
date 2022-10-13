@@ -324,9 +324,9 @@
           .simulator-container {
             height: 100%;
             .simulator-links {
-              position: absolute;
-              width: 100%;
               margin: 0;
+              margin-left: -30px;
+              margin-right: -30px;
               bottom: 0;
               left: 0;
               border-bottom-left-radius: 8px;
@@ -445,9 +445,8 @@
   .scenario-container-title {
     font-weight: $intro-regular;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 24px;
-    max-width: 446px;
     color: $black;
     margin: 57px 0 15px;
   }
@@ -1182,6 +1181,7 @@
     display: flex;
     margin: 0;
     border-bottom: 2px solid $border-color-4;
+    justify-content: space-between;
     .report-nav-item {
       margin-bottom: 0;
       button {
@@ -2047,9 +2047,10 @@
     text-decoration: underline !important;
     text-transform: uppercase;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     font-weight: 700;
     cursor: pointer;
+    line-height: 24px;
     svg {
       margin-right: 7px;
     }
@@ -3005,6 +3006,8 @@
       font-weight: 700;
       cursor: pointer;
       letter-spacing: 0;
+      display: flex;
+      align-items: center;
       svg {
         margin-right: 7px;
       }

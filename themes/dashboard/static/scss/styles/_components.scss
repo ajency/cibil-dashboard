@@ -870,6 +870,9 @@
       }
     }
   }
+  @include media-breakpoint-up(lg){
+    height: 100%;
+  }
   @include media-breakpoint-down(md) {
     &__wraper {
       padding: 18px 30px 20px;
