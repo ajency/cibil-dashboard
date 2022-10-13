@@ -1183,12 +1183,12 @@
     &__wraper {
       display: flex;
       justify-content: space-between;
-      column-gap: 27px;
+      column-gap: 17px;
       .history-graph {
-        width: 70%;
+        width: 71%;
       }
       .history-details {
-        width: 30%;
+        width: 29%;
         &__wraper {
           height: 100%;
           .unsubscribed {
@@ -1196,7 +1196,10 @@
             background: $light;
             border-radius: 8px;
             padding: 20px;
-            padding-right: 24px;
+            padding-right: 11px;
+            .content{
+              max-width: 181px;
+            }
           }
         }
       }
