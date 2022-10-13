@@ -597,6 +597,10 @@ footer {
   }
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 @import "styles/page-header";
 @import "styles/elements";
 @import "styles/components";

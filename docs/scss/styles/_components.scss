@@ -1206,12 +1206,14 @@
     }
   }
   @include media-breakpoint-down(sm) {
-    padding: 20px 0px;
+    padding: 0px;
+    border-radius: 0px;
     &__wraper {
+      padding: 20px;
       display: flex;
       flex-direction: column-reverse;
       .cibil-link {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
       }
     }
   }

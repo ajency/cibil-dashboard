@@ -52,6 +52,12 @@ $(function () {
     $(this).parent().next(".sublist").toggle("medium");
   });
 
+  $('.mobile-nav-list .sublist-item').click(function(){
+    $('.mobile-nav-list').hide('fast').removeClass('opened');
+    $('.hamburger').removeClass('opened');
+    $(".overlay").toggleClass('opened');
+  });
+
   // animated simulator
   $(".simulator:not(.empty-simulator) .score-bar").each(function () {
     updateScore(0);
