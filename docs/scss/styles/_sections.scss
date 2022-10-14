@@ -652,6 +652,9 @@
     .smiluate-now-cta {
       font-weight: 600;
     }
+    @include media-breakpoint-down(sm){
+      margin-top: 20px;
+    }
     @include media-breakpoint-up(md) {
       .add-scenario,
       .reset-scenario {
@@ -724,6 +727,9 @@
     .scenario {
       &:not(:last-child) {
         margin-bottom: 30px;
+        @include media-breakpoint-down(sm){
+          margin-bottom: 20px;
+        }
       }
     }
   }
@@ -1534,6 +1540,7 @@
   }
 
   @include media-breakpoint-down(sm) {
+    margin-bottom: 40px;
     .table-title {
       margin: 0;
     }
@@ -1556,6 +1563,9 @@
       .table-content {
         row-gap: 20px;
       }
+    }
+    .showAllLink{
+      margin-top: 20px;
     }
   }
 }
@@ -2780,6 +2790,9 @@
               background: $light-blue-2;
               border-bottom-color: $light-blue-7;
               border-top-color: $light-blue-2;
+              &:first-child{
+                border-left-color: #f6f7fc;
+              }
             }
           }
         }
@@ -2908,7 +2921,10 @@
       }
       p {
         display: flex;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
+        &:not(:last-child){
+          margin-bottom: 10px;
+        }
         & > span {
           &:first-child {
             width: 20px;
@@ -3101,6 +3117,7 @@
   @include media-breakpoint-down(sm) {
     padding: 20px 0 20px;
     justify-content: flex-start;
+    margin-bottom: 0px;
     a {
       &:first-child {
         display: block;
