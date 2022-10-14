@@ -1022,7 +1022,7 @@ input[type="number"] {
   border-radius: 8px;
   border: none !important;
   box-shadow: none !important;
-  padding: 10px 20px 20px;
+  padding: 20px;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -1031,6 +1031,7 @@ input[type="number"] {
   .steps {
     font-weight: 700;
     margin-bottom: 10px;
+    line-height: 18px;
   }
 }
 .introjs-overlay {
@@ -1043,6 +1044,7 @@ input[type="number"] {
   grid-gap: 49px;
   gap: 49px;
   margin-top: 10px;
+  justify-content: flex-end;
 }
 .introjs-button {
   border-radius: 4px;
@@ -1064,6 +1066,22 @@ input[type="number"] {
     background: #0e95b3;
     color: #ffffff !important;
     font-weight: 600;
+    &:not(.introjs-donebutton) {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      padding: 0px;
+      background: transparent;
+      color: #2c2c2c !important;
+      text-decoration: underline !important;
+      display: inline-flex;
+      align-items: center;
+      grid-gap: 10px;
+      gap: 10px;
+      &:after {
+        content: url(../images/static-images/skip-icon.svg);
+      }
+    }
     &.introjs-donebutton {
       background: #ffffff;
       color: #2c2c2c !important;
@@ -1103,9 +1121,6 @@ input[type="number"] {
     left: auto !important;
     right: 20px !important;
   }
-  .introjs-tooltipbuttons {
-    justify-content: flex-end;
-  }
   .introjs-arrow {
     display: block !important;
     top: -30px !important;
@@ -1118,24 +1133,6 @@ input[type="number"] {
     border-bottom-width: 20px !important;
     border-bottom-color: $primary-yellow !important;
     bottom: auto !important;
-  }
-  .introjs-button {
-    &.introjs-skipbutton:not(.introjs-donebutton) {
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      padding: 0px;
-      background: transparent;
-      color: #2c2c2c !important;
-      text-decoration: underline !important;
-      display: inline-flex;
-      align-items: center;
-      grid-gap: 10px;
-      gap: 10px;
-      &:after {
-        content: url(../images/static-images/skip-icon.svg);
-      }
-    }
   }
   .introjs-showElement {
     position: relative !important;
