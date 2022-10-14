@@ -143,14 +143,14 @@
       max-width: calc(100% - 23px);
     }
     &.download-icon {
-      padding-right: 24px;
+      padding-right: 27px;
       &:before {
-        max-width: calc(100% - 24px);
+        max-width: calc(100% - 27px);
       }
       &:after {
         background-image: url(/cibil-dashboard/images/static-images/download-dark-icon.svg);
-        width: 14px;
-        height: 14px;
+        width: 19px;
+        height: 13px;
         margin-bottom: -1px;
       }
     }

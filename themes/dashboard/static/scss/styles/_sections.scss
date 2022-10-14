@@ -323,6 +323,14 @@
           height: 100%;
           .simulator-container {
             height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 29px;
+            grid-row-gap: 29px;
+            .score-text{
+              margin-bottom: 0px;
+            }
             .simulator-links {
               margin: 0;
               margin-left: -30px;
@@ -1231,29 +1239,38 @@
         height: 100%;
         background: none;
         position: relative;
+        &::before {
+          content: "";
+          width: 100%;
+          height: 6px;
+          background-color: transparent;
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          transition: background 0.3s ease-in-out;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -9px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid transparent;
+          transition: bottom 0.4s ease;
+        }
 
         &.active {
           font-weight: 700;
           color: $primary-blue;
           &::before {
-            content: "";
-            width: 100%;
-            height: 6px;
             background-color: $primary-blue;
-            position: absolute;
-            bottom: -3px;
-            left: 0;
           }
           &::after {
-            content: "";
-            position: absolute;
             bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
             border-top: 10px solid $primary-blue;
           }
         }
@@ -2548,6 +2565,14 @@
           text-align: center;
         }
       }
+      @include media-breakpoint-up(md){
+        justify-content: space-between;
+        grid-column-gap: 15px;
+        column-gap: 15px;
+        p{
+          margin: 0;
+        }
+      }
     }
     & > .cibil-button {
       margin-left: auto;
@@ -2570,8 +2595,12 @@
         position: relative;
         width: calc(33% - 14px);
         min-height: 92px;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 6px;
         span:first-child {
           border: 0;
+          padding: 0;
         }
         &:last-of-type {
           margin-right: 0;
@@ -2593,6 +2622,10 @@
           &::after {
             color: $black;
           }
+        }
+        p{
+          margin-left: auto;
+          margin-right: auto;
         }
       }
       & > .cibil-button {
@@ -2950,6 +2983,7 @@
       flex-direction: column;
       border-radius: 8px;
       overflow: hidden;
+      margin-bottom: 30px;
       & > div {
         width: 100%;
       }
