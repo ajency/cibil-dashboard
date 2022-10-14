@@ -927,6 +927,9 @@
     .subheading-light {
       margin-bottom: 30px;
     }
+    .section-heading{
+      margin-bottom: 16px;
+    }
     .small-ctas {
       &__wraper {
         display: flex;
@@ -976,7 +979,7 @@
 
 // score history
 .cibil-score-history {
-  margin-bottom: 65px;
+  margin-bottom: 60px;
   .section-heading {
     margin-bottom: 20px;
   }
@@ -994,7 +997,7 @@
   &__wraper {
     background: #f1f6ff;
     border-radius: 12px;
-    padding: 20px;
+    padding: 30px;
     .content {
       margin-bottom: 12px;
       letter-spacing: 0.02em;
@@ -1033,7 +1036,7 @@
       background: $light;
       box-shadow: $shadow-blue;
       border-radius: 12px;
-      padding: 30px 25px;
+      padding: 30px;
       .section-head {
         display: flex;
         justify-content: space-between;
@@ -1060,8 +1063,8 @@
         overflow: hidden;
         padding-top: 8px;
         margin-top: -8px;
-        margin-right: -25px;
-        margin-left: -25px;
+        margin-right: -30px;
+        margin-left: -30px;
         .slick-list {
           overflow: visible;
           margin: 0 -15px;
@@ -2785,7 +2788,7 @@
         border: 1px solid $light-blue-7;
         border-radius: 0px 0px 8px 8px;
         .tab-pane {
-          padding: 20px 16px 30px;
+          padding: 20px 16px;
         }
       }
     }
