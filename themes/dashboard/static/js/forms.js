@@ -133,7 +133,10 @@ function phoneValidation(input) {
   }
   $(new_password).on("keyup", function () {
     checkEmpty(this);
-    comparePasswords();
+    //comparePasswords();
+    if(confirm_password.value != ''){
+      comparePasswords();
+    }
   });
   $(confirm_password).on("keyup", function () {
     comparePasswords();
