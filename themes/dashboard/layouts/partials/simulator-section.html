@@ -2,8 +2,10 @@
 <div class="simulator-section" id="cibil-score">
     <div class="simulator-section__wraper">
         <div class="simulator-container">
-            {{if .username}}<p class="username">{{.username}}</p>{{end}}
-            {{ partial "simulator" . }}
+            <div class="wrap-section">
+                {{if .username}}<p class="username">{{.username}}</p>{{end}}
+                {{ partial "simulator" . }}
+            </div>
             <div class="simulator-links">
                 {{if .link}}<a href="{{.link}}" class="cibil-link">{{.link_text}}</a>{{end}}
                 {{if .button_link}}<a href="{{.button_link}}" class="cibil-button">{{.button_text}}</a>{{end}}
