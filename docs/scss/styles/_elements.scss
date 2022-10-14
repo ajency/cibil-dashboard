@@ -934,7 +934,7 @@ input[type="number"] {
   }
   .checkbox-wraper {
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     display: flex;
     align-items: flex-start;
     label {
@@ -945,6 +945,7 @@ input[type="number"] {
       align-items: center;
       grid-gap: 14px;
       font-weight: $intro-book;
+      margin-bottom: 0px;
       &:before {
         content: "";
         -webkit-appearance: none;
