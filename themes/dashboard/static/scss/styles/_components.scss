@@ -1192,9 +1192,13 @@
             background: $light;
             border-radius: 8px;
             padding: 20px;
-            padding-right: 11px;
+            padding-right: 17px;
             .content{
-              max-width: 181px;
+              max-width: 207px;
+              margin-bottom: 16px;
+              &:last-child{
+                margin-bottom: 17px;
+              }
             }
           }
         }

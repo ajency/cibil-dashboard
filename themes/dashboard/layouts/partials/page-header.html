@@ -3,6 +3,6 @@
     {{ partial "breadcrumbs" . }}
     <p class="page-title">
       {{ if .Params.icon_url }}<img class="icon" src="{{ .Params.icon_url | relURL }}" />{{end}}{{ .Title }}</p>
-      {{ if .Params.description }}<p class="page-desc">{{ .Params.description }}</p>{{end}}
+      {{ if .Params.description }}<p class="page-desc">{{ .Params.description | safeHTML }}</p>{{end}}
   </div>
 </div>
