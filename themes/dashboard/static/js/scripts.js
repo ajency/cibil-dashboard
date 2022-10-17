@@ -58,8 +58,33 @@ $(function() {
         tooltip_box.css({"top":topPosition+elHeight, "left":leftPosition});
         $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{left: '+ leftPosition +'px;}</style>');
       } else{
-        tooltip_box.css({"top":topPosition+elHeight, "left": (leftPosition - elWidth)});
+        let finalLeft = leftPosition - elWidth;
+        tooltip_box.css({"top":topPosition+elHeight, "left": finalLeft});
         $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{right:'+ arrowPosition +'px !important;}</style>');
+      }
+    }
+
+    let calculatePositionMob = () => {
+      let topPosition = tooltip_trigger.position().top;
+      let leftPosition =  tooltip_trigger.position().left;
+      let elHeight = tooltip_trigger.height()*2.2;
+      let elWidth = tooltip_trigger.width()*70/100;
+
+      let windowWidth = $( document ).width();
+      let arrowPosition = (windowWidth - leftPosition)- 48;
+
+      if ( (leftPosition-elWidth) < 0 ){
+        tooltip_box.css({"top":topPosition+elHeight, "left":leftPosition});
+        $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{left: '+ leftPosition +'px;}</style>');
+      } else{
+        let finalLeft = leftPosition - elWidth;
+        if(finalLeft > 160 ){
+          tooltip_box.css({"top":topPosition+elHeight, "left": 160 });
+          $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{right:'+ arrowPosition +'px !important;left: auto;}</style>');
+        }else{
+          tooltip_box.css({"top":topPosition+elHeight, "left": finalLeft});
+          $('head').append('<style>.tooltip-box .tooltip-box__wraper:before{right:'+ arrowPosition +'px !important;left: auto;}</style>');
+        }
       }
     }
   
@@ -74,7 +99,14 @@ $(function() {
     }
   
     tooltip_trigger.mouseover(function(){
-      calculatePosition();
+      var newWindowWidth = $(window).width();
+        if (newWindowWidth < 768) {
+          calculatePositionMob();
+        }
+        else
+        {
+          calculatePosition();
+        }
       showTooltip();
     });
     tooltip_trigger.mouseout(function(){
