@@ -408,3 +408,29 @@ var editInfo = getUrlParameter('editInfo');
 if (editInfo == "show"){
   editOInfoToggle();
 }
+
+//Repayment slider
+$('.repayment-slider').slick({
+    slidesToShow:3,
+    slidesToScroll:1,
+    infinite: false,
+    nextArrow: "<button class='nextArrow'><svg width='17' height='29' viewBox='0 0 17 29' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M2 2.07227L15 14.7341L2 27.396' stroke='#2C2C2C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg></button>",
+    prevArrow: "<button class='prevArrow'><svg width='17' height='29' viewBox='0 0 17 29' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M15 27.3237L2 14.6619L15 2.00003' stroke='#2C2C2C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg></button>",
+    responsive:[
+      {
+        breakpoint: 767.68,
+        settings: {
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          centerPadding: '20px',
+          slidesToShow: 1,
+          infinite: true,
+        }
+      }
+    ]
+});
+
+$('.thankYouBtn').click(function(){
+  $(this).parents('.modal').modal('toggle');
+});

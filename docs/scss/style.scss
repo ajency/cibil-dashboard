@@ -18,7 +18,7 @@ $dark1: #565656;
 $light: #fff;
 $grey: #707070;
 $grey-1: #acacac;
-$grey-2:#F9F9F9;
+$grey-2: #f9f9f9;
 $light-blue: #f5f9ff;
 $light-blue-2: #f6f7fc;
 $light-blue-3: #f1f6ff;
@@ -88,7 +88,60 @@ $intro-book: 400;
   line-height: 16px;
   color: $black;
 }
-
+@mixin body {
+  font-weight: $intro-book;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
+@mixin h2 {
+  font-weight: $intro-regular;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: -0.01em;
+}
+@mixin h3 {
+  font-weight: $intro-regular;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0;
+}
+@mixin body-medium {
+  @include body;
+  font-weight: $intro-regular;
+}
+@mixin body-bold {
+  @include body;
+  font-weight: $intro-bold;
+}
+@mixin hairline {
+  font-weight: $intro-book;
+  font-size: 14px;
+  line-height: 24px;
+}
+@mixin hairline-bold {
+  @include hairline;
+  font-weight: $intro-regular;
+}
+.hairline {
+  @include hairline;
+  letter-spacing: 0.02em;
+  &-bold {
+    @include hairline-bold;
+  }
+}
+.body {
+  @include body;
+  &-medium {
+    @include body-medium;
+  }
+  &-bold {
+    @include body-bold;
+  }
+}
+.h2{
+  @include h2;
+}
 * {
   outline: none !important;
   box-shadow: none;
@@ -266,7 +319,7 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
-  @media (min-width: 1200px){
+  @media (min-width: 1200px) {
     border-radius: 8px;
   }
   //overflow: hidden;
@@ -279,7 +332,7 @@ header {
     text-decoration: none !important;
     //background-color: #00a6ca;
 
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(md) {
       &:hover {
         background-color: #0095b7;
         @include media-breakpoint-down(lg) {
@@ -348,14 +401,14 @@ header {
     }
   }
   .overview-list {
-    @include media-breakpoint-up(md){
-      &:hover{
+    @include media-breakpoint-up(md) {
+      &:hover {
         background-color: #0095b7;
       }
     }
     &.active {
       background-color: #0095b7;
-      .sublist{
+      .sublist {
         display: block;
       }
       @include media-breakpoint-down(lg) {
@@ -592,19 +645,19 @@ footer {
 }
 
 // how it works -> nav
-.nav-list{
-  &.introjs-showElement{
+.nav-list {
+  &.introjs-showElement {
     overflow: hidden;
     .nav-item {
       background-color: #00a6ca;
-      &.active{
+      &.active {
         background-color: #0095b7;
       }
     }
   }
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 

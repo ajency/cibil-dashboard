@@ -105,6 +105,7 @@
 }
 
 .cibil-link {
+  cursor: pointer;
   font-weight: $intro-bold;
   font-size: 14px;
   line-height: 14px;
@@ -188,6 +189,9 @@
   }
   &.inherit-font {
     font-size: inherit;
+  }
+  &.underlined{
+    text-decoration: underline !important;
   }
 
   @include media-breakpoint-down(sm) {
