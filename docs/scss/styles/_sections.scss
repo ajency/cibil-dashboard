@@ -3539,6 +3539,7 @@ b.plus-icon {
     }
   }
   @include media-breakpoint-down(sm){
+    margin-bottom: 30px;
     .benefits{
       .benefit {
         padding: 20px;
@@ -3553,6 +3554,46 @@ b.plus-icon {
         &:not(:last-child) {
           margin-bottom: 16px;
         }
+      }
+    }
+  }
+}
+
+// terms
+.terms{
+  margin-bottom: 60px;
+  &__wraper{
+    background: #FFFFFF;
+    border: 1px solid #DDE0EF;
+    border-radius: 6px;
+    padding: 20px;
+    p{
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0px;
+      }
+    }
+    .hairline{
+      color: $grey;
+      b{
+        @include hairline-bold;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    margin-bottom: 40px;
+    &__wraper{
+      p{
+        margin-bottom: 16px;
+        &:last-child{
+          margin-bottom: 0px;
+        }
+      }
+      .hairline-bold{
+        margin-bottom: 20px;
+      }
+      .hairline{
+        color: $black;
       }
     }
   }
