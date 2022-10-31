@@ -3461,25 +3461,33 @@ b.plus-icon {
       display: flex;
       align-items: center;
       &.nextArrow {
-        background: linear-gradient(270deg, #F1F6FF 0%, rgba(255, 255, 255, 0) 95.5%);
+        background: linear-gradient(
+          270deg,
+          #f1f6ff 0%,
+          rgba(255, 255, 255, 0) 95.5%
+        );
         right: 0;
         justify-content: flex-end;
         padding-right: 25px;
       }
       &.prevArrow {
-        background: linear-gradient(90deg, #F1F6FF 0%, rgba(255, 255, 255, 0) 95.5%);
+        background: linear-gradient(
+          90deg,
+          #f1f6ff 0%,
+          rgba(255, 255, 255, 0) 95.5%
+        );
         left: 0;
         justify-content: flex-start;
         padding-left: 25px;
       }
-      &.slick-disabled{
+      &.slick-disabled {
         display: none !important;
       }
     }
   }
-  @include media-breakpoint-up(md){
-    .repayment-slider{
-      .slick-list{
+  @include media-breakpoint-up(md) {
+    .repayment-slider {
+      .slick-list {
         margin-left: -12px;
         margin-right: -12px;
       }
@@ -3488,13 +3496,63 @@ b.plus-icon {
       }
     }
   }
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     margin-bottom: 38px;
-    .repayment-slider{
+    .repayment-slider {
       margin-left: -20px;
       margin-right: -20px;
-      .slick-slide{
+      .slick-slide {
         margin: 0px 10px;
+      }
+    }
+  }
+}
+
+// repayment benefits
+.repayment-options-benefits {
+  background-color: #f1f6ff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  .section-heading {
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+  .benefits {
+    .benefit {
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 16px 16px 20px;
+      p {
+        margin-bottom: 0px;
+      }
+      .icon {
+        margin-bottom: 17px;
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .benefits {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 22px;
+    }
+  }
+  @include media-breakpoint-down(sm){
+    .benefits{
+      .benefit {
+        padding: 20px;
+        border-radius: 8px;
+        &__wraper {
+          display: flex;
+          justify-content: space-between;
+          .body{
+            width: calc(100% - 61px);
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
       }
     }
   }

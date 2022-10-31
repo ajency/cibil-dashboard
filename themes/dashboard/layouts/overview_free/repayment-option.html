@@ -6,4 +6,6 @@
 
     {{ partial "repayment-options" (dict "repaymentOptions" .Site.Data.repayment_options ) }}
 
+    {{ partial "repayment-options-benefits" (dict "heading" "benefits of repayment options" "repaymentBenefits" .Site.Data.repayment_benefits ) }}
+
 {{end}}
