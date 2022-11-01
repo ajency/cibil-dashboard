@@ -2288,14 +2288,10 @@
           }
         }
       }
-      .modal-footer {
-        border: none;
-        justify-content: flex-start;
-        padding: 0px 30px 30px;
-        .cibil-button {
-          min-width: 131px;
-          max-width: 100%;
-        }
+      .cibil-button {
+        margin-top: 20px;
+        min-width: 131px;
+        max-width: 100%;
       }
     }
   }
@@ -2332,6 +2328,8 @@
       margin-top: 20px;
       margin-bottom: 20px; */
       .modal-content {
+        max-height: 90vh;
+        overflow-y: scroll;
         .modal-body,
         .modal-header {
           padding: 20px;
@@ -2393,9 +2391,15 @@
             }
           }
         }
-        .modal-footer {
-          padding: 0px 20px 20px;
+        .button-wrap {
+          position: sticky;
+          bottom: 0px;
+          background: #fff;
+          margin-left: -20px;
+          margin-right: -20px;
+          padding: 20px;
           .cibil-button {
+            margin: 0px;
             width: 100%;
           }
         }
@@ -2405,43 +2409,43 @@
 }
 
 // thank you popup
-#thankYouPopup{
-  .modal-dialog{
+#thankYouPopup {
+  .modal-dialog {
     max-width: 840px;
-    .modal-content{
-      .modal-body{
+    .modal-content {
+      .modal-body {
         text-align: center;
         padding: 60px 30px 80px;
-        p{
+        p {
           margin-bottom: 0px;
         }
-        h2{
+        h2 {
           margin-bottom: 20px;
         }
-        .body-medium{
-          color:$grey;
+        .body-medium {
+          color: $grey;
           max-width: 424px;
           margin: auto;
         }
-        .icon{
+        .icon {
           margin-bottom: 40px;
         }
       }
     }
   }
-  @include media-breakpoint-down(sm){
-    .modal-dialog{
-      .modal-content{
-        .modal-body{
+  @include media-breakpoint-down(sm) {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
           padding: 50px 20px 40px;
-          .icon{
+          .icon {
             margin-bottom: 20px;
           }
-          .h2{
+          .h2 {
             margin-bottom: 10px;
             @include h3;
           }
-          .body-medium{
+          .body-medium {
             color: $dark;
             @include body;
           }
