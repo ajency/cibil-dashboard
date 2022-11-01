@@ -5,7 +5,7 @@
                 <div class="repayment-option">
                     <div class="repayment-option__wraper">
                         <div class="details">
-                            {{range .}}
+                            {{range first 3 .}}
                                 <div class="option-details">
                                     {{range $index, $optionDetails:= . }}
                                         <p class="body-medium title">{{$index}}</p>

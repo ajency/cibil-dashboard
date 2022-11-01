@@ -10,8 +10,8 @@
         <div class="modal-body">
             <div class="info">
                 <div class="company-container">
-                    <img src="{{ "images/dynamic-images/bajaj-finserv-logo.svg" | relURL }}" class="company-logo"></span>
-                    <p class="company-name">Bajaj Finserv</p>
+                    {{range .}}{{if .logo}}<img src="{{ .logo | relURL }}" class="company-logo">{{end}}{{end}}
+                    <p class="company-name">{{range .}} {{.Lender}} {{end}}</p>
                 </div>
             </div>
 
