@@ -3,6 +3,8 @@
       "summary_number": 2,
       "summary_title": "NEGATIVE STATUS",
       "summary_date": "as of 19th Apr‘22",
+      "summary_message": "This negative status factors into your CIBIL Score. Clearing your dues could help resolve this status.","summary_link_text": "Learn more",
+      "summary_link": "#credtEducationCta",
       "summary_content": [
         {
           "content_title": "How does this affect my score?",
@@ -12,7 +14,17 @@
       "related_article": [
         {
           "article_link": "#",
-          "article_link_text": "how to imprOve"
+          "article_link_text": "how to imprOve",
+          "article_icon": "images/static-images/affect-score-icon.svg"
+        }
+      ],
+      "related_page": [
+        {
+          "page_title":"score simulator",
+          "page_content":"Know how repaying your debt affects your CIBIL Score",
+          "page_link": "/cibil-dashboard/overview_free/score-simulator",
+          "page_link_text": "go to score simulator",
+          "page_icon": "images/static-images/score-simulator-icon.svg"
         }
       ]
     }

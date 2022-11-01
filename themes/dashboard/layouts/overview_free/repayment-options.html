@@ -2,11 +2,11 @@
 
     {{ partial "page-header" . }}
 
-    {{ partial "page-error" (dict "message" "This negative status factors into your CIBIL Score. Clearing your dues could help resolve this status.") }}
-
-    {{ partial "credit-education-cta" (dict "ce_ctas" .Site.Data.credit_education_ctas)}}
+    {{ partial "negative-status" (dict "ce_ctas" .Site.Data.credit_education_ctas) }}
 
     {{ partial "repayment-options" (dict "repaymentOptions" .Site.Data.repayment_options ) }}
+
+    {{ partial "credit-education-cta" (dict "ce_ctas" .Site.Data.credit_education_ctas)}}
 
     {{ partial "repayment-options-benefits" (dict "heading" "benefits of repayment options" "repaymentBenefits" .Site.Data.repayment_benefits ) }}
 

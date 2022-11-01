@@ -3453,7 +3453,7 @@ b.plus-icon {
 }
 
 .repayment-options {
-  margin-bottom: 41px;
+  margin-bottom: 40px;
   .repayment-slider {
     overflow: hidden;
     .slick-track {
@@ -3510,7 +3510,6 @@ b.plus-icon {
     }
   }
   @include media-breakpoint-down(sm) {
-    margin-bottom: 38px;
     .repayment-slider {
       margin-left: -20px;
       margin-right: -20px;
@@ -3614,7 +3613,7 @@ b.plus-icon {
 
 // credit-education-ctas
 .credit-education-ctas{
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   @include media-breakpoint-down(sm){
     margin-bottom: 40px;
   }
