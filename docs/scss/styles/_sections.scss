@@ -3598,3 +3598,11 @@ b.plus-icon {
     }
   }
 }
+
+// credit-education-ctas
+.credit-education-ctas{
+  margin-bottom: 30px;
+  @include media-breakpoint-down(sm){
+    margin-bottom: 40px;
+  }
+}

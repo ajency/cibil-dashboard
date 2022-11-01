@@ -4,6 +4,8 @@
 
     {{ partial "page-error" (dict "message" "This negative status factor into your credit score. Settling this debt, could resolve this status") }}
 
+    {{ partial "credit-education-cta" (dict "ce_ctas" .Site.Data.credit_education_ctas)}}
+
     {{ partial "repayment-options" (dict "repaymentOptions" .Site.Data.repayment_options ) }}
 
     {{ partial "repayment-options-benefits" (dict "heading" "benefits of repayment options" "repaymentBenefits" .Site.Data.repayment_benefits ) }}
