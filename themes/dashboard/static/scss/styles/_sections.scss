@@ -3501,8 +3501,8 @@ b.plus-icon {
   @include media-breakpoint-up(md) {
     .repayment-slider {
       .slick-list {
-        margin-left: -12px;
-        margin-right: -12px;
+        margin-left: -11px;
+        margin-right: -11px;
       }
       .slick-slide {
         margin: 0px 12px;
@@ -3551,7 +3551,6 @@ b.plus-icon {
     }
   }
   @include media-breakpoint-down(sm){
-    margin-bottom: 30px;
     .benefits{
       .benefit {
         padding: 20px;
