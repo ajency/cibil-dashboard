@@ -72,3 +72,38 @@
 
     });
 </script>
+
+<script>
+    function videoPlayer(element){
+    let ctaId = $(element).data('target');
+    let playerId = $(element).data('player');
+
+    let videoElement = $(ctaId).find("video").attr("id");
+
+    $(element).click(function(){
+        let videoTitle = $(this).data("title");
+        $(ctaId).find(".modal-title").text(videoTitle);
+    });
+    
+    var player = videojs(videoElement, {
+        fluid: true
+    });
+    $(ctaId).on("show.bs.modal", function (e) {
+        player.play("muted");
+        player.muted(false);
+    });
+
+    $(ctaId).on("hide.bs.modal", function (e) {
+        player.pause();
+        player.play("pause");
+        player.muted(true);
+    });
+}
+</script>
+{{ if eq .RelPermalink "/cibil-dashboard/overview_free/credit-education/" }}
+    <script>
+        $(".video-cta-link").each(function(){
+            videoPlayer(this);
+        });
+    </script>
+{{end}}

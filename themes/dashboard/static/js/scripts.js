@@ -183,11 +183,18 @@ $(".account-collapse").on("hide.bs.collapse", function () {
 
 // tabs redirect
 var hash = location.hash.replace(/^#/, '').split('_')[0];
-$tabsParent =  $(".reportTabs");
-$panelParent = $(".report-content .tab-content");
+$tabsParent =  $(".nav-tabs");
+$panelParent = $(".tab-content");
 if (hash) {
+    $tabsParent.find(".nav-link ").removeClass("active");
+    $('.nav-link[data-target="#' + hash + '"]').addClass("active");
+
     $tabsParent.find(".report-nav-item button").removeClass("active");
     $('.report-nav-item button[data-target="#' + hash + '"]').addClass("active");
+
+    $panelParent.find(".tab-pane").removeClass("active");
+    $('.tab-pane[id="' + hash + '"]').addClass("active");
+
     $panelParent.find(".tab-panel").removeClass("active");
     $('.tab-panel[id="' + hash + '"]').addClass("active");
     //checkAccountVisibility();

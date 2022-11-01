@@ -910,7 +910,7 @@
     height: 50px !important;
     padding: 0 !important;
     margin: 0 !important;
-    display: flex;
+    //display: flex;
     align-items: center !important;
     justify-content: center !important;
     border-radius: 100% !important;
@@ -2144,25 +2144,25 @@
         margin-bottom: 20px;
       }
     }
-    .summary-message{
+    .summary-message {
       margin-bottom: 10px;
     }
   }
-  @include media-breakpoint-down(sm){
-    &__wraper{
-      .summary-count-cta{
+  @include media-breakpoint-down(sm) {
+    &__wraper {
+      .summary-count-cta {
         width: auto;
       }
-      .summary-message{
+      .summary-message {
         margin-bottom: 20px;
       }
-      .summary-container{
+      .summary-container {
         margin-bottom: 20px;
         align-items: center;
-        .summary-title{
+        .summary-title {
           margin-bottom: 10px;
         }
-        .summary-date{
+        .summary-date {
           margin-bottom: 0px;
         }
       }
@@ -2585,6 +2585,78 @@
         }
         .desc {
           margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+//credit-education-video-cta
+.ce-video-cta {
+  max-width: 320px;
+  border-radius: 2px;
+  overflow: hidden;
+  &__wraper {
+    .cta-thumbnail {
+      height: 133px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .content {
+      background: #f9f9f9;
+      padding: 20px;
+      .desc {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+//credit-education-dashboard-faqs
+.ce-cards {
+  &__wraper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    .ce-card {
+      background: #f9f9f9;
+      border: 1px solid #dddddd;
+      border-radius: 4px;
+      padding: 20px;
+      &__wraper {
+        p {
+          margin-bottom: 0px;
+        }
+        .title {
+          margin-bottom: 10px;
+        }
+        .head {
+          margin-bottom: 20px;
+          position: relative;
+          &:before {
+            content: "";
+            width: 30.19px;
+            height: 30px;
+            background-image: url(../images/static-images/right-arrow-boxed.svg);
+            position: absolute;
+            right: 8px;
+            top: 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+          .icon {
+            width: 53.34px;
+            height: 53px;
+            object-fit: contain;
+          }
         }
       }
     }

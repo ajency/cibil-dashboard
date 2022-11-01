@@ -1,3 +1,4 @@
+{{.dot}}
 {{if .account_tabs}}
     {{range $count, $tabs:= .account_tabs}}
         <div class="tabs-vertical-icons">
@@ -15,7 +16,7 @@
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
                         {{range $index, $tabs:= .tabs}}
-                            <div class="tab-pane fade {{if eq .active true}}show active{{end}}" id="{{ anchorize .tab_title}}" role="tabpanel" aria-labelledby="{{ anchorize .tab_title}}-tab">{{partial .tab_content}}</div>
+                            <div class="tab-pane fade {{if eq .active true}}show active{{end}}" id="{{ anchorize .tab_title}}" role="tabpanel" aria-labelledby="{{ anchorize .tab_title}}-tab">{{partial .tab_content }}</div>
                         {{end}}
                     </div>
                 {{end}}

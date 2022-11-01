@@ -10,27 +10,27 @@
             {
                 "tab_title": "Credit Basics",
                 "tab_icon": "icons/watch-icon.html",
-                "tab_content": "tabs/watch-n-learn.html"
+                "tab_content": "tabs/credit-basics.html"
             },
             {
                 "tab_title": "Dashboard FAQ’s",
                 "tab_icon": "icons/watch-icon.html",
-                "tab_content": "tabs/watch-n-learn.html"
+                "tab_content": "tabs/dashboard-faqs.html"
             },
             {
                 "tab_title": "Latest<br>Blogs",
                 "tab_icon": "icons/watch-icon.html",
-                "tab_content": "tabs/watch-n-learn.html"
+                "tab_content": "tabs/blogs.html"
             },
             {
                 "tab_title": "Legal Information",
                 "tab_icon": "icons/watch-icon.html",
-                "tab_content": "tabs/watch-n-learn.html"
+                "tab_content": "tabs/legal-info.html"
             },
             {
                 "tab_title": "Consumer Awareness",
                 "tab_icon": "icons/watch-icon.html",
-                "tab_content": "tabs/watch-n-learn.html"
+                "tab_content": "tabs/consumer-awareness.html"
             }
         ]
     }
