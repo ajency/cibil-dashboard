@@ -1,0 +1,37 @@
+[
+    {
+        "tabs":[
+            {
+                "tab_title": "Watch & Learn",
+                "tab_icon": "icons/watch-icon.html",
+                "active": true,
+                "tab_content": "tabs/watch-n-learn.html"
+            },
+            {
+                "tab_title": "Credit Basics",
+                "tab_icon": "icons/watch-icon.html",
+                "tab_content": "tabs/watch-n-learn.html"
+            },
+            {
+                "tab_title": "Dashboard FAQ’s",
+                "tab_icon": "icons/watch-icon.html",
+                "tab_content": "tabs/watch-n-learn.html"
+            },
+            {
+                "tab_title": "Latest<br>Blogs",
+                "tab_icon": "icons/watch-icon.html",
+                "tab_content": "tabs/watch-n-learn.html"
+            },
+            {
+                "tab_title": "Legal Information",
+                "tab_icon": "icons/watch-icon.html",
+                "tab_content": "tabs/watch-n-learn.html"
+            },
+            {
+                "tab_title": "Consumer Awareness",
+                "tab_icon": "icons/watch-icon.html",
+                "tab_content": "tabs/watch-n-learn.html"
+            }
+        ]
+    }
+]

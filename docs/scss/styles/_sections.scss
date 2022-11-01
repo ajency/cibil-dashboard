@@ -2750,6 +2750,12 @@
               }
             }
           }
+          &.tabs-wide{
+            .nav-link{
+              min-width: auto;
+              width: 100%;
+            }
+          }
         }
       }
     }
@@ -2794,6 +2800,13 @@
               &:first-child {
                 border-left-color: #f6f7fc;
               }
+            }
+          }
+          &.tabs-wide{
+            overflow: hidden;
+            .nav-link{
+              min-width: auto;
+              width: 100%;
             }
           }
         }

@@ -1,14 +1,14 @@
 {{if .account_tabs}}
-    {{range .account_tabs}}
+    {{range $count, $tabs:= .account_tabs}}
         <div class="tabs-vertical-icons">
             <div class="tabs-vertical-icons__wraper">
                 {{if .tabs}}
                     <nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <div class="nav nav-tabs{{range $index, $tabs1:= .tabs}}{{if gt $index 4}} tabs-wide{{end}}{{end}}" id="nav-tab" role="tablist">
                         {{range $index, $tabs:= .tabs}}
                             <button class="nav-link {{if eq .active true}}active{{end}}" id="{{ anchorize .tab_title}}-tab" data-toggle="tab" data-target="#{{ anchorize .tab_title}}" type="button" role="tab" aria-controls="{{ anchorize .tab_title}}" aria-selected="true">
                                 <div class="tab-icon">{{partial .tab_icon }}</div>
-                                <p class="tab-title">{{.tab_title}}</p>
+                                <p class="tab-title">{{.tab_title | safeHTML}}</p>
                             </button>
                         {{end}}
                         </div>
