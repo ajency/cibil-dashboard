@@ -19,15 +19,11 @@
                                     <p class="summary-date">{{.summary_date}}</p>
                                     {{if .summary_rating}}<p class="summary-rating {{anchorize .summary_rating}}">{{.summary_rating}}</p>{{end}}
                                 </div>
-                                <div class="content-container hide-sm-down">
-                                    <p class="body-medium summary-message">{{.summary_message}}</p>
-                                    <a href="{{.summary_link}}" class="cibil-link cibil-link-right-icon">{{.summary_link_text}}</a>
-                                </div>
                             </div>
                         </div>
-                        <div class="content-container hide-md-up">
-                            <p class="body-medium summary-message">{{.summary_message}}</p>
-                            <a href="{{.summary_link}}" class="cibil-link cibil-link-right-icon">{{.summary_link_text}}</a>
+                        <div class="content-container">
+                            <img src="{{ "images/static-images/negative-status.svg" | relURL }}" alt="" class="icon">
+                            <p class="hairline summary-message">{{.summary_message}}<a href="{{.summary_link}}" class="cibil-link cibil-link-right-icon">{{.summary_link_text}}</a></p>
                         </div>
                     {{end}}
                 {{end}}

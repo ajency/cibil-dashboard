@@ -2109,7 +2109,7 @@
 
 // page error message
 .negative-status {
-  margin: 30px auto 40px;
+  margin: 30px auto;
   p {
     margin-bottom: 0px;
   }
@@ -2135,7 +2135,7 @@
         font-size: 18px;
         line-height: 18px;
         text-transform: uppercase;
-        margin-bottom: 14px;
+        margin-bottom: 10px;
       }
       .summary-date {
         font-weight: 600;
@@ -2144,8 +2144,40 @@
         margin-bottom: 20px;
       }
     }
+    .content-container {
+      display: flex;
+      align-items: flex-start;
+      grid-gap: 10px;
+      gap: 10px;
+    }
     .summary-message {
-      margin-bottom: 10px;
+      margin-bottom: 0px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__wraper {
+      display: flex;
+      padding: 10px;
+      padding-right: 25px;
+      align-items: center;
+      .summary-container {
+        width: 38%;
+        padding-right: 30px;
+        align-items: center;
+        .summary-date {
+          margin-bottom: 0px;
+        }
+      }
+      .content-container {
+        border-left: 1px solid #fcd800;
+        padding-left: 20px;
+        .cibil-link {
+          margin-left: 8px;
+        }
+        .icon {
+          margin-top: 2px;
+        }
+      }
     }
   }
   @include media-breakpoint-down(sm) {
@@ -2154,7 +2186,12 @@
         width: auto;
       }
       .summary-message {
-        margin-bottom: 20px;
+        margin-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        grid-gap: 20px;
       }
       .summary-container {
         margin-bottom: 20px;
@@ -2165,6 +2202,12 @@
         .summary-date {
           margin-bottom: 0px;
         }
+      }
+      .content-container {
+        border-top: 1px solid #fcd800;
+        padding-top: 20px;
+        gap: 8px;
+        grid-gap: 8px;
       }
     }
   }
@@ -2282,6 +2325,7 @@
               letter-spacing: 0.02em;
               margin-bottom: 0px;
               padding-left: 33px;
+              color: $grey;
             }
           }
           .list-group {
@@ -2292,7 +2336,7 @@
               margin-bottom: 6px;
             }
           }
-          .required-docs {
+          .required-docs, .fees {
             li {
               position: relative;
               padding-left: 52px;
@@ -2300,7 +2344,7 @@
                 content: "";
                 height: 3px;
                 width: 3px;
-                background-color: $black;
+                background-color: $grey;
                 border-radius: 5px;
                 position: absolute;
                 left: 40px;
