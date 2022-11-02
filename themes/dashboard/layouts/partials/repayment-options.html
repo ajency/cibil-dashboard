@@ -22,6 +22,12 @@
     </div>
 </div>
 
-{{ partial "clear-dues-popup" . }}
+{{range $index, $options:= .repaymentOptions}}
+    {{range .}} 
+    {{$bankName := .Lender}} 
+    {{$logoURL := .logo }}
+    {{ partial "clear-dues-popup" (dict "indexNo" $index "dataMap" $options "bankName" $bankName "logo" $logoURL ) }}
+    {{end}}
+{{end}}
 
 {{partial "thank-you-popup" (dict "heading" "Thank you for your interest" "message" "Your request has been forwarded to the financial institution and they will get in touch with you shortly.")}}

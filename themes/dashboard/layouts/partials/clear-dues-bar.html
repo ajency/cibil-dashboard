@@ -23,7 +23,7 @@
                 <span class="black">Would you like to settle this debt ?</span>
             </span>
         </p>
-        <a class="cibil-button toggle-popup" data-target="repayment-popup">CLEAR YOUR DUES</a>
+        <a class="cibil-button" data-toggle="modal" data-target="{{if .targetPopup}}#{{.targetPopup}}{{end}}">CLEAR YOUR DUES</a>
     </div>
     {{end}}
 </div>

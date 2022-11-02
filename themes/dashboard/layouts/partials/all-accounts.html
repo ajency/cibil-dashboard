@@ -30,8 +30,14 @@
                         {{ if or .dues .under_dispute }} 
                             {{ $dues := .dues }}
                             {{ $underDispute := .under_dispute }}
-                            {{ partial "clear-dues-bar" (dict "under_dispute" $underDispute "clear_dues" $dues ) }}
+                            {{ $targetPopup := print "clearDuesPopup-open-" $index }}
+                            {{ partial "clear-dues-bar" (dict "under_dispute" $underDispute "clear_dues" $dues "targetPopup" $targetPopup ) }}
                         {{ end }}
+
+                        {{ if eq .dues true}}
+                            {{ $targetPopupSuffix := print "open-" $index }}
+                            {{ partial "clear-dues-popup" (dict "indexNo" $targetPopupSuffix "dataMap" $accountsElement "pageRef" "allAccount" "bankName" .member_name "logo" .logo ) }}
+                        {{end}}
                         
                             <div class="card-body__wraper">
                                 {{if .tabs}}
@@ -122,7 +128,18 @@
             
                 <div id="collapse-{{$closedIndex}}" class="collapse account-collapse {{if eq .collapsed true }}show{{end}}" aria-labelledby="heading-{{$closedIndex}}" data-parent="#accountsAccordion2">
                     <div class="card-body">
-                    {{ partial "clear-dues-bar" (dict "under_dispute" true "clear_dues" true ) }}
+
+                        {{ if or .dues .under_dispute }} 
+                            {{ $dues := .dues }}
+                            {{ $underDispute := .under_dispute }}
+                            {{ $targetPopup := print "clearDuesPopup-closed-" $closedIndex }}
+                            {{ partial "clear-dues-bar" (dict "under_dispute" $underDispute "clear_dues" $dues "targetPopup" $targetPopup ) }}
+                        {{ end }}
+
+                        {{ if eq .dues true}}
+                            {{ $targetPopupSuffix := print "closed-" $closedIndex }}
+                            {{ partial "clear-dues-popup" (dict "indexNo" $targetPopupSuffix "dataMap" $accountsElement "pageRef" "allAccount" "bankName" .member_name "logo" .logo ) }}
+                        {{end}}
                     
                         <div class="card-body__wraper">
                             {{if .tabs}}
@@ -189,3 +206,5 @@
     </div>
     {{end}}
 {{end}}
+
+{{partial "thank-you-popup" (dict "heading" "Thank you for your interest" "message" "Your request has been forwarded to the financial institution and they will get in touch with you shortly.")}}

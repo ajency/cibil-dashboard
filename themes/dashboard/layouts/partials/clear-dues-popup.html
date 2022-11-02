@@ -1,5 +1,4 @@
-{{range $index, $options:= .repaymentOptions}}
-<div class="modal clearDuesPopup" id="clearDuesPopup-{{$index}}" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal clearDuesPopup" id="clearDuesPopup-{{.indexNo}}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="no-title modal-header">
@@ -10,8 +9,15 @@
         <div class="modal-body">
             <div class="info">
                 <div class="company-container">
-                    {{range .}}{{if .logo}}<img src="{{ .logo | relURL }}" class="company-logo">{{end}}{{end}}
-                    <p class="company-name">{{range .}} {{.Lender}} {{end}}</p>
+                    {{if .pageRef}}
+                        {{if eq .pageRef "allAccount"}}
+                            <img src="{{ .logo | relURL }}" class="company-logo">
+                            <p class="company-name">{{.bankName}}</p>
+                        {{end}}
+                    {{else}}
+                    {{range .dataMap}}{{if .logo}}<img src="{{ .logo | relURL }}" class="company-logo">{{end}}{{end}}
+                    <p class="company-name">{{range .dataMap}}{{if .Lender}} {{.Lender}} {{end}} {{end}}</p>
+                    {{end}}
                 </div>
             </div>
 
@@ -62,4 +68,3 @@
       </div>
     </div>
   </div>
-{{end}}
