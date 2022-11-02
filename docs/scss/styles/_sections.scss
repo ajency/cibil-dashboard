@@ -1832,8 +1832,11 @@
 .clear-dues-bar {
   display: block;
   width: 100%;
-  padding: 20px 30px 20px 52px;
+  padding: 20px 30px 20px 50px;
   background: #fff7c9;
+  b{
+    font-weight: $intro-regular;
+  }
   .bar-content {
     display: flex;
     justify-content: space-between;
@@ -1873,6 +1876,21 @@
       min-width: 262px;
     }
   }
+  .under-dispute {
+    .under-dispute-text {
+      margin-bottom: 0px;
+      display: flex;
+      gap: 10px;
+      grid-gap: 10px;
+      align-items: flex-start;
+      .text-row{
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .horizontal-seperator{
+    border-color: #C8BA6D;
+  }
   @include media-breakpoint-down(sm) {
     padding: 20px;
 
@@ -1880,6 +1898,7 @@
       flex-direction: column;
       svg {
         min-width: 20px;
+        margin-right:14px;
       }
       .clear-dues-text {
         & > span {
@@ -1888,6 +1907,19 @@
             &:first-child {
               margin-bottom: 20px;
             }
+          }
+        }
+      }
+    }
+    .under-dispute{
+      .under-dispute-text{
+        gap: 14px;
+        grid-gap: 14px;
+        .text-row{
+          display: flex;
+          flex-direction: column;
+          &:not(:last-child){
+            margin-bottom: 10px;
           }
         }
       }
