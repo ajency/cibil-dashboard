@@ -5,6 +5,6 @@ draft: false
 layout: repayment-options
 
 icon_url: "images/static-images/repayment-option-icon.svg"
-description: One stop shop to access all your credit accounts at one place and ensure you never default on your payments.
+description: Now view all your pending EMI’s and payments in one place to clear dues and ensure a credit-healthy future.
 ---
 

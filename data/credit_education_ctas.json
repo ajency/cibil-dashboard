@@ -3,12 +3,13 @@
       "summary_number": 2,
       "summary_title": "NEGATIVE STATUS",
       "summary_date": "as of 19th Apr‘22",
-      "summary_message": "This negative status factors into your CIBIL Score. Clearing your dues could help resolve this status.","summary_link_text": "Learn more",
+      "summary_message": "A negative status on your credit account can result in a low CIBIL score and difficulty in getting a loan when required.",
+      "summary_link_text": "Learn more",
       "summary_link": "#credtEducationCta",
       "summary_content": [
         {
-          "content_title": "How does this affect my score?",
-          "content_description": "Negative status will hurt your ability to get the best credit cards and the best loan terms. Too many negative items or even one severely negative item can mean that you won’t qualify for a credit card or loan at all. "
+          "content_title": "How does negative status affect your score?",
+          "content_description": "Negative status is a result of missing payments on your accounts that can impact your CIBIL score and affect your ability to get the best offers on loans and credit cards."
         }
       ],
       "related_article": [
@@ -21,7 +22,7 @@
       "related_page": [
         {
           "page_title":"score simulator",
-          "page_content":"Know how repaying your debt affects your CIBIL Score",
+          "page_content":"Check how clearing dues against accounts with negative status can impact your CIBIL score.",
           "page_link": "/cibil-dashboard/overview_free/score-simulator",
           "page_link_text": "go to score simulator",
           "page_icon": "images/static-images/score-simulator-icon.svg"
