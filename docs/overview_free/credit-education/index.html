@@ -320,7 +320,6 @@
         <div class="page-width">
 
             
-
     
         <div class="tabs-vertical-icons">
             <div class="tabs-vertical-icons__wraper">
@@ -355,7 +354,7 @@
                                 <p class="tab-title">Dashboard FAQ’s</p>
                             </button>
                         
-                            <button class="nav-link " id="latestbrblogs-tab" data-toggle="tab" data-target="#latestbrblogs" type="button" role="tab" aria-controls="latestbrblogs" aria-selected="true">
+                            <button class="nav-link " id="latest-blogs-tab" data-toggle="tab" data-target="#latest-blogs" type="button" role="tab" aria-controls="latest-blogs" aria-selected="true">
                                 <div class="tab-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.79922 8.86771L15.4317 12.036L9.79922 15.5563V8.86771ZM8.19922 16.638V7.84008C8.19952 7.66566 8.24543 7.49436 8.3324 7.34317C8.41937 7.19198 8.54437 7.06617 8.69499 6.97823C8.84561 6.89028 9.01661 6.84326 9.19102 6.84183C9.36542 6.8404 9.53717 6.88461 9.68922 6.97007L17.097 11.137C17.2482 11.222 17.3751 11.3451 17.4644 11.4937C17.5538 11.6425 17.603 11.812 17.607 11.9856C17.611 12.1591 17.5698 12.3307 17.4874 12.4835C17.4051 12.6362 17.2844 12.7649 17.1372 12.8569C17.1372 12.8569 17.1373 12.8568 17.1372 12.8569L9.72922 17.4869M9.20022 16.6405L9.30478 16.8078ZM8.19922 16.638C8.19922 16.6378 8.19922 16.6381 8.19922 16.638C8.19922 16.6384 8.19922 16.6393 8.19922 16.6397C8.19922 16.6395 8.19922 16.64 8.19922 16.6397C8.1995 16.8172 8.24699 16.9921 8.33684 17.1451C8.42729 17.2992 8.55737 17.4262 8.71358 17.513C8.86976 17.5998 9.04635 17.6431 9.22497 17.6385C9.40359 17.6339 9.57771 17.5815 9.72922 17.4869M9.79922 16.6385V16.6405H9.20022M9.79922 16.6405V16.6385ZM9.79922 16.6405L9.19922 16.6389Z" fill="#707070"/>
 <path d="M24 12C24 18.627 18.627 24 12 24C5.373 24 0 18.627 0 12C0 5.373 5.373 0 12 0C18.627 0 24 5.373 24 12ZM1.652 12C1.652 17.715 6.285 22.348 12 22.348C17.715 22.348 22.348 17.715 22.348 12C22.348 6.285 17.715 1.652 12 1.652C6.285 1.652 1.652 6.285 1.652 12Z" fill="#707070"/>
@@ -386,16 +385,20 @@
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
                         
-                            <div class="tab-pane fade show active" id="watch--learn" role="tabpanel" aria-labelledby="watch--learn-tab"><div class="ce-video-cta">
-    <div class="ce-video-cta__wraper">
-        <div class="video-cta-link cta-thumbnail" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../images/dynamic-images/video-thumbnail-1.png');" data-toggle="modal" data-target="#video-CTA-modal" data-player="download-now-video">
-            <div class="play-button"><img src="/cibil-dashboard/images/static-images/play-icon.svg" alt=""></div>
-        </div>
-        <div class="content">
-            <p class="desc">Watch this video to learn more about your CIBIL Score &amp; Report</p>
-            <a class="cibil-link cibil-link-right-icon underlined" data-toggle="modal" data-target="#video-CTA-modal">Watch Video</a>
-        </div>
-    </div>
+                            <div class="tab-pane fade show active" id="watch--learn" role="tabpanel" aria-labelledby="watch--learn-tab"><div class="ce-video-ctas">
+  <div class="ce-grid ce-video-ctas__wraper">
+    <div class="ce-video-cta">
+      <div class="ce-video-cta__wraper">
+          <div class="video-cta-link cta-thumbnail" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../images/dynamic-images/video-thumbnail-1.png');" data-toggle="modal" data-target="#video-CTA-modal" data-player="download-now-video">
+              <div class="play-button"><img src="/cibil-dashboard/images/static-images/play-icon.svg" alt=""></div>
+          </div>
+          <div class="content">
+              <p class="desc">Watch this video to learn more about your CIBIL Score &amp; Report</p>
+              <a class="cibil-link cibil-link-right-icon underlined" data-toggle="modal" data-target="#video-CTA-modal">Watch Video</a>
+          </div>
+      </div>
+  </div>
+  </div>
 </div>
   
   <div class="modal fade" id="video-CTA-modal" tabindex="-1" role="dialog" aria-labelledby="video-CTA-modal-title" aria-hidden="true">
@@ -438,7 +441,7 @@
                             <div class="tab-pane fade " id="credit-basics" role="tabpanel" aria-labelledby="credit-basics-tab"></div>
                         
                             <div class="tab-pane fade " id="dashboard-faqs" role="tabpanel" aria-labelledby="dashboard-faqs-tab"><div class="ce-cards">
-    <div class="ce-cards__wraper">
+    <div class="ce-grid ce-cards__wraper">
         <div class="ce-card">
             <div class="ce-card__wraper">
                 <div class="head">
@@ -453,11 +456,52 @@
     </div>
 </div></div>
                         
-                            <div class="tab-pane fade " id="latestbrblogs" role="tabpanel" aria-labelledby="latestbrblogs-tab"></div>
+                            <div class="tab-pane fade " id="latest-blogs" role="tabpanel" aria-labelledby="latest-blogs-tab"><div class="ce-blog-cards">
+    <div class="ce-grid ce-blog-cards__wraper">
+        <div class="ce-blog-card">
+            <div class="ce-blog-card__wraper">
+                <img src="/cibil-dashboard/images/dynamic-images/blog-1.png" alt="" class="thumbnail">
+                <div class="content">
+                    <p class="category highlighted-primary">Watch And Learn</p>
+                    <p class="title">Understanding the key features of your CIBIL Report </p>
+                    <a href="#" class="cibil-link cibil-link-right-icon">Read Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
                         
-                            <div class="tab-pane fade " id="legal-information" role="tabpanel" aria-labelledby="legal-information-tab"></div>
+                            <div class="tab-pane fade " id="legal-information" role="tabpanel" aria-labelledby="legal-information-tab"><div class="ce-cards">
+    <div class="ce-grid ce-cards__wraper">
+        <div class="ce-card">
+            <div class="ce-card__wraper">
+                <div class="head">
+                    <img src="/cibil-dashboard/images/static-images/faq-icon-1.svg" alt="" class="icon">
+                </div>
+                <div class="content">
+                    <p class="title body-medium">What is CIBIL Score and how to improve it?</p>
+                    <p class="body">Basics about what CIBIL Score is and how you can improve it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
                         
-                            <div class="tab-pane fade " id="consumer-awareness" role="tabpanel" aria-labelledby="consumer-awareness-tab"></div>
+                            <div class="tab-pane fade " id="consumer-awareness" role="tabpanel" aria-labelledby="consumer-awareness-tab"><div class="ce-cards">
+    <div class="ce-grid ce-cards__wraper">
+        <div class="ce-card">
+            <div class="ce-card__wraper">
+                <div class="head">
+                    <img src="/cibil-dashboard/images/static-images/faq-icon-1.svg" alt="" class="icon">
+                </div>
+                <div class="content">
+                    <p class="title body-medium">What is CIBIL Score and how to improve it?</p>
+                    <p class="body">Basics about what CIBIL Score is and how you can improve it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
                         
                     </div>
                 

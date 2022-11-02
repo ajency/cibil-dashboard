@@ -192,8 +192,8 @@ if (hash) {
     $tabsParent.find(".report-nav-item button").removeClass("active");
     $('.report-nav-item button[data-target="#' + hash + '"]').addClass("active");
 
-    $panelParent.find(".tab-pane").removeClass("active");
-    $('.tab-pane[id="' + hash + '"]').addClass("active");
+    $panelParent.find(".tab-pane").removeClass("active show");
+    $('.tab-pane[id="' + hash + '"]').addClass("active show");
 
     $panelParent.find(".tab-panel").removeClass("active");
     $('.tab-panel[id="' + hash + '"]').addClass("active");

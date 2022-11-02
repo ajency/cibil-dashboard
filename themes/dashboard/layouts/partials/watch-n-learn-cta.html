@@ -1,13 +1,17 @@
-<div class="ce-video-cta">
-    <div class="ce-video-cta__wraper">
-        <div class="video-cta-link cta-thumbnail" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../..{{.cta_bg_image}}');" data-toggle="modal" data-target="#{{.popup_id}}" data-player="{{.video_id}}">
-            <div class="play-button"><img src="{{ "/images/static-images/play-icon.svg" | relURL }}" alt=""></div>
-        </div>
-        <div class="content">
-            <p class="desc">{{.content}}</p>
-            <a class="cibil-link cibil-link-right-icon underlined" data-toggle="modal" data-target="#{{.popup_id}}">Watch Video</a>
-        </div>
-    </div>
+<div class="ce-video-ctas">
+  <div class="ce-grid ce-video-ctas__wraper">
+    <div class="ce-video-cta">
+      <div class="ce-video-cta__wraper">
+          <div class="video-cta-link cta-thumbnail" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../..{{.cta_bg_image}}');" data-toggle="modal" data-target="#{{.popup_id}}" data-player="{{.video_id}}">
+              <div class="play-button"><img src="{{ "/images/static-images/play-icon.svg" | relURL }}" alt=""></div>
+          </div>
+          <div class="content">
+              <p class="desc">{{.content}}</p>
+              <a class="cibil-link cibil-link-right-icon underlined" data-toggle="modal" data-target="#{{.popup_id}}">Watch Video</a>
+          </div>
+      </div>
+  </div>
+  </div>
 </div>
   <!-- Video CTA Modal -->
   <div class="modal fade" id="{{.popup_id}}" tabindex="-1" role="dialog" aria-labelledby="{{.popup_id}}-title" aria-hidden="true">

@@ -2750,8 +2750,8 @@
               }
             }
           }
-          &.tabs-wide{
-            .nav-link{
+          &.tabs-wide {
+            .nav-link {
               min-width: auto;
               width: 100%;
             }
@@ -2802,9 +2802,9 @@
               }
             }
           }
-          &.tabs-wide{
+          &.tabs-wide {
             overflow: hidden;
-            .nav-link{
+            .nav-link {
               min-width: auto;
               width: 100%;
             }
@@ -3550,15 +3550,15 @@ b.plus-icon {
       grid-gap: 22px;
     }
   }
-  @include media-breakpoint-down(sm){
-    .benefits{
+  @include media-breakpoint-down(sm) {
+    .benefits {
       .benefit {
         padding: 20px;
         border-radius: 8px;
         &__wraper {
           display: flex;
           justify-content: space-between;
-          .body{
+          .body {
             width: calc(100% - 61px);
           }
         }
@@ -3571,39 +3571,39 @@ b.plus-icon {
 }
 
 // terms
-.terms{
+.terms {
   margin-bottom: 60px;
-  &__wraper{
-    background: #FFFFFF;
-    border: 1px solid #DDE0EF;
+  &__wraper {
+    background: #ffffff;
+    border: 1px solid #dde0ef;
     border-radius: 6px;
     padding: 20px;
-    p{
+    p {
       margin-bottom: 10px;
-      &:last-child{
+      &:last-child {
         margin-bottom: 0px;
       }
     }
-    .hairline{
+    .hairline {
       color: $grey;
-      b{
+      b {
         @include hairline-bold;
       }
     }
   }
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     margin-bottom: 40px;
-    &__wraper{
-      p{
+    &__wraper {
+      p {
         margin-bottom: 16px;
-        &:last-child{
+        &:last-child {
           margin-bottom: 0px;
         }
       }
-      .hairline-bold{
+      .hairline-bold {
         margin-bottom: 20px;
       }
-      .hairline{
+      .hairline {
         color: $black;
       }
     }
@@ -3611,9 +3611,21 @@ b.plus-icon {
 }
 
 // credit-education-ctas
-.credit-education-ctas{
+.credit-education-ctas {
   margin-bottom: 40px;
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     margin-bottom: 40px;
+  }
+}
+
+.credit-education {
+  .tabs-vertical-icons {
+    &__wraper {
+      .tab-content {
+        .tab-pane {
+          padding: 20px;
+        }
+      }
+    }
   }
 }

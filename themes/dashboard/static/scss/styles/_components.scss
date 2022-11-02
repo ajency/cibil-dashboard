@@ -2591,6 +2591,12 @@
   }
 }
 
+//credit education grid
+.ce-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
 //credit-education-video-cta
 .ce-video-cta {
   max-width: 320px;
@@ -2621,43 +2627,65 @@
 }
 
 //credit-education-dashboard-faqs
-.ce-cards {
+.ce-card {
+  background: #f9f9f9;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  padding: 20px;
   &__wraper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    .ce-card {
+    p {
+      margin-bottom: 0px;
+    }
+    .title {
+      margin-bottom: 10px;
+    }
+    .head {
+      margin-bottom: 20px;
+      position: relative;
+      &:before {
+        content: "";
+        width: 30.19px;
+        height: 30px;
+        background-image: url(../images/static-images/right-arrow-boxed.svg);
+        position: absolute;
+        right: 8px;
+        top: 10px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .icon {
+        width: 53.34px;
+        height: 53px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+//credit-education-blogs
+.ce-blog-card {
+  &__wraper {
+    .thumbnail {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+    }
+    .content {
       background: #f9f9f9;
-      border: 1px solid #dddddd;
-      border-radius: 4px;
       padding: 20px;
-      &__wraper {
-        p {
-          margin-bottom: 0px;
-        }
-        .title {
-          margin-bottom: 10px;
-        }
-        .head {
-          margin-bottom: 20px;
-          position: relative;
-          &:before {
-            content: "";
-            width: 30.19px;
-            height: 30px;
-            background-image: url(../images/static-images/right-arrow-boxed.svg);
-            position: absolute;
-            right: 8px;
-            top: 10px;
-            background-size: contain;
-            background-repeat: no-repeat;
-          }
-          .icon {
-            width: 53.34px;
-            height: 53px;
-            object-fit: contain;
-          }
-        }
+      .category {
+        font-weight: $intro-regular;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .title {
+        font-weight: $intro-bold;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: $dark;
+        margin-bottom: 25px;
       }
     }
   }
