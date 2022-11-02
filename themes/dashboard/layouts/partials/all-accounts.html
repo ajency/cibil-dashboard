@@ -26,7 +26,12 @@
                 
                     <div id="collapse{{$index}}" class="collapse account-collapse {{if eq .collapsed true }}show{{end}}" aria-labelledby="heading{{$index}}" data-parent="#accountsAccordion1">
                         <div class="card-body">
-                        {{ partial "clear-dues-bar" (dict "under_dispute" true "clear_dues" true ) }}
+
+                        {{ if or .dues .under_dispute }} 
+                            {{ $dues := .dues }}
+                            {{ $underDispute := .under_dispute }}
+                            {{ partial "clear-dues-bar" (dict "under_dispute" $underDispute "clear_dues" $dues ) }}
+                        {{ end }}
                         
                             <div class="card-body__wraper">
                                 {{if .tabs}}

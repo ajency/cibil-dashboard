@@ -87,6 +87,7 @@
             "account_type": "Consumer Loan",
             "account_number": "0000036115055594465",
             "ownership": "Individual",
+            "under_dispute": true,
             "dues": true,
             "tabs": [
               {
@@ -147,7 +148,8 @@
             "account_type": "Home Loan",
             "account_number": "0937948700028378900",
             "ownership": "Joint",
-            "dues": true,
+            "under_dispute": true,
+            "dues": false,
             "tabs": [
               {
                 "account_details": [
@@ -207,6 +209,7 @@
             "account_type": "Personal Loan",
             "account_number": "0009476839012001234",
             "ownership": "Individual",
+            "under_dispute": false,
             "dues": true,
             "tabs": [
               {
@@ -269,6 +272,7 @@
             "account_type": "Consumer Loan",
             "account_number": "0000036115055594465",
             "ownership": "Individual",
+            "under_dispute": true,
             "dues": true,
             "tabs": [
               {
@@ -329,6 +333,7 @@
             "account_type": "Consumer Loan",
             "account_number": "0000036115055594465",
             "ownership": "Individual",
+            "under_dispute": true,
             "dues": true,
             "tabs": [
               {
@@ -389,6 +394,7 @@
             "account_type": "Consumer Loan",
             "account_number": "0000036115055594465",
             "ownership": "Individual",
+            "under_dispute": true,
             "dues": true,
             "tabs": [
               {
