@@ -1908,7 +1908,7 @@
         padding-bottom: 4px;
       }
       .modal-body {
-        padding-top: 0px;
+        padding-top: 50px;
         table {
           width: 100%;
           letter-spacing: 0.02em;
@@ -2640,12 +2640,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  @include media-breakpoint-down(sm){
+    grid-template-columns:1fr 1fr;
+  }
+  @include media-breakpoint-down(xs){
+    grid-template-columns:1fr;
+  }
+}
+// all cards
+.ce-video-cta, .ce-card, .ce-blog-card{
+  border-radius: 4px;
+  overflow: hidden;
+  background: #F9F9F9;
+  border: 1px solid #dddddd;
 }
 //credit-education-video-cta
 .ce-video-cta {
-  max-width: 320px;
-  border-radius: 2px;
-  overflow: hidden;
   &__wraper {
     .cta-thumbnail {
       height: 133px;
@@ -2655,33 +2665,31 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
     }
     .content {
-      background: #f9f9f9;
       padding: 20px;
       .desc {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 24px;
-        letter-spacing: 0.02em;
+        @include body-medium;
         margin-bottom: 20px;
       }
     }
+  }
+  @include media-breakpoint-down(sm){
+    background: #F9F9F9;
+    border: 1px solid #DDDDDD;
   }
 }
 
 //credit-education-dashboard-faqs
 .ce-card {
-  background: #f9f9f9;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
   padding: 20px;
   &__wraper {
     p {
       margin-bottom: 0px;
     }
     .title {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .head {
       margin-bottom: 20px;
@@ -2692,10 +2700,11 @@
         height: 30px;
         background-image: url(../images/static-images/right-arrow-boxed.svg);
         position: absolute;
-        right: 8px;
-        top: 10px;
+        right: 0px;
+        top: 0px;
         background-size: contain;
         background-repeat: no-repeat;
+        cursor: pointer;
       }
       .icon {
         width: 53.34px;
@@ -2703,6 +2712,10 @@
         object-fit: contain;
       }
     }
+  }
+  @include media-breakpoint-down(sm){
+    background: #FFFFFF;
+    border: 1px solid #EDEDED;
   }
 }
 //credit-education-blogs
@@ -2714,22 +2727,9 @@
       object-fit: cover;
     }
     .content {
-      background: #f9f9f9;
       padding: 20px;
-      .category {
-        font-weight: $intro-regular;
-        font-size: 14px;
-        line-height: 24px;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-      }
       .title {
-        font-weight: $intro-bold;
-        font-size: 14px;
-        line-height: 24px;
-        letter-spacing: 0.02em;
-        color: $dark;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
       }
     }
   }

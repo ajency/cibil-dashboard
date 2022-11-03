@@ -185,6 +185,7 @@ $(".account-collapse").on("hide.bs.collapse", function () {
 var hash = location.hash.replace(/^#/, '').split('_')[0];
 $tabsParent =  $(".nav-tabs");
 $panelParent = $(".tab-content");
+$optionsParent = $(".custom-select-options");
 if (hash) {
     $tabsParent.find(".nav-link ").removeClass("active");
     $('.nav-link[data-target="#' + hash + '"]').addClass("active");
@@ -198,6 +199,8 @@ if (hash) {
     $panelParent.find(".tab-panel").removeClass("active");
     $('.tab-panel[id="' + hash + '"]').addClass("active");
     //checkAccountVisibility();
+
+    targetOption("#"+hash, $optionsParent);
 }
 
 //tooltip funciton
@@ -440,4 +443,65 @@ $('.repayment-slider').slick({
 
 $('.thankYouBtn').click(function(){
   $(this).parents('.modal').modal('toggle');
+});
+
+// animated tabs
+function selectTab(element){
+  let mainParent = $(element).parents('.tabs-vertical-icons');
+
+  $(element).siblings().removeClass("selected")
+  $(element).addClass('selected')
+  $(element).parents('.custom-select-input').find('.custom-select-value').html($(element).html())
+
+  $(mainParent).find('.tab-pane').removeClass('show active');
+  $($(element).data('target')).addClass('show active');
+
+  $(mainParent).find('.nav-link').removeClass('active');
+  $(mainParent).find('.nav-link[data-target="'+$(element).data('target')+'"]').addClass('active');
+
+  if($(mainParent).hasClass('animated-tabs')){
+    let currentTabParent = $(mainParent).find('.nav-tabs');
+    animateTabs(currentTabParent);
+  }
+}
+function selectOption(element){
+  $(element).toggleClass('opened')
+  $(element).find('.custom-select-options').toggle('fast');
+}
+function animateTabs(element){
+  let activeTab = $(element).find('.nav-link.active');
+  let activeTabPosition = $(activeTab).position().left;
+  let activeTabWidth = $(activeTab).outerWidth();
+  $(element).addClass('animated-tab');
+  $('head').append('<style>.animated-tab:before{left:'+ activeTabPosition +'px !important;width:'+ activeTabWidth +'px !important;}</style>');
+}
+let tabsParent = $('.animated-tabs').find('.nav-tabs');
+$(tabsParent).each(function(){
+  animateTabs(this);
+  $('button[data-toggle="tab"]').on('shown.bs.tab', function (event) {
+    let currentTab = event.target; // newly activated tab
+    let currentTabParent = $(currentTab).parents('.animated-tabs').find('.nav-tabs');
+    animateTabs(currentTabParent);
+  });
+});
+
+function targetOption(targetTab, optionsList){
+  $(optionsList).find('span').removeClass("selected");
+  $(optionsList).find('span[data-target="'+ targetTab +'"]').addClass("selected");
+
+  let optionHTML = $('.selected');
+  
+  $(optionsList).parents('.custom-select-input').find('.custom-select-value').html(optionHTML.html());
+}
+
+let dropdownTabs = $('.hasDropdown').find('.nav-tabs');
+$(dropdownTabs).each(function(){
+  $('button[data-toggle="tab"]').on('shown.bs.tab', function (event) {
+    let currentTab = event.target; // newly activated tab
+    let currentTabParent = $(currentTab).parents('.hasDropdown');
+    let targetTab = $(currentTab).data('target');
+
+    let optionsList = $(currentTabParent).find('.custom-select-options');
+    targetOption(targetTab, optionsList);
+  })
 });

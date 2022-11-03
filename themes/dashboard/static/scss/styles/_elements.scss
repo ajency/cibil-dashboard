@@ -190,7 +190,7 @@
   &.inherit-font {
     font-size: inherit;
   }
-  &.underlined{
+  &.underlined {
     text-decoration: underline !important;
   }
 
@@ -1011,7 +1011,7 @@ input[type="number"] {
     .cibil-button {
       width: 100%;
     }
-    .checkbox-wraper{
+    .checkbox-wraper {
       margin-top: 10px;
       margin-bottom: 0px;
     }
@@ -1164,8 +1164,77 @@ input[type="number"] {
 }
 
 // highlight
-.highlighted{
-  &-primary{
+.highlighted {
+  &-primary {
     color: $primary-blue;
+  }
+}
+
+// custom select group
+.custom-select-group {
+  .custom-select-input {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f1f6ff;
+    .custom-select-value {
+      background: #f1f6ff;
+      padding: 20px;
+      position: relative;
+      display: flex;
+      gap: 10px;
+      grid-gap: 10px;
+      @include body-bold;
+      cursor: pointer;
+      transition: padding 0.2s ease-in-out;
+      svg {
+        path {
+          fill: $dark;
+        }
+      }
+      &:before {
+        content: "";
+        height: 16px;
+        width: 16px;
+        background-image: url(../images/static-images/arrow-filled.svg);
+        position: absolute;
+        right: 20px;
+        top: calc(31px - 8px);
+        background-repeat: no-repeat;
+        background-size: contain;
+        //transition: transform 0.2s ease-in-out;
+      }
+    }
+    .custom-select-options {
+      display: none;
+      width: 100% !important;
+      span {
+        svg {
+          path {
+            fill: $dark;
+          }
+        }
+      }
+      .select-option {
+        display: flex;
+        gap: 10px;
+        background: #f1f6ff;
+        padding: 7px 20px;
+        cursor: pointer;
+        @include body-medium;
+        transition: all 0.2 ease-in-out;
+        &:hover{
+          background-color: #CDF6FF;
+          font-weight: $intro-bold;
+        }
+      }
+    }
+    &.opened{
+      .custom-select-value{
+        padding-bottom: 13px;
+        &:before{
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
 }

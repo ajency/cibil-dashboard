@@ -1834,7 +1834,7 @@
   width: 100%;
   padding: 20px 30px 20px 50px;
   background: #fff7c9;
-  b{
+  b {
     font-weight: $intro-regular;
   }
   .bar-content {
@@ -1883,13 +1883,13 @@
       gap: 10px;
       grid-gap: 10px;
       align-items: flex-start;
-      .text-row{
+      .text-row {
         margin-bottom: 0px;
       }
     }
   }
-  .horizontal-seperator{
-    border-color: #C8BA6D;
+  .horizontal-seperator {
+    border-color: #c8ba6d;
   }
   @include media-breakpoint-down(sm) {
     padding: 20px;
@@ -1898,7 +1898,7 @@
       flex-direction: column;
       svg {
         min-width: 20px;
-        margin-right:14px;
+        margin-right: 14px;
       }
       .clear-dues-text {
         & > span {
@@ -1911,14 +1911,14 @@
         }
       }
     }
-    .under-dispute{
-      .under-dispute-text{
+    .under-dispute {
+      .under-dispute-text {
         gap: 14px;
         grid-gap: 14px;
-        .text-row{
+        .text-row {
           display: flex;
           flex-direction: column;
-          &:not(:last-child){
+          &:not(:last-child) {
             margin-bottom: 10px;
           }
         }
@@ -2764,6 +2764,31 @@
       }
     }
   }
+  &.animated-tabs {
+    .tabs-vertical-icons__wraper {
+      nav {
+        .nav-tabs {
+          position: relative;
+          &:before {
+            content: "";
+            width: 168px;
+            height: 6px;
+            background-color: $primary-blue;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 1;
+            transition: left 0.2s ease-in-out;
+          }
+          .nav-link {
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
   @include media-breakpoint-up(md) {
     &__wraper {
       nav {
@@ -2794,6 +2819,7 @@
   }
   @include media-breakpoint-down(sm) {
     padding-top: 20px;
+    padding-bottom: 40px;
     &__wraper {
       nav {
         .nav-tabs {
@@ -3656,6 +3682,22 @@ b.plus-icon {
       .tab-content {
         .tab-pane {
           padding: 20px;
+        }
+      }
+      .custom-select-group {
+        margin: 10px 0 30px;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    .tabs-vertical-icons{
+      &__wraper{
+        .tab-content{
+          border-radius: 0px;
+          border: none;
+          .tab-pane{
+            padding: 0px;
+          }
         }
       }
     }

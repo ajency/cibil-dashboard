@@ -5,6 +5,7 @@ draft: false
 layout: credit-education
 
 icon_url: "images/static-images/credit-education-icon.svg"
-description: Everything you need to learn on how to keep your credit secure & in good health.
+description: "As you set the foundation for building good credit, know it may take time, but it’s never too late to start. 
+Here are some resources to get you started."
 ---
 
