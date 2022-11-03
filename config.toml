@@ -4,3 +4,6 @@ title = 'Cibil Dashboard'
 theme = 'dashboard'
 publishDir =  'docs'
 
+[markup.goldmark.parser.attribute]
+block = true
+title = true

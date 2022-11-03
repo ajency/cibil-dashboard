@@ -2710,12 +2710,21 @@
         width: 53.34px;
         height: 53px;
         object-fit: contain;
+        background: #EDEDED;
+        border-radius: 100%;
       }
     }
   }
   @include media-breakpoint-down(sm){
     background: #FFFFFF;
     border: 1px solid #EDEDED;
+    &__wraper{
+      .head{
+        .icon{
+          background: #F6F7FC;
+        }
+      }
+    }
   }
 }
 //credit-education-blogs

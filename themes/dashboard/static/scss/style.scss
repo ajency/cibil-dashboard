@@ -142,6 +142,9 @@ $intro-book: 400;
 .h2{
   @include h2;
 }
+.h3{
+  @include h3;
+}
 * {
   outline: none !important;
   box-shadow: none;

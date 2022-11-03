@@ -183,6 +183,17 @@
         margin-bottom: -1px;
       }
     }
+    &.goback-icon{
+      padding-left: 16px;
+      &:after{
+        width: 6px;
+        height: 10px;
+        background-image: url(/cibil-dashboard/images/static-images/goback-icon.svg);
+      }
+      &:before {
+        max-width: calc(100% - 16px);
+      }
+    }
   }
   &.default-case {
     text-transform: inherit;
