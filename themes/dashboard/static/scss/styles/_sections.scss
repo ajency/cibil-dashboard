@@ -3726,13 +3726,10 @@ b.plus-icon {
         @include cibil-link;
         text-transform: inherit;
         font-size: inherit;
+        font-weight: 600;
       }
       img {
         max-width: 100%;
-      }
-      .article-images {
-        margin-top: 50px;
-        margin-bottom: 50px;
       }
       .full{
         img{
@@ -3806,6 +3803,10 @@ b.plus-icon {
           }
         }
       }
+      .article-images {
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+      }
     }
   }
   @include media-breakpoint-down(sm) {
@@ -3841,8 +3842,8 @@ b.plus-icon {
           }
         }
         .article-images {
-          margin-top: 30px;
-          margin-bottom: 30px;
+          margin-top: 30px !important;
+          margin-bottom: 30px !important;
         }
       }
     }
