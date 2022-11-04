@@ -48,7 +48,8 @@ We are unsure of the lender's criteria to evaluate our application. Is it the si
     * **Check your payment history (Days Past Due-DPD) for every loan or credit card availed-**
     The DPD indicates how many days a payment on that account is late that month. Anything other than "000" or "STD" is considered negative by the lender. Below are the types of asset classification that can appear in the DPD section:
 
-        [PENDING TABLE]
+        {{< dataTable >}}
+        {{< /dataTable >}}
 
 * On occasion you may also notice "XXX" reported for your DPD on a certain account which implies that information for these months has not been reported to CIBIL by the Banks.
     If there is a number in the DPD column, then it means that the payment is late by that many days. So for example if it is 050, then it means the payment is late by 50 days. If it is 000 then it means the payment is as per the due date, so there is no deviation or late payment.

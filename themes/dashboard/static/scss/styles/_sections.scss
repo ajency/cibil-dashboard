@@ -3713,16 +3713,16 @@ b.plus-icon {
     .article-title {
       margin-bottom: 20px;
     }
-    .bookmarks-section{
+    .bookmarks-section {
       margin-bottom: 60px;
     }
-    .related-articles{
+    .related-articles {
       margin-top: 60px;
     }
     .article-content {
       padding-top: 0px;
       padding-bottom: 0px;
-      a{
+      a {
         @include cibil-link;
         text-transform: inherit;
         font-size: inherit;
@@ -3731,8 +3731,8 @@ b.plus-icon {
       img {
         max-width: 100%;
       }
-      .full{
-        img{
+      .full {
+        img {
           width: 100%;
         }
       }
@@ -3749,11 +3749,12 @@ b.plus-icon {
         &-15 {
           margin-bottom: 15px;
         }
-        &-20{
+        &-20 {
           margin-bottom: 20px;
         }
       }
-      ul, ol {
+      ul,
+      ol {
         margin-bottom: 0px;
         li {
           position: relative;
@@ -3769,8 +3770,8 @@ b.plus-icon {
           }
         }
       }
-      ul{
-        li{
+      ul {
+        li {
           padding-left: 10px;
           position: relative;
           margin-left: 0;
@@ -3784,16 +3785,16 @@ b.plus-icon {
             left: 0px;
             top: 8px;
           }
-          ul{
+          ul {
             margin-left: 10px;
-            li{
-              &:before{
+            li {
+              &:before {
                 background-color: #fff;
                 border: 1px solid #2c2c2c;
               }
-              ul{
-                li{
-                  &:before{
+              ul {
+                li {
+                  &:before {
                     background-color: #2c2c2c;
                     border: none;
                   }
@@ -3806,6 +3807,15 @@ b.plus-icon {
       .article-images {
         margin-top: 50px !important;
         margin-bottom: 50px !important;
+      }
+      table {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+      }
+      table, td, th{
+        border: 1px solid #DDDDDD;
+        padding: 10px;
       }
     }
   }
@@ -3820,18 +3830,19 @@ b.plus-icon {
         margin-right: -20px;
         margin-bottom: 30px;
       }
-      .bookmarks-section{
+      .bookmarks-section {
         margin-bottom: 30px;
       }
-      .related-articles{
+      .related-articles {
         margin-top: 40px;
       }
       .article-content {
         padding-top: 0px;
         padding-bottom: 0px;
-        ul, ol{
-          li{
-            p{
+        ul,
+        ol {
+          li {
+            p {
               margin-bottom: 4px;
             }
           }
@@ -3856,7 +3867,7 @@ b.plus-icon {
     border: 1px solid #dddddd;
     border-radius: 6px;
     padding: 20px;
-    .body-medium{
+    .body-medium {
       margin-bottom: 15px !important;
     }
     ul {
@@ -3914,9 +3925,9 @@ b.plus-icon {
       margin-bottom: 30px;
     }
   }
-  @include media-breakpoint-down(sm){
-    &__wraper{
-      .h3{
+  @include media-breakpoint-down(sm) {
+    &__wraper {
+      .h3 {
         @include body-bold;
       }
     }
