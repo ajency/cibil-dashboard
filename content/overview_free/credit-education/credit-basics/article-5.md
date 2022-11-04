@@ -96,7 +96,7 @@ You can choose to contact the concerned lender/Credit Institution (CI) directly.
 
 As highlighted in the image below, this notification indicates that the information in certain sections of your CIBIL Report is disputed. It will be removed only once the dispute is resolved.
 
-![](../../../../images/article-images/image8.jpg)
+![](../../../../images/article-images/image8.png)
 {.article-images}
 
 **How does CIBIL ensure that the credit institution or bank resolves the dispute within 30 days?**
