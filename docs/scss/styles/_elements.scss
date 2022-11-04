@@ -116,7 +116,7 @@
   align-items: center;
   justify-content: center;
   text-decoration: underline;
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 1px !important;
   text-underline-offset: 0.1em;
   /* text-decoration: none !important; */
   /* &:before {
