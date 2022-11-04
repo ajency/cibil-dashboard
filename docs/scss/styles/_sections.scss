@@ -3722,6 +3722,11 @@ b.plus-icon {
     .article-content {
       padding-top: 0px;
       padding-bottom: 0px;
+      a{
+        @include cibil-link;
+        text-transform: inherit;
+        font-size: inherit;
+      }
       img {
         max-width: 100%;
       }
@@ -3747,16 +3752,31 @@ b.plus-icon {
         &-15 {
           margin-bottom: 15px;
         }
+        &-20{
+          margin-bottom: 20px;
+        }
       }
-      ul {
+      ul, ol {
         margin-bottom: 0px;
         li {
-          padding-left: 10px;
           position: relative;
           margin-bottom: 0px;
           &:not(:last-child) {
             margin-bottom: 20px;
           }
+          p {
+            margin-bottom: 5px;
+            &:last-child {
+              margin-bottom: 0px;
+            }
+          }
+        }
+      }
+      ul{
+        li{
+          padding-left: 10px;
+          position: relative;
+          margin-left: 0;
           &:before {
             content: "";
             height: 4px;
@@ -3767,10 +3787,21 @@ b.plus-icon {
             left: 0px;
             top: 8px;
           }
-          p {
-            margin-bottom: 5px;
-            &:last-child {
-              margin-bottom: 0px;
+          ul{
+            margin-left: 10px;
+            li{
+              &:before{
+                background-color: #fff;
+                border: 1px solid #2c2c2c;
+              }
+              ul{
+                li{
+                  &:before{
+                    background-color: #2c2c2c;
+                    border: none;
+                  }
+                }
+              }
             }
           }
         }
@@ -3797,7 +3828,7 @@ b.plus-icon {
       .article-content {
         padding-top: 0px;
         padding-bottom: 0px;
-        ul{
+        ul, ol{
           li{
             p{
               margin-bottom: 4px;
@@ -3840,7 +3871,7 @@ b.plus-icon {
           width: 4px;
           border-radius: 5px;
           position: absolute;
-          background-color: $primary-blue;
+          background-color: $primary-blue !important;
           left: 0px;
           top: 8px;
         }
@@ -3863,8 +3894,8 @@ b.plus-icon {
             margin-bottom: 16px;
           }
           &:before {
-            width: 9px;
-            height: 9px;
+            width: 9px !important;
+            height: 9px !important;
           }
         }
       }

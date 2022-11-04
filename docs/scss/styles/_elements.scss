@@ -104,6 +104,22 @@
   }
 }
 
+@mixin cibil-link {
+  cursor: pointer;
+  font-weight: $intro-bold;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $black !important;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 0.1em;
+}
+
 .cibil-link {
   cursor: pointer;
   font-weight: $intro-bold;
