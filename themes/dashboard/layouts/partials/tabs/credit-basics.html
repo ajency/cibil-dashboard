@@ -1,1 +1,12 @@
 {{ partial "ce-cards" }}
+
+{{ range .Site.Sections}}
+<li>{{ .Title }}
+    <ul>
+        {{ range .Site.Pages }}
+        <li><a href="{{ .RelPermalink}}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+</li>
+{{ end }}
+

@@ -1,7 +1,7 @@
 ---
 title: "Credit Education"
-date: 2022-11-01T10:44:40+05:30
-draft: false
+date: 2022-11-04T02:44:34+05:30
+
 layout: credit-education
 
 icon_url: "images/static-images/credit-education-icon.svg"

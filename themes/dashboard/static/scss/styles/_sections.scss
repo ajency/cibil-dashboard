@@ -3713,9 +3713,15 @@ b.plus-icon {
     .article-title {
       margin-bottom: 20px;
     }
+    .bookmarks-section{
+      margin-bottom: 60px;
+    }
+    .related-articles{
+      margin-top: 60px;
+    }
     .article-content {
-      padding-top: 60px;
-      padding-bottom: 60px;
+      padding-top: 0px;
+      padding-bottom: 0px;
       img {
         max-width: 100%;
       }
@@ -3782,9 +3788,15 @@ b.plus-icon {
         margin-right: -20px;
         margin-bottom: 30px;
       }
+      .bookmarks-section{
+        margin-bottom: 30px;
+      }
+      .related-articles{
+        margin-top: 40px;
+      }
       .article-content {
-        padding-top: 30px;
-        padding-bottom: 40px;
+        padding-top: 0px;
+        padding-bottom: 0px;
         ul{
           li{
             p{

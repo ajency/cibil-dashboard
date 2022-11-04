@@ -1,0 +1,8 @@
+{{- $title := .Get "title" -}}
+<!-- Related articles -->
+<div class="related-articles">
+    <div class="related-articles__wraper">
+        <p class="h3">Other articles related to {{$title}}</p>
+        {{.Inner}}
+    </div>
+</div>

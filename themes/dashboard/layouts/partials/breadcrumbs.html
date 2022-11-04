@@ -20,7 +20,7 @@
                     <li class="breadcrumb-item">
                         <a href="{{ $.Scratch.Get `url` }}">
                         {{- range first 1 (split . "_") -}}
-                            {{.}}
+                            {{ humanize . }}
                         {{- end -}}
                         </a>
                     </li>

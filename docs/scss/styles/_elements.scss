@@ -183,9 +183,9 @@
         margin-bottom: -1px;
       }
     }
-    &.goback-icon{
+    &.goback-icon {
       padding-left: 16px;
-      &:after{
+      &:after {
         width: 6px;
         height: 10px;
         background-image: url(/cibil-dashboard/images/static-images/goback-icon.svg);
@@ -1233,19 +1233,36 @@ input[type="number"] {
         cursor: pointer;
         @include body-medium;
         transition: all 0.2 ease-in-out;
-        &:hover{
-          background-color: #CDF6FF;
+        &:hover {
+          background-color: #cdf6ff;
           font-weight: $intro-bold;
         }
       }
     }
-    &.opened{
-      .custom-select-value{
+    &.opened {
+      .custom-select-value {
         padding-bottom: 13px;
-        &:before{
+        &:before {
           transform: rotate(180deg);
         }
       }
     }
   }
+}
+
+//scroll to top
+.scrollToTop {
+  width: 46px;
+  height: 46px;
+  background-color: #3ea3ce;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+  display: inline-flex;
+  border-radius: 100%;
+  background-image: url(../images/static-images/scrolltop-icon.svg);
+  position: fixed;
+  right: 48px;
+  bottom: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
 }

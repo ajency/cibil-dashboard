@@ -505,3 +505,20 @@ $(dropdownTabs).each(function(){
     targetOption(targetTab, optionsList);
   })
 });
+
+
+//scroll to top
+var scrollToTop = $('.scrollToTop');
+
+$(window).scroll(function() {
+if ($(window).scrollTop() > 300) {
+    scrollToTop.fadeIn('medium');
+} else {
+    scrollToTop.fadeOut('medium');
+}
+});
+
+scrollToTop.on('click', function(e) {
+e.preventDefault();
+$('html, body').animate({scrollTop:0}, '300');
+});
