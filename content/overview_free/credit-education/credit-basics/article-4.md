@@ -6,8 +6,7 @@ layout: article
 ---
 
 {{< jumpBookmark >}}
-  {{< bookmark href="#bookmark1" title="What is CIBIL Score and what factors affect my CIBIL Score?" >}}
-  {{< bookmark href="#bookmark2" title="How can I improve my CIBIL Score?" >}}
+  {{< bookmark href="#bookmark1" title="How can you avoid getting into a debt trap?" >}}
 {{< /jumpBookmark >}}
 
 The easiest way to make your loan search (and application) simpler and faster is to maintain a high CIBIL Score. Learn about the most common debt traps, and how to steer clear of it so that it does not affect your credit health negatively.
@@ -21,6 +20,7 @@ The easiest way to make your loan search (and application) simpler and faster is
   {.mb-20}
 
 **How can you avoid getting into a debt trap?**
+{#bookmark1}
 
 Today most of the urban population uses a Credit Card. It is a brilliant way to manage your money provided you pay your credit card bill on time. Since you are buying more credit period, this means your savings continue to earn at least minimal interest rate (if it is lying with the bank) while you continue to spend. But do take a note of the points below:
 
