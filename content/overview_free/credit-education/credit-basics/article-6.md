@@ -3,6 +3,8 @@ title: "Free CIBIL Score & Report"
 date: 2022-11-04T02:10:13+05:30
 
 layout: article
+Category: credit-basics
+icon: "images/static-images/cb-icon-6.svg"
 ---
 
 {{< jumpBookmark >}}

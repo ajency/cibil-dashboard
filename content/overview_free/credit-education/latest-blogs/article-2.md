@@ -3,6 +3,8 @@ title: "Some of the common credit mistakes to avoid"
 date: 2022-11-04T02:10:13+05:30
 
 layout: article
+Category: latest-blogs
+thumbnail: "/images/dynamic-images/blog-2.png"
 ---
 
 **Let’s dive in now into the ways by which you can get off to a good start on your credit profile.**

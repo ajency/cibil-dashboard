@@ -3,6 +3,8 @@ title: "Things to do while preparing for a loan application."
 date: 2022-11-04T02:10:13+05:30
 
 layout: article
+Category: credit-basics
+icon: "images/static-images/cb-icon-2.svg"
 ---
 
 {{< jumpBookmark >}}

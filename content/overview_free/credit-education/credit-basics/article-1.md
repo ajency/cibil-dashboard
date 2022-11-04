@@ -3,6 +3,8 @@ title: "What is CIBIL Score and how to improve it?"
 date: 2022-11-04T02:10:13+05:30
 
 layout: article
+Category: credit-basics
+icon: "images/static-images/cb-icon-1.svg"
 ---
 
 {{< jumpBookmark >}}

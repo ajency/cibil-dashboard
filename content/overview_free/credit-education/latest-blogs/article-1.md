@@ -3,6 +3,8 @@ title: "A first time users guide to establishing credit"
 date: 2022-11-04T02:10:13+05:30
 
 layout: article
+Category: latest-blogs
+thumbnail: "/images/dynamic-images/blog-1.png"
 ---
 
 **Simple steps can lead to a bright financial future**

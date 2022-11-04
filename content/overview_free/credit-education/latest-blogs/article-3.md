@@ -3,6 +3,8 @@ title: "Build a positive credit profile with good credit habits"
 date: 2022-11-04T02:10:13+05:30
 
 layout: article
+Category: latest-blogs
+thumbnail: "/images/dynamic-images/blog-1.png"
 ---
 
 **Good financial habits can help you create a positive credit profile. Here are a few key credit habits you should keep in mind when building and maintaining a positive credit profile.**

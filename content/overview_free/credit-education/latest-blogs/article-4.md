@@ -3,6 +3,8 @@ title: "All you need to know about CIBIL Score"
 date: 2022-11-04T02:10:13+05:30
 
 layout: article
+Category: latest-blogs
+thumbnail: "/images/dynamic-images/blog-1.png"
 ---
 
 **Are you aware of the CIBIL Score? Why is it important? Here’s an overview of what the CIBIL Score is, how it is calculated and why it is a key factor in our loan applications.**

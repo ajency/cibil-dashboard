@@ -3,6 +3,8 @@ title: "Taking Informed Credit Decisions Just Got Easier With the Score Simulato
 date: 2022-11-04T02:10:13+05:30
 
 layout: article
+Category: latest-blogs
+thumbnail: "/images/dynamic-images/blog-1.png"
 ---
 
 **Ever wondered how your credit actions today can impact your access to future loans and credit? Read on to know how the Score Simulator helps you take an informed credit decision.**

@@ -3,6 +3,8 @@ title: "CIBIL Alerts: Stay connected with your credit profile, always"
 date: 2022-11-04T02:10:13+05:30
 
 layout: article
+Category: latest-blogs
+thumbnail: "/images/dynamic-images/blog-1.png"
 ---
 
 *Stay updated and aware of key changes in your credit profile with CIBIL Alerts.*

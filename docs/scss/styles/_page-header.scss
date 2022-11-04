@@ -101,6 +101,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .left-panel{
+          width: 85%;
+        }
       }
     }
   }

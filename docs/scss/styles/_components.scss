@@ -2672,12 +2672,20 @@
       .desc {
         @include body-medium;
         margin-bottom: 20px;
+        min-height: 48px;
       }
     }
   }
   @include media-breakpoint-down(sm){
     background: #F9F9F9;
     border: 1px solid #DDDDDD;
+    &__wraper{
+      .content{
+        .desc{
+          min-height: auto;
+        }
+      }
+    }
   }
 }
 
@@ -2690,6 +2698,7 @@
     }
     .title {
       margin-bottom: 20px;
+      min-height: 48px;
     }
     .head {
       margin-bottom: 20px;
@@ -2719,6 +2728,9 @@
     background: #FFFFFF;
     border: 1px solid #EDEDED;
     &__wraper{
+      .title{
+        min-height: auto;
+      }
       .head{
         .icon{
           background: #F6F7FC;
@@ -2739,6 +2751,14 @@
       padding: 20px;
       .title {
         margin-bottom: 20px;
+        min-height: 48px;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    &__wraper{
+      .title{
+        min-height: auto;
       }
     }
   }

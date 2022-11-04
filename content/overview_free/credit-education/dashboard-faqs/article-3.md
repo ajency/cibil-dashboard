@@ -3,6 +3,8 @@ title: "Alerts"
 date: 2022-11-04T02:10:13+05:30
 
 layout: article
+Category: dashboard-faqs
+icon: "images/static-images/faq-icon-3.svg"
 ---
 
 {{< jumpBookmark >}}
