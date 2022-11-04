@@ -45,7 +45,7 @@ CIBIL cannot make any change directly to your CIBIL Report. Your CIBIL Report ca
 
 To initiate a dispute with us, just follow the below mentioned online dispute process. [Click here](https://www.cibil.com/self-service-portal/know-account-latest-status.action) to know more:
 
-![](../../../../images/article-images/image9.jpg)
+![](../../../../images/article-images/image9.png)
 {.article-images}
 
 **Note:** You can dispute multiple fields and information on your report in a single dispute by navigating to each section on the Online Dispute Form (i.e. Personal, Contact, Employment, Account Details and Enquiry).

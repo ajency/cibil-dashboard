@@ -1205,7 +1205,7 @@ input[type="number"] {
     background: #f1f6ff;
     .custom-select-value {
       background: #f1f6ff;
-      padding: 20px;
+      padding: 20px 16px;
       position: relative;
       display: flex;
       gap: 10px;
@@ -1245,7 +1245,7 @@ input[type="number"] {
         display: flex;
         gap: 10px;
         background: #f1f6ff;
-        padding: 7px 20px;
+        padding: 15px 16px;
         cursor: pointer;
         @include body-medium;
         transition: all 0.2 ease-in-out;
@@ -1256,8 +1256,9 @@ input[type="number"] {
       }
     }
     &.opened {
+      padding-bottom: 5px;
       .custom-select-value {
-        padding-bottom: 13px;
+        padding-bottom: 20px;
         &:before {
           transform: rotate(180deg);
         }

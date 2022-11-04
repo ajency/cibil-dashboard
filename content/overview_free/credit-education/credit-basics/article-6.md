@@ -32,7 +32,7 @@ You will get access to a variety of credit tools and features such as personaliz
 
 To initiate a dispute with us, just follow the below mentioned online dispute process. [Click here](/cibil-dashboard/overview_free/cibil-report/) to know more:
 
-![](../../../../images/article-images/image9.jpg)
+![](../../../../images/article-images/image9.png)
 {.article-images}
 
 **Note:** You can dispute multiple fields and information on your report in a single dispute by navigating to each section on the Online Dispute Form (i.e. Personal, Contact, Employment, Account Details and Enquiry).
