@@ -6,18 +6,21 @@ layout: article
 ---
 
 {{< jumpBookmark >}}
-  {{< bookmark href="#bookmark1" title="What is CIBIL Score and what factors affect my CIBIL Score?" >}}
-  {{< bookmark href="#bookmark2" title="How can I improve my CIBIL Score?" >}}
+  {{< bookmark href="#bookmark1" title="Your CIBIL Score" >}}
+  {{< bookmark href="#bookmark2" title="Your Credit Eligibility" >}}
 {{< /jumpBookmark >}}
 
 Applying for a loan can be a very unnerving and anxious process. You fill in lengthy forms, collect and submit various documents to multiple banks and then find yourself waiting with bated breath for loan approval while your plans for that dream home, your first car or your child's education are kept waiting.
 
-1. Your CIBIL Score
+1. **Your CIBIL Score**
+
     The first thing you should do is get your CIBIL Score and Report from Transunion CIBIL. Usually, a CIBIL Score of 750 or more puts you in contention for a loan approval but does not guarantee it. Of course, if your score is below 750, all is not lost. There are financial institutions who will lend to individuals with a low score.
+    {#bookmark1}
  
-2. Your Credit Eligibility
+2. **Your Credit Eligibility**
+
     Your credit eligibility is the second criteria reviewed by a lender. Your credit eligibility is determined using your CIBIL Score and Report and your bank statements as follows:
-    {.mb-20}
+    {.mb-20 id="bookmark2"}
 
     * **Review for payment irregularities:**
 
