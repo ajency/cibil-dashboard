@@ -37,8 +37,4 @@ Once you have established a credit footprint, make sure you follow healthy credi
   
   Building a healthy credit profile is like running a marathon. Regardless of the methods you choose, remember consistency is the key. By following a carefully planned roadmap, you can move several steps towards creating your credit footprint and becoming credit-worthy.
 
-
-
-{{< relatedArticles title="latest blogs" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="latest blogs" category="latest-blogs" cardType="blog-card" >}}

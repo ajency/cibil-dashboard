@@ -56,9 +56,4 @@ Your CIBIL Score is instrumental in getting you faster, cheaper access to credit
 * Identify and track any incorrect data reported on your CIBIL Report
 * Protect yourself against identity theft and report any possible incidents of credit fraud
 
-
-
-
-{{< relatedArticles title="FAQ's" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="FAQ's" category="dashboard-faqs" cardType="icon-card" >}}

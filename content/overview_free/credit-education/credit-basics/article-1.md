@@ -51,6 +51,4 @@ You can improve your CIBIL Score by maintaining a good credit history, which is 
     Monitor your CIBIL Score and Report regularly to avoid unpleasant surprises in the form of a rejected loan application.
 {.btag}
 
-{{< relatedArticles title="credit basics" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="credit basics" category="credit-basics" cardType="icon-card" >}}

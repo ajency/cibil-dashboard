@@ -39,7 +39,4 @@ So, stop guessing and start simulating, today.
 
  ***Disclaimer:** Your CIBIL Score is a 3-digit numeric summary of your credit report and is dependent on multiple factors, which might be unique to every individual. The impact of these factors may vary for different scenarios and might not lead to a change in CIBIL Score in case of certain simulations.*
 
-
-{{< relatedArticles title="latest blogs" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="latest blogs" category="latest-blogs" cardType="blog-card" >}}

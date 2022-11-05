@@ -25,7 +25,4 @@ So in essence, you can not only view at one place what participating bank/financ
 [See your Personalized Loan Offers](https://myscore.cibil.com/CreditView/loanOffers.page?enterprise=CIBIL)
 {#bookmark1}
 
-
-{{< relatedArticles title="FAQ's" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="FAQ's" category="dashboard-faqs" cardType="icon-card" >}}

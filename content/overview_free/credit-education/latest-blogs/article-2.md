@@ -40,8 +40,4 @@ Monitoring your CIBIL score and report not only lets you keep track of your prog
 
 *In short, getting to a healthy CIBIL score takes time. Once you’ve attained it, good behaviours such as checking your CIBIL score and report regularly, paying your bills on time, keeping your credit card balances low, and avoiding non-essential debt, helps maintain a healthy credit profile. So steer clear of the credit missteps listed above to attain and maintain the best possible CIBIL score.*
 
-
-
-{{< relatedArticles title="latest blogs" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="latest blogs" category="latest-blogs" cardType="blog-card" >}}

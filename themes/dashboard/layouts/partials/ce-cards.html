@@ -3,6 +3,7 @@
     <div class="ce-card__wraper">
         <div class="head">
             <img src="{{ .icon | relURL }}" alt="" class="icon">
+            <a href="{{.articleLink}}" class="read-more-button"></a>
         </div>
         <div class="content">
             <p class="title body-medium">{{truncate 70  .articleTitle}}</p>

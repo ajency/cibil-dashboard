@@ -28,8 +28,4 @@ Here are a few key credit habits you should keep in mind when building and maint
 
 Remember that you may not be able to develop all these overnight. Slowly, but surely work towards good credit habits and a positive credit profile and you may notice how this brings about a positive impact on other aspects of your life too.
 
-
-
-{{< relatedArticles title="latest blogs" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="latest blogs" category="latest-blogs" cardType="blog-card" >}}

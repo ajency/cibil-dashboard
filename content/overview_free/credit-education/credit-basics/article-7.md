@@ -50,7 +50,4 @@ icon: "images/static-images/cb-icon-7.svg"
 
     **FACT**- Since your savings or current account details are not a part of the CIBIL Report, a bounced cheque does not impact your credit score. However, if you have missed an EMI or credit card payment it will have an impact on your CIBIL Score.
 
-
-{{< relatedArticles title="credit basics" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="credit basics" category="credit-basics" cardType="icon-card" >}}

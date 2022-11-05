@@ -2703,8 +2703,7 @@
     .head {
       margin-bottom: 20px;
       position: relative;
-      &:before {
-        content: "";
+      .read-more-button {
         width: 30.19px;
         height: 30px;
         background-image: url(../images/static-images/right-arrow-boxed.svg);

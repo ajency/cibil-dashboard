@@ -3904,7 +3904,7 @@ b.plus-icon {
       padding: 16px;
       ul {
         li {
-          padding-left: 19px;
+          padding-left: 19px !important;
           &:not(:last-child) {
             margin-bottom: 16px !important;
           }

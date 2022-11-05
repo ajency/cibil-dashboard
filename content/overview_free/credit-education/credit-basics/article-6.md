@@ -43,7 +43,4 @@ Once the dispute is submitted, CIBIL will also mark the relevant field/ account/
 
 It may take approximately 30 days to resolve a dispute, subject to the time taken by the Credit Institution to respond.
 
-
-{{< relatedArticles title="credit basics" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="credit basics" category="credit-basics" cardType="icon-card" >}}

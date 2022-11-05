@@ -42,6 +42,4 @@ Applying for a loan can be a very unnerving and anxious process. You fill in len
 
 As you can see, you have all the tools required to figure out your credit eligibility. So, before you apply for a loan, ensure that you make these simple calculations to not only save yourself the embarrassment of being rejected but also to put yourself in a better position to bargain for a better deal.
 
-{{< relatedArticles title="credit basics" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="credit basics" category="credit-basics" cardType="icon-card" >}}

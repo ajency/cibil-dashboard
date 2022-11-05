@@ -41,6 +41,4 @@ Your CIBIL score is based on your credit history and past payments, but it subse
 
 As you look to achieve your planned financial goals or in case of an emergency, you may need access to credit. Make sure you monitor your CIBIL score and credit profile regularly to ensure you are credit-ready. Start working towards improving your score today. 
 
-{{< relatedArticles title="latest blogs" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="latest blogs" category="latest-blogs" cardType="blog-card" >}}

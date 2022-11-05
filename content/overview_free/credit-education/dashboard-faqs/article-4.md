@@ -33,7 +33,7 @@ Depending upon the Plan that you choose, you also get access to other CIBIL feat
 
 **I have purchased a CIBIL subscription plan. How do I refresh my CIBIL Score and Report?**
 
-* Go to 'Dashboard' and scroll to the 'Refresh Center' section of the dashboard. Click on the 'Refresh Now' button.
+* Click on the 'Overview' section in the menu, then click on 'Refresh Now' button on your CIBIL score card to refresh your score.
 
     ![](../../../../images/article-images/image11.png)
     {.article-images}
@@ -57,8 +57,4 @@ You will get access to various tools and features that can help you at various s
 * Apply for personalized loan and credit card offers based on your CIBIL Score
 * Raise disputes online in case you find any discrepancies or inaccuracies that reflect on your CIBIL Report
 
-
-
-{{< relatedArticles title="FAQ's" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="FAQ's" category="dashboard-faqs" cardType="icon-card" >}}

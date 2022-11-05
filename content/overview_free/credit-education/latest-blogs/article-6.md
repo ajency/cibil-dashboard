@@ -35,9 +35,4 @@ Alerts’ real-time notifications via emails and SMSs will inform you the follow
 
 Apart from this, to maintain good credit, you should regularly monitor your CIBIL Score and report. You should also ensure that credit expenses do not put you at risk of attracting penalties, and look out for signs of fraud. To build a strong credit profile, make sure you pay all your EMIs on time and in full, and have a healthy mix of credit accounts such as loans and credit cards. This makes you eligible for the best credit offers from leading lenders and may even help you access loans on affordable terms. 
 
-
-
-
-{{< relatedArticles title="latest blogs" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="latest blogs" category="latest-blogs" cardType="blog-card" >}}

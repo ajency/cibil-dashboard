@@ -53,7 +53,4 @@ Today most of the urban population uses a Credit Card. It is a brilliant way to 
 
 Also all this effects your CIBIL Score. Not only does your payment history gets affected in case of default but also your current balance increases, indicating higher debt.
 
-
-{{< relatedArticles title="credit basics" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="credit basics" category="credit-basics" cardType="icon-card" >}}

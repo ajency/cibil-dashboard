@@ -36,6 +36,4 @@ Your CIBIL Score and Report are important factors in the loan application proces
     {.article-images}
 {.btag}
 
-{{< relatedArticles title="credit basics" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="credit basics" category="credit-basics" cardType="icon-card" >}}

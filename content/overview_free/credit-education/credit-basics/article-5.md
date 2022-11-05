@@ -123,7 +123,4 @@ I have approached the lender/CI to update my account details. However I have not
 
 If you have approached the lender/CI directly to update your account in CIBIL records, the onus lies with the CI to send you an update. You may contact your credit institution to know the updated status of your account. Alternatively, you can [click here](https://www.cibil.com/self-service-portal/know-account-latest-status.action) to know the updated status of your account.
 
-
-{{< relatedArticles title="credit basics" >}}
-  {{< relatedArticle >}}
-{{< /relatedArticles >}}
+{{< relatedArticles title="credit basics" category="credit-basics" cardType="icon-card" >}}
