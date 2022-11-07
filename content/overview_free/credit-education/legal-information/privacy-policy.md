@@ -4,7 +4,7 @@ date: 2022-11-07T13:40:18+05:30
 
 layout: article
 Category: legal-info
-thumbnail: "images/static-images/legal-info-icon-2.svg"
+icon: "images/static-images/legal-info-icon-2.svg"
 ---
 The contents of this privacy policy ("Privacy Policy") along with the general terms and conditions ("General TNC") available at [http://www.transunioncibil.com/terms-and-conditions](http://www.transunioncibil.com/terms-and-conditions) are applicable to all hyperlinks under [http://www.transunioncibil.com](http://www.transunioncibil.com) (this "Website") and [http://www.cibil.com](http://www.cibil.com). You hereby acknowledge of having read and accepted the same by use or access of this Website. We reserve the right to modify this privacy policy at any time, so please review it frequently. If we make material changes to this privacy policy, we will notify the by means of a notice on our home page. By continuing to use our service after notice of changes have been published on the Website, you are consenting to the changes. The capitalized terms used herein and not defined shall have the meaning set out in the General TNC.
 

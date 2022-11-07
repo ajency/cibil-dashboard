@@ -4,7 +4,7 @@ date: 2022-11-07T14:32:54+05:30
 
 layout: article
 Category: legal-info
-thumbnail: "images/static-images/legal-info-icon-3.svg"
+icon: "images/static-images/legal-info-icon-3.svg"
 ---
 This document lays out the terms and conditions and rules, as may be amended and supplemented, from time to time, (Terms) which shall be applicable to the provision of: (i) Credit Information Reports (Individual CIRs) and Company Credit Information Report (Company CIRs) (collectively referred to as, Reports) either /or for (a) Free Annual Credit Report and Score (as mandated by the Reserve Bank of India) (b) Subscribed Product ( Unlimited Access within the subscription period) (c) Featured Offers (d) Personalized Loan Offers to either an individual, a partnership firm, a company (as defined in section 2 (20) of the Companies Act, 2013 ), a body corporate (as defined under Section 2(11) of the Companies Act, 2013), a co-operative society, a trust, an association of persons whether incorporated or not, and any other entity, and shall include their heirs, representatives, successors and assigns, as permitted and applicable, (Persons) who can apply for the CIRs and/or the Commercial CIRs, under applicable law; (ii) Featured Offers and (iii) any other products and services rendered by TransUnion CIBIL to the Persons (collectively referred to as, Products and Services) by TransUnion TransUnion CIBIL Limited ("TransUnion CIBIL") having its registered office at One World Center, 19th Floor, Tower 2A, Senapati Bapat Marg, Elphinstone Road, Mumbai - 400 013 (Transaction).
 

@@ -4,7 +4,7 @@ date: 2022-11-07T13:19:55+05:30
 
 layout: article
 Category: legal-info
-thumbnail: "images/static-images/legal-info-icon-1.svg"
+icon: "images/static-images/legal-info-icon-1.svg"
 ---
 **TransUnion Interactive, Inc. understands the confidentiality of information contained in credit reports, and we safeguard the privacy of all information you provide to us through any TransUnion Interactive website.**
 
