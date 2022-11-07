@@ -6,7 +6,6 @@ layout: article
 Category: latest-blogs
 thumbnail: "/images/dynamic-images/blog-1.png"
 ---
-
 **Are you aware of the CIBIL Score? Why is it important? Here’s an overview of what the CIBIL Score is, how it is calculated and why it is a key factor in our loan applications.**
 
 Your CIBIL score is an important factor that lenders look at while evaluating a loan application. Hence it’s important to understand how the score is calculated. While there is a proprietary algorithm that determines your CIBIL score, the most important elements of the score composition are based on an individual’s loan payment behavior.

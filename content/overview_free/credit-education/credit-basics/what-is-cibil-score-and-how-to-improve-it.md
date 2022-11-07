@@ -1,6 +1,6 @@
 ---
-title: "What is CIBIL Score and how to improve it?"
-date: 2022-11-04T02:10:13+05:30
+title: "What Is Cibil Score and How to Improve It"
+date: 2022-11-07T12:15:43+05:30
 
 layout: article
 Category: credit-basics
