@@ -276,7 +276,13 @@
           }
           .score-text {
             margin-bottom: 29px;
+            font-size: 18px;
             line-height: 18px;
+          }
+          .subtext {
+            margin-bottom: 0px;
+            margin-top: 12px;
+            color: $dark;
           }
           .simulator-links {
             background: $light;
@@ -326,8 +332,8 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            row-gap: 29px;
-            grid-row-gap: 29px;
+            row-gap: 21px;
+            grid-row-gap: 21px;
             .score-text {
               margin-bottom: 0px;
             }
@@ -398,7 +404,7 @@
         margin-bottom: 20px;
         &__wraper {
           .simulator-container {
-            padding: 30px 45px 28px;
+            padding: 30px 20px 20px;
             .username {
               margin-bottom: 20px;
             }
@@ -412,6 +418,38 @@
             .score-text {
               margin-bottom: 0px;
               font-size: 16px;
+              line-height: 16px;
+            }
+            .subtext {
+              line-height: 18px;
+              margin-top: 20px;
+              max-width: 250px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .tooltipBox {
+              background: #fff;
+              border: 1px solid #d9d9d9;
+              border-radius: 2px;
+              padding: 4px 40px;
+              margin: 12px auto 0px;
+              max-width: 100%;
+              font-size: 14px;
+              line-height: 24px;
+              position: relative;
+              &:before {
+                content: '';
+                width: 11px;
+                height: 11px;
+                background: #fff;
+                border: 1px solid #d9d9d9;
+                position: absolute;
+                top: -6px;
+                left: calc(50% - 6px);
+                transform: rotate(45deg);
+                border-bottom-color: #fff;
+                border-right-color: #fff;
+              }
             }
             .simulator-links {
               box-shadow: none;
@@ -762,6 +800,9 @@
           max-width: calc(218px + 60px);
           margin-left: auto;
           margin-right: auto;
+          .score-text{
+            margin-bottom: 16px;
+          }
         }
         hr {
           border-color: #b8c9e9;
@@ -3813,8 +3854,10 @@ b.plus-icon {
         margin-bottom: 30px;
         width: 100%;
       }
-      table, td, th{
-        border: 1px solid #DDDDDD;
+      table,
+      td,
+      th {
+        border: 1px solid #dddddd;
         padding: 10px;
       }
     }
