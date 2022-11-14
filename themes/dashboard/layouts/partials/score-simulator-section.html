@@ -76,6 +76,10 @@
                     <div class="score-display-box__wraper">
                         <div>
                             {{ partial "simulator" (dict "cibil_score" "720" "score_text" "<b>Current <strong class='highlight-text-blue'>CIBIL</strong> Score</b>" )}}
+
+                            <div style="display: none;">
+                                {{ partial "default-simulator" (dict "cibil_score" "N/A" "score_text" "<b>Current <strong class='highlight-text-blue'>CIBIL</strong> Score</b>" "showSubtext" false )}}
+                            </div>
                         </div>
                         <hr class="horizontal-seperator">
                         <div>

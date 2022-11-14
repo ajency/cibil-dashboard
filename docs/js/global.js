@@ -59,11 +59,11 @@ $(function () {
   });
 
   // animated simulator
-  $(".simulator:not(.empty-simulator) .score-bar").each(function () {
+  $(".simulator:not(.no-score-simulator) .score-bar").each(function () {
     updateScore(0);
   });
   function updateScore($initialScore) {
-    $(".simulator:not(.empty-simulator) .score-bar").each(function () {
+    $(".simulator:not(.no-score-simulator) .score-bar").each(function () {
       var $pointer = $(this).find(".score-pointer .pointer-image");
       var $val = $(this).find(".cibil-score");
 
