@@ -17,7 +17,7 @@
                     {{ if .features }}
                     <ul class="plan-features">
                         {{ range .features }}
-                        <li class="feature"><img src="{{ .icon | relURL }}" alt="" class="icon"><span>{{ .content | safeHTML }}</span></li>
+                        <li class="feature body-bold"><img src="{{ .icon | relURL }}" alt="" class="icon"><span>{{ .content | safeHTML }}</span></li>
                         {{ end }}
                     </ul>
                     {{ end }}
@@ -52,7 +52,7 @@
                     {{ if .features }}
                     <ul class="plan-features">
                         {{ range .features }}
-                        <li class="feature"><img src="{{ .icon | relURL }}" alt="" class="icon"><span>{{ .content | safeHTML }}</span></li>
+                        <li class="feature body-bold"><img src="{{ .icon | relURL }}" alt="" class="icon"><span>{{ .content | safeHTML }}</span></li>
                         {{ end }}
                     </ul>
                     {{ end }}

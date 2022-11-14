@@ -10,25 +10,25 @@
         "features":[
             {
                 "icon":"images/static-images/dashboard-icon.svg",
-                "content":"<b>Unlimited access</b> to the most recent updates in your CIBIL Score & Report"
+                "content":"Unlimited access"
             },
             {
                 "icon":"images/static-images/simulator-icon.svg",
-                "content":"<b>Score Simulator</b> to check the impact of your credit actions on your CIBIL Score"
+                "content":"Score Simulator"
             },
             {
                 "icon":"images/static-images/offers-icon.svg",
-                "content":"<b>Tailored loan</b> offers from leading lenders based on your CIBIL Score"
+                "content":"Tailored loan offers"
             }
             ,
             {
                 "icon":"images/static-images/trended-view-icon.svg",
-                "content":"<b>Trended view</b> of the changes in your CIBIL Score with every refresh"
+                "content":"Score History"
             }
             ,
             {
                 "icon":"images/static-images/where-you-stand-icon.svg",
-                "content":"<b>Where you stand</b> with the rest of self-monitoring consumers"
+                "content":"Social Score Comparision"
             }
         ]
     },
@@ -45,27 +45,29 @@
         "features":[
             {
                 "icon":"images/static-images/dashboard-icon.svg",
-                "content":"<b>Unlimited Access</b> to the most recent updates in your CIBIL Score & Report"
-            },
-            {
-                "icon":"images/static-images/alerts-icon-blue.svg",
-                "content":"<b>CIBIL Alerts</b> to stay updated and aware of key changes in your credit profile"
+                "content":"Unlimited access"
             },
             {
                 "icon":"images/static-images/simulator-icon.svg",
-                "content":"<b>Score Simulator</b> to check the impact of your credit actions on your CIBIL Score"
+                "content":"Score Simulator"
+            },
+            {
+                "icon":"images/static-images/alerts-icon-blue.svg",
+                "content":"CIBIL Alerts"
             },
             {
                 "icon":"images/static-images/offers-icon.svg",
-                "content":"<b>Tailored Loan</b> Offers from leading lenders based on your CIBIL Score"
-            },
+                "content":"Tailored loan offers"
+            }
+            ,
             {
                 "icon":"images/static-images/trended-view-icon.svg",
-                "content":"<b>Trended view</b> of the changes in your CIBIL Score with every refresh"
-            },
+                "content":"Score History"
+            }
+            ,
             {
                 "icon":"images/static-images/where-you-stand-icon.svg",
-                "content":"<b>Where you stand</b> with the rest of self-monitoring consumers"
+                "content":"Social Score Comparision"
             }
         ]
     },
@@ -82,27 +84,29 @@
         "features":[
             {
                 "icon":"images/static-images/dashboard-icon.svg",
-                "content":"<b>Unlimited Access</b> to the most recent updates in your CIBIL Score & Report"
-            },
-            {
-                "icon":"images/static-images/alerts-icon-blue.svg",
-                "content":"<b>CIBIL Alerts</b> to stay updated and aware of key changes in your credit profile"
+                "content":"Unlimited access"
             },
             {
                 "icon":"images/static-images/simulator-icon.svg",
-                "content":"<b>Score Simulator</b> to check the impact of your credit actions on your CIBIL Score"
+                "content":"Score Simulator"
+            },
+            {
+                "icon":"images/static-images/alerts-icon-blue.svg",
+                "content":"CIBIL Alerts"
             },
             {
                 "icon":"images/static-images/offers-icon.svg",
-                "content":"<b>Tailored Loan</b> Offers from leading lenders based on your CIBIL Score"
-            },
+                "content":"Tailored loan offers"
+            }
+            ,
             {
                 "icon":"images/static-images/trended-view-icon.svg",
-                "content":"<b>Trended view</b> of the changes in your CIBIL Score with every refresh"
-            },
+                "content":"Score History"
+            }
+            ,
             {
                 "icon":"images/static-images/where-you-stand-icon.svg",
-                "content":"<b>Where you stand</b> with the rest of self-monitoring consumers"
+                "content":"Social Score Comparision"
             }
         ]
     }

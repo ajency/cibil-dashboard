@@ -47,19 +47,19 @@
 
 // banner section
 .banner-section {
-  background: $gradient-blue;
-  padding-top: 18px;
-  padding-bottom: 52px;
+  background: linear-gradient(0deg, #F1F6FF -1.49%, #EDF3FE 20.77%, #D3E0F8 28.43%, #F1F6FF 100%);
+  padding-top: 30px;
+  padding-bottom:81px;
   &__wraper {
     display: flex;
-    display: flex;
-    justify-content: space-between;
-    .banner-heading {
+    justify-content: center;
+    .h3 {
       color: $dark;
       margin-bottom: 0px;
+      text-align: center;
     }
     .username {
-      margin-bottom: 4px;
+      margin-bottom: 14px;
     }
     .img-container {
       img {
@@ -70,32 +70,26 @@
   @include media-breakpoint-up(md) {
     &__wraper {
       .left-side {
-        margin-top: 37px;
-        .banner-heading {
+        .h3 {
           .highlight {
-            font-size: 32px;
-            line-height: 44px;
+            &::after{
+              bottom: 3px;
+            }
           }
         }
       }
     }
   }
   @include media-breakpoint-down(sm) {
+    background: linear-gradient(0deg, #F1F6FF 0%, #EDF3FE 12.5%, #D3E0F8 25.52%, #F1F6FF 100%);
     padding-top: 30px;
-    padding-bottom: 29px;
+    padding-bottom: 30px;
     &__wraper {
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      .left-side {
-        margin-bottom: 10px;
-      }
-      .banner-heading {
-        font-size: 16px;
-        line-height: 24px;
-        .highlight {
-          font-weight: $intro-bold;
-        }
+      .h3 {
+        @include body-bold;
         .full-width {
           display: flex;
           justify-content: center;
@@ -106,11 +100,15 @@
             margin-bottom: 6px;
           }
         }
+        .highlight{
+          &:after{
+            bottom: 3px;
+            height: 7px;
+          }
+        }
       }
       .username {
-        margin-bottom: 10px;
-        font-size: 24px;
-        line-height: 30px;
+        margin-bottom: 6px;
       }
       .img-container {
         padding-left: 42px;
@@ -123,7 +121,7 @@
 // upgrade plans section
 .upgrade-plans {
   margin-bottom: 80px;
-  margin-top: -38px;
+  margin-top: -58px;
   &__wraper {
     display: flex;
     justify-content: space-between;
@@ -133,7 +131,7 @@
     }
   }
   @include media-breakpoint-down(md) {
-    margin-top: 60px;
+    margin-top: 50px;
   }
   @include media-breakpoint-down(sm) {
     margin-bottom: 40px;

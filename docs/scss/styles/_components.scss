@@ -344,11 +344,11 @@
       margin-bottom: 0px;
       .icon {
         max-width: 28px;
-        margin-right: 25px;
+        margin-right: 22px;
         margin-top: 3px;
       }
       &:not(:last-child) {
-        margin-bottom: 34px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -485,12 +485,13 @@
       .plan-features {
         .feature {
           font-size: 14px;
+          align-items: center;
           .icon {
             margin-right: 18px;
             margin-top: 0px;
           }
           &:not(:last-child) {
-            margin-bottom: 16px;
+            margin-bottom: 22px;
           }
         }
       }
