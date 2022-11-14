@@ -47,9 +47,14 @@
 
 // banner section
 .banner-section {
-  background: linear-gradient(0deg, #F1F6FF -1.49%, #EDF3FE 20.77%, #D3E0F8 28.43%, #F1F6FF 100%);
+  background: linear-gradient(
+    0deg,
+    #f1f6ff -1.49%,
+    #d3e0f8 4.64%,
+    #f1f6ff 100%
+  );
   padding-top: 30px;
-  padding-bottom:81px;
+  padding-bottom: 81px;
   &__wraper {
     display: flex;
     justify-content: center;
@@ -72,7 +77,7 @@
       .left-side {
         .h3 {
           .highlight {
-            &::after{
+            &::after {
               bottom: 3px;
             }
           }
@@ -81,7 +86,13 @@
     }
   }
   @include media-breakpoint-down(sm) {
-    background: linear-gradient(0deg, #F1F6FF 0%, #EDF3FE 12.5%, #D3E0F8 25.52%, #F1F6FF 100%);
+    background: linear-gradient(
+      0deg,
+      #f1f6ff 0%,
+      #edf3fe 12.5%,
+      #d3e0f8 25.52%,
+      #f1f6ff 100%
+    );
     padding-top: 30px;
     padding-bottom: 30px;
     &__wraper {
@@ -100,8 +111,8 @@
             margin-bottom: 6px;
           }
         }
-        .highlight{
-          &:after{
+        .highlight {
+          &:after {
             bottom: 3px;
             height: 7px;
           }
@@ -120,14 +131,63 @@
 
 // upgrade plans section
 .upgrade-plans {
-  margin-bottom: 80px;
-  margin-top: -58px;
+  margin-bottom: 60px;
   &__wraper {
     display: flex;
     justify-content: space-between;
     column-gap: 22px;
     .plan-tabs-container {
       width: 100%;
+    }
+    .plan-features-list {
+      ul {
+        margin-bottom: 0px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        li {
+          margin-bottom: 0px;
+          display: flex;
+          align-items: flex-start;
+          grid-gap: 20px;
+          gap: 20px;
+          .icon {
+            margin-top: 10px;
+          }
+          span {
+            padding: 10px 0px;
+            padding-right: 8px;
+          }
+          &:not(:last-child) {
+            span {
+              border-bottom: 1px solid #acacac;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    background: #f5f9ff;
+    padding-bottom: 30px;
+    .plan-features-list,
+    .plan {
+      width: calc(100% / 4);
+    }
+    .plan-features-list{
+      ul{
+        li{
+          min-height: 117px;
+        }
+      }
+    }
+    .plan {
+      .cibil-button {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 30px;
+      }
     }
   }
   @include media-breakpoint-down(md) {
@@ -436,7 +496,7 @@
               line-height: 24px;
               position: relative;
               &:before {
-                content: '';
+                content: "";
                 width: 11px;
                 height: 11px;
                 background: #fff;
@@ -798,7 +858,7 @@
           max-width: calc(218px + 60px);
           margin-left: auto;
           margin-right: auto;
-          .score-text{
+          .score-text {
             margin-bottom: 16px;
           }
         }

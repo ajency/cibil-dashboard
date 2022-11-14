@@ -230,7 +230,31 @@
     border-width: 2px;
   }
   @include media-breakpoint-up(lg) {
-    width: calc(100% / 3);
+    width: calc(100% / 4);
+    margin-top: -56px;
+    &__wraper{
+      padding-bottom: 0px;
+      .discount-price{
+        margin-bottom: 10px !important;
+      }
+      .plan-features{
+        .feature{
+          min-height: 116px;
+          display: flex;
+          align-items: center !important;
+          justify-content: center;
+          &:not(:last-child){
+            margin-bottom: 0px !important;
+            border-bottom: 1px solid #ACACAC;
+          }
+          .icon{
+            margin-top: 0px !important;
+            max-width: auto !important;
+            margin-right: 0px !important;
+          }
+        }
+      }
+    }
   }
 }
 .plan,
@@ -273,6 +297,26 @@
     color: $black;
     margin-bottom: 20px;
   }
+  .inline-wraper{
+    position: relative;
+  }
+  .discount {
+    background: $primary-yellow;
+    border-radius: 12px;
+    padding: 6px 0px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $black;
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    height: 24px;
+  }
   .discount-price {
     font-weight: $intro-bold;
     font-size: 20px;
@@ -282,25 +326,6 @@
     position: relative;
     display: inline-flex;
     align-items: center;
-
-    .discount {
-      background: $primary-yellow;
-      border-radius: 12px;
-      padding: 6px 0px;
-      font-weight: 700;
-      font-size: 12px;
-      line-height: 12px;
-      text-align: center;
-      letter-spacing: 0.02em;
-      color: $black;
-      position: absolute;
-      left: calc(100% + 8px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 80px;
-      height: 24px;
-    }
   }
   .plan-price {
     font-weight: $intro-regular;
@@ -427,13 +452,6 @@
         letter-spacing: 0.02em;
         margin-bottom: 4px;
       }
-      .discount-price {
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 0.02em;
-        color: $black;
-        margin-bottom: 0px;
-      }
       .discount {
         position: absolute;
         bottom: -1px;
@@ -445,6 +463,16 @@
         letter-spacing: 0.02em;
         color: $black;
         padding: 0px 10px;
+        margin-left: 0px;
+        border-radius: 0px;
+        font-weight: $intro-book;
+      }
+      .discount-price {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: $black;
+        margin-bottom: 0px;
       }
       .popular-tag {
         top: -30px;
@@ -485,13 +513,16 @@
       .plan-features {
         .feature {
           font-size: 14px;
-          align-items: center;
+          align-items: flex-start;
+          b{
+            font-weight: $intro-regular;
+          }
           .icon {
             margin-right: 18px;
-            margin-top: 0px;
+            margin-top: 3px;
           }
           &:not(:last-child) {
-            margin-bottom: 22px;
+            margin-bottom: 16px;
           }
         }
       }

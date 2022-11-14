@@ -1,5 +1,20 @@
 <div class="upgrade-plans" id="upgradePlansPricing">
     <div class="page-width upgrade-plans__wraper">
+        <div class="hide-md-down plan-features-list">
+            <ul>
+                <li class="feature body"><img src="{{ "images/static-images/dashboard-icon.svg" | relURL }}" alt="" class="icon"><span><b>Unlimited Access</b> to the most recent updates in your CIBIL Score & Report</span></li>
+
+                <li class="feature body"><img src="{{ "images/static-images/alerts-icon-blue.svg" | relURL }}" alt="" class="icon"><span><b>CIBIL Alerts</b> to stay updated and aware of key changes in your credit profile</span></li>
+
+                <li class="feature body"><img src="{{ "images/static-images/simulator-icon.svg" | relURL }}" alt="" class="icon"><span><b>Score Simulator</b> to check the impact of your credit actions on your CIBIL Score</span></li>
+
+                <li class="feature body"><img src="{{ "images/static-images/offers-icon.svg" | relURL }}" alt="" class="icon"><span><b>Tailored Loan Offers</b> from leading lenders based on your CIBIL Score</span></li>
+
+                <li class="feature body"><img src="{{ "images/static-images/trended-view-icon.svg" | relURL }}" alt="" class="icon"><span><b>Trended View</b> of the changes in your CIBIL Score with every refresh</span></li>
+
+                <li class="feature body"><img src="{{ "images/static-images/where-you-stand-icon.svg" | relURL }}" alt="" class="icon"><span><b>Where you stand</b> with the rest of self-monitoring consumers</span></li>
+            </ul>
+        </div>
         {{ range .upgradePlans }}
         <div class="hide-md-down plan {{ if eq .recommended true }}recommended{{ end }}">
             <div class="plan__wraper">
@@ -10,14 +25,14 @@
                     <div class="plan-header">
                         <p class="plan-name">{{ .plan_name }}</p>
                         <p class="plan-duration">{{ .plan_duration }}</p>
-                        <div class="inline-wraper"><p class="discount-price">₹<span class="ammount">{{ .discount_price }}</span>{{ if .discount }}<span class="discount">Save {{ .discount }}</span>{{ end }}</p></div>
-                        <div class="inline-wraper"><p class="plan-price {{ if not .price }}empty-height{{ end }}">{{if .price }}₹{{ .price }}{{end}}</p></div>
+                        <div class="inline-wraper"><p class="discount-price">₹<span class="ammount">{{ .discount_price }}</span></p></div>
+                        <div class="inline-wraper"><p class="plan-price {{ if not .price }}empty-height{{ end }}">{{if .price }}₹{{ .price }}{{end}}</p>{{ if .discount }}<span class="discount">Save {{ .discount }}</span>{{ end }}</div>
                     </div>
                     <a data-toggle="modal" data-target="#{{ anchorize .plan_name }}-popup" class="CouponFormToggle cibil-button {{ if eq .recommended false }}cibil-button-border{{ end }}" popup-link ="{{ anchorize .plan_name }}-popup">{{ .upgrade_button_text }}</a>
                     {{ if .features }}
                     <ul class="plan-features">
                         {{ range .features }}
-                        <li class="feature body-bold"><img src="{{ .icon | relURL }}" alt="" class="icon"><span>{{ .content | safeHTML }}</span></li>
+                        <li class="feature">{{if eq .feature_available true}}<img src="{{ "images/static-images/checkmark-green1.svg" | relURL }}" alt="" class="icon">{{else}}<img src="{{ "images/static-images/cross-icon.svg" | relURL }}" alt="" class="icon">{{end}}</li>
                         {{ end }}
                     </ul>
                     {{ end }}
@@ -52,7 +67,9 @@
                     {{ if .features }}
                     <ul class="plan-features">
                         {{ range .features }}
-                        <li class="feature body-bold"><img src="{{ .icon | relURL }}" alt="" class="icon"><span>{{ .content | safeHTML }}</span></li>
+                            {{if .content}}
+                                <li class="feature"><img src="{{ .icon | relURL }}" alt="" class="icon"><span>{{ .content | safeHTML }}</span></li>
+                            {{end}}
                         {{ end }}
                     </ul>
                     {{ end }}
