@@ -546,11 +546,22 @@ function refreshComparison(){
     $(percentBoxes).each(function(){
       let low = $(this).data("low");
       let high = $(this).data("high");
-      //console.log(low, high)
 
       if (percentage > low && percentage < high) {
         $(this).find('span').text('?');
         $(this).addClass('text-center');
+
+        let boxCenter = ((low + high)/2) - 0.25;
+        $(section).animate(
+          {
+            left:  boxCenter+'%',
+          },
+          {
+            duration: 2000,
+            easing: "swing",
+          }
+        );
+
       }
     });
   }
@@ -571,9 +582,6 @@ function refreshComparison(){
     let pointerBoxPosition = Math.ceil((comparedScore - lowestScore)/(highestScore - lowestScore)*100);
     $(this).find(scoreElement).text(comparedScore);
 
-    //show question mark
-    findRange(pointerBoxPosition, this);
-
     $({ score : lowestScore }).animate(
       { score : comparedScore },
       {
@@ -584,39 +592,9 @@ function refreshComparison(){
         },
       }
     );
-    if(pointerBoxPosition >= 0 && pointerBoxPosition <= 100){
-      //console.log('1 working');
-      $(this).animate(
-        {
-          left:  pointerBoxPosition+'%',
-        },
-        {
-          duration: 2000,
-          easing: "swing",
-        }
-      );
-    }else if(pointerBoxPosition <= 0){
-      $(this).animate(
-        {
-          left:  pointerBoxPosition+'%',
-        },
-        {
-          duration: 2000,
-          easing: "swing",
-        }
-      );
-    }
-    else{
-      $(this).animate(
-        {
-          left:  pointerBoxPosition+'%',
-        },
-        {
-          duration: 2000,
-          easing: "swing",
-        }
-      );
-    }
+
+    //find range
+    findRange(pointerBoxPosition, this);
 
     //Display percent score
     /* $({ perc : 0 }).animate(
