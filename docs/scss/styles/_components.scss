@@ -3135,3 +3135,21 @@
     }
   }
 }
+
+.yellow-button {
+  background: $primary-yellow;
+  border-radius: 25px;
+  font-size: 12px !important;
+  line-height: 12px !important;
+  text-decoration: none;
+  padding: 12px 15px 10px;
+  
+}
+
+#edit-info{
+  text-decoration: none !important;
+  svg{
+    position: relative;
+    top: -2px;
+  }
+}

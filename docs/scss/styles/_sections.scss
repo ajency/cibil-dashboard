@@ -1542,11 +1542,16 @@
     padding-top: 30px;
     margin-bottom: 30px;
   }
-  .report-select-group {
-    display: block !important;
-  }
+  // .report-select-group {
+  //   display: block !important;
+  // }
   .reportTabs {
-    display: none !important;
+    // display: none !important;
+    overflow-x: scroll !important;
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+    border-radius: 0 !important;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08) !important;
   }
 }
 
@@ -2312,12 +2317,16 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 30px 0 24px;
+  margin: 30px 0;
 
   span {
     @include intro-regular-16;
     b {
       position: relative;
+      @include media-breakpoint-down(sm) {
+        font-weight: 600;
+        display: inline-block;
+      }
       &::after {
         content: "";
         height: 3px;
@@ -2346,20 +2355,24 @@
   }
 
   @include media-breakpoint-down(sm) {
-    flex-direction: column;
-    margin: 30px 0 30px;
+    // flex-direction: column;
+    margin: 20px 0;
     align-items: center;
+    justify-content: space-between;
     span {
-      margin-bottom: 20px;
-      text-align: center;
+      // margin-bottom: 20px;
+      // text-align: center;
+      margin-right: 10px;
     }
     a {
-      width: 100%;
-      justify-content: center;
-      font-size: 12px;
-      padding: 10px;
-      border: 0.4px solid #acacac;
-      border-radius: 8px;
+      // width: 100%;
+      // justify-content: center;
+      // font-size: 12px;
+      // padding: 10px;
+      // border: 0.4px solid #acacac;
+      // border-radius: 8px;
+      padding: 12px 10px 10px;
+      white-space: nowrap;
     }
   }
 }
@@ -2370,10 +2383,12 @@
   height: 30px;
   display: grid;
   place-content: center;
-  border: 1px solid $black;
+  border: 1px solid $secondary-denim;
   border-radius: 50%;
   background-color: $light;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 24px;
   b {
     line-height: 1;
     position: relative;
@@ -2387,8 +2402,9 @@
   .loanTabs {
     border: 0;
     border-radius: 12px;
-    background-color: #f1f6ff;
-    padding: 10px 0;
+    background-color: $light;
+    box-shadow: 2px 2px 16px rgba(0, 71, 255, 0.2);
+    padding: 14px 0 27px;
     display: flex;
     overflow: hidden;
     .report-nav-item {
@@ -2396,6 +2412,9 @@
       display: flex;
       justify-content: center;
       position: relative;
+      @include media-breakpoint-down(sm) {
+        min-width: 120px;
+      }
       button {
         display: flex;
         justify-content: flex-start;
@@ -2403,31 +2422,43 @@
         flex-direction: column;
         padding: 0 10px;
         font-weight: 600;
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 14px;
+        line-height: 14px;
         padding: 0 10px;
+        text-transform: uppercase;
         &.active {
           font-weight: $intro-bold;
-          color: $dark;
+          color: $black;
           position: unset;
           .offer-count {
-            background-color: $primary-blue;
-            border-color: $primary-blue;
-            color: $light;
+            background-color: $primary-yellow;
+            border-color: $primary-yellow;
+            color: $black;
           }
           &::after {
             content: "";
             height: 10px;
             width: calc(100% + 2px);
-            top: 100%;
+            top: calc(100% + 17px);
             left: -1px;
             background-color: $primary-yellow;
             border: none;
             transform: none;
           }
           &::before {
-            content: none;
+            content: '';
+            width: 0;
+            height: 0;
+            background: transparent;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 8px solid $primary-yellow;
+            position: absolute;
+            top: calc(100% + 9px);
+            left: 50%;
+            transform: translateX(-50%);
           }
+
         }
         &:disabled {
           color: #acacac;
@@ -2439,6 +2470,21 @@
       }
       &:not(:last-child) {
         border-right: 1px solid $border-color-4;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 20px;
+      .report-nav-item {
+        button{
+          &.active{
+            &::after{
+              top: calc(100% + 10px);
+            }
+            &::before{
+              top: calc(100% + 2px);
+            }
+          }
+        }
       }
     }
   }
@@ -2493,11 +2539,13 @@
   .offers-card {
     display: flex;
     justify-content: space-between;
-    padding: 30px 30px 20px;
-    box-shadow: 2px 2px 16px rgba(0, 71, 255, 0.2);
-    border-radius: 12px;
+    // padding: 30px 30px 20px;
+    // box-shadow: 2px 2px 16px rgba(0, 71, 255, 0.2);
+    // border-radius: 12px;
+    // border: 1px solid $light;
+    padding: 0 0 10px;
     margin-top: 20px;
-    border: 1px solid $light;
+    border-bottom: 1px solid #DDD;
 
     .offer-info-wrap {
       display: flex;
@@ -2511,7 +2559,7 @@
         border: 1px solid $border-color-4;
         border-radius: 6px;
         width: 130px;
-        height: 60px;
+        height: 50px;
         margin-bottom: 8px;
         justify-content: center;
         align-items: center;
@@ -2525,6 +2573,7 @@
         max-width: 130px;
         overflow: hidden;
         white-space: nowrap;
+        color: $black;
       }
     }
     .offer-info {
@@ -2543,11 +2592,17 @@
         justify-content: space-between;
         margin-right: 30px;
         span {
+          &:first-child{
+            @include media-breakpoint-up(md){
+              height: 0;
+              overflow: hidden;
+            }
+          }
           &:last-child {
-            margin-top: 16px;
+            margin-top: 0;
             font-size: 16px;
             line-height: 16px;
-            font-weight: $intro-regular;
+            font-weight: $intro-book;
             letter-spacing: 0.02em;
             color: $black;
           }
@@ -2562,14 +2617,22 @@
       text-align: center;
       .cibil-link {
         width: auto;
-        color: #707070 !important;
+        /* color: #2c2c2c !important; */
         margin-top: 16px;
         cursor: pointer;
-        text-transform: none;
+        text-transform: uppercase;
+        font-size: 10px;
+        line-height: 12px;
+        font-weight: 600;
         span {
           &:last-child {
             display: none;
           }
+        }
+        svg{
+          position: relative;
+          top: -2px;
+          margin-right: 4px;
         }
         &::before {
           width: calc(100% - 8px);
@@ -2579,8 +2642,12 @@
         }
       }
       .cibil-button {
+        padding: 14px 32px 12px;
+        font-size: 14px;
+        line-height: 14px;
+        white-space: nowrap;
         @include media-breakpoint-up(lg) {
-          min-width: 168px;
+          min-width: 142px;
         }
       }
     }
@@ -2591,10 +2658,39 @@
         position: absolute;
         left: -6px;
         top: -8px;
+        @include media-breakpoint-up(md){
+          display: none;
+        }
+      }
+      @include media-breakpoint-up(md){
+        .company-container {
+          span{
+            position: relative;
+            background-color: $light;
+            &::after{
+              content: 'Premium Partner';
+              background-image: url(../images/static-images/star.svg);
+              background-position: 3px 6px;
+              background-repeat: no-repeat;
+              position: absolute;
+              padding: 9px 5px 13px;
+              padding-left: 20px;
+              border-radius: 4px;
+              width: calc(100% + 2px);
+              font-weight: 700;
+              font-size: 12px;
+              line-height: 12px;
+              background-color: #00a6ca;
+              color: #fff;
+              z-index: -1;
+              bottom: calc(100% - 7px);
+            }
+          }
+        }
       }
     }
     &.selected {
-      border: 1px solid #fcd800;
+      // border: 1px solid #fcd800;
       .offer-cta {
         .cibil-link {
           span {
@@ -4122,5 +4218,61 @@ b.plus-icon {
         @include body-bold;
       }
     }
+  }
+}
+
+.sort-component {
+  display: flex;
+  margin-bottom: 44px;
+  background: #F6F7FC;
+  border-radius: 8px;
+  padding: 14px 20px 12px;
+
+  li{
+    display: flex;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: #2C2C2C;
+    margin: 0;
+    margin-right: 30px;
+    padding-right: 10px;
+    border-right: 1px solid #DDDDDD;
+    flex-direction: column;
+    cursor: pointer;
+    
+    label {
+      display: block;
+      font-weight: 400;
+      font-size: 14px !important;
+      line-height: 14px;
+      text-transform: lowercase;
+      margin: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    svg{
+      margin-left: 10px;
+    }
+    &:first-of-type{
+      min-width: 110px;
+      margin-right: 40px;
+    }
+    &:last-of-type{
+      width: 148px;
+      margin: 0;
+    }
+    &:last-of-type, &:nth-of-type(4){
+      border: 0;
+    }
+    & > span {
+      display: flex;
+      align-items: center;
+    }
+  }
+  @include media-breakpoint-down(sm){
+    display: none;
   }
 }
