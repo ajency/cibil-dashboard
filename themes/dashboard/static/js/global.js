@@ -154,13 +154,40 @@ $(function () {
     var container = $(".custom-select-input");
     if (!container.is(event.target) && !container.has(event.target).length) {
         container.find('.custom-select-options').hide('fast');
+        container.find('.searchbox').slideUp('fast');
     }
   });
-
 })
 function customSelectInput(element){
   $(element).toggleClass('opened')
   $(element).find('.custom-select-options').toggle('fast');
+}
+function checkSearchbox(element){
+  //searchbox
+  let searchbox = $(element).parents('.custom-select-input').find('.searchbox');
+  if(searchbox){
+    $(searchbox).slideToggle('fast');
+  }
+}
+function customSelectInputSearch(element){
+$(element).parents('.custom-select-input').toggleClass('opened')
+$(element).parents('.custom-select-input').find('.custom-select-options').toggle('fast');
+checkSearchbox(element);
+}
+function customSelectOptionSearch(element){
+$(element).siblings().removeClass("selected")
+$(element).addClass('selected')
+$(element).parents('.custom-select-input').find('.custom-select-value').text($(element).text())
+$(element).parents('.custom-select-options').toggle('fast')
+$(element).parents('.custom-select-input').removeClass('opened')
+checkSearchbox(element)
+$(element).parents('.custom-select-input').parents('.form-group').find('.resetSearch').fadeIn('fast');
+}
+function resetSearchInput(element){
+$(element).parents('.form-group').find('.custom-select-value').text('All of India');
+}
+function searchQuery(element){
+
 }
 function customSelectOption(element){
   if(!$(element).hasClass('selected') && $(element).hasClass('valueTarget')){
@@ -177,6 +204,7 @@ function customSelectOption(element){
   $(element).siblings().removeClass("selected")
   $(element).addClass('selected')
   $(element).parents('.custom-select-input').find('.custom-select-value').text($(element).text())
+  $(element).parents('.custom-select-input').find('.custom-select-value').removeClass('placeholder')
   $('#loantype').val($(element).text())
 }
 function customSelectTab(element){

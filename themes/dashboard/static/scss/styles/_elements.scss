@@ -304,6 +304,21 @@
       right: 0;
     }
   }
+  &.back-icon {
+    color: $primary-blue !important;
+    span {
+      padding-left: 20px;
+      &:before {
+        max-width: calc(100% - 20px);
+        background-color: $primary-blue;
+      }
+      &:after {
+        background-image: url(../images/static-images/arrow-left-primary.svg);
+        width: 10px;
+        height: 14px;
+      }
+    }
+  }
   @include media-breakpoint-down(sm) {
     padding-left: 28px;
     height: 44px;
@@ -870,6 +885,20 @@ input[type="number"] {
   .input-icons-wraper {
     position: relative;
   }
+  .search-button{
+    background-image: url(../images/static-images/search-input.svg);
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    right: 17px;
+    top: 46px;
+  }
+  .search-button + input{
+    padding-right: 33px;
+  }
   .reset-field,
   .show-password,
   .hide-password {
@@ -948,8 +977,81 @@ input[type="number"] {
     color: #000000;
     margin-bottom: 2px;
   }
+  .custom-select-input {
+    position: relative;
+    padding: 0px;
+    background: $light;
+    border: 1px solid #acacac !important;
+    cursor: pointer;
+    .custom-select-value {
+      border: none !important;
+      min-height: 50px;
+      display: block;
+      border-bottom: 1px solid transparent !important;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      &:before {
+        content: "";
+        width: 11px;
+        height: 6px;
+        position: absolute;
+        background-image: url(../images/static-images/grey-arrow.svg);
+        display: block;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    &.opened {
+      .custom-select-value {
+        border-bottom: 1px solid #ededed !important;
+        &:before {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .custom-select-options {
+      display: none;
+      margin: 0;
+      width: 100% !important;
+      position: absolute;
+      z-index: 1;
+      top: 51px;
+      span {
+        display: block;
+        padding: 5px 16px;
+        background: $light;
+        font-weight: $intro-regular;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          background: $light-blue-4;
+          font-weight: $intro-bold;
+        }
+      }
+    }
+    .searchbox {
+      display: none;
+    }
+  }
+  .currency-prefix {
+    display: inline-block;
+    position: absolute;
+    top: calc(52px - 13px);
+    left: 16px;
+    @include body;
+    font-weight: $intro-bold;
+  }
+  .currency-field {
+    padding-left: 30px;
+  }
   input,
-  textarea {
+  textarea,
+  .custom-select-value {
     width: 100%;
     background: $light;
     border: 1px solid $grey-1 !important;
@@ -960,6 +1062,31 @@ input[type="number"] {
     letter-spacing: 0.02em;
     color: $dark;
     transition: color 0.3 ease-in-out, background 0.3 ease-in-out;
+    ::placeholder,
+    ::-moz-placeholder,
+    ::-webkit-input-placeholder {
+      color: $grey;
+    }
+  }
+  .placeholder{
+    color: $grey !important;
+  }
+  #searchbox {
+    border: none !important;
+    background: #ffffff !important;
+  }
+  .resetSearch {
+    background: url(../images/static-images/close-icon.svg);
+    width: 26px;
+    height: 26px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: calc(50px - 13px);
+    right: 16px;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
   }
   .cibil-button {
     min-width: 144px;
@@ -1027,6 +1154,9 @@ input[type="number"] {
   @include media-breakpoint-down(sm) {
     .form-group {
       margin-bottom: 20px;
+    }
+    .search-button{
+      top: 46px;
     }
     .message {
       margin-top: 10px;
@@ -1283,4 +1413,17 @@ input[type="number"] {
   background-repeat: no-repeat;
   background-position: center;
   display: none;
+}
+
+.col3 {
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+}
+
+.text-center {
+  text-align: center;
+  justify-content: center;
 }

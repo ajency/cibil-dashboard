@@ -1,0 +1,25 @@
+<form class="dashboard-form" id="comparisonForm" novalidate>
+    <div class="col3">
+        <div class="form-group">
+            <label for="location">Location</label>
+            <span class="search-button"></span>
+            <input type="text" name="location" id="location" value="All Of India" required>
+        </div>
+        <div class="form-group">
+            <label for="income_type">Income Type</label>
+            <div class="custom-select-input" onclick="customSelectInput(this)">
+                <span class="custom-select-value placeholder">Select Type</span>
+                <div class="custom-select-options">
+                    <span onclick="customSelectOption(this)">Self-Employed</span>
+                    <span onclick="customSelectOption(this)">Salaraid</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="monthly_income">Monthly Income</label>
+            <span class="currency-prefix">₹</span>
+            <input class="currency-field" type="text" name="monthly_income" id="monthly_income" placeholder="Enter Amount" required>
+            <p class="message"></p>
+        </div>
+    </div>
+</form>

@@ -19,6 +19,7 @@ $light: #fff;
 $grey: #707070;
 $grey-1: #acacac;
 $grey-2: #f9f9f9;
+$grey-3: #919191;
 $light-blue: #f5f9ff;
 $light-blue-2: #f6f7fc;
 $light-blue-3: #f1f6ff;
@@ -33,6 +34,11 @@ $secondary-dark-green: #3bb012;
 $light-green: #dcecbd;
 $red: #d10000;
 $secondary-red: #d74025;
+$low: #e15825;
+$low-medium: #e5862e;
+$medium: #e7b92e;
+$high-medium: #a9d161;
+$high: #009900;
 $light-red: #f7d9d3;
 $secondary-denim: #006685;
 
@@ -105,6 +111,11 @@ $intro-book: 400;
   font-size: 24px;
   line-height: 30px;
   letter-spacing: 0;
+}
+@mixin h3-bold {
+  font-weight: $intro-bold;
+  font-size: 24px;
+  line-height: 30px;
 }
 @mixin body-medium {
   @include body;

@@ -522,3 +522,116 @@ scrollToTop.on('click', function(e) {
 e.preventDefault();
 $('html, body').animate({scrollTop:0}, '300');
 });
+
+//score comparison
+function refreshComparison(){
+  let percentBox = $('.comparison-graph .graph-bar').find('.percent');
+  let scoreBox = $('.graph-bar-pointer');
+  let percentText = $('.score-percent-text .percent');
+
+  //assign values
+  $(percentBox).each(function(){
+    let scoreWidth = $(this).data('width');
+    let scorePercent = $(this).data('percent');
+
+    $(this).css({'width':scoreWidth});
+    $(this).html('<span>'+scorePercent+'%</span>');
+  });
+
+  //find range
+  function findRange(percentage, section){
+    let graphBar = $(section).parent().find(".graph-bar");
+    let percentBoxes = $(graphBar).find('.percent');
+    
+    $(percentBoxes).each(function(){
+      let low = $(this).data("low");
+      let high = $(this).data("high");
+      //console.log(low, high)
+
+      if (percentage > low && percentage < high) {
+        $(this).find('span').text('?');
+        $(this).addClass('text-center');
+      }
+    });
+  }
+
+  //position score pointer
+  let graphBarPointer = $('.graph-bar-pointer');
+  let poniterBoxCenter = $(graphBarPointer).innerWidth()/2;
+
+  $(graphBarPointer).find('.graph-bar-pointer__wraper').css({'left': -(poniterBoxCenter+4)})
+  
+  $(graphBarPointer).css({'left': 0+'%'});
+
+  $(scoreBox).each(function(){
+    let scoreElement = $(this).find('.score');
+    let comparedScore = $(scoreElement).data('score');
+    let lowestScore = 300;
+    let highestScore = 900;
+    let pointerBoxPosition = Math.ceil((comparedScore - lowestScore)/(highestScore - lowestScore)*100);
+    $(this).find(scoreElement).text(comparedScore);
+
+    //show question mark
+    findRange(pointerBoxPosition, this);
+
+    $({ score : lowestScore }).animate(
+      { score : comparedScore },
+      {
+        duration: 2000,
+        easing: "swing",
+        step: function (now) {
+          $(scoreElement).text((now) | 0);
+        },
+      }
+    );
+    if(pointerBoxPosition >= 0 && pointerBoxPosition <= 100){
+      //console.log('1 working');
+      $(this).animate(
+        {
+          left:  pointerBoxPosition+'%',
+        },
+        {
+          duration: 2000,
+          easing: "swing",
+        }
+      );
+    }else if(pointerBoxPosition <= 0){
+      $(this).animate(
+        {
+          left:  pointerBoxPosition+'%',
+        },
+        {
+          duration: 2000,
+          easing: "swing",
+        }
+      );
+    }
+    else{
+      $(this).animate(
+        {
+          left:  pointerBoxPosition+'%',
+        },
+        {
+          duration: 2000,
+          easing: "swing",
+        }
+      );
+    }
+
+    //Display percent score
+    /* $({ perc : 0 }).animate(
+      { perc : pointerBoxPosition },
+      {
+        duration: 2000,
+        easing: "swing",
+        step: function (now) {
+          $(percentText).text((now) | 0);
+        },
+      }
+    ); */
+
+  });
+}
+if($('.comparison-graph')){
+  refreshComparison();
+}

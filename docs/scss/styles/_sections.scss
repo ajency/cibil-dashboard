@@ -1102,7 +1102,8 @@
   &__wraper {
     background: #f1f6ff;
     border-radius: 12px;
-    padding: 30px;
+    padding: 30px 30px 12px;
+    //height: 466px;
     .content {
       margin-bottom: 12px;
       letter-spacing: 0.02em;
@@ -1120,15 +1121,104 @@
         object-fit: cover;
       }
     }
+    .comparison-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      p {
+        margin-bottom: 0px;
+      }
+      .cibil-link-button {
+        &.back-icon {
+          border: none;
+          padding: 0;
+          justify-content: start;
+          height: auto;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+    .comparison-footer {
+      text-align: center;
+      margin-top: 20px;
+      p {
+        margin-bottom: 0px;
+      }
+      .score-percent-text {
+        margin-bottom: 2px;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__wraper {
+      min-height: 466px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__wraper {
+      .comparison-head {
+        p {
+          &:first-child {
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-only(md) {
+    &__wraper {
+      .comparison-head {
+        p {
+          &:first-child {
+            width: 65%;
+          }
+        }
+      }
+    }
   }
   @include media-breakpoint-down(sm) {
     margin-bottom: 40px;
+    .section-heading {
+      margin-bottom: 10px;
+    }
     &__wraper {
       border-radius: 0;
-      padding: 20px;
+      padding: 0px;
+      background-color: $light;
       .content,
       .cibil-link {
         margin-bottom: 20px;
+      }
+      .comparison-head {
+        flex-direction: column;
+        gap: 20px;
+        grid-gap: 20px;
+        align-items: flex-start;
+        .cibil-link{
+          margin-bottom: 0px;
+        }
+      }
+      .comparison-footer {
+        margin-top: 0px;
+        background: $light-blue-3;
+        padding: 0px 16px 8px;
+      }
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    &__wraper {
+      .comparison-footer {
+        .score-percent-text {
+          max-width: 218px;
+          margin-bottom: 8px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        p:not(.score-percent-text) {
+          @include hairline;
+        }
       }
     }
   }
