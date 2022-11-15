@@ -885,7 +885,7 @@ input[type="number"] {
   .input-icons-wraper {
     position: relative;
   }
-  .search-button{
+  .search-button {
     background-image: url(../images/static-images/search-input.svg);
     height: 16px;
     width: 16px;
@@ -896,7 +896,7 @@ input[type="number"] {
     right: 17px;
     top: 46px;
   }
-  .search-button + input{
+  .search-button + input {
     padding-right: 33px;
   }
   .reset-field,
@@ -1006,22 +1006,37 @@ input[type="number"] {
         transform: translateY(-50%);
         transition: all 0.2s ease-in-out;
       }
+      &.value-selected {
+        background: rgb(249, 249, 249);
+        color: rgb(112, 112, 112);
+      }
     }
-    &.opened {
+    &.opened:not(.search-dropdown) {
       .custom-select-value {
-        border-bottom: 1px solid #ededed !important;
         &:before {
           transform: rotate(180deg);
+        }
+      }
+    }
+    &.search-dropdown {
+      .custom-select-value {
+        &:before {
+          width: 16px;
+          height: 16px;
+          background-image: url(/cibil-dashboard/images/static-images/search-input.svg);
         }
       }
     }
     .custom-select-options {
       display: none;
       margin: 0;
-      width: 100% !important;
+      width: calc(100% + 2px) !important;
       position: absolute;
       z-index: 1;
       top: 51px;
+      left: -1px;
+      border: 1px solid #acacac !important;
+      border-top: none !important;
       span {
         display: block;
         padding: 5px 16px;
@@ -1041,7 +1056,7 @@ input[type="number"] {
   .currency-prefix {
     display: inline-block;
     position: absolute;
-    top: calc(52px - 13px);
+    top: calc(52px - 10px);
     left: 16px;
     @include body;
     font-weight: $intro-bold;
@@ -1068,7 +1083,7 @@ input[type="number"] {
       color: $grey;
     }
   }
-  .placeholder{
+  .placeholder {
     color: $grey !important;
   }
   #searchbox {
@@ -1155,7 +1170,7 @@ input[type="number"] {
     .form-group {
       margin-bottom: 20px;
     }
-    .search-button{
+    .search-button {
       top: 46px;
     }
     .message {

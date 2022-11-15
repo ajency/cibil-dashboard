@@ -169,25 +169,14 @@ function checkSearchbox(element){
     $(searchbox).slideToggle('fast');
   }
 }
-function customSelectInputSearch(element){
-$(element).parents('.custom-select-input').toggleClass('opened')
-$(element).parents('.custom-select-input').find('.custom-select-options').toggle('fast');
-checkSearchbox(element);
-}
-function customSelectOptionSearch(element){
-$(element).siblings().removeClass("selected")
-$(element).addClass('selected')
-$(element).parents('.custom-select-input').find('.custom-select-value').text($(element).text())
-$(element).parents('.custom-select-options').toggle('fast')
-$(element).parents('.custom-select-input').removeClass('opened')
-checkSearchbox(element)
-$(element).parents('.custom-select-input').parents('.form-group').find('.resetSearch').fadeIn('fast');
-}
-function resetSearchInput(element){
-$(element).parents('.form-group').find('.custom-select-value').text('All of India');
-}
-function searchQuery(element){
+function customSelectOptionLocation(element){
+  $(element).siblings().removeClass("selected")
+  $(element).addClass('selected')
+  $(element).parents('.custom-select-input').find('.custom-select-value').text($(element).text())
+  $(element).parents('.custom-select-input').find('.custom-select-value').removeClass('placeholder')
+  $(element).parents('.custom-select-input').find('.custom-select-value').addClass('value-selected')
 
+  $(element).parents('.score-comparison').find('.location').text($(element).text());
 }
 function customSelectOption(element){
   if(!$(element).hasClass('selected') && $(element).hasClass('valueTarget')){
@@ -205,6 +194,7 @@ function customSelectOption(element){
   $(element).addClass('selected')
   $(element).parents('.custom-select-input').find('.custom-select-value').text($(element).text())
   $(element).parents('.custom-select-input').find('.custom-select-value').removeClass('placeholder')
+  $(element).parents('.custom-select-input').find('.custom-select-value').addClass('value-selected')
   $('#loantype').val($(element).text())
 }
 function customSelectTab(element){

@@ -2,8 +2,13 @@
     <div class="col3">
         <div class="form-group">
             <label for="location">Location</label>
-            <span class="search-button"></span>
-            <input type="text" name="location" id="location" value="All Of India" required>
+            <div class="custom-select-input search-dropdown" onclick="customSelectInput(this)">
+                <span class="custom-select-value placeholder">All Of India</span>
+                <div class="custom-select-options">
+                    <span onclick="customSelectOptionLocation(this)">Delhi</span>
+                    <span onclick="customSelectOptionLocation(this)">Mumbai</span>
+                </div>
+            </div>
         </div>
         <div class="form-group">
             <label for="income_type">Income Type</label>
@@ -11,7 +16,7 @@
                 <span class="custom-select-value placeholder">Select Type</span>
                 <div class="custom-select-options">
                     <span onclick="customSelectOption(this)">Self-Employed</span>
-                    <span onclick="customSelectOption(this)">Salaraid</span>
+                    <span onclick="customSelectOption(this)">Salaried</span>
                 </div>
             </div>
         </div>
