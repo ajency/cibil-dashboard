@@ -157,6 +157,16 @@ $(function () {
         container.find('.searchbox').slideUp('fast');
     }
   });
+
+  $('.custom-checkbox svg').click(function(){
+    let checkBoxes = $(this).siblings("input[type=checkbox]");
+    checkBoxes.prop("checked", !checkBoxes.prop("checked"));
+  })
+
+  $('.filter-label').click(function(){
+    $(this).siblings('.filter-values').toggle('medium')
+    $(this).toggleClass('opened')
+  })
 })
 function customSelectInput(element){
   $(element).toggleClass('opened')
