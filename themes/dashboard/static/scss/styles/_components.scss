@@ -378,7 +378,119 @@
     }
   }
 }
-
+@include media-breakpoint-up(lg) {
+  .bg-wrap {
+    background: #f5f9ff;
+  }
+  .upgrade-plans {
+    margin-top: -154px;
+    background: transparent !important;
+    &__wraper {
+      .plan {
+        max-width: 152px;
+        margin-top: 0px !important;
+        &__wraper {
+          padding-top: 45px;
+          .plan-features {
+            .feature {
+              height: 89px;
+              min-height: 89px;
+              &:not(:last-child) {
+                border-bottom: 1px solid #cbcbcb;
+              }
+            }
+          }
+          .cibil-button {
+            margin-bottom: 9px !important;
+            padding-left: 22px !important;
+            padding-right: 22px !important;
+          }
+        }
+        .plan-name {
+          @include body;
+          text-transform: capitalize;
+          margin-bottom: 11px;
+        }
+        .plan-duration {
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 22px;
+          margin-bottom: 11px;
+        }
+        .discount-price {
+          @include body-medium;
+        }
+        .discount-tag {
+          @include hairline;
+          background: #fcd800;
+          height: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          width: calc(100% + 2px);
+          left: -1px;
+          top: -1px;
+          border-radius: 7px 7px 0px 0px;
+          margin-bottom: 0px;
+        }
+        .plan-inner-wraper {
+          padding-left: 13px;
+          padding-right: 13px;
+        }
+        .popular-tag {
+          padding: 0 13px;
+        }
+        &.recommended {
+          margin-top: -30px !important;
+          .plan__wraper {
+            padding-top: 75px;
+          }
+          .discount-tag {
+            top: 29px;
+            border-radius: 0px;
+            border-left: 1px solid #00a6ca;
+            border-right: 1px solid #00a6ca;
+          }
+        }
+      }
+      .plan,
+      .plan-features-list {
+        width: 100% !important;
+      }
+      .plan-features-list {
+        ul {
+          li {
+            min-height: 89px !important;
+            max-height: 89px;
+            position: relative;
+            .icon {
+              margin-top: 20px !important;
+            }
+            &:first-child {
+              &:before {
+                content: "";
+                height: 1px;
+                width: 100%;
+                background-color: #dddddd;
+                position: absolute;
+                top: -10px;
+                left: 0px;
+              }
+            }
+            &:not(:last-child) {
+              span {
+                padding: 20px 0px;
+                padding-right: 0px;
+                border-bottom: 1px solid #dddddd !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @include media-breakpoint-down(md) {
   .plan-tabs {
     flex-wrap: nowrap;
@@ -2805,12 +2917,12 @@
 }
 
 // comparison graph
-.unsubscribed-content{
-  .comparison-graph{
-    &__wraper{
-      .graph-legend{
-        .legend{
-          .blur{
+.unsubscribed-content {
+  .comparison-graph {
+    &__wraper {
+      .graph-legend {
+        .legend {
+          .blur {
             filter: blur(5px);
             -webkit-filter: blur(5px);
           }
@@ -3035,7 +3147,7 @@
           @include hairline;
         }
       }
-      .legend-wrap{
+      .legend-wrap {
         flex-direction: column;
         align-items: flex-start;
         padding-left: 19px;
@@ -3048,7 +3160,7 @@
         gap: 3px;
         margin-top: 0px;
         height: 55px;
-        .percent{
+        .percent {
           font-weight: $intro-regular;
           font-size: 16px;
           line-height: 16px;
@@ -3091,7 +3203,7 @@
       margin-bottom: 17px;
     }
     .dashboard-form {
-      label{
+      label {
         margin-bottom: 5px;
       }
       .form-group {
@@ -3104,10 +3216,10 @@
       background-color: #f1f6ff;
       padding: 20px 20px 0px;
       border-radius: 0px;
-      .dashboard-form{
-        .form-group{
+      .dashboard-form {
+        .form-group {
           margin-bottom: 20px !important;
-          &:last-child{
+          &:last-child {
             margin-bottom: 0px !important;
           }
         }

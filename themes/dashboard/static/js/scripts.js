@@ -267,18 +267,45 @@ $(".reset-field").click(function(){
   $(this).hide("fast");
 });
 
-$(".CouponFormToggle").click(function(){
-  let couponPopup = $("#"+$(this).attr("popup-link"));
+$(document).ready(function () {
+  $(window).on("resize", function (e) {
+      checkScreenSize();
+  });
 
-  let planPrice = couponPopup.find(".plan-price-ammount .ammount").text();
-  let disountedPrice = couponPopup.find(".coupon-discount .discount-ammount").text();
+  checkScreenSize();
+  
+  function checkScreenSize(){
+      var newWindowWidth = $(window).width();
+      if (newWindowWidth < 992) {
+        $(".CouponFormToggle").click(function(){
+          let couponPopup = $(this).data("target");
 
-  let subtotalVal = parseInt(planPrice) ;
+          let tabId = "#"+$(this).parents('.tab-pane').attr("id");
+        
+          let planPrice = $('button[data-target="'+ tabId +'"]').find(".discount-price .ammountMob").text();
+        
+          let subtotalVal = parseInt(planPrice) ;
 
-  if(disountedPrice){
-    subtotalVal = parseInt(planPrice)-parseInt(disountedPrice) ;
+          $(couponPopup).find(".subtotal .subtotal-ammount").text(subtotalVal);
+        });
+      }
+      else
+      {
+        $(".CouponFormToggle").click(function(){
+          let couponPopup = $("#"+$(this).attr("popup-link"));
+        
+          let planPrice = couponPopup.find(".plan-price-ammount .ammount").text();
+          let disountedPrice = couponPopup.find(".coupon-discount .discount-ammount").text();
+        
+          let subtotalVal = parseInt(planPrice) ;
+        
+          if(disountedPrice){
+            subtotalVal = parseInt(planPrice)-parseInt(disountedPrice) ;
+          }
+          couponPopup.find(".subtotal .subtotal-ammount").text(subtotalVal);
+        });
+      }
   }
-  couponPopup.find(".subtotal .subtotal-ammount").text(subtotalVal);
 });
 
 function howItWorks(){

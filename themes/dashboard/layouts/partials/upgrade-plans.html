@@ -21,12 +21,12 @@
                 {{ if eq .most_popular true }}
                 <p class="popular-tag"><img src="{{ "images/static-images/star-icon.svg" | relURL }}" alt="" class="icon"> Most Popular</p>
                 {{ end }}
+                {{ if .discount }}<p class="discount-tag">Save {{ .discount }}</p>{{ end }}
                 <div class="plan-inner-wraper">
                     <div class="plan-header">
                         <p class="plan-name">{{ .plan_name }}</p>
                         <p class="plan-duration">{{ .plan_duration }}</p>
                         <div class="inline-wraper"><p class="discount-price">₹<span class="ammount">{{ .discount_price }}</span></p></div>
-                        <div class="inline-wraper"><p class="plan-price {{ if not .price }}empty-height{{ end }}">{{if .price }}₹{{ .price }}{{end}}</p>{{ if .discount }}<span class="discount">Save {{ .discount }}</span>{{ end }}</div>
                     </div>
                     <a data-toggle="modal" data-target="#{{ anchorize .plan_name }}-popup" class="CouponFormToggle cibil-button {{ if eq .recommended false }}cibil-button-border{{ end }}" popup-link ="{{ anchorize .plan_name }}-popup">{{ .upgrade_button_text }}</a>
                     {{ if .features }}
@@ -48,7 +48,7 @@
                     <p class="plan-name">{{ .plan_name }}</p>
                     <p class="plan-duration">{{ .plan_duration }}</p>
                     <div class="prices">
-                        <span class="discount-price">₹{{ .discount_price }}</span>
+                        <span class="discount-price">₹<span class="ammountMob">{{ .discount_price }}</span></span>
                         <span class="plan-price {{ if not .price }}empty-height{{ end }}">{{if .price }}₹{{ .price }}{{end}}</span>
                     </div>
                     {{ if eq .most_popular true }}

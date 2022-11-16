@@ -48,10 +48,10 @@
 // banner section
 .banner-section {
   background: linear-gradient(
-    0deg,
-    #f1f6ff -1.49%,
-    #d3e0f8 4.64%,
-    #f1f6ff 100%
+    360deg,
+    rgba(241, 246, 255, 0) -1.49%,
+    #f2f6ff 30.01%,
+    #dbe8ff 100%
   );
   padding-top: 30px;
   padding-bottom: 81px;
@@ -69,6 +69,28 @@
     .img-container {
       img {
         width: 100%;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 73px;
+    padding-bottom: 39px;
+    &__wraper {
+      justify-content: flex-start;
+      .left-side {
+        max-width: 40%;
+        p {
+          text-align: left;
+        }
+        .username {
+          margin-bottom: 20px;
+          font-size: 24px;
+          line-height: 34px;
+        }
+        .subtext{
+          @include h4(700);
+          text-transform: uppercase;
+        }
       }
     }
   }
@@ -175,9 +197,9 @@
     .plan {
       width: calc(100% / 4);
     }
-    .plan-features-list{
-      ul{
-        li{
+    .plan-features-list {
+      ul {
+        li {
           min-height: 117px;
         }
       }
@@ -1196,7 +1218,7 @@
         gap: 20px;
         grid-gap: 20px;
         align-items: flex-start;
-        .cibil-link{
+        .cibil-link {
           margin-bottom: 0px;
         }
       }
