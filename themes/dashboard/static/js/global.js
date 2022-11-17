@@ -167,6 +167,12 @@ $(function () {
     $(this).siblings('.filter-values').toggle('medium')
     $(this).toggleClass('opened')
   })
+
+  $('input[type="range"]').change(function(){
+    console.log($(this).val())
+    $(this).parent().siblings('.range-slider-label').find('span:last-of-type b').text('₹'+parseInt($(this).val()).toLocaleString('en-IN'))
+  })
+
 })
 function customSelectInput(element){
   $(element).toggleClass('opened')
@@ -296,4 +302,8 @@ function editOInfoToggle(){
 function submitEditInfo(){
   resetCompare()
   $('.loan-offer-js').toggleClass('edit');
+}
+
+function toggeSortFilter(){
+  $('.offers-container').toggleClass('show-sort-filter')
 }

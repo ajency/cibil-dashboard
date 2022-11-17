@@ -2,29 +2,86 @@
     <div class="filter-container">
         <span class="filter-header">{{ partial "icons/filter-icon"}} <b>Filter by</b></span>
         <div class="filter-items">
+            <div class="filter-item d-lg-none">
+                <span class="filter-label">SORT OFFERS {{ partial "icons/blue-arrow" }}</span>
+                <ul class="filter-values">
+                    <li class="filter-value">
+                        <label>Loan Partners</label>
+                        <div class="custom-radio-wrap">
+                            <span class="custom-radio">
+                                <input id="card-partner-1" type="radio" name="card-radio" value="A-Z">
+                                <label for="card-partner-1">A-Z</label>
+                            </span>
+                            <span class="custom-radio">
+                                <input id="card-partner-2" type="radio" name="card-radio" value="Z-A">
+                                <label for="card-partner-2">Z-A</label>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="filter-value">
+                        <label>Credit Limit</label>
+                        <div class="custom-radio-wrap">
+                            <span class="custom-radio">
+                                <input id="card-limit-1" type="radio" name="card-radio" value="Low to High">
+                                <label for="card-limit-1">Low to High</label>
+                            </span>
+                            <span class="custom-radio">
+                                <input id="card-limit-2" type="radio" name="card-radio" value="High to Low">
+                                <label for="card-limit-2">High to Low</label>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="filter-value">
+                        <label>Monthly Interest Rate</label>
+                        <div class="custom-radio-wrap">
+                            <span class="custom-radio">
+                                <input id="card-interest-1" type="radio" name="card-radio" value="Low to High">
+                                <label for="card-interest-1">Low to High</label>
+                            </span>
+                            <span class="custom-radio">
+                                <input id="card-interest-2" type="radio" name="card-radio" value="High to Low">
+                                <label for="card-interest-2">High to Low</label>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="filter-value">
+                        <label>Annual Fees</label>
+                        <div class="custom-radio-wrap">
+                            <span class="custom-radio">
+                                <input id="card-fees-1" type="radio" name="card-radio" value="Low to High">
+                                <label for="card-fees-1">Low to High</label>
+                            </span>
+                            <span class="custom-radio">
+                                <input id="card-fees-2" type="radio" name="card-radio" value="High to Low">
+                                <label for="card-fees-2">High to Low</label>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <div class="filter-item">
                 <span class="filter-label">LOAN PARTNERS {{ partial "icons/blue-arrow" }}</span>
                 <ul class="filter-values">
                     <li class="filter-value">
                         <span class="custom-checkbox">
-                            <input type="checkbox" value="Bajaj Finserver">
+                            <input type="checkbox" value="Bajaj Finserv Ltd.">
                             {{ partial "icons/checkbox-checked"}}
                         </span>
-                        <label>Bajaj Finserver</label>
+                        <label>Bajaj Finserv Ltd.</label>
                     </li>
                     <li class="filter-value">
                         <span class="custom-checkbox">
-                            <input type="checkbox" value="HDFC Bank">
+                            <input type="checkbox" value="HDFC Bank Ltd.">
                             {{ partial "icons/checkbox-checked"}}
                         </span>
-                        <label>HDFC Bank</label>
+                        <label>HDFC Bank Ltd.</label>
                     </li>
                     <li class="filter-value">
                         <span class="custom-checkbox">
-                            <input type="checkbox" value="Aditya Birla Finance">
+                            <input type="checkbox" value="Aditya Birla Finance Ltd.">
                             {{ partial "icons/checkbox-checked"}}
                         </span>
-                        <label>Aditya Birla Finance</label>
+                        <label>Aditya Birla Finance Ltd.</label>
                     </li>
                     <li class="filter-value">
                         <span class="custom-checkbox">
@@ -44,6 +101,17 @@
             </div>
             <div class="filter-item">
                 <span class="filter-label">CREDIT LIMIT {{ partial "icons/blue-arrow" }}</span>
+                <ul class="filter-values">
+                    <li class="filter-value flex-column">
+                        <p class="range-slider-label">
+                            <span><b>₹10,000</b><br>(10 Thousand)</span>
+                            <span><b>₹5,00,000</b><br>(5 Lakhs)</span>
+                        </p>
+                        <span class="range-slider-container">
+                            <input type='range' min='10000' value='500000' max='900000'/>
+                        </span>
+                    </li>
+                </ul>
             </div>
             <div class="filter-item">
                 <span class="filter-label">INTEREST RATE {{ partial "icons/blue-arrow" }}</span>
@@ -127,12 +195,12 @@
             </div>
         </div>
         <div class="filter-cta">
-            <a class="cibil-button cibil-button-border">apply filter</a>
-            <a class="cibil-btn-link">CLEAR ALL FILTERS</a>
+            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none">Apply</span></a>
+            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none">Clear All</span></a>
         </div>
     </div>
-    <div>
-        <div>
+    <div class="offers-content-container">
+        <div class="sticky-sort-wrap">
             <ul class="sort-component">
                 <li>
                     <label>Loan Partner</label>
@@ -152,13 +220,17 @@
                 </li>
                 <li></li>
             </ul>
+            <div class="sort-filter-sticky d-lg-none">
+                <a onclick="toggeSortFilter()">{{ partial "icons/sort-filter-icon"}}<span>SORT & Filter</span>{{partial "icons/arrow-right"}}</a>
+                <a>Clear All</a>
+            </div>
         </div>
         <div class="offer-card-list">
             <div class="offers-card premium-partner" amount="₹8,00,000" data-index="1">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/bajaj-finserv-logo.svg" class="company-logo"></span>
-                        <label class="company-name">Bajaj Finserv</label>
+                        <label class="company-name">Bajaj Finserv Ltd.</label>
                     </div>
                     <div class="offer-info">
                         <li>
@@ -186,7 +258,7 @@
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/digit-logo.svg" class="company-logo"></span>
-                        <label class="company-name">DIGIT</label>
+                        <label class="company-name">Digit Inc.</label>
                     </div>
                     <div class="offer-info">
                         <li>
@@ -214,7 +286,7 @@
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/aditya-birla-finance-logo.svg" class="company-logo"></span>
-                        <label class="company-name">Aditya Birla Finance Pvt Ltd</label>
+                        <label class="company-name">Aditya Birla Finance Ltd.</label>
                     </div>
                     <div class="offer-info">
                         <li>
@@ -241,7 +313,7 @@
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/hdfc-home-loans-logo.svg" class="company-logo"></span>
-                        <label class="company-name">HDFC Home Loans</label>
+                        <label class="company-name">HDFC Bank Ltd.</label>
                     </div>
                     <div class="offer-info">
                         <li>
@@ -268,7 +340,7 @@
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/bajaj-finserv-logo.svg" class="company-logo"></span>
-                        <label class="company-name">Bajaj Finserv</label>
+                        <label class="company-name">Bajaj Finserv Ltd.</label>
                     </div>
                     <div class="offer-info">
                         <li>

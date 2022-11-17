@@ -1636,7 +1636,10 @@
       }
     }
   }
-  .loan-offers-tabs {
+}
+
+@include media-breakpoint-down(md) {
+  .loan-offers-tabs{
     .report-select-group {
       display: none !important;
     }
@@ -1650,6 +1653,8 @@
     }
   }
 }
+
+
 
 //report-summary
 .report-summary-container {
@@ -2529,12 +2534,12 @@
   padding: 0;
   margin-bottom: 30px;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     position: sticky;
     top: 60px;
-    z-index: 10;
+    z-index: 9;
   }
 
   .loanTabs {
@@ -2550,7 +2555,7 @@
       display: flex;
       justify-content: center;
       position: relative;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         min-width: 120px;
       }
       button {
@@ -2609,7 +2614,7 @@
         border-right: 1px solid $border-color-4;
       }
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding-bottom: 20px;
       .report-nav-item {
         button {
@@ -2683,6 +2688,10 @@
     padding: 0 0 10px;
     margin-top: 20px;
     border-bottom: 1px solid #ddd;
+
+    &:last-child{
+      border-bottom: 0;
+    } 
 
     .offer-info-wrap {
       display: flex;
@@ -4465,7 +4474,7 @@ b.plus-icon {
       align-items: center;
     }
   }
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md){
     display: none;
   }
 }
@@ -4489,6 +4498,7 @@ b.plus-icon {
   height: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
+  margin-bottom: 40px;
 
   .filter-header {
     margin-bottom: 30px;
@@ -4527,12 +4537,14 @@ b.plus-icon {
           display: flex;
           align-items: center;
           margin: 15px 0 0;
-          label {
+          flex-flow: wrap;
+          label{
             font-weight: 600;
             font-size: 14px;
             line-height: 14px;
             margin: 0;
             text-transform: none;
+            white-space: nowrap;
           }
         }
       }
@@ -4557,6 +4569,303 @@ b.plus-icon {
       text-decoration-line: underline;
       text-transform: uppercase;
       color: #d74025;
+    }
+  }
+
+  @include media-breakpoint-down(md){
+    display: none;
+  }
+}
+.offers-content-container{
+  width: 100%;
+}
+
+@media (min-width:992px) and (max-width:1300px){
+  .sort-component li, .offer-card-list .offers-card .offer-info li, .offer-card-list .offers-card .company-container{
+    margin-right: 10px !important;
+  }
+}
+
+//custm range slider
+.range-slider-label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+
+  span{
+      font-weight: $intro-regular;
+      font-size: 10px;
+      line-height: 10px;
+      color: $black;
+      b{
+        font-weight: $intro-regular;
+        font-size: 14px;
+        line-height: 14px;
+        color: $secondary-denim;
+        margin-bottom: 2px;
+        display: inline-block;
+      }
+      &:last-child{
+        text-align: right;
+      }
+  }
+}
+.range-slider-container{
+  width: 100%;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 20px 0 14px;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #707070;
+  border-radius: 1.3px;
+}
+input[type=range]::-webkit-slider-thumb {
+  // box-shadow: inset 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: url(/cibil-dashboard/images/static-images/slider-thumb.svg);
+  cursor: pointer;
+  -webkit-appearance: none;
+  transform: translateY(-50%);
+  position: relative;
+  border: 0;
+}
+input[type=range]::-webkit-slider-thumb::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: $primary-blue;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #707070;
+  border-radius: 1.3px;
+}
+input[type=range]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: url(/cibil-dashboard/images/static-images/slider-thumb.svg);
+  cursor: pointer;
+  -webkit-appearance: none;
+  position: relative;
+  border: 0;
+}
+input[type=range]::-ms-track {
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+  width: 100%;
+  height: 2px;
+  border-radius: 1.3px;
+}
+input[type=range]::-ms-fill-lower {
+  background: $primary-blue;
+}
+input[type=range]::-ms-fill-upper {
+  background:#707070;
+}
+input[type=range]::-ms-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: url(/cibil-dashboard/images/static-images/slider-thumb.svg);
+  cursor: pointer;
+  -webkit-appearance: none;
+  transform: translateY(-50%);
+  position: relative;
+  border: 0;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+.sort-filter-sticky{
+  background: #FEFBE9;
+  border-bottom: 1px solid #ACACAC;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  padding: 17px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 30px;
+  a{
+    font-weight: $intro-regular;
+    font-size: 14px;
+    line-height: 14px;
+    text-decoration: underline !important;
+    text-transform: uppercase;
+    color: $black !important;
+    cursor: pointer;
+    
+    &:first-child{
+      text-decoration: none !important;
+      span {
+        font-weight: $intro-bold;
+        font-size: 14px;
+        line-height: 14px;
+        text-transform: uppercase;
+        color: $black;
+        margin: 0 10px 0 12px;
+        text-decoration: none !important;
+        position: relative;
+        top: 2px; 
+      }
+    }
+  }
+}
+@include media-breakpoint-down(md){
+  .sticky-sort-wrap{
+    position: sticky;
+    top: 181px;
+    z-index: 9;
+  }
+}
+
+.show-sort-filter{
+  @include media-breakpoint-down(md){
+    .sort-filter-sticky{
+      position: fixed;
+      top: 60px;
+      width: 100%;
+      left: 20px;
+      z-index: 11;
+      a{
+        display: none;
+        &:first-of-type{
+          display: flex;
+          width: 100%;
+          justify-content: center;
+
+          svg:last-child{
+            order: -1;
+            margin-right: auto;
+            transform: rotate(180deg);
+          }
+          span{
+            margin-right: auto;
+          }
+        }
+      }
+    }
+    .filter-container{
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 111px;
+      width: 100%;
+      z-index: 10;
+      background: $light;
+      border-radius: 0;
+      max-height: calc(100vh - 111px);
+      height: 100vh;
+      overflow-y: scroll;
+      padding-bottom: 100px;
+
+      .filter-label{
+        border-color: #ddd !important;
+        color: $dark;
+      }
+      .filter-header{
+        display: none;
+      }
+      .filter-cta {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 20px;
+        background: $light;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 20px 20px;
+        margin: 0 -20px 0 -20px;
+        box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.12);
+        align-items: center;
+
+        .cibil-button{
+          background: $primary-orange;
+          font-size: 14px;
+          line-height: 14px;
+          font-weight: $intro-bold;
+          padding-top: 16px;
+          padding-bottom: 15px;
+          margin-bottom: 0;
+        }
+        .cibil-btn-link{
+          font-weight: $intro-regular;
+          font-size: 16px;
+          line-height: 16px;
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+}
+
+.custom-radio-wrap {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+
+  label{
+    font-weight: $intro-book !important;
+  }
+  .custom-radio{
+    &:first-of-type{
+      margin-right: 30px;
+    }
+
+    input {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      background: $light;
+      border-radius: 50%;
+      border: 1px solid #2c2c2c;
+      margin-right: 10px;
+      position: relative;
+      top: 3px;
+
+    }
+    input:checked::after{
+      content: '';
+      width: 8px;
+      height: 8px;
+      background-color: $primary-blue;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      border-radius: 50%;
     }
   }
 }

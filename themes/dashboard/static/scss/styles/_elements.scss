@@ -1454,6 +1454,8 @@ input[type="number"] {
     border-radius: 2px;
     margin: 0;
     cursor: pointer;
+    -webkit-appearance: none;
+    background: #fff;
 
     & + svg {
       position: absolute;
