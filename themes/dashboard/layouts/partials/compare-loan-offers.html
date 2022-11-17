@@ -1,36 +1,203 @@
-{{if .offersData}}
+
     <div class="loan-offers-comparison">
         <div class="loan-offers-comparison__wraper">
-            <table>
-                <tbody>
-                    
-                    <tr class="offers-head">
-                        <td></td>
-                        {{range .offersData}}
-                            <td>
-                                <div class="wrap">
-                                    <span class="company-logo">
-                                        <img src="{{ .logo | relURL }}" alt="">
-                                    </span>
-                                    <p class="company-title">{{.name}}</p>
-                                    <a class="cibil-button">VIEW OFFER</a>
-                                </div>
-                            </td>
-                        {{end}}
-                    </tr>
-                    
-                        <tr>
-                            <td>test</td>
-                            {{range .offersData}}
-                            <td>
-                                {{.}}
-                            </td>
-                            {{end}}
-                        </tr>
-                    
+            <div class="hide-sm-down">
+                <table>
+                    <tbody>
+                        
+                        <tr class="offers-head">
+                            <td></td>
+                            
+                                <td>
+                                    <div class="wrap">
+                                        <span class="company-logo">
+                                            <img src="{{ "images/dynamic-images/bajaj-finserv-logo.svg" | relURL }}" alt="">
+                                        </span>
+                                        <p class="company-title">Bajaj Finserv Ltd.</p>
+                                        <a class="cibil-button">VIEW OFFER</a>
+                                    </div>
+                                </td>
 
-                </tbody>
-            </table>
+                                <td>
+                                    <div class="wrap">
+                                        <span class="company-logo">
+                                            <img src="{{ "images/dynamic-images/digit-logo.svg" | relURL }}" alt="">
+                                        </span>
+                                        <p class="company-title">Digit Inc.</p>
+                                        <a class="cibil-button">VIEW OFFER</a>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="wrap">
+                                        <span class="company-logo">
+                                            <img src="{{ "images/dynamic-images/aditya-birla-finance-logo.svg" | relURL }}" alt="">
+                                        </span>
+                                        <p class="company-title">Aditya Birla Finance Ltd.</p>
+                                        <a class="cibil-button">VIEW OFFER</a>
+                                    </div>
+                                </td>
+                            
+                        </tr>
+                        
+                            <tr>
+                                <th>Tentative Credit Limit Offered</th>
+                                <td>₹8,00,000</td>
+                                <td>₹8,00,000</td>
+                                <td>₹8,00,000</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>Monthly Interest Rate</th>
+                                <td>3.35%</td>
+                                <td>3.35%</td>
+                                <td>3.35%</td>
+                            </tr>
+                            <tr>
+                                <th>Annual Fees</th>
+                                <td>₹400+GST</td>
+                                <td>₹400+GST</td>
+                                <td>₹400+GST</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>Required Documents</th>
+                                <td>
+                                    <ul>
+                                        <li>KYC documents, Photograph</li>
+                                        <li>Previous 3 months salary slips</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>KYC documents, Photograph</li>
+                                        <li>Previous 3 months salary slips</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>KYC documents, Photograph</li>
+                                        <li>Previous 3 months salary slips</li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>Benefits</th>
+                                <td>
+                                    <ul>
+                                        <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                        <li>Earn 10X rewards on online spends with exclusive partners.</li>
+                                        <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                        <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                        <li>Earn 10X rewards on online spends with exclusive partners.</li>
+                                        <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                        <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                        <li>Earn 10X rewards on online spends with exclusive partners.</li>
+                                        <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                        <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="hide-md-up">
+                <table>
+                    <tbody>
+                        
+                        <tr class="offers-head">
+                            
+                                <td>
+                                    <div class="wrap">
+                                        <span class="company-logo">
+                                            <img src="{{ "images/dynamic-images/bajaj-finserv-logo.svg" | relURL }}" alt="">
+                                        </span>
+                                        <p class="company-title">Bajaj Finserv Ltd.</p>
+                                        <a class="cibil-button">VIEW OFFER</a>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="wrap">
+                                        <span class="company-logo">
+                                            <img src="{{ "images/dynamic-images/digit-logo.svg" | relURL }}" alt="">
+                                        </span>
+                                        <p class="company-title">Digit Inc.</p>
+                                        <a class="cibil-button">VIEW OFFER</a>
+                                    </div>
+                                </td>
+                            
+                        </tr>
+                        
+                            <tr>
+                                <th>Tentative Credit Limit Offered</th>
+                                <td>₹8,00,000</td>
+                                <td>₹8,00,000</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>Monthly Interest Rate</th>
+                                <td>3.35%</td>
+                                <td>3.35%</td>
+                            </tr>
+                            <tr>
+                                <th>Annual Fees</th>
+                                <td>₹400+GST</td>
+                                <td>₹400+GST</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>Required Documents</th>
+                                <td>
+                                    <ul>
+                                        <li>KYC documents, Photograph</li>
+                                        <li>Previous 3 months salary slips</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>KYC documents, Photograph</li>
+                                        <li>Previous 3 months salary slips</li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>Benefits</th>
+                                <td>
+                                    <ul>
+                                        <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                        <li>Earn 10X rewards on online spends with exclusive partners.</li>
+                                        <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                        <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                        <li>Earn 10X rewards on online spends with exclusive partners.</li>
+                                        <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                        <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-{{end}}
