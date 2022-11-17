@@ -1468,3 +1468,29 @@ input[type="number"] {
     }
   }
 }
+
+.checklist{
+  margin-bottom: 0px;
+  position: relative;
+  li{
+    display: grid;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+    grid-template-columns: 16px 1fr;
+    &:last-child{
+      margin-bottom: 0px;
+    }
+    &:before{
+      content: "";
+      height: 16px;
+      width: 16px;
+      display: inline-flex;
+      background-image: url(../images/static-images/checkmark-blue-icon.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      margin-top: 4px;
+    }
+  }
+}
