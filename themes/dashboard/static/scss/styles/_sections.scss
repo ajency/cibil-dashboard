@@ -1570,7 +1570,7 @@
     padding-top: 0px;
     margin-bottom: 30px;
   }
-  .mobile-tabs{
+  .mobile-tabs {
     margin-bottom: 20px;
   }
   .report-select-group {
@@ -1589,6 +1589,9 @@
       overflow-y: hidden !important;
       .report-nav-item {
         position: relative;
+        &:last-child{
+          margin-right: 19px;
+        }
         .report-nav-link {
           padding: 14px 15px 20px;
           font-weight: $intro-regular;
@@ -1600,12 +1603,13 @@
           justify-content: center;
           align-items: center;
           gap: 18px;
+          min-width: 133px;
           &:before {
             height: 10px;
             transition: none !important;
             bottom: 0px;
           }
-          &::after{
+          &::after {
             transition: none !important;
             bottom: 0px;
           }
@@ -1629,7 +1633,7 @@
             width: 1px;
             position: absolute;
             right: 0px;
-            background: #ACACAC;
+            background: #acacac;
             top: calc(50% - 24px);
           }
         }
@@ -4866,6 +4870,81 @@ input[type=range]:focus::-ms-fill-upper {
       transform: translate(-50%, -50%);
       display: block;
       border-radius: 50%;
+    }
+  }
+}
+
+.loan-offers-comparison {
+  &__wraper {
+    table {
+      width: 100%;
+      tr {
+        &:nth-child(even) {
+          background: #f6f7fc;
+        }
+        th {
+          @include hairline-bold;
+        }
+        th, td{
+          padding: 20px 30px;
+        }
+        td{
+          @include hairline;
+        }
+      }
+      .offers-head {
+        background: #ffffff;
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.12);
+        position: relative;
+        z-index: 1;
+        border-right: 1px solid #ededed;
+        td {
+          padding: 23px 20px 18px;
+          &:first-child,
+          &:last-child {
+            .wrap {
+              border-right: 1px solid #fff;
+            }
+          }
+        }
+      }
+    }
+    .company-logo {
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      border-radius: 6px;
+      width: 120px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .company-title {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 14px;
+      margin-bottom: 20px;
+    }
+    ul{
+      li{
+        display: grid;
+        grid-template-columns: 4px 1fr;
+        align-items: start;
+        align-items: center;
+        gap: 10px;
+        grid-gap: 10px;
+        &:before{
+          content:'';
+          width: 4px;
+          height: 4px;
+          background: #2C2C2C;
+          border-radius: 5px;
+          display: block;
+          margin-top: 5px;
+        }
+      }
     }
   }
 }

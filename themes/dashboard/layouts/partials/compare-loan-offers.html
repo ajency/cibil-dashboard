@@ -1,0 +1,36 @@
+{{if .offersData}}
+    <div class="loan-offers-comparison">
+        <div class="loan-offers-comparison__wraper">
+            <table>
+                <tbody>
+                    
+                    <tr class="offers-head">
+                        <td></td>
+                        {{range .offersData}}
+                            <td>
+                                <div class="wrap">
+                                    <span class="company-logo">
+                                        <img src="{{ .logo | relURL }}" alt="">
+                                    </span>
+                                    <p class="company-title">{{.name}}</p>
+                                    <a class="cibil-button">VIEW OFFER</a>
+                                </div>
+                            </td>
+                        {{end}}
+                    </tr>
+                    
+                        <tr>
+                            <td>test</td>
+                            {{range .offersData}}
+                            <td>
+                                {{.}}
+                            </td>
+                            {{end}}
+                        </tr>
+                    
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+{{end}}
