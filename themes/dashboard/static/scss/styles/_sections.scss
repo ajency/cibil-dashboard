@@ -1564,16 +1564,29 @@
     padding-top: 30px;
     margin-bottom: 30px;
   }
-  // .report-select-group {
-  //   display: block !important;
-  // }
+  .report-select-group {
+    display: block !important;
+  }
   .reportTabs {
-    // display: none !important;
+    display: none !important;
     overflow-x: scroll !important;
     margin-left: -20px !important;
     margin-right: -20px !important;
     border-radius: 0 !important;
     box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08) !important;
+  }
+  .loan-offers-tabs{
+    .report-select-group {
+      display: none !important;
+    }
+    .loanTabs {
+      display: flex !important;
+      overflow-x: scroll !important;
+      margin-left: -20px !important;
+      margin-right: -20px !important;
+      border-radius: 0 !important;
+      box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08) !important;
+    }
   }
 }
 
@@ -4379,6 +4392,9 @@ b.plus-icon {
   color: #2C2C2C;
   margin-right: 20px;
   min-width: 236px;
+  height: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
 
   .filter-header {
     margin-bottom: 30px;
