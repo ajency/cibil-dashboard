@@ -1438,6 +1438,12 @@
         }
       }
     }
+    margin-top: -10px;
+    .report-bar-wrap {
+      .report-bar-item {
+        max-width: 313px;
+      }
+    }
   }
 }
 .report-tabs {
@@ -1561,8 +1567,11 @@
 
 @include media-breakpoint-down(sm) {
   .report-tabs {
-    padding-top: 30px;
+    padding-top: 0px;
     margin-bottom: 30px;
+  }
+  .mobile-tabs{
+    margin-bottom: 20px;
   }
   .report-select-group {
     display: block !important;
@@ -1574,6 +1583,56 @@
     margin-right: -20px !important;
     border-radius: 0 !important;
     box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08) !important;
+    border: none !important;
+    &.mobileTabs {
+      display: flex !important;
+      .report-nav-item {
+        position: relative;
+        .report-nav-link {
+          padding: 14px 15px 20px;
+          font-weight: $intro-regular;
+          font-size: 14px;
+          line-height: 14px;
+          text-transform: uppercase;
+          color: #2c2c2c !important;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 18px;
+          &:before {
+            height: 10px;
+            transition: none !important;
+          }
+          &::after{
+            transition: none !important;
+            bottom: 0px;
+          }
+          &.active {
+            font-weight: $intro-bold;
+            &:before {
+              background-color: #fcd800 !important;
+            }
+            &:after {
+              bottom: 6px;
+              border-bottom: 8px solid #fcd800 !important;
+              border-width: 8px !important;
+              border-top: none !important;
+            }
+          }
+        }
+        &:not(:last-child) {
+          &:before {
+            content: "";
+            height: 56px;
+            width: 1px;
+            position: absolute;
+            right: 0px;
+            background: #ACACAC;
+            top: calc(50% - 24px);
+          }
+        }
+      }
+    }
   }
   .loan-offers-tabs {
     .report-select-group {
@@ -1599,7 +1658,7 @@
   .summary-gif {
     border: 3px solid #dddddd;
   }
-  .heading{
+  .heading {
     margin-bottom: 20px;
   }
   .mobile-mockup {
