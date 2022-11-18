@@ -834,11 +834,18 @@
     <div class="col3">
         <div class="form-group">
             <label for="location">Location</label>
-            <div class="custom-select-input search-dropdown" onclick="customSelectInput(this)">
-                <span class="custom-select-value placeholder">All Of India</span>
+            <span class="resetSearch" onclick="resetSearch(this)"></span>
+            <div class="custom-select-input">
+                <span class="custom-select-value" onclick="customSelectInputSearch(this)">All of India</span>
+                <div class="searchbox" onclick="searchQuery(this)">
+    <div class="searchbox__wraper">
+        <span class="search-button"></span>
+        <input type="text" id="searchbox" name="searchbox">
+    </div>
+</div>
                 <div class="custom-select-options">
-                    <span onclick="customSelectOptionLocation(this)">Delhi</span>
-                    <span onclick="customSelectOptionLocation(this)">Mumbai</span>
+                    <span onclick="customSelectOptionSearch(this)">Ambarnath</span>
+                    <span onclick="customSelectOptionSearch(this)">Ambattur</span>
                 </div>
             </div>
         </div>

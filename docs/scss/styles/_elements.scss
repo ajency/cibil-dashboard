@@ -1044,7 +1044,7 @@ input[type="number"] {
         background: $light;
         font-weight: $intro-regular;
         transition: all 0.2s ease-in-out;
-        &:hover {
+        &:hover, &.selected {
           background: $light-blue-4;
           font-weight: $intro-bold;
         }
@@ -1052,6 +1052,16 @@ input[type="number"] {
     }
     .searchbox {
       display: none;
+      position: absolute;
+      width: 100%;
+      top: 51px;
+      z-index: 2;
+      & ~ .custom-select-options {
+        padding-top: 49px;
+    }
+    }
+    &.opened{
+      border-bottom-color: #EDEDED !important ;
     }
   }
   .currency-prefix {
@@ -1098,7 +1108,7 @@ input[type="number"] {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: calc(50px - 13px);
+    top: calc(50px - 8px);
     right: 16px;
     z-index: 1;
     cursor: pointer;
