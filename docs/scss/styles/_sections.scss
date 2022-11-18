@@ -2507,7 +2507,7 @@
       // padding: 10px;
       // border: 0.4px solid #acacac;
       // border-radius: 8px;
-      padding: 12px 10px 10px;
+      padding: 11px 10px;
       white-space: nowrap;
     }
   }
@@ -3672,13 +3672,6 @@
   a {
     &:first-child {
       @include intro-regular-16;
-      color: $primary-blue !important;
-      &::before {
-        content: url(../images/static-images/left-arrow-blue.svg);
-        margin-right: 10px;
-        top: 2px;
-        position: relative;
-      }
       display: none;
     }
     &:last-child {
@@ -3695,6 +3688,7 @@
       letter-spacing: 0.02em;
       color: #2c2c2c !important;
       text-decoration: none !important;
+      border: none;
       svg {
         margin-right: 7px;
       }
@@ -3723,11 +3717,15 @@
     justify-content: flex-start;
     margin-bottom: 0px;
     a {
+      width: 50%;
       &:first-child {
-        display: block;
+        display: flex;
+        justify-content: flex-start;
       }
-      &:last-child {
-        display: none;
+      &:last-child{
+        padding: 11px 10px;
+        max-width: 166.9px;
+        height: 40px;
       }
     }
   }
@@ -3741,7 +3739,7 @@
   margin-bottom: 200px;
   & > p {
     @include intro-regular-16;
-    margin-bottom: 17px;
+    margin-bottom: 20px;
   }
   .edit-info-wrap {
     display: flex;
@@ -3788,6 +3786,20 @@
       display: block;
     }
   }
+  #comparisonForm{
+    .col3{
+      grid-row-gap: 0px;
+      .form-group{
+        margin-bottom: 24px;
+      }
+      .currency-prefix{
+        top: calc(52px - 13px);
+      }
+      .resetSearch{
+        top: calc(50px - 10px);
+      }
+    }
+  }
   @include media-breakpoint-down(sm) {
     margin-bottom: 40px;
     box-shadow: none;
@@ -3807,6 +3819,19 @@
       .cibil-button {
         width: 100%;
         margin-bottom: 30px;
+      }
+    }
+    #comparisonForm{
+      .col3{
+        label{
+          margin-bottom: 6px;
+        }
+        .currency-prefix{
+          top: calc(52px - 9px);
+        }
+        .resetSearch{
+          top: calc(50px - 7px);
+        }
       }
     }
   }
@@ -3834,6 +3859,12 @@ b.plus-icon {
     }
     & > .edit-info-header {
       display: flex;
+      @include media-breakpoint-down(sm){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0px 30px;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 <form class="dashboard-form" id="comparisonForm" novalidate>
     <div class="col3">
         <div class="form-group">
-            <label for="location">Location</label>
+            <label for="location">City</label>
             <span class="resetSearch" onclick="resetSearch(this)"></span>
             <div class="custom-select-input">
                 <span class="custom-select-value" onclick="customSelectInputSearch(this)">All of India</span>
@@ -27,6 +27,10 @@
             <span class="currency-prefix">₹</span>
             <input class="currency-field" type="number" name="monthly_income" id="monthly_income" placeholder="Enter Amount" required>
             <p class="message"></p>
+        </div>
+        <div class="edit-info-cta-wrap">
+            <a onclick="submitEditInfo()" class="cibil-button">Submit</a>
+            <a onclick="editOInfoToggle()" class="cibil-link">Cancel</a>
         </div>
     </div>
 </form>
