@@ -2,14 +2,14 @@
   {
     "logo": "images/dynamic-images/bajaj-finserv-logo.svg",
     "name": "Bajaj Finserv Ltd.",
-    "Tentative Credit Limit Offered": "₹8,00,000",
-    "Monthly Interest Rate": "3.35%",
-    "Annual Fees": "₹400+GST",
-    "Required Documents": [
+    "limit_offered": "₹8,00,000",
+    "monthly_interest_rate": "3.35%",
+    "annual_fees": "₹400+GST",
+    "required_documents": [
       "KYC documents, Photograph",
       "Previous 3 months salary slips"
     ],
-    "Benefits": [
+    "benefits": [
       "Get a welcome e-gift voucher worth ₹500 from Amazon.",
       "Earn 10X rewards on online spends with exclusive partners.",
       "E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.",
@@ -17,16 +17,50 @@
     ]
   },
   {
-    "logo": "images/dynamic-images/bajaj-finserv-logo.svg",
-    "name": "Bajaj Finserv Ltd.",
-    "Tentative Credit Limit Offered": "₹8,00,000",
-    "Monthly Interest Rate": "3.35%",
-    "Annual Fees": "₹400+GST",
-    "Required Documents": [
+    "logo": "images/dynamic-images/digit-logo.svg",
+    "name": "Digit Inc.",
+    "limit_offered": "₹10,00,000",
+    "monthly_interest_rate": "3.35%",
+    "annual_fees": "₹1,200+GST",
+    "required_documents": [
       "KYC documents, Photograph",
-      "Previous 3 months salary slips"
+      "ITR Returns of past 2 years"
     ],
-    "Benefits": [
+    "benefits": [
+      "Get a welcome e-gift voucher worth ₹500 from Amazon.",
+      "Earn 10X rewards on online spends with exclusive partners.",
+      "E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.",
+      "Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year."
+    ]
+  },
+  {
+    "logo": "images/dynamic-images/aditya-birla-finance-logo.svg",
+    "name": "Aditya Birla Finance Ltd.",
+    "limit_offered": "₹8,00,000",
+    "monthly_interest_rate": "3.35%",
+    "annual_fees": "₹399+GST",
+    "required_documents": [
+      "KYC documents, Photograph",
+      "ITR Returns of past 2 years"
+    ],
+    "benefits": [
+      "Get a welcome e-gift voucher worth ₹500 from Amazon.",
+      "Earn 10X rewards on online spends with exclusive partners.",
+      "E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.",
+      "Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year."
+    ]
+  },
+  {
+    "logo": "images/dynamic-images/hdfc-home-loans-logo.svg",
+    "name": "HDFC Bank Ltd.",
+    "limit_offered": "₹7,00,000",
+    "monthly_interest_rate": "3.35%",
+    "annual_fees": "₹12,000+GST",
+    "required_documents": [
+      "KYC documents, Photograph",
+      "ITR Returns of past 2 years"
+    ],
+    "benefits": [
       "Get a welcome e-gift voucher worth ₹500 from Amazon.",
       "Earn 10X rewards on online spends with exclusive partners.",
       "E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.",

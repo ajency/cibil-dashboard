@@ -3255,15 +3255,16 @@
   font-size: 12px !important;
   line-height: 12px !important;
   text-decoration: none;
-  padding: 12px 15px 10px;
-  
+  padding: 11px 16px;
+  letter-spacing: 0.02em;
 }
 
 #edit-info{
   text-decoration: none !important;
+  user-select: none;
   svg{
     position: relative;
-    top: -2px;
+    //top: -2px;
   }
 }
 

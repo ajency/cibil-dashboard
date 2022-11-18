@@ -682,6 +682,20 @@ html {
   scroll-behavior: smooth;
 }
 
+.sticky-head {
+  @include media-breakpoint-up(md){
+    position: fixed !important;
+    z-index: 2;
+  }
+}
+
+.custom-select-value {
+  &.value-selected {
+    background: rgb(249, 249, 249) !important;
+    color: rgb(112, 112, 112) !important;
+  }
+}
+
 @import "styles/page-header";
 @import "styles/elements";
 @import "styles/components";

@@ -2971,11 +2971,11 @@
 .compare-offer-header {
   display: none;
   background: $primary-yellow;
-  padding: 20px 0;
-  margin-bottom: 36px;
+  padding: 26px 0 20px;
+  margin-bottom: 0px;
   .compare-header-wrap {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
     p {
       font-weight: $intro-regular;
@@ -2988,9 +2988,10 @@
   }
   @include media-breakpoint-down(sm) {
     position: relative;
-    margin-top: 64px;
+    margin-top: 0px;
+    padding: 20px 0;
     .compare-header-wrap {
-      grid-template-columns: auto;
+      grid-template-columns: auto 1fr;
       .cibil-button {
         position: absolute;
         left: 0;
@@ -4888,6 +4889,11 @@ input[type="range"]:focus::-ms-fill-upper {
   &__wraper {
     table {
       width: 100%;
+      thead{
+        position: sticky;
+        top: 60px;
+        z-index: 1;
+      }
       tr {
         &:nth-child(even) {
           background: #f6f7fc;
@@ -4901,6 +4907,9 @@ input[type="range"]:focus::-ms-fill-upper {
         }
         td {
           @include hairline;
+          &:nth-child(n+5){
+            display: none;
+          }
         }
       }
       .offers-head {
@@ -4933,6 +4942,7 @@ input[type="range"]:focus::-ms-fill-upper {
       margin-bottom: 20px;
     }
     ul {
+      margin-bottom: 0px;
       li {
         display: grid;
         grid-template-columns: 4px 1fr;
@@ -4968,6 +4978,16 @@ input[type="range"]:focus::-ms-fill-upper {
                 border-right: 1px solid #fff;
               }
             }
+            &:nth-child(n+4){
+              .wrap{
+                border-right: none;
+              }
+            }
+          }
+        }
+        tr{
+          th{
+            width: 20%;
           }
         }
       }
@@ -4987,6 +5007,12 @@ input[type="range"]:focus::-ms-fill-upper {
             &:not(:last-child) {
               border-right: 1px solid #dddddd;
             }
+            &:nth-child(n+4){
+              display: none;
+            }
+            &:nth-child(n+3){
+              border-right: none;
+            }
             ul {
               text-align: left;
             }
@@ -5005,6 +5031,13 @@ input[type="range"]:focus::-ms-fill-upper {
               padding: 0;
               width: calc(100% - 40px);
               text-align: center;
+            }
+          }
+        }
+        .offers-head{
+          td{
+            &:first-child{
+              display: none;
             }
           }
         }
