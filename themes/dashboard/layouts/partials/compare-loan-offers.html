@@ -16,7 +16,7 @@
                     <tr class="offers-head">
                         <td></td>
                         {{range $index, $offersData := .offersData}}
-                            <td>
+                            <td data-id="{{.id}}">
                                 <div class="wrap">
                                     <span class="company-logo">
                                         <img src="{{ .logo | relURL }}" alt="">
@@ -32,28 +32,28 @@
                         <tr>
                             <th>Tentative Credit Limit Offered</th>
                             {{range .offersData}}
-                                <td>{{.limit_offered}}</td>
+                                <td data-id="{{.id}}">{{.limit_offered}}</td>
                             {{end}}
                         </tr>
                         
                         <tr>
                             <th>Monthly Interest Rate</th>
                             {{range .offersData}}
-                                <td>{{.monthly_interest_rate}}</td>
+                                <td data-id="{{.id}}">{{.monthly_interest_rate}}</td>
                             {{end}}
                         </tr>
 
                         <tr>
                             <th>Annual Fees</th>
                             {{range .offersData}}
-                                <td>{{.annual_fees}}</td>
+                                <td data-id="{{.id}}">{{.annual_fees}}</td>
                             {{end}}
                         </tr>
                         
                         <tr>
                             <th>Required Documents</th>
                             {{range .offersData}}
-                                <td>
+                                <td data-id="{{.id}}">
                                     <ul>
                                         {{range .required_documents}}
                                             <li>{{.}}</li>
@@ -66,7 +66,7 @@
                         <tr>
                             <th>Benefits</th>
                             {{range .offersData}}
-                                <td>
+                                <td data-id="{{.id}}">
                                     <ul>
                                         {{range .benefits}}
                                             <li>{{.}}</li>
