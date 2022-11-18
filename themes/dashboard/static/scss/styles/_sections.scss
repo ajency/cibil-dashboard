@@ -2683,14 +2683,14 @@
   display: flex;
   position: relative;
 
-  @include media-breakpoint-up(md){
-      &::after {
-        content: '';
-        width: 100%;
-        height: 3px;
-        background: #fff;
-        bottom: -1px;
-        position: absolute;
+  @include media-breakpoint-up(md) {
+    &::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background: #fff;
+      bottom: -1px;
+      position: absolute;
     }
   }
 
@@ -2757,7 +2757,7 @@
         // margin-right: 30px;
         margin-right: 0;
         padding-right: 14px;
-        padding-left: 14px; 
+        padding-left: 14px;
         span {
           &:first-child {
             @include media-breakpoint-up(md) {
@@ -2821,7 +2821,7 @@
     &.premium-partner {
       position: relative;
       margin-top: 45px;
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(sm) {
         margin-top: 30px;
       }
       &:before {
@@ -3681,14 +3681,14 @@
       cursor: pointer;
       display: flex;
       align-items: center;
-      background: #EDEDED;
+      background: #ededed;
       border-radius: 25px;
       padding: 11px 16px;
       font-weight: 700;
       font-size: 12px;
       line-height: 12px;
       letter-spacing: 0.02em;
-      color: #2C2C2C !important;
+      color: #2c2c2c !important;
       text-decoration: none !important;
       svg {
         margin-right: 7px;
@@ -3704,9 +3704,9 @@
           background-color: $primary-blue !important;
         }
       }
-      &.cibil-link-button{
-        svg{
-          path{
+      &.cibil-link-button {
+        svg {
+          path {
             fill: $black;
           }
         }
@@ -3758,6 +3758,10 @@
     .cibil-link {
       font-weight: $intro-regular;
       margin-left: 30px;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      text-decoration: underline;
     }
   }
   .personal-loan-offers-section__wraper {
@@ -4621,7 +4625,7 @@ b.plus-icon {
 }
 .offers-content-container {
   width: 100%;
-  @media (min-width: 1200px) and (max-width:1360px){
+  @media (min-width: 1200px) and (max-width: 1360px) {
     // zoom: 0.8;
     transform: scale(0.99);
     -moz-transform: scale(0.99);
@@ -4924,7 +4928,7 @@ input[type="range"]:focus::-ms-fill-upper {
   &__wraper {
     table {
       width: 100%;
-      thead{
+      thead {
         position: sticky;
         top: 60px;
         z-index: 1;
@@ -4942,7 +4946,7 @@ input[type="range"]:focus::-ms-fill-upper {
         }
         td {
           @include hairline;
-          &:nth-child(n+5){
+          &:nth-child(n + 5) {
             display: none;
           }
         }
@@ -5000,28 +5004,28 @@ input[type="range"]:focus::-ms-fill-upper {
       }
     }
   }
-  @include media-breakpoint-up(md){
-    &__wraper{
-      table{
-        .offers-head{
-          td{
-            .wrap{
+  @include media-breakpoint-up(md) {
+    &__wraper {
+      table {
+        .offers-head {
+          td {
+            .wrap {
               border-right: 1px solid #ededed;
             }
-            &:last-child{
-              .wrap{
+            &:last-child {
+              .wrap {
                 border-right: 1px solid #fff;
               }
             }
-            &:nth-child(n+4){
-              .wrap{
+            &:nth-child(n + 4) {
+              .wrap {
                 border-right: none;
               }
             }
           }
         }
-        tr{
-          th{
+        tr {
+          th {
             width: 20%;
           }
         }
@@ -5042,10 +5046,10 @@ input[type="range"]:focus::-ms-fill-upper {
             &:not(:last-child) {
               border-right: 1px solid #dddddd;
             }
-            &:nth-child(n+4){
+            &:nth-child(n + 4) {
               display: none;
             }
-            &:nth-child(n+3){
+            &:nth-child(n + 3) {
               border-right: none;
             }
             ul {
@@ -5069,9 +5073,9 @@ input[type="range"]:focus::-ms-fill-upper {
             }
           }
         }
-        .offers-head{
-          td{
-            &:first-child{
+        .offers-head {
+          td {
+            &:first-child {
               display: none;
             }
           }
@@ -5093,7 +5097,7 @@ input[type="range"]:focus::-ms-fill-upper {
   }
 }
 
-.activated{
+.activated {
   display: block;
   & + .loan-offers-comparison {
     display: block;
