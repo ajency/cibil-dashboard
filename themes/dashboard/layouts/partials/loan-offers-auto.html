@@ -2,18 +2,18 @@
     <div class="filter-container">
         <span class="filter-header">{{ partial "icons/filter-icon"}} <b>Filter by</b></span>
         <div class="filter-items">
-            <div class="filter-item d-lg-none">
+            <div class="filter-item filter-sort-item d-lg-none">
                 <span class="filter-label">SORT OFFERS {{ partial "icons/blue-arrow" }}</span>
                 <ul class="filter-values">
                     <li class="filter-value">
                         <label>Loan Partners</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="auto-partner-1" type="radio" name="auto-radio" value="A-Z">
+                                <input id="auto-partner-1" type="radio" name="auto-radio" value="partner">
                                 <label for="auto-partner-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="auto-partner-2" type="radio" name="auto-radio" value="Z-A">
+                                <input id="auto-partner-2" type="radio" name="auto-radio" value="partner" reverse="true">
                                 <label for="auto-partner-2">Z-A</label>
                             </span>
                         </div>
@@ -22,11 +22,11 @@
                         <label>Loan Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="auto-loan-upto-1" type="radio" name="auto-radio" value="Low to High">
+                                <input id="auto-loan-upto-1" type="radio" name="auto-radio" value="amount">
                                 <label for="auto-loan-upto-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="auto-loan-upto-2" type="radio" name="auto-radio" value="High to Low">
+                                <input id="auto-loan-upto-2" type="radio" name="auto-radio" value="amount" reverse="true">
                                 <label for="auto-loan-upto-2">High to Low</label>
                             </span>
                         </div>
@@ -35,11 +35,11 @@
                         <label>Interest Rate (%)</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="auto-interest-1" type="radio" name="auto-radio" value="Low to High">
+                                <input id="auto-interest-1" type="radio" name="auto-radio" value="rate">
                                 <label for="auto-interest-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="auto-interest-2" type="radio" name="auto-radio" value="High to Low">
+                                <input id="auto-interest-2" type="radio" name="auto-radio" value="rate" reverse="true">
                                 <label for="auto-interest-2">High to Low</label>
                             </span>
                         </div>
@@ -48,12 +48,12 @@
                         <label>Interest Type</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="auto-type-1" type="radio" name="auto-radio" value="Fixed">
-                                <label for="auto-type-1">Fixed</label>
+                                <input id="auto-type-1" type="radio" name="auto-radio" value="type">
+                                <label for="auto-type-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="auto-type-2" type="radio" name="auto-radio" value="Floating">
-                                <label for="auto-type-2">Floating</label>
+                                <input id="auto-type-2" type="radio" name="auto-radio" value="type" reverse="true">
+                                <label for="auto-type-2">Z-A</label>
                             </span>
                         </div>
                     </li>
@@ -61,11 +61,11 @@
                         <label>Processing Fees Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="auto-fees-1" type="radio" name="auto-radio" value="Low to High">
+                                <input id="auto-fees-1" type="radio" name="auto-radio" value="fees">
                                 <label for="auto-fees-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="auto-fees-2" type="radio" name="auto-radio" value="High to Low">
+                                <input id="auto-fees-2" type="radio" name="auto-radio" value="fees" reverse="true">
                                 <label for="auto-fees-2">High to Low</label>
                             </span>
                         </div>
@@ -208,30 +208,30 @@
             </div>
         </div>
         <div class="filter-cta">
-            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none">Apply</span></a>
-            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none">Clear All</span></a>
+            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none" onclick="toggeSortFilter()">Apply</span></a>
+            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none" onclick="toggeSortFilter()">Clear All</span></a>
         </div>
     </div>
     <div class="offers-content-container">
         <div class="sticky-sort-wrap">
             <ul class="sort-component">
-                <li>
+                <li target="partner">
                     <label>Loan Partner</label>
                     <span><span>Loan <br> Partner</span>{{partial "icons/sort-arrows"}}</span>
                 </li>
-                <li>
+                <li target="amount">
                     <label>Loan Upto</label>
                     <span><span>Loan Upto</span>{{partial "icons/sort-arrows"}}</span>
                 </li>
-                <li>
+                <li target="rate">
                     <label>Interest Rate (%)</label>
                     <span><span>Interest <br>Rate (%)</span>{{partial "icons/sort-arrows"}}</span>
                 </li>
-                <li>
+                <li target="type">
                     <label>Interest Type</label>
                     <span><span>Interest <br>Type</span>{{partial "icons/sort-arrows"}}</span>
                 </li>
-                <li>
+                <li target="fees">
                     <label>Processing Fees Upto</label>
                     <span><span>Processing <br>Fees Upto</span>{{partial "icons/sort-arrows"}}</span>
                 </li>
@@ -243,9 +243,8 @@
             </div>
         </div>
         <div class="offer-card-list">
-            
         
-            <div class="offers-card" amount="₹8,00,000" data-index="5">
+            <div class="offers-card" amount="₹8,00,000" rate="3.35%" fees="₹12,000" partner="Bajaj Finserv Ltd." type="floating" data-index="5">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/bajaj-finserv-logo.svg" class="company-logo"></span>

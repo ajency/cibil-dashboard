@@ -173,6 +173,27 @@ $(function () {
     $(this).parent().siblings('.range-slider-label').find('span:last-of-type b').text('₹'+parseInt($(this).val()).toLocaleString('en-IN'))
   })
 
+  $('.sort-component li').click(function(){
+    let reverse = false
+    if($(this).attr('reverse')){
+      reverse = true
+      $(this).removeAttr('reverse')
+    }
+    else{
+      $(this).attr('reverse',true)
+    }
+    sortData($(this), $(this).attr('target'), reverse)
+  })
+
+  $('.filter-sort-item .filter-value input[type=radio]').change(function(){
+    console.log('rr')
+    let reverse = false
+    if($(this).attr('reverse')){
+      reverse = true
+    }
+    sortData($(this), $(this).val(), reverse)
+  })
+
 })
 function customSelectInput(element){
   $(element).toggleClass('opened')
@@ -306,4 +327,34 @@ function submitEditInfo(){
 
 function toggeSortFilter(){
   $('.offers-container').toggleClass('show-sort-filter')
+}
+
+function sortData(element, target, reverse){
+  let offers = $(element).parents('.offers-container').find('.offer-card-list .offers-card').get();
+  console.log('offers', offers)
+  offers.sort((a, b) => {
+    let nameA, nameB;
+    if(target == 'partner' || target == "type"){
+      nameA = $(a).attr(target).toUpperCase();
+      nameB = $(b).attr(target).toUpperCase();
+    }
+    else{
+      nameA = parseInt($(a).attr(target).replace(/\D/g,''));
+      nameB = parseInt($(b).attr(target).replace(/\D/g,''));
+    }
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  })
+  if(reverse){
+    offers.reverse()
+  }
+  $(offers).each(function(i,e){
+    $(this).css('order',i)
+  })
+
 }

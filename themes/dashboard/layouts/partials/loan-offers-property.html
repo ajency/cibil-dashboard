@@ -2,18 +2,18 @@
     <div class="filter-container">
         <span class="filter-header">{{ partial "icons/filter-icon"}} <b>Filter by</b></span>
         <div class="filter-items">
-            <div class="filter-item d-lg-none">
+            <div class="filter-item filter-sort-item d-lg-none">
                 <span class="filter-label">SORT OFFERS {{ partial "icons/blue-arrow" }}</span>
                 <ul class="filter-values">
                     <li class="filter-value">
                         <label>Loan Partners</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="property-partner-1" type="radio" name="property-radio" value="A-Z">
+                                <input id="property-partner-1" type="radio" name="property-radio" value="partner">
                                 <label for="property-partner-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="property-partner-2" type="radio" name="property-radio" value="Z-A">
+                                <input id="property-partner-2" type="radio" name="property-radio" value="partner" reverse="true">
                                 <label for="property-partner-2">Z-A</label>
                             </span>
                         </div>
@@ -22,11 +22,11 @@
                         <label>Loan Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="property-loan-upto-1" type="radio" name="property-radio" value="Low to High">
+                                <input id="property-loan-upto-1" type="radio" name="property-radio" value="amount">
                                 <label for="property-loan-upto-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="property-loan-upto-2" type="radio" name="property-radio" value="High to Low">
+                                <input id="property-loan-upto-2" type="radio" name="property-radio" value="amount" reverse="true">
                                 <label for="property-loan-upto-2">High to Low</label>
                             </span>
                         </div>
@@ -35,11 +35,11 @@
                         <label>Interest Rate (%)</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="property-interest-1" type="radio" name="property-radio" value="Low to High">
+                                <input id="property-interest-1" type="radio" name="property-radio" value="rate">
                                 <label for="property-interest-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="property-interest-2" type="radio" name="property-radio" value="High to Low">
+                                <input id="property-interest-2" type="radio" name="property-radio" value="rate" reverse="true">
                                 <label for="property-interest-2">High to Low</label>
                             </span>
                         </div>
@@ -48,12 +48,12 @@
                         <label>Interest Type</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="property-type-1" type="radio" name="property-radio" value="Fixed">
-                                <label for="property-type-1">Fixed</label>
+                                <input id="property-type-1" type="radio" name="property-radio" value="type">
+                                <label for="property-type-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="property-type-2" type="radio" name="property-radio" value="Floating">
-                                <label for="property-type-2">Floating</label>
+                                <input id="property-type-2" type="radio" name="property-radio" value="type" reverse="true">
+                                <label for="property-type-2">Z-A</label>
                             </span>
                         </div>
                     </li>
@@ -61,11 +61,11 @@
                         <label>Processing Fees Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="property-fees-1" type="radio" name="property-radio" value="Low to High">
+                                <input id="property-fees-1" type="radio" name="property-radio" value="fees">
                                 <label for="property-fees-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="property-fees-2" type="radio" name="property-radio" value="High to Low">
+                                <input id="property-fees-2" type="radio" name="property-radio" value="fees" reverse="true">
                                 <label for="property-fees-2">High to Low</label>
                             </span>
                         </div>
@@ -208,30 +208,30 @@
             </div>
         </div>
         <div class="filter-cta">
-            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none">Apply</span></a>
-            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none">Clear All</span></a>
+            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none" onclick="toggeSortFilter()">Apply</span></a>
+            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none" onclick="toggeSortFilter()">Clear All</span></a>
         </div>
     </div>
     <div class="offers-content-container">
         <div class="sticky-sort-wrap">
             <ul class="sort-component">
-                <li>
+                <li target="partner">
                     <label>Loan Partner</label>
                     <span><span>Loan <br> Partner</span>{{partial "icons/sort-arrows"}}</span>
                 </li>
-                <li>
+                <li target="amount">
                     <label>Loan Upto</label>
                     <span><span>Loan Upto</span>{{partial "icons/sort-arrows"}}</span>
                 </li>
-                <li>
+                <li target="rate">
                     <label>Interest Rate (%)</label>
                     <span><span>Interest <br>Rate (%)</span>{{partial "icons/sort-arrows"}}</span>
                 </li>
-                <li>
+                <li target="type">
                     <label>Interest Type</label>
                     <span><span>Interest <br>Type</span>{{partial "icons/sort-arrows"}}</span>
                 </li>
-                <li>
+                <li target="fees">
                     <label>Processing Fees Upto</label>
                     <span><span>Processing <br>Fees Upto</span>{{partial "icons/sort-arrows"}}</span>
                 </li>
@@ -242,11 +242,9 @@
                 <a>Clear All</a>
             </div>
         </div>
-        <div class="offer-card-list">
-            
+        <div class="offer-card-list">        
         
-        
-            <div class="offers-card" amount="₹7,30,000" data-index="2">
+            <div class="offers-card" amount="₹7,30,000" rate="4.35%" fees="₹12,000" partner="Digit Inc." type="fixed" data-index="2">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/digit-logo.svg" class="company-logo"></span>
@@ -278,7 +276,6 @@
             </div>
         
         
-           
         </div>
     </div>
 </div>

@@ -2680,6 +2680,21 @@
 }
 .offer-card-list {
   margin-bottom: 40px;
+  display: flex;
+  position: relative;
+
+  @include media-breakpoint-up(md){
+      &::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        bottom: -1px;
+        position: absolute;
+    }
+  }
+
+  flex-direction: column;
   .offers-card {
     display: flex;
     justify-content: space-between;
@@ -2691,9 +2706,9 @@
     margin-top: 20px;
     border-bottom: 1px solid #ddd;
 
-    &:last-child {
-      border-bottom: 0;
-    }
+    // &:last-child {
+    //   border-bottom: 0;
+    // }
 
     .offer-info-wrap {
       display: flex;
@@ -2801,6 +2816,10 @@
     }
     &.premium-partner {
       position: relative;
+      margin-top: 45px;
+      @include media-breakpoint-down(sm){
+        margin-top: 30px;
+      }
       &:before {
         // content: url(../images/static-images/premium-partner-tag.svg);
         // position: absolute;
@@ -4439,7 +4458,8 @@ b.plus-icon {
 
 .sort-component {
   display: flex;
-  margin-bottom: 0px;
+  // margin-bottom: 44px;
+  margin-bottom: 0;
   background: #f6f7fc;
   border-radius: 8px;
   padding: 14px 0px 12px;
@@ -4731,7 +4751,7 @@ input[type="range"]:focus::-ms-fill-upper {
   align-items: center;
   margin-left: -20px;
   margin-right: -20px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   a {
     font-weight: $intro-regular;
     font-size: 14px;

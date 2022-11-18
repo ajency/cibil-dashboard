@@ -298,6 +298,7 @@
     </div>
 </header>
 
+
 <div class="page-header-section ">
   <div class="page-width page-header-section__wraper">
     <div class="left-panel">
@@ -404,7 +405,7 @@
 </svg>
  <b>Filter by</b></span>
         <div class="filter-items">
-            <div class="filter-item d-lg-none">
+            <div class="filter-item filter-sort-item d-lg-none">
                 <span class="filter-label">SORT OFFERS <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.999999 0.999999L7 7L13 0.999997" stroke="#006685" stroke-width="1.6"/>
 </svg>
@@ -414,11 +415,11 @@
                         <label>Loan Partners</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="card-partner-1" type="radio" name="card-radio" value="A-Z">
+                                <input id="card-partner-1" type="radio" name="card-radio" value="partner">
                                 <label for="card-partner-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="card-partner-2" type="radio" name="card-radio" value="Z-A">
+                                <input id="card-partner-2" type="radio" name="card-radio" value="partner" reverse="true">
                                 <label for="card-partner-2">Z-A</label>
                             </span>
                         </div>
@@ -427,11 +428,11 @@
                         <label>Credit Limit</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="card-limit-1" type="radio" name="card-radio" value="Low to High">
+                                <input id="card-limit-1" type="radio" name="card-radio" value="amount">
                                 <label for="card-limit-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="card-limit-2" type="radio" name="card-radio" value="High to Low">
+                                <input id="card-limit-2" type="radio" name="card-radio" value="amount" reverse="true">
                                 <label for="card-limit-2">High to Low</label>
                             </span>
                         </div>
@@ -440,11 +441,11 @@
                         <label>Monthly Interest Rate</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="card-interest-1" type="radio" name="card-radio" value="Low to High">
+                                <input id="card-interest-1" type="radio" name="card-radio" value="rate">
                                 <label for="card-interest-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="card-interest-2" type="radio" name="card-radio" value="High to Low">
+                                <input id="card-interest-2" type="radio" name="card-radio" value="rate" reverse="true">
                                 <label for="card-interest-2">High to Low</label>
                             </span>
                         </div>
@@ -453,11 +454,11 @@
                         <label>Annual Fees</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="card-fees-1" type="radio" name="card-radio" value="Low to High">
+                                <input id="card-fees-1" type="radio" name="card-radio" value="fees">
                                 <label for="card-fees-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="card-fees-2" type="radio" name="card-radio" value="High to Low">
+                                <input id="card-fees-2" type="radio" name="card-radio" value="fees" reverse="true">
                                 <label for="card-fees-2">High to Low</label>
                             </span>
                         </div>
@@ -657,14 +658,14 @@
             </div>
         </div>
         <div class="filter-cta">
-            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none">Apply</span></a>
-            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none">Clear All</span></a>
+            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none" onclick="toggeSortFilter()">Apply</span></a>
+            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none" onclick="toggeSortFilter()">Clear All</span></a>
         </div>
     </div>
     <div class="offers-content-container">
         <div class="sticky-sort-wrap">
             <ul class="sort-component">
-                <li>
+                <li target="partner">
                     <label>Loan Partner</label>
                     <span><span>Loan <br> Partner</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -672,7 +673,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="amount">
                     <label>Tentative Credit Limit Offered</label>
                     <span><span>Tentative Credit <br> Limit Offered</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -680,7 +681,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="rate">
                     <label>Monthly Interest Rate</label>
                     <span><span>Monthly <br> Interest Rate</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -688,7 +689,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="fees">
                     <label>Annual Fees</label>
                     <span><span>Annual <br> Fees</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -718,7 +719,7 @@
             </div>
         </div>
         <div class="offer-card-list">
-            <div class="offers-card premium-partner" amount="₹8,00,000" data-index="1">
+            <div class="offers-card premium-partner" amount="₹8,00,000" rate="3.35%" fees="₹9,000" partner="Bajaj Finserv Ltd." data-index="1">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/bajaj-finserv-logo.svg" class="company-logo"></span>
@@ -753,7 +754,7 @@
             </div>
         
         
-            <div class="offers-card" amount="₹7,30,000" data-index="2">
+            <div class="offers-card" amount="₹7,30,000" rate="4.35%" fees="₹12,000" partner="Digit Inc." data-index="2">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/digit-logo.svg" class="company-logo"></span>
@@ -788,7 +789,7 @@
             </div>
         
         
-            <div class="offers-card" amount="₹9,00,000" data-index="3">
+            <div class="offers-card" amount="₹9,00,000" rate="3.35%" fees="₹14,000" partner="Aditya Birla Finance Ltd." data-index="3">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/aditya-birla-finance-logo.svg" class="company-logo"></span>
@@ -822,7 +823,7 @@
                 </div>
             </div>
         
-            <div class="offers-card" amount="₹7,00,000" data-index="4">
+            <div class="offers-card" amount="₹7,00,000" rate="3.35%" fees="₹12,000" partner="HDFC Bank Ltd." data-index="4">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/hdfc-home-loans-logo.svg" class="company-logo"></span>
@@ -856,7 +857,7 @@
                 </div>
             </div>
         
-            <div class="offers-card" amount="₹8,00,000" data-index="5">
+            <div class="offers-card" amount="₹8,00,000" rate="3.35%" fees="₹12,000" partner="Bajaj Finserv Ltd." data-index="5">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/bajaj-finserv-logo.svg" class="company-logo"></span>
@@ -908,7 +909,7 @@
 </svg>
  <b>Filter by</b></span>
         <div class="filter-items">
-            <div class="filter-item d-lg-none">
+            <div class="filter-item filter-sort-item d-lg-none">
                 <span class="filter-label">SORT OFFERS <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.999999 0.999999L7 7L13 0.999997" stroke="#006685" stroke-width="1.6"/>
 </svg>
@@ -918,11 +919,11 @@
                         <label>Loan Partners</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="personal-partner-1" type="radio" name="personal-radio" value="A-Z">
+                                <input id="personal-partner-1" type="radio" name="personal-radio" value="partner">
                                 <label for="personal-partner-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="personal-partner-2" type="radio" name="personal-radio" value="Z-A">
+                                <input id="personal-partner-2" type="radio" name="personal-radio" value="partner" reverse="true">
                                 <label for="personal-partner-2">Z-A</label>
                             </span>
                         </div>
@@ -931,11 +932,11 @@
                         <label>Loan Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="personal-loan-upto-1" type="radio" name="personal-radio" value="Low to High">
+                                <input id="personal-loan-upto-1" type="radio" name="personal-radio" value="amount">
                                 <label for="personal-loan-upto-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="personal-loan-upto-2" type="radio" name="personal-radio" value="High to Low">
+                                <input id="personal-loan-upto-2" type="radio" name="personal-radio" value="amount" reverse="true">
                                 <label for="personal-loan-upto-2">High to Low</label>
                             </span>
                         </div>
@@ -944,11 +945,11 @@
                         <label>Interest Rate (%)</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="personal-interest-1" type="radio" name="personal-radio" value="Low to High">
+                                <input id="personal-interest-1" type="radio" name="personal-radio" value="rate">
                                 <label for="personal-interest-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="personal-interest-2" type="radio" name="personal-radio" value="High to Low">
+                                <input id="personal-interest-2" type="radio" name="personal-radio" value="rate" reverse="true">
                                 <label for="personal-interest-2">High to Low</label>
                             </span>
                         </div>
@@ -957,12 +958,12 @@
                         <label>Interest Type</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="personal-type-1" type="radio" name="personal-radio" value="Fixed">
-                                <label for="personal-type-1">Fixed</label>
+                                <input id="personal-type-1" type="radio" name="personal-radio" value="type">
+                                <label for="personal-type-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="personal-type-2" type="radio" name="personal-radio" value="Floating">
-                                <label for="personal-type-2">Floating</label>
+                                <input id="personal-type-2" type="radio" name="personal-radio" value="type" reverse="true">
+                                <label for="personal-type-2">Z-A</label>
                             </span>
                         </div>
                     </li>
@@ -970,11 +971,11 @@
                         <label>Processing Fees Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="personal-fees-1" type="radio" name="personal-radio" value="Low to High">
+                                <input id="personal-fees-1" type="radio" name="personal-radio" value="fees">
                                 <label for="personal-fees-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="personal-fees-2" type="radio" name="personal-radio" value="High to Low">
+                                <input id="personal-fees-2" type="radio" name="personal-radio" value="fees" reverse="true">
                                 <label for="personal-fees-2">High to Low</label>
                             </span>
                         </div>
@@ -1174,14 +1175,14 @@
             </div>
         </div>
         <div class="filter-cta">
-            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none">Apply</span></a>
-            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none">Clear All</span></a>
+            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none" onclick="toggeSortFilter()">Apply</span></a>
+            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none" onclick="toggeSortFilter()">Clear All</span></a>
         </div>
     </div>
     <div class="offers-content-container">
         <div class="sticky-sort-wrap">
             <ul class="sort-component">
-                <li>
+                <li target="partner">
                     <label>Loan Partner</label>
                     <span><span>Loan <br> Partner</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -1189,7 +1190,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="amount">
                     <label>Loan Upto</label>
                     <span><span>Loan Upto</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -1197,7 +1198,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="rate">
                     <label>Interest Rate (%)</label>
                     <span><span>Interest <br>Rate (%)</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -1205,7 +1206,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="type">
                     <label>Interest Type</label>
                     <span><span>Interest <br>Type</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -1213,7 +1214,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="fees">
                     <label>Processing Fees Upto</label>
                     <span><span>Processing <br>Fees Upto</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -1243,7 +1244,7 @@
             </div>
         </div>
         <div class="offer-card-list">
-            <div class="offers-card premium-partner" amount="₹8,00,000" data-index="1">
+            <div class="offers-card premium-partner" amount="₹8,00,000" rate="3.35%" type="floating" fees="₹9,000" partner="Bajaj Finserv Ltd." data-index="1">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/bajaj-finserv-logo.svg" class="company-logo"></span>
@@ -1282,7 +1283,7 @@
             </div>
         
         
-            <div class="offers-card" amount="₹7,30,000" data-index="2">
+            <div class="offers-card" amount="₹7,30,000" rate="4.35%" fees="₹12,000" partner="Digit Inc." type="fixed" data-index="2">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/digit-logo.svg" class="company-logo"></span>
@@ -1321,7 +1322,7 @@
             </div>
         
         
-            <div class="offers-card" amount="₹9,00,000" data-index="3">
+            <div class="offers-card" amount="₹9,00,000" rate="3.35%" fees="₹14,000" partner="Aditya Birla Finance Ltd." type="floating" data-index="3">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/aditya-birla-finance-logo.svg" class="company-logo"></span>
@@ -1359,7 +1360,7 @@
                 </div>
             </div>
         
-            <div class="offers-card" amount="₹8,00,000" data-index="5">
+            <div class="offers-card" amount="₹8,00,000" rate="3.35%" fees="₹12,000" partner="Bajaj Finserv Ltd." type="floating" data-index="5">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/bajaj-finserv-logo.svg" class="company-logo"></span>
@@ -1415,7 +1416,7 @@
 </svg>
  <b>Filter by</b></span>
         <div class="filter-items">
-            <div class="filter-item d-lg-none">
+            <div class="filter-item filter-sort-item d-lg-none">
                 <span class="filter-label">SORT OFFERS <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.999999 0.999999L7 7L13 0.999997" stroke="#006685" stroke-width="1.6"/>
 </svg>
@@ -1425,11 +1426,11 @@
                         <label>Loan Partners</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="business-partner-1" type="radio" name="business-radio" value="A-Z">
+                                <input id="business-partner-1" type="radio" name="business-radio" value="partner">
                                 <label for="business-partner-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="business-partner-2" type="radio" name="business-radio" value="Z-A">
+                                <input id="business-partner-2" type="radio" name="business-radio" value="partner" reverse="true">
                                 <label for="business-partner-2">Z-A</label>
                             </span>
                         </div>
@@ -1438,11 +1439,11 @@
                         <label>Loan Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="business-loan-upto-1" type="radio" name="business-radio" value="Low to High">
+                                <input id="business-loan-upto-1" type="radio" name="business-radio" value="amount">
                                 <label for="business-loan-upto-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="business-loan-upto-2" type="radio" name="business-radio" value="High to Low">
+                                <input id="business-loan-upto-2" type="radio" name="business-radio" value="amount" reverse="true">
                                 <label for="business-loan-upto-2">High to Low</label>
                             </span>
                         </div>
@@ -1451,11 +1452,11 @@
                         <label>Interest Rate (%)</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="business-interest-1" type="radio" name="business-radio" value="Low to High">
+                                <input id="business-interest-1" type="radio" name="business-radio" value="rate">
                                 <label for="business-interest-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="business-interest-2" type="radio" name="business-radio" value="High to Low">
+                                <input id="business-interest-2" type="radio" name="business-radio" value="rate" reverse="true">
                                 <label for="business-interest-2">High to Low</label>
                             </span>
                         </div>
@@ -1464,12 +1465,12 @@
                         <label>Interest Type</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="business-type-1" type="radio" name="business-radio" value="Fixed">
-                                <label for="business-type-1">Fixed</label>
+                                <input id="business-type-1" type="radio" name="business-radio" value="type">
+                                <label for="business-type-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="business-type-2" type="radio" name="business-radio" value="Floating">
-                                <label for="business-type-2">Floating</label>
+                                <input id="business-type-2" type="radio" name="business-radio" value="type" reverse="true">
+                                <label for="business-type-2">Z-A</label>
                             </span>
                         </div>
                     </li>
@@ -1477,11 +1478,11 @@
                         <label>Processing Fees Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="business-fees-1" type="radio" name="business-radio" value="Low to High">
+                                <input id="business-fees-1" type="radio" name="business-radio" value="fees">
                                 <label for="business-fees-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="business-fees-2" type="radio" name="business-radio" value="High to Low">
+                                <input id="business-fees-2" type="radio" name="business-radio" value="fees" reverse="true">
                                 <label for="business-fees-2">High to Low</label>
                             </span>
                         </div>
@@ -1681,14 +1682,14 @@
             </div>
         </div>
         <div class="filter-cta">
-            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none">Apply</span></a>
-            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none">Clear All</span></a>
+            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none" onclick="toggeSortFilter()">Apply</span></a>
+            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none" onclick="toggeSortFilter()">Clear All</span></a>
         </div>
     </div>
     <div class="offers-content-container">
         <div class="sticky-sort-wrap">
             <ul class="sort-component">
-                <li>
+                <li target="partner">
                     <label>Loan Partner</label>
                     <span><span>Loan <br> Partner</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -1696,7 +1697,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="amount">
                     <label>Loan Upto</label>
                     <span><span>Loan Upto</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -1704,7 +1705,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="rate">
                     <label>Interest Rate (%)</label>
                     <span><span>Interest <br>Rate (%)</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -1712,7 +1713,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="type">
                     <label>Interest Type</label>
                     <span><span>Interest <br>Type</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -1720,7 +1721,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="fees">
                     <label>Processing Fees Upto</label>
                     <span><span>Processing <br>Fees Upto</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -1750,7 +1751,7 @@
             </div>
         </div>
         <div class="offer-card-list">
-            <div class="offers-card premium-partner" amount="₹8,00,000" data-index="1">
+            <div class="offers-card premium-partner" amount="₹8,00,000" rate="3.35%" type="floating" fees="₹9,000" partner="Bajaj Finserv Ltd." data-index="1">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/bajaj-finserv-logo.svg" class="company-logo"></span>
@@ -1789,7 +1790,7 @@
             </div>
         
         
-            <div class="offers-card" amount="₹7,30,000" data-index="2">
+            <div class="offers-card" amount="₹7,30,000" rate="4.35%" fees="₹12,000" partner="Digit Inc." type="fixed" data-index="2">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/digit-logo.svg" class="company-logo"></span>
@@ -1827,8 +1828,6 @@
                 </div>
             </div>
         
-        
-            
         </div>
     </div>
 </div>
@@ -1848,7 +1847,7 @@
 </svg>
  <b>Filter by</b></span>
         <div class="filter-items">
-            <div class="filter-item d-lg-none">
+            <div class="filter-item filter-sort-item d-lg-none">
                 <span class="filter-label">SORT OFFERS <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.999999 0.999999L7 7L13 0.999997" stroke="#006685" stroke-width="1.6"/>
 </svg>
@@ -1858,11 +1857,11 @@
                         <label>Loan Partners</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="home-partner-1" type="radio" name="home-radio" value="A-Z">
+                                <input id="home-partner-1" type="radio" name="home-radio" value="partner">
                                 <label for="home-partner-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="home-partner-2" type="radio" name="home-radio" value="Z-A">
+                                <input id="home-partner-2" type="radio" name="home-radio" value="partner" reverse="true">
                                 <label for="home-partner-2">Z-A</label>
                             </span>
                         </div>
@@ -1871,11 +1870,11 @@
                         <label>Loan Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="home-loan-upto-1" type="radio" name="home-radio" value="Low to High">
+                                <input id="home-loan-upto-1" type="radio" name="home-radio" value="amount">
                                 <label for="home-loan-upto-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="home-loan-upto-2" type="radio" name="home-radio" value="High to Low">
+                                <input id="home-loan-upto-2" type="radio" name="home-radio" value="amount" reverse="true">
                                 <label for="home-loan-upto-2">High to Low</label>
                             </span>
                         </div>
@@ -1884,11 +1883,11 @@
                         <label>Interest Rate (%)</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="home-interest-1" type="radio" name="home-radio" value="Low to High">
+                                <input id="home-interest-1" type="radio" name="home-radio" value="rate">
                                 <label for="home-interest-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="home-interest-2" type="radio" name="home-radio" value="High to Low">
+                                <input id="home-interest-2" type="radio" name="home-radio" value="rate" reverse="true">
                                 <label for="home-interest-2">High to Low</label>
                             </span>
                         </div>
@@ -1897,12 +1896,12 @@
                         <label>Interest Type</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="home-type-1" type="radio" name="home-radio" value="Fixed">
-                                <label for="home-type-1">Fixed</label>
+                                <input id="home-type-1" type="radio" name="home-radio" value="type">
+                                <label for="home-type-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="home-type-2" type="radio" name="home-radio" value="Floating">
-                                <label for="home-type-2">Floating</label>
+                                <input id="home-type-2" type="radio" name="home-radio" value="type" reverse="true">
+                                <label for="home-type-2">Z-A</label>
                             </span>
                         </div>
                     </li>
@@ -1910,11 +1909,11 @@
                         <label>Processing Fees Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="home-fees-1" type="radio" name="home-radio" value="Low to High">
+                                <input id="home-fees-1" type="radio" name="home-radio" value="fees">
                                 <label for="home-fees-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="home-fees-2" type="radio" name="home-radio" value="High to Low">
+                                <input id="home-fees-2" type="radio" name="home-radio" value="fees" reverse="true">
                                 <label for="home-fees-2">High to Low</label>
                             </span>
                         </div>
@@ -2114,14 +2113,14 @@
             </div>
         </div>
         <div class="filter-cta">
-            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none">Apply</span></a>
-            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none">Clear All</span></a>
+            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none" onclick="toggeSortFilter()">Apply</span></a>
+            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none" onclick="toggeSortFilter()">Clear All</span></a>
         </div>
     </div>
     <div class="offers-content-container">
         <div class="sticky-sort-wrap">
             <ul class="sort-component">
-                <li>
+                <li target="partner">
                     <label>Loan Partner</label>
                     <span><span>Loan <br> Partner</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2129,7 +2128,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="amount">
                     <label>Loan Upto</label>
                     <span><span>Loan Upto</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2137,7 +2136,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="rate">
                     <label>Interest Rate (%)</label>
                     <span><span>Interest <br>Rate (%)</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2145,7 +2144,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="type">
                     <label>Interest Type</label>
                     <span><span>Interest <br>Type</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2153,7 +2152,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="fees">
                     <label>Processing Fees Upto</label>
                     <span><span>Processing <br>Fees Upto</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2183,9 +2182,8 @@
             </div>
         </div>
         <div class="offer-card-list">
-            
         
-            <div class="offers-card" amount="₹9,00,000" data-index="3">
+            <div class="offers-card" amount="₹9,00,000" rate="3.35%" fees="₹14,000" partner="Aditya Birla Finance Ltd." type="floating" data-index="3">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/aditya-birla-finance-logo.svg" class="company-logo"></span>
@@ -2223,16 +2221,16 @@
                 </div>
             </div>
         
-            <div class="offers-card" amount="₹7,00,000" data-index="4">
+            <div class="offers-card" amount="₹8,00,000" rate="3.35%" fees="₹12,000" partner="Bajaj Finserv Ltd." type="floating" data-index="5">
                 <div class="offer-info-wrap">
                     <div class="company-container">
-                        <span><img src="/cibil-dashboard/images/dynamic-images/hdfc-home-loans-logo.svg" class="company-logo"></span>
-                        <label class="company-name">HDFC Bank Ltd.</label>
+                        <span><img src="/cibil-dashboard/images/dynamic-images/bajaj-finserv-logo.svg" class="company-logo"></span>
+                        <label class="company-name">Bajaj Finserv Ltd.</label>
                     </div>
                     <div class="offer-info">
                         <li>
                             <span>Loan Upto</span>
-                            <span>₹7,00,000</span>
+                            <span>₹8,00,000</span>
                         </li>
                         <li>
                             <span>Interest Rate (%)</span>
@@ -2240,7 +2238,7 @@
                         </li>
                         <li>
                             <span>Interest Type</span>
-                            <span>Fixed</span>
+                            <span>Floating</span>
                         </li>
                         <li>
                             <span>Processing Fees Upto</span>
@@ -2250,7 +2248,7 @@
                 </div>
                 <div class="offer-cta">
                     <a class=" cibil-button toggle-popup" data-target="offersPopup">VIEW OFFER</a>
-                    <a class="cibil-link" onclick="addToCompare(this)" data-target="4"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a class="cibil-link" onclick="addToCompare(this)" data-target="5"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="8" cy="8" r="7.2" fill="white" stroke="#00A6CA" stroke-width="1.6"/>
 </svg>
  Add to compare</span><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2260,8 +2258,6 @@
  Add to compare</span></a>
                 </div>
             </div>
-        
-            
         </div>
     </div>
 </div>
@@ -2281,7 +2277,7 @@
 </svg>
  <b>Filter by</b></span>
         <div class="filter-items">
-            <div class="filter-item d-lg-none">
+            <div class="filter-item filter-sort-item d-lg-none">
                 <span class="filter-label">SORT OFFERS <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.999999 0.999999L7 7L13 0.999997" stroke="#006685" stroke-width="1.6"/>
 </svg>
@@ -2291,11 +2287,11 @@
                         <label>Loan Partners</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="property-partner-1" type="radio" name="property-radio" value="A-Z">
+                                <input id="property-partner-1" type="radio" name="property-radio" value="partner">
                                 <label for="property-partner-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="property-partner-2" type="radio" name="property-radio" value="Z-A">
+                                <input id="property-partner-2" type="radio" name="property-radio" value="partner" reverse="true">
                                 <label for="property-partner-2">Z-A</label>
                             </span>
                         </div>
@@ -2304,11 +2300,11 @@
                         <label>Loan Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="property-loan-upto-1" type="radio" name="property-radio" value="Low to High">
+                                <input id="property-loan-upto-1" type="radio" name="property-radio" value="amount">
                                 <label for="property-loan-upto-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="property-loan-upto-2" type="radio" name="property-radio" value="High to Low">
+                                <input id="property-loan-upto-2" type="radio" name="property-radio" value="amount" reverse="true">
                                 <label for="property-loan-upto-2">High to Low</label>
                             </span>
                         </div>
@@ -2317,11 +2313,11 @@
                         <label>Interest Rate (%)</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="property-interest-1" type="radio" name="property-radio" value="Low to High">
+                                <input id="property-interest-1" type="radio" name="property-radio" value="rate">
                                 <label for="property-interest-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="property-interest-2" type="radio" name="property-radio" value="High to Low">
+                                <input id="property-interest-2" type="radio" name="property-radio" value="rate" reverse="true">
                                 <label for="property-interest-2">High to Low</label>
                             </span>
                         </div>
@@ -2330,12 +2326,12 @@
                         <label>Interest Type</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="property-type-1" type="radio" name="property-radio" value="Fixed">
-                                <label for="property-type-1">Fixed</label>
+                                <input id="property-type-1" type="radio" name="property-radio" value="type">
+                                <label for="property-type-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="property-type-2" type="radio" name="property-radio" value="Floating">
-                                <label for="property-type-2">Floating</label>
+                                <input id="property-type-2" type="radio" name="property-radio" value="type" reverse="true">
+                                <label for="property-type-2">Z-A</label>
                             </span>
                         </div>
                     </li>
@@ -2343,11 +2339,11 @@
                         <label>Processing Fees Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="property-fees-1" type="radio" name="property-radio" value="Low to High">
+                                <input id="property-fees-1" type="radio" name="property-radio" value="fees">
                                 <label for="property-fees-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="property-fees-2" type="radio" name="property-radio" value="High to Low">
+                                <input id="property-fees-2" type="radio" name="property-radio" value="fees" reverse="true">
                                 <label for="property-fees-2">High to Low</label>
                             </span>
                         </div>
@@ -2547,14 +2543,14 @@
             </div>
         </div>
         <div class="filter-cta">
-            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none">Apply</span></a>
-            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none">Clear All</span></a>
+            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none" onclick="toggeSortFilter()">Apply</span></a>
+            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none" onclick="toggeSortFilter()">Clear All</span></a>
         </div>
     </div>
     <div class="offers-content-container">
         <div class="sticky-sort-wrap">
             <ul class="sort-component">
-                <li>
+                <li target="partner">
                     <label>Loan Partner</label>
                     <span><span>Loan <br> Partner</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2562,7 +2558,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="amount">
                     <label>Loan Upto</label>
                     <span><span>Loan Upto</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2570,7 +2566,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="rate">
                     <label>Interest Rate (%)</label>
                     <span><span>Interest <br>Rate (%)</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2578,7 +2574,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="type">
                     <label>Interest Type</label>
                     <span><span>Interest <br>Type</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2586,7 +2582,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="fees">
                     <label>Processing Fees Upto</label>
                     <span><span>Processing <br>Fees Upto</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2615,11 +2611,9 @@
                 <a>Clear All</a>
             </div>
         </div>
-        <div class="offer-card-list">
-            
+        <div class="offer-card-list">        
         
-        
-            <div class="offers-card" amount="₹7,30,000" data-index="2">
+            <div class="offers-card" amount="₹7,30,000" rate="4.35%" fees="₹12,000" partner="Digit Inc." type="fixed" data-index="2">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/digit-logo.svg" class="company-logo"></span>
@@ -2658,7 +2652,6 @@
             </div>
         
         
-           
         </div>
     </div>
 </div>
@@ -2678,7 +2671,7 @@
 </svg>
  <b>Filter by</b></span>
         <div class="filter-items">
-            <div class="filter-item d-lg-none">
+            <div class="filter-item filter-sort-item d-lg-none">
                 <span class="filter-label">SORT OFFERS <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.999999 0.999999L7 7L13 0.999997" stroke="#006685" stroke-width="1.6"/>
 </svg>
@@ -2688,11 +2681,11 @@
                         <label>Loan Partners</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="auto-partner-1" type="radio" name="auto-radio" value="A-Z">
+                                <input id="auto-partner-1" type="radio" name="auto-radio" value="partner">
                                 <label for="auto-partner-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="auto-partner-2" type="radio" name="auto-radio" value="Z-A">
+                                <input id="auto-partner-2" type="radio" name="auto-radio" value="partner" reverse="true">
                                 <label for="auto-partner-2">Z-A</label>
                             </span>
                         </div>
@@ -2701,11 +2694,11 @@
                         <label>Loan Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="auto-loan-upto-1" type="radio" name="auto-radio" value="Low to High">
+                                <input id="auto-loan-upto-1" type="radio" name="auto-radio" value="amount">
                                 <label for="auto-loan-upto-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="auto-loan-upto-2" type="radio" name="auto-radio" value="High to Low">
+                                <input id="auto-loan-upto-2" type="radio" name="auto-radio" value="amount" reverse="true">
                                 <label for="auto-loan-upto-2">High to Low</label>
                             </span>
                         </div>
@@ -2714,11 +2707,11 @@
                         <label>Interest Rate (%)</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="auto-interest-1" type="radio" name="auto-radio" value="Low to High">
+                                <input id="auto-interest-1" type="radio" name="auto-radio" value="rate">
                                 <label for="auto-interest-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="auto-interest-2" type="radio" name="auto-radio" value="High to Low">
+                                <input id="auto-interest-2" type="radio" name="auto-radio" value="rate" reverse="true">
                                 <label for="auto-interest-2">High to Low</label>
                             </span>
                         </div>
@@ -2727,12 +2720,12 @@
                         <label>Interest Type</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="auto-type-1" type="radio" name="auto-radio" value="Fixed">
-                                <label for="auto-type-1">Fixed</label>
+                                <input id="auto-type-1" type="radio" name="auto-radio" value="type">
+                                <label for="auto-type-1">A-Z</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="auto-type-2" type="radio" name="auto-radio" value="Floating">
-                                <label for="auto-type-2">Floating</label>
+                                <input id="auto-type-2" type="radio" name="auto-radio" value="type" reverse="true">
+                                <label for="auto-type-2">Z-A</label>
                             </span>
                         </div>
                     </li>
@@ -2740,11 +2733,11 @@
                         <label>Processing Fees Upto</label>
                         <div class="custom-radio-wrap">
                             <span class="custom-radio">
-                                <input id="auto-fees-1" type="radio" name="auto-radio" value="Low to High">
+                                <input id="auto-fees-1" type="radio" name="auto-radio" value="fees">
                                 <label for="auto-fees-1">Low to High</label>
                             </span>
                             <span class="custom-radio">
-                                <input id="auto-fees-2" type="radio" name="auto-radio" value="High to Low">
+                                <input id="auto-fees-2" type="radio" name="auto-radio" value="fees" reverse="true">
                                 <label for="auto-fees-2">High to Low</label>
                             </span>
                         </div>
@@ -2944,14 +2937,14 @@
             </div>
         </div>
         <div class="filter-cta">
-            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none">Apply</span></a>
-            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none">Clear All</span></a>
+            <a class="cibil-button cibil-button-border"><span class="d-none d-lg-inline-flex">apply filter</span><span class="d-lg-none" onclick="toggeSortFilter()">Apply</span></a>
+            <a class="cibil-btn-link"><span class="d-none d-lg-inline-flex">CLEAR ALL FILTERS</span><span class="d-lg-none" onclick="toggeSortFilter()">Clear All</span></a>
         </div>
     </div>
     <div class="offers-content-container">
         <div class="sticky-sort-wrap">
             <ul class="sort-component">
-                <li>
+                <li target="partner">
                     <label>Loan Partner</label>
                     <span><span>Loan <br> Partner</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2959,7 +2952,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="amount">
                     <label>Loan Upto</label>
                     <span><span>Loan Upto</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2967,7 +2960,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="rate">
                     <label>Interest Rate (%)</label>
                     <span><span>Interest <br>Rate (%)</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2975,7 +2968,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="type">
                     <label>Interest Type</label>
                     <span><span>Interest <br>Type</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -2983,7 +2976,7 @@
 </svg>
 </span>
                 </li>
-                <li>
+                <li target="fees">
                     <label>Processing Fees Upto</label>
                     <span><span>Processing <br>Fees Upto</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 0L0 5.33333H8L4 0Z" fill="#006685"/>
@@ -3013,9 +3006,8 @@
             </div>
         </div>
         <div class="offer-card-list">
-            
         
-            <div class="offers-card" amount="₹8,00,000" data-index="5">
+            <div class="offers-card" amount="₹8,00,000" rate="3.35%" fees="₹12,000" partner="Bajaj Finserv Ltd." type="floating" data-index="5">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/bajaj-finserv-logo.svg" class="company-logo"></span>
