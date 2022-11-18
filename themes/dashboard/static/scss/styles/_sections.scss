@@ -4439,10 +4439,10 @@ b.plus-icon {
 
 .sort-component {
   display: flex;
-  margin-bottom: 44px;
+  margin-bottom: 0px;
   background: #f6f7fc;
   border-radius: 8px;
-  padding: 14px 20px 12px;
+  padding: 14px 0px 12px;
 
   li {
     display: flex;
@@ -4452,8 +4452,8 @@ b.plus-icon {
     text-transform: uppercase;
     color: #2c2c2c;
     margin: 0;
-    margin-right: 30px;
-    padding-right: 10px;
+    margin-right: 0px;
+    padding: 0px 14px;
     border-right: 1px solid #dddddd;
     flex-direction: column;
     cursor: pointer;
@@ -4469,12 +4469,10 @@ b.plus-icon {
       overflow: hidden;
     }
 
-    svg {
-      margin-left: 10px;
-    }
     &:first-of-type {
-      min-width: 110px;
-      margin-right: 40px;
+      min-width: 130px;
+      margin-right: 0px;
+      padding-left: 20px;
     }
     &:last-of-type {
       width: 148px;
@@ -4485,8 +4483,10 @@ b.plus-icon {
       border: 0;
     }
     & > span {
-      display: flex;
+      display: grid;
       align-items: center;
+      grid-template-columns: auto 8px;
+      grid-gap: 10px;
     }
   }
   @include media-breakpoint-down(md) {
@@ -4596,7 +4596,6 @@ b.plus-icon {
 }
 
 @media (min-width: 992px) and (max-width: 1300px) {
-  .sort-component li,
   .offer-card-list .offers-card .offer-info li,
   .offer-card-list .offers-card .company-container {
     margin-right: 10px !important;
