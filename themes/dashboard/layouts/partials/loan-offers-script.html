@@ -66,6 +66,7 @@
             $('.loan-offers-comparison [data-id='+$(this).attr("data-id")+']').show()
         })
         $('.compare-header-wrap p').text('Comparing '+length+' '+offer+' offers')
+        $("html, body").animate({ scrollTop: 0 }, "fast");
         $('.offer-card-list').addClass('comparing')
         $('.compare-offer-header').toggleClass('show activated')
         $('.compare-offer-footer').fadeOut('fast');

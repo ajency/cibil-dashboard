@@ -4584,7 +4584,7 @@ b.plus-icon {
           display: flex;
           align-items: center;
           margin: 15px 0 0;
-          flex-flow: nowrap;
+          flex-flow: wrap;
           width: 100% !important;
           label {
             font-weight: 600;
@@ -5106,6 +5106,9 @@ input[type="range"]:focus::-ms-fill-upper {
   }
   & ~ div:not(.loan-offers-comparison) {
     display: none;
+  }
+  & ~ .popup-for-offers{
+    display: block !important;
   }
 }
 
