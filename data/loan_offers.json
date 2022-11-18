@@ -4,7 +4,7 @@
     "name": "Bajaj Finserv Ltd.",
     "limit_offered": "₹8,00,000",
     "monthly_interest_rate": "3.35%",
-    "annual_fees": "₹400+GST",
+    "annual_fees": "₹9,000",
     "required_documents": [
       "KYC documents, Photograph",
       "Previous 3 months salary slips"
@@ -19,9 +19,9 @@
   {
     "logo": "images/dynamic-images/digit-logo.svg",
     "name": "Digit Inc.",
-    "limit_offered": "₹10,00,000",
-    "monthly_interest_rate": "3.35%",
-    "annual_fees": "₹1,200+GST",
+    "limit_offered": "₹7,30,000",
+    "monthly_interest_rate": "4.35%",
+    "annual_fees": "₹12,000",
     "required_documents": [
       "KYC documents, Photograph",
       "ITR Returns of past 2 years"
@@ -36,9 +36,9 @@
   {
     "logo": "images/dynamic-images/aditya-birla-finance-logo.svg",
     "name": "Aditya Birla Finance Ltd.",
-    "limit_offered": "₹8,00,000",
+    "limit_offered": "₹9,00,000",
     "monthly_interest_rate": "3.35%",
-    "annual_fees": "₹399+GST",
+    "annual_fees": "₹14,000",
     "required_documents": [
       "KYC documents, Photograph",
       "ITR Returns of past 2 years"
@@ -55,7 +55,7 @@
     "name": "HDFC Bank Ltd.",
     "limit_offered": "₹7,00,000",
     "monthly_interest_rate": "3.35%",
-    "annual_fees": "₹12,000+GST",
+    "annual_fees": "₹12,000",
     "required_documents": [
       "KYC documents, Photograph",
       "ITR Returns of past 2 years"
