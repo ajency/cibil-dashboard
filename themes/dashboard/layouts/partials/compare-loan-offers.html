@@ -1,10 +1,18 @@
 
+    <div class="compare-offer-header" style="display: block;">
+        <div class="page-width">
+            <div class="compare-header-wrap">
+                <a class="resetOffers cibil-link cibil-link-left-icon goback-icon underlined default-case sticky-head" onclick="resetCompare()">Go Back</a>
+                <p class="text-uppercase">Compare Loan Offers</p>
+            </div>
+        </div>
+    </div>
+
     <div class="loan-offers-comparison">
         <div class="loan-offers-comparison__wraper">
             <div class="hide-sm-down">
                 <table>
-                    <tbody>
-                        
+                    <thead>
                         <tr class="offers-head">
                             <td></td>
                             
@@ -39,7 +47,8 @@
                                 </td>
                             
                         </tr>
-                        
+                    </thead>
+                    <tbody>
                             <tr>
                                 <th>Tentative Credit Limit Offered</th>
                                 <td>₹8,00,000</td>
@@ -116,31 +125,32 @@
             </div>
             <div class="hide-md-up">
                 <table>
-                    <tbody>
-                        
+                    <thead>
                         <tr class="offers-head">
                             
-                                <td>
-                                    <div class="wrap">
-                                        <span class="company-logo">
-                                            <img src="{{ "images/dynamic-images/bajaj-finserv-logo.svg" | relURL }}" alt="">
-                                        </span>
-                                        <p class="company-title">Bajaj Finserv Ltd.</p>
-                                        <a class="cibil-button">VIEW OFFER</a>
-                                    </div>
-                                </td>
+                            <td>
+                                <div class="wrap">
+                                    <span class="company-logo">
+                                        <img src="{{ "images/dynamic-images/bajaj-finserv-logo.svg" | relURL }}" alt="">
+                                    </span>
+                                    <p class="company-title">Bajaj Finserv Ltd.</p>
+                                    <a class="cibil-button">VIEW OFFER</a>
+                                </div>
+                            </td>
 
-                                <td>
-                                    <div class="wrap">
-                                        <span class="company-logo">
-                                            <img src="{{ "images/dynamic-images/digit-logo.svg" | relURL }}" alt="">
-                                        </span>
-                                        <p class="company-title">Digit Inc.</p>
-                                        <a class="cibil-button">VIEW OFFER</a>
-                                    </div>
-                                </td>
-                            
-                        </tr>
+                            <td>
+                                <div class="wrap">
+                                    <span class="company-logo">
+                                        <img src="{{ "images/dynamic-images/digit-logo.svg" | relURL }}" alt="">
+                                    </span>
+                                    <p class="company-title">Digit Inc.</p>
+                                    <a class="cibil-button">VIEW OFFER</a>
+                                </div>
+                            </td>
+                        
+                    </tr>
+                    </thead>
+                    <tbody>
                         
                             <tr>
                                 <th>Tentative Credit Limit Offered</th>

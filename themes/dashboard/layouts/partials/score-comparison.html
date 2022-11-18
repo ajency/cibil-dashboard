@@ -10,7 +10,7 @@
                 <div class="comparison">
                     <div class="comparison-head">
                         <p>{{ .unsubscribed_content }}</p>
-                        <a href="upgrade-plan" class="cibil-link cibil-link-right-icon">UPGRADE NOW</a>
+                        <a href="{{.subscribe_link}}" class="cibil-link cibil-link-right-icon">{{.subscribe_link_text}}</a>
                     </div>
                     {{partial "comparison-form-screen" }}
                     {{partial "comparison-graph" }}
