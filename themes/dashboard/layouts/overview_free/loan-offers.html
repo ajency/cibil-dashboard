@@ -1,6 +1,6 @@
 {{ define "main" }}
-<!-- 
-{{ partial "compare-loan-offers" (dict "offersData" .Site.Data.loan_offers ) }} -->
+
+{{ partial "compare-loan-offers" (dict "offersData" .Site.Data.loan_offers ) }} 
 
 {{ partial "page-header" . }}
 
@@ -8,6 +8,13 @@
 
 {{ partial "loan-offers-script"}}
 
-{{ partial "offers-popup" (dict "id" "offersPopup")}}
+<!-- {{ partial "offers-popup" (dict "id" "offersPopup")}} -->
+{{if .Site.Data.loan_offers }}
+    {{range $index, $offersData := .Site.Data.loan_offers }}
+        {{ $popupId := print "offersPopup" $index }}
+        {{ partial "offers-popup2" (dict "id" $popupId "logo" .logo "name" .name "limit_offered" .limit_offered "monthly_interest_rate" .monthly_interest_rate "annual_fees" .annual_fees "required_documents" .required_documents "benefits" .benefits ) }}
+    {{end}}
+{{end}}
+
 
 {{ end }}

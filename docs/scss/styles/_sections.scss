@@ -2716,7 +2716,8 @@
     }
 
     .company-container {
-      margin-right: 40px;
+      // margin-right: 40px;
+      margin-right: 0;
       span {
         display: flex;
         border: 1px solid $border-color-4;
@@ -2753,7 +2754,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-right: 30px;
+        // margin-right: 30px;
+        margin-right: 0;
+        padding-right: 14px;
+        padding-left: 14px; 
         span {
           &:first-child {
             @include media-breakpoint-up(md) {
@@ -4613,6 +4617,13 @@ b.plus-icon {
 }
 .offers-content-container {
   width: 100%;
+  @media (min-width: 1200px) and (max-width:1360px){
+    // zoom: 0.8;
+    transform: scale(0.99);
+    -moz-transform: scale(0.99);
+    transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1300px) {
@@ -4905,6 +4916,7 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 
 .loan-offers-comparison {
+  display: none;
   &__wraper {
     table {
       width: 100%;
@@ -5071,5 +5083,15 @@ input[type="range"]:focus::-ms-fill-upper {
         margin-bottom: 10px;
       }
     }
+  }
+}
+
+.activated{
+  display: block;
+  & + .loan-offers-comparison {
+    display: block;
+  }
+  & ~ div:not(.loan-offers-comparison) {
+    display: none;
   }
 }

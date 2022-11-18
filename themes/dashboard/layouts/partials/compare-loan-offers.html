@@ -1,5 +1,5 @@
 
-<div class="compare-offer-header" style="display: block;">
+<div class="compare-offer-header" style="">
     <div class="page-width">
         <div class="compare-header-wrap">
             <a class="resetOffers cibil-link cibil-link-left-icon goback-icon underlined default-case sticky-head" onclick="resetCompare()">Go Back</a>
@@ -81,10 +81,10 @@
     </div>
 {{end}}
 
-{{if .offersData}}
+<!-- {{if .offersData}}
     {{range $index, $offersData := .offersData}}
         {{ $popupId := print "offersPopup" $index }}
 
         {{ partial "offers-popup2" (dict "id" $popupId "logo" .logo "name" .name "limit_offered" .limit_offered "monthly_interest_rate" .monthly_interest_rate "annual_fees" .annual_fees "required_documents" .required_documents "benefits" .benefits ) }}
     {{end}}
-{{end}}
+{{end}} -->
