@@ -115,7 +115,7 @@
             <div class="filter-item">
                 <span class="filter-label">CREDIT LIMIT {{ partial "icons/blue-arrow" }}</span>
                 <ul class="filter-values">
-                    <li class="filter-value flex-column">
+                    <!-- <li class="filter-value flex-column">
                         <p class="range-slider-label">
                             <span><b>₹10,000</b><br>(10 Thousand)</span>
                             <span><b>₹5,00,000</b><br>(5 Lakhs)</span>
@@ -123,6 +123,41 @@
                         <span class="range-slider-container">
                             <input type='range' min='10000' value='500000' max='900000'/>
                         </span>
+                    </li> -->
+                    <li class="filter-value">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" value="5000-10000">
+                            {{ partial "icons/checkbox-checked"}}
+                        </span>
+                        <label>₹5,000 - ₹10,000</label>
+                    </li>
+                    <li class="filter-value">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" value="50000-100000">
+                            {{ partial "icons/checkbox-checked"}}
+                        </span>
+                        <label>₹50,000 - ₹1,00,000</label>
+                    </li>
+                    <li class="filter-value">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" value="100000-500000">
+                            {{ partial "icons/checkbox-checked"}}
+                        </span>
+                        <label>₹1,00,000 - ₹5,00,000</label>
+                    </li>
+                    <li class="filter-value">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" value="500000-1000000">
+                            {{ partial "icons/checkbox-checked"}}
+                        </span>
+                        <label>₹5,00,000 - ₹10,00,000</label>
+                    </li>
+                    <li class="filter-value">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" value="1000000-">
+                            {{ partial "icons/checkbox-checked"}}
+                        </span>
+                        <label>₹10,00,000 and Above</label>
                     </li>
                 </ul>
             </div>
@@ -244,7 +279,7 @@
         </div>
         <div class="offer-card-list">        
         
-            <div class="offers-card" amount="₹7,30,000" rate="4.35%" fees="₹12,000" partner="Digit Inc." type="fixed" data-index="2">
+            <div class="offers-card" amount="₹7,30,000" rate="4.35%" fees="₹12,000" partner="Digit Inc." type="fixed" data-id="1" data-index="2">
                 <div class="offer-info-wrap">
                     <div class="company-container">
                         <span><img src="/cibil-dashboard/images/dynamic-images/digit-logo.svg" class="company-logo"></span>

@@ -4584,7 +4584,8 @@ b.plus-icon {
           display: flex;
           align-items: center;
           margin: 15px 0 0;
-          flex-flow: wrap;
+          flex-flow: nowrap;
+          width: 100% !important;
           label {
             font-weight: 600;
             font-size: 14px;
@@ -4592,6 +4593,7 @@ b.plus-icon {
             margin: 0;
             text-transform: none;
             white-space: nowrap;
+            color: $black;
           }
         }
       }
