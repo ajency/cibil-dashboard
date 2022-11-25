@@ -26,7 +26,7 @@
 //faq section
 .faq-section {
   margin-top: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   &__wraper {
     .section-heading-1 {
       margin-bottom: 10px;
@@ -36,7 +36,7 @@
     background-color: $light-blue-2;
     padding-top: 30px;
     padding-bottom: 14px;
-    margin-bottom: 0px;
+    margin-bottom: 40px;
     margin-top: 40px;
     .section-heading-1 {
       text-transform: uppercase;
@@ -5153,3 +5153,20 @@ input[type="range"]:focus::-ms-fill-upper {
     border: 0;
   }
 }
+
+.disclaimer {
+  margin-bottom: 60px;
+  p {
+    margin-bottom: 0px;
+  }
+  .body-bold {
+    margin-bottom: 10px;
+  }
+  @include media-breakpoint-down(sm){
+    margin-bottom: 40px;
+    .body{
+      @include hairline;
+    }
+  }
+}
+
