@@ -121,7 +121,7 @@ $(function () {
     e.preventDefault()
     $(this).parents('.popup').addClass('success')
   })
-  $('.close-popup').click(function(){
+  $('.close-popup, .go-back').click(function(){
     $(this).parents('.popup').removeClass('opened success')
   })
   $('#optionsAdded').change(function(){
