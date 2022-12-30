@@ -68,7 +68,7 @@
                     {{ if .features }}
                     <ul class="plan-features">
                         {{ range .features }}
-                            {{if .content}}
+                            {{if eq .feature_available true}}
                                 <li class="feature"><img src="{{ .icon | relURL }}" alt="" class="icon"><span>{{ .content | safeHTML }}</span></li>
                             {{end}}
                         {{ end }}
