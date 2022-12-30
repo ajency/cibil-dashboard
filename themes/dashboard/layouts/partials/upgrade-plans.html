@@ -26,9 +26,12 @@
                     <div class="plan-header">
                         <p class="plan-name">{{ .plan_name }}</p>
                         <p class="plan-duration">{{ .plan_duration }}</p>
-                        <div class="inline-wraper"><p class="discount-price">₹<span class="ammount">{{ .discount_price }}</span></p></div>
+                        <div class="inline-wraper">
+                            <p class="discount-price desktop">₹<span class="ammount">{{ .discount_price }}</span></p>
+                            <p class="desktop plan-price {{ if not .price }}empty-height{{ end }}">{{if .price }}₹{{ .price }}{{end}}</p>
+                        </div>
                     </div>
-                    <a data-toggle="modal" data-target="#{{ anchorize .plan_name }}-popup" class="CouponFormToggle cibil-button {{ if eq .recommended false }}cibil-button-border{{ end }}" popup-link ="{{ anchorize .plan_name }}-popup">{{ .upgrade_button_text }}</a>
+                    <a data-toggle="modal" data-target="#{{ anchorize .plan_name }}-popup" class="CouponFormToggle cibil-button" popup-link ="{{ anchorize .plan_name }}-popup">{{ .upgrade_button_text }}</a>
                     {{ if .features }}
                     <ul class="plan-features">
                         {{ range .features }}
@@ -62,8 +65,6 @@
               <div class="tab-content plan-tab-content" id="myTabContent">
                 {{ range .upgradePlans }}
                 <div class="tab-pane fade {{ if eq .active_tab true }}show active{{ end }}" id="{{ anchorize .plan_name }}" role="tabpanel" aria-labelledby="{{anchorize .plan_name}}-tab">
-                    <a data-toggle="modal" data-target="#{{ anchorize .plan_name }}-popup" class="CouponFormToggle cibil-button">{{ .upgrade_button_text }}</a>
-                    <hr class="horizontal-seperator">
                     {{ if .features }}
                     <ul class="plan-features">
                         {{ range .features }}
@@ -72,7 +73,16 @@
                             {{end}}
                         {{ end }}
                     </ul>
+                    <ul class="not-available-features">
+                        {{range .features}}
+                            {{if eq .feature_available false}}
+                                <li class="feature">{{ .content | safeHTML }}</li>
+                            {{end}}
+                        {{end}}
+                    </ul>
                     {{ end }}
+                    <hr class="horizontal-seperator">
+                    <a data-toggle="modal" data-target="#{{ anchorize .plan_name }}-popup" class="CouponFormToggle cibil-button">{{ .upgrade_button_text }}</a>
                 </div>
                 {{ end }}
               </div>

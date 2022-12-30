@@ -340,9 +340,12 @@
                     <div class="plan-header">
                         <p class="plan-name">Basic</p>
                         <p class="plan-duration">1 Month</p>
-                        <div class="inline-wraper"><p class="discount-price">₹<span class="ammount">550</span></p></div>
+                        <div class="inline-wraper">
+                            <p class="discount-price desktop">₹<span class="ammount">550</span></p>
+                            <p class="desktop plan-price empty-height"></p>
+                        </div>
                     </div>
-                    <a data-toggle="modal" data-target="#basic-popup" class="CouponFormToggle cibil-button cibil-button-border" popup-link ="basic-popup">UPGRADE</a>
+                    <a data-toggle="modal" data-target="#basic-popup" class="CouponFormToggle cibil-button" popup-link ="basic-popup">UPGRADE</a>
                     
                     <ul class="plan-features">
                         
@@ -372,9 +375,12 @@
                     <div class="plan-header">
                         <p class="plan-name">Standard</p>
                         <p class="plan-duration">6 Months</p>
-                        <div class="inline-wraper"><p class="discount-price">₹<span class="ammount">800</span></p></div>
+                        <div class="inline-wraper">
+                            <p class="discount-price desktop">₹<span class="ammount">800</span></p>
+                            <p class="desktop plan-price ">₹3,300</p>
+                        </div>
                     </div>
-                    <a data-toggle="modal" data-target="#standard-popup" class="CouponFormToggle cibil-button cibil-button-border" popup-link ="standard-popup">UPGRADE</a>
+                    <a data-toggle="modal" data-target="#standard-popup" class="CouponFormToggle cibil-button" popup-link ="standard-popup">UPGRADE</a>
                     
                     <ul class="plan-features">
                         
@@ -406,9 +412,12 @@
                     <div class="plan-header">
                         <p class="plan-name">Premium</p>
                         <p class="plan-duration">12 Months</p>
-                        <div class="inline-wraper"><p class="discount-price">₹<span class="ammount">1200</span></p></div>
+                        <div class="inline-wraper">
+                            <p class="discount-price desktop">₹<span class="ammount">1,200</span></p>
+                            <p class="desktop plan-price ">₹6,600</p>
+                        </div>
                     </div>
-                    <a data-toggle="modal" data-target="#premium-popup" class="CouponFormToggle cibil-button " popup-link ="premium-popup">UPGRADE</a>
+                    <a data-toggle="modal" data-target="#premium-popup" class="CouponFormToggle cibil-button" popup-link ="premium-popup">UPGRADE</a>
                     
                     <ul class="plan-features">
                         
@@ -452,7 +461,7 @@
                     <p class="plan-duration">6 Months</p>
                     <div class="prices">
                         <span class="discount-price">₹<span class="ammountMob">800</span></span>
-                        <span class="plan-price ">₹3300</span>
+                        <span class="plan-price ">₹3,300</span>
                     </div>
                     
                     <span class="discount">Save 75%</span>
@@ -464,8 +473,8 @@
                     <p class="plan-name">Premium</p>
                     <p class="plan-duration">12 Months</p>
                     <div class="prices">
-                        <span class="discount-price">₹<span class="ammountMob">1200</span></span>
-                        <span class="plan-price ">₹6600</span>
+                        <span class="discount-price">₹<span class="ammountMob">1,200</span></span>
+                        <span class="plan-price ">₹6,600</span>
                     </div>
                     
                     <p class="popular-tag">Most Popular</p>
@@ -478,8 +487,6 @@
               <div class="tab-content plan-tab-content" id="myTabContent">
                 
                 <div class="tab-pane fade show active" id="basic" role="tabpanel" aria-labelledby="basic-tab">
-                    <a data-toggle="modal" data-target="#basic-popup" class="CouponFormToggle cibil-button">UPGRADE</a>
-                    <hr class="horizontal-seperator">
                     
                     <ul class="plan-features">
                         
@@ -487,6 +494,8 @@
                                 <li class="feature"><img src="/cibil-dashboard/images/static-images/dashboard-icon.svg" alt="" class="icon"><span><b>Unlimited Access</b> to the most recent updates in your CIBIL Score & Report</span></li>
                             
                         
+                            
+                                <li class="feature"><img src="/cibil-dashboard/" alt="" class="icon"><span>*<b>CIBIL Alerts</b> is available only with CIBIL standard and premium subscription plan</span></li>
                             
                         
                             
@@ -506,12 +515,29 @@
                             
                         
                     </ul>
+                    <ul class="not-available-features">
+                        
+                            
+                        
+                            
+                                <li class="feature">*<b>CIBIL Alerts</b> is available only with CIBIL standard and premium subscription plan</li>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                    </ul>
                     
+                    <hr class="horizontal-seperator">
+                    <a data-toggle="modal" data-target="#basic-popup" class="CouponFormToggle cibil-button">UPGRADE</a>
                 </div>
                 
                 <div class="tab-pane fade " id="standard" role="tabpanel" aria-labelledby="standard-tab">
-                    <a data-toggle="modal" data-target="#standard-popup" class="CouponFormToggle cibil-button">UPGRADE</a>
-                    <hr class="horizontal-seperator">
                     
                     <ul class="plan-features">
                         
@@ -540,12 +566,27 @@
                             
                         
                     </ul>
+                    <ul class="not-available-features">
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                    </ul>
                     
+                    <hr class="horizontal-seperator">
+                    <a data-toggle="modal" data-target="#standard-popup" class="CouponFormToggle cibil-button">UPGRADE</a>
                 </div>
                 
                 <div class="tab-pane fade " id="premium" role="tabpanel" aria-labelledby="premium-tab">
-                    <a data-toggle="modal" data-target="#premium-popup" class="CouponFormToggle cibil-button">UPGRADE</a>
-                    <hr class="horizontal-seperator">
                     
                     <ul class="plan-features">
                         
@@ -574,7 +615,24 @@
                             
                         
                     </ul>
+                    <ul class="not-available-features">
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                    </ul>
                     
+                    <hr class="horizontal-seperator">
+                    <a data-toggle="modal" data-target="#premium-popup" class="CouponFormToggle cibil-button">UPGRADE</a>
                 </div>
                 
               </div>
@@ -687,7 +745,7 @@
             <table class="payment">
                 <tr class="plan-price">
                     <td class="plan-duration">12 Months</td>
-                    <td class="plan-price-ammount">₹<span class="ammount">1200</span></td>
+                    <td class="plan-price-ammount">₹<span class="ammount">1,200</span></td>
                 </tr>
                 
                 <tr class="coupon-discount d-none">

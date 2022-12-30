@@ -272,6 +272,9 @@
     width: calc(100% + 2px);
     left: -1px;
     top: -1px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
     border-radius: 7px 7px 0px 0px;
     .icon {
       margin-right: 8px;
@@ -326,6 +329,9 @@
     position: relative;
     display: inline-flex;
     align-items: center;
+    &.desktop {
+      margin-bottom: 2px !important;
+    }
   }
   .plan-price {
     font-weight: $intro-regular;
@@ -350,6 +356,14 @@
       &::before {
         display: none;
       }
+    }
+    &.desktop {
+      display: flex;
+      width: fit-content;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      margin: 0 auto 10px;
+      font-weight: 400;
     }
   }
   .cibil-button {
@@ -408,7 +422,7 @@
         }
         .plan-name {
           @include body;
-          text-transform: capitalize;
+          text-transform: uppercase;
           margin-bottom: 11px;
         }
         .plan-duration {
@@ -422,8 +436,9 @@
         }
         .discount-tag {
           @include hairline;
+          font-weight: 600;
           background: #fcd800;
-          height: 28px;
+          height: 34px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -509,10 +524,15 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding-bottom: 40px;
+        padding-bottom: 15px;
+        padding-top: 35px;
         position: relative;
         &:first-child {
           border-left-color: $light-blue-2;
+        }
+        .discount {
+          top: 0px;
+          left: -1px;
         }
         &.active {
           background-color: $light;
@@ -636,6 +656,39 @@
           &:not(:last-child) {
             margin-bottom: 18px;
           }
+        }
+      }
+      .not-available-features {
+        margin-top: 16px;
+        margin-bottom: 20px;
+        .feature {
+          @include hairline;
+          letter-spacing: 0.02em;
+          color: #f16e00;
+          b {
+            font-weight: 600;
+          }
+          &:last-child {
+            margin-bottom: 0px;
+          }
+        }
+      }
+      .horizontal-seperator {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .plan-tabs {
+    .nav-item {
+      .nav-link {
+        .prices {
+          flex-wrap: wrap;
+          // flex-direction: column;
+          // .discount-price {
+          //   margin-right: 0px;
+          // }
         }
       }
     }
@@ -2680,7 +2733,7 @@
         .icon {
           margin-bottom: 40px;
         }
-        .cibil-button{
+        .cibil-button {
           margin-top: 20px;
         }
       }
@@ -3262,16 +3315,16 @@
   letter-spacing: 0.02em;
 }
 
-#edit-info{
+#edit-info {
   text-decoration: none !important;
   user-select: none;
-  svg{
+  svg {
     position: relative;
     //top: -2px;
   }
 }
 
-.report-bar-item-print{
+.report-bar-item-print {
   .cibil-link-dark {
     justify-content: center;
     gap: 9px;
